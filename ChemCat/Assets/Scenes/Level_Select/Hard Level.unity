@@ -1929,7 +1929,7 @@ GameObject:
   - component: {fileID: 1201717097}
   - component: {fileID: 1201717096}
   m_Layer: 5
-  m_Name: EASY
+  m_Name: Hard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1974,7 +1974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EASY
+  m_text: HARD
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 828c88a110a2aa1478e75ed94343d439, type: 2}
   m_sharedMaterial: {fileID: -356180998631019827, guid: 828c88a110a2aa1478e75ed94343d439, type: 2}
@@ -1983,8 +1983,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283419196
-  m_fontColor: {r: 0.23549305, g: 0.7924528, b: 0.31063333, a: 1}
+    rgba: 4284133507
+  m_fontColor: {r: 0.5137255, g: 0.6901961, b: 0.3529412, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2037,7 +2037,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -56.7493, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

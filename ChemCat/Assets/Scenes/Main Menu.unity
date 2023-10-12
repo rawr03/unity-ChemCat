@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 295947473}
   - component: {fileID: 295947472}
   m_Layer: 5
-  m_Name: Button
+  m_Name: btn.settings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323.9, y: 165.1}
+  m_AnchoredPosition: {x: -312.4, y: 165.1}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &295947472
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 538875661}
   - component: {fileID: 538875660}
   m_Layer: 5
-  m_Name: btn. standard mode
+  m_Name: btn.standardmode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 787950346}
   - component: {fileID: 787950345}
   m_Layer: 5
-  m_Name: bt.story mode
+  m_Name: btn.storymode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: 998488167}
   - component: {fileID: 998488166}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: btn.exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -654,7 +654,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323.1, y: -168.9}
+  m_AnchoredPosition: {x: -312.8, y: -169.5}
   m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998488166
@@ -804,8 +804,7 @@ Transform:
   m_LocalPosition: {x: 1, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1708022481}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025630740
@@ -1171,7 +1170,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1936017015}
-  m_Father: {fileID: 1006722470}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1191,7 +1190,7 @@ GameObject:
   - component: {fileID: 1764405127}
   - component: {fileID: 1764405126}
   m_Layer: 5
-  m_Name: btn. quiz mode
+  m_Name: btn.quizmode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1552,4 +1551,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1985046274}
+  - {fileID: 1708022481}
   - {fileID: 1006722470}

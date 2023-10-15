@@ -19,8 +19,12 @@ public class GamePlayFunctionalities : MonoBehaviour
 
     public void Subract()
     {
-        number--;
-        CurrentNum.text = number.ToString();
+        if(number>0)
+        {
+            number--;
+            CurrentNum.text = number.ToString();
+        }
+        
     }
 
     

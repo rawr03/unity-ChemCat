@@ -7,7 +7,7 @@ public class GamePlayFunctionalities : MonoBehaviour
 {
     
     public Text CurrentNum;
-    public int number = 0;
+    public int number = 1;
     public GameObject plus;
     public GameObject minus;
 
@@ -19,7 +19,7 @@ public class GamePlayFunctionalities : MonoBehaviour
 
     public void Subract()
     {
-        if(number>0)
+        if(number>1)
         {
             number--;
             CurrentNum.text = number.ToString();

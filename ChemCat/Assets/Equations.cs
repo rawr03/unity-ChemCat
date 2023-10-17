@@ -8,5 +8,7 @@ public class Equations
     public string reactant2;
     public int PD_coef1;
     public string product1;
+    public int PD_coef2;
+    public string product2;
 
 }

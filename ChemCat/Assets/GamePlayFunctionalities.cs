@@ -10,7 +10,6 @@ public class GamePlayFunctionalities : MonoBehaviour
     public int number = 1;
     public GameObject plus;
     public GameObject minus;
-
     public void Add()
     {
         number++;
@@ -24,10 +23,8 @@ public class GamePlayFunctionalities : MonoBehaviour
             number--;
             CurrentNum.text = number.ToString();
         }
-        
     }
 
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +35,5 @@ public class GamePlayFunctionalities : MonoBehaviour
     void Update()
     {
         
-    }
+}
 }

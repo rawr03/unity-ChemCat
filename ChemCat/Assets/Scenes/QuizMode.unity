@@ -423,9 +423,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
+  gameOver: {fileID: 0}
   inputNum1: {fileID: 1811866930}
   inputNum2: {fileID: 799104432}
   inputNum3: {fileID: 1205526461}
+  Heart1: {fileID: 1360961887}
+  Heart2: {fileID: 1630817758}
+  Heart3: {fileID: 1859283237}
 --- !u!1 &72973634
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,9 +4854,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
+  gameOver: {fileID: 255810610}
   inputNum1: {fileID: 1811866930}
   inputNum2: {fileID: 799104432}
   inputNum3: {fileID: 1205526461}
+  Heart1: {fileID: 1360961887}
+  Heart2: {fileID: 1630817758}
+  Heart3: {fileID: 1859283237}
 --- !u!114 &1770443319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4894,16 +4902,10 @@ MonoBehaviour:
   equationText2: {fileID: 1028990975}
   equationText3: {fileID: 516701006}
   equationText4: {fileID: 1579546251}
-  Heart1: {fileID: 1360961887}
-  Heart2: {fileID: 1630817758}
-  Heart3: {fileID: 1859283237}
   Switch4: {fileID: 1296691139}
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
   gameOver: {fileID: 255810610}
-  inputNum1: {fileID: 1811866930}
-  inputNum2: {fileID: 799104432}
-  inputNum3: {fileID: 1205526461}
 --- !u!1 &1798498255
 GameObject:
   m_ObjectHideFlags: 0

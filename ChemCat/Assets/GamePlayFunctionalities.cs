@@ -17,8 +17,6 @@ public class GamePlayFunctionalities : MonoBehaviour
         {   
             number++;
             CurrentNum.text = number.ToString();
-            Textnumber = number.ToString();
-
         }
         
     }
@@ -29,7 +27,6 @@ public class GamePlayFunctionalities : MonoBehaviour
         {
             number--;
             CurrentNum.text = number.ToString();
-            Textnumber = number.ToString();
         }
     }
 

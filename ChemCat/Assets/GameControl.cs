@@ -20,7 +20,7 @@ public class GameControl : MonoBehaviour
     // Equation related
     public Equations[] problems;
     private static List<Equations> unansweredProblems;
-    
+
     private Equations currentEquation;
 
     // display Text of Equation Problem
@@ -38,34 +38,26 @@ public class GameControl : MonoBehaviour
 
 
     // Health related 
-    public GameObject Heart1, Heart2, Heart3, Switch4, correct, wrong, gameOver;
-    public static int health;
+    public GameObject Switch4, correct, wrong, gameOver;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
-    
-    // Confirm Button related
-    public static int Num1, Num2, Num3, Num4;
-    public GameObject inputNum1, inputNum2, inputNum3;
+
     void Start()
     {
-
-        health = 3;
-        Heart1.gameObject.SetActive(true);
-        Heart2.gameObject.SetActive(true);
-        Heart3.gameObject.SetActive(true);
         Switch4.gameObject.SetActive(false);
         correct.gameObject.SetActive(false);
         wrong.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
+
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
             unansweredProblems = problems.ToList<Equations>();
         }
 
         GetRandomEquation();
-        
+
     }
 
-    void GetRandomEquation()
+    public void GetRandomEquation()
     {
         int randomEquationIndex = Random.Range(0, unansweredProblems.Count);
         currentEquation = unansweredProblems[randomEquationIndex];
@@ -86,56 +78,12 @@ public class GameControl : MonoBehaviour
         unansweredProblems.RemoveAt(randomEquationIndex);
 
         Confirm.RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
-        //  Confirm(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
     }
 
-    /* Confirm
-    void Confirm(int equationAnswer1, int equationAnswer2, int equationAnswer3, int equationAnswer4)
-    {
-        Num1 = inputNum1.;
-        Num2 = inputNum2.GetComponent<int>();
-        Num3 = inputNum3.GetComponent<int>();
-
-        Debug.Log(equationAnswer1 + equationAnswer2 + equationAnswer3 + equationAnswer4);
-        Debug.Log(Num1);
-        Debug.Log(Num2);
-        Debug.Log(Num3);
-        // Num4 = inputNum1.GetComponent<int>();
-
-    if (Num1 == equationAnswer1 && Num2 == equationAnswer2 && Num3 == equationAnswer3)
-    {
-        Debug.Log("Correct");
-    //correct.gameObject.SetActive(true);
-    }
-    else
-    {
-        Debug.Log("Wrong");
-    //gameOver.gameObject.SetActive(true);
-    }
-    }
-    */
-
-    /* Add/Subtract
-    public void Add()
-    {
-        number++;
-        CurrentNum.text = number.ToString();
-    }
-
-    public void Subract()
-    {
-        if (number > 1)
-        {
-            number--;
-            CurrentNum.text = number.ToString();
-        }
-
-    }
-*/
     // Update is called once per frame
     void Update()
     {
-
+        /*
         if (health > 3)
             health = 3;
 
@@ -164,5 +112,7 @@ public class GameControl : MonoBehaviour
                 break;
         }
     }
+        */
 
+    }
 }

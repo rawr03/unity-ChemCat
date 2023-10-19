@@ -89,7 +89,7 @@ public class GameControl : MonoBehaviour
         //  Confirm(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
     }
 
-    /*
+    /* Confirm
     void Confirm(int equationAnswer1, int equationAnswer2, int equationAnswer3, int equationAnswer4)
     {
         Num1 = inputNum1.;

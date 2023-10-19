@@ -10,10 +10,17 @@ public class GamePlayFunctionalities : MonoBehaviour
     public int number = 1;
     public GameObject plus;
     public GameObject minus;
+    public string Textnumber; 
     public void Add()
     {
-        number++;
-        CurrentNum.text = number.ToString();
+        if (number < 9)
+        {   
+            number++;
+            CurrentNum.text = number.ToString();
+            Textnumber = number.ToString();
+
+        }
+        
     }
 
     public void Subract()
@@ -22,6 +29,7 @@ public class GamePlayFunctionalities : MonoBehaviour
         {
             number--;
             CurrentNum.text = number.ToString();
+            Textnumber = number.ToString();
         }
     }
 

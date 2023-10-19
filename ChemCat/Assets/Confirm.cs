@@ -11,7 +11,7 @@ public class Confirm : MonoBehaviour
     public GameObject correct, wrong;
     public GameObject inputNum1, inputNum2, inputNum3; //inputNum4;
  
-    public static Text Num1, Num2, Num3; //Num4;
+    private static string Num1, Num2, Num3; //Num4;
     public static int React1, React2, Prod1;
 
     private void Start()
@@ -27,21 +27,21 @@ public class Confirm : MonoBehaviour
 
         
         // yes data is transferred
-        Debug.Log("Answers are " + equationAnswer1 + ", " + equationAnswer2 + ", " + equationAnswer3);
+        Debug.Log("Answers are " + React1 + " + " + React1 + " -> " + Prod1);
         // Num4 = inputNum1.GetComponent<int>();     
         
     }
 
     public void CheckAnswer()
     {
-        Debug.Log("Button is pressed");
-        Num1 = inputNum1.GetComponent<Text>();
-        Num2 = inputNum2.GetComponent<Text>();
-        Num3 = inputNum3.GetComponent<Text>();
+        Num1 = inputNum1.GetComponent<Text>().text;
+        Num2 = inputNum2.GetComponent<Text>().text;
+        Num3 = inputNum3.GetComponent<Text>().text;
 
         Debug.Log("Input are " + Num1 + ", " + Num2 + ", " + Num3);
-        /*
-        if (React1.Equals(Num1) && React2.Equals(Num2) && Prod1.Equals(Num3))
+
+        
+        if (Num1.Equals(React1.ToString()) && Num2.Equals(React2.ToString()) && Num3.Equals(Prod1.ToString()))
         {
             Debug.Log("Correct");
             //correct.gameObject.SetActive(true);
@@ -51,8 +51,7 @@ public class Confirm : MonoBehaviour
             Debug.Log("Wrong");
             //gameOver.gameObject.SetActive(true);
         }
-
-        */
+        
     }
     
     // Update is called once per frame

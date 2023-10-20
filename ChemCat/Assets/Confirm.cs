@@ -57,16 +57,16 @@ public class Confirm : MonoBehaviour
         if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
         {
             Debug.Log("Correct");
-            //correct.gameObject.SetActive(true);
+            correct.gameObject.SetActive(true);
         }
         else
         {
             Debug.Log("Wrong");
-            //gameOver.gameObject.SetActive(true);
+            //wrong.gameObject.SetActive(true);
             health--;
         }
         
-        //GameControl.GetRandomEquation();
+        // GameControl.GetRandomEquation();
     }
     
     // Update is called once per frame

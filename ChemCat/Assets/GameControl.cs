@@ -41,6 +41,9 @@ public class GameControl : MonoBehaviour
     public GameObject Switch4, correct, wrong, gameOver;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
+    // respawn problem
+    public static int health; 
+
     void Start()
     {
         Switch4.gameObject.SetActive(false);
@@ -83,36 +86,6 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (health > 3)
-            health = 3;
-
-        switch (health)
-        {
-            case 3:
-                Heart1.gameObject.SetActive(true);
-                Heart2.gameObject.SetActive(true);
-                Heart3.gameObject.SetActive(true);
-                break;
-            case 2:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(true);
-                Heart3.gameObject.SetActive(true);
-                break;
-            case 1:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(false);
-                Heart3.gameObject.SetActive(true);
-                break;
-            case 0:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(false);
-                Heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
-                break;
-        }
-    }
-        */
-
+        health = Confirm.health; 
     }
 }

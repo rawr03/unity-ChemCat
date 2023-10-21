@@ -14,10 +14,12 @@ public class Confirm : MonoBehaviour
     private static string Num1, Num2, Num3; //Num4;
     public static int React1, React2, Prod1;
     public static string Element1, Element2, Element3, Element4;
+    public static int outcome; 
 
     // Life related
     public GameObject Heart1, Heart2, Heart3;
     public static int health;
+    public static float startTime;
 
     private void Start()
     {
@@ -43,6 +45,72 @@ public class Confirm : MonoBehaviour
         
     }
 
+    /*
+     * private IEnumerator FlickerEffectInTime()
+{
+    while(startTime < 2.0f)
+    {
+        startTime += Time.deltaTime;
+        GetComponent<SpriteRenderer>().enabled = !GetComponent<SpriteRenderer>().enabled;
+        yield return new WaitForSeconds(0.1f);
+    }
+
+    startTime = 0;
+    GetComponent<SpriteRenderer>().enabled = true;
+}
+     */
+
+    public void ShowPanel()
+    {       
+        StartCoroutine(EnablePanel());
+        // StopCoroutine(EnablePanel());
+    }
+
+    IEnumerator EnablePanel()
+    {
+        while (startTime < 2.0f)
+        {          
+            if (Confirm.outcome == 2)
+            {
+                gameOver.gameObject.SetActive(true);
+            }
+            
+            else if (Confirm.outcome == 1)
+            {
+                correct.gameObject.SetActive(true);
+            }
+
+            startTime += Time.deltaTime;
+            yield return new WaitForSeconds(0.1f);
+        }
+
+ 
+
+    }
+
+    /*
+    public void ShowPanel()
+    {
+        StartCoroutine(EnablePanel());
+        StopCoroutine(EnablePanel());
+    }
+
+    IEnumerator EnablePanel()
+    {
+        yield return new WaitForSeconds(2);
+
+        if (Confirm.outcome == 2)
+        {
+            gameOver.gameObject.SetActive(true);
+        }
+        else if (Confirm.outcome == 1)
+        {
+            correct.gameObject.SetActive(true);
+        }
+
+    }
+    */
+
     public void CheckAnswer()
     {
         Num1 = inputNum1.GetComponent<Text>().text;
@@ -57,7 +125,8 @@ public class Confirm : MonoBehaviour
         if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
         {
             Debug.Log("Correct");
-            correct.gameObject.SetActive(true);
+            outcome = 1;
+            // correct.gameObject.SetActive(true);
         }
         else
         {
@@ -65,8 +134,9 @@ public class Confirm : MonoBehaviour
             //wrong.gameObject.SetActive(true);
             health--;
         }
-        
+
         // GameControl.GetRandomEquation();
+        ShowPanel();
     }
     
     // Update is called once per frame
@@ -96,7 +166,8 @@ public class Confirm : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
+                // gameOver.gameObject.SetActive(true);
+                outcome = 2;
                 break;
         }
     }

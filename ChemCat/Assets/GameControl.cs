@@ -57,11 +57,13 @@ public class GameControl : MonoBehaviour
         }
 
         GetRandomEquation();
-
     }
+
 
     public void GetRandomEquation()
     {
+        gameOver.gameObject.SetActive(false);
+        correct.gameObject.SetActive(false);
         int randomEquationIndex = Random.Range(0, unansweredProblems.Count);
         currentEquation = unansweredProblems[randomEquationIndex];
 
@@ -86,6 +88,6 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health = Confirm.health; 
+
     }
 }

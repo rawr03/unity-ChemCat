@@ -38,7 +38,7 @@ public class GameControl : MonoBehaviour
 
 
     // Health related 
-    public GameObject Switch4, correct, wrong, gameOver;
+    public GameObject Switch4, correct, wrong, gameOver, nextLevel;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
     // respawn problem
@@ -50,6 +50,7 @@ public class GameControl : MonoBehaviour
         correct.gameObject.SetActive(false);
         wrong.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
+        nextLevel.gameObject.SetActive(false);
 
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {

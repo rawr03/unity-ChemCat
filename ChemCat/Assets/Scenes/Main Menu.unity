@@ -592,7 +592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 787950346}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1708022482}
+        m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StoryMode
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &787950346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1284,7 +1296,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1764405127}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1708022482}
+        m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: QuizMode
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1764405127
 MonoBehaviour:
   m_ObjectHideFlags: 0

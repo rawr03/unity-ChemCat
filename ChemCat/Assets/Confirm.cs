@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class Confirm : MonoBehaviour
 {
     // Start is called before the first frame update
-
-    public GameObject correct, wrong, gameOver;
+    public GameObject correct, wrong, gameOver, nextLevel;
     public GameObject inputNum1, inputNum2, inputNum3; //inputNum4;
  
     private static string Num1, Num2, Num3; //Num4;
@@ -23,6 +22,7 @@ public class Confirm : MonoBehaviour
 
     private void Start()
     {
+        nextLevel.gameObject.SetActive(false);
         health = 3;
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
@@ -78,6 +78,7 @@ public class Confirm : MonoBehaviour
             else if (Confirm.outcome == 1)
             {
                 correct.gameObject.SetActive(true);
+                nextLevel.gameObject.SetActive(true);
             }
 
             startTime += Time.deltaTime;

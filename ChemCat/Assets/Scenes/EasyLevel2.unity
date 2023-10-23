@@ -424,7 +424,6 @@ MonoBehaviour:
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
   gameOver: {fileID: 0}
-  nextLevel: {fileID: 0}
   inputNum1: {fileID: 1811866930}
   inputNum2: {fileID: 799104432}
   inputNum3: {fileID: 1205526461}
@@ -1311,7 +1310,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: EasyLevel2
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &244902133
@@ -1943,7 +1942,7 @@ GameObject:
   - component: {fileID: 628302734}
   - component: {fileID: 628302735}
   m_Layer: 5
-  m_Name: nextLevel
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4246,6 +4245,7 @@ GameObject:
   - component: {fileID: 1396944290}
   - component: {fileID: 1396944293}
   - component: {fileID: 1396944292}
+  - component: {fileID: 1396944291}
   m_Layer: 5
   m_Name: btn_Continue
   m_TagString: Untagged
@@ -4273,6 +4273,27 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030517578, y: -93}
   m_SizeDelta: {x: 59.3938, y: -44.07129}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1396944291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396944289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d766b390a7fb140a0728c20e5aee90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correct: {fileID: 235177923}
+  wrong: {fileID: 83594429}
+  gameOver: {fileID: 0}
+  inputNum1: {fileID: 1811866930}
+  inputNum2: {fileID: 799104432}
+  inputNum3: {fileID: 1205526461}
+  Heart1: {fileID: 1360961887}
+  Heart2: {fileID: 1630817758}
+  Heart3: {fileID: 1859283237}
 --- !u!114 &1396944292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5294,7 +5315,6 @@ MonoBehaviour:
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
   gameOver: {fileID: 255810610}
-  nextLevel: {fileID: 628302733}
   inputNum1: {fileID: 1811866930}
   inputNum2: {fileID: 799104432}
   inputNum3: {fileID: 1205526461}
@@ -5330,7 +5350,6 @@ MonoBehaviour:
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
   gameOver: {fileID: 255810610}
-  nextLevel: {fileID: 628302733}
 --- !u!114 &1770443320
 MonoBehaviour:
   m_ObjectHideFlags: 0

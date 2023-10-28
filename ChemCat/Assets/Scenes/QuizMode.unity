@@ -343,7 +343,6 @@ GameObject:
   - component: {fileID: 44678092}
   - component: {fileID: 44678095}
   - component: {fileID: 44678094}
-  - component: {fileID: 44678096}
   m_Layer: 5
   m_Name: btn_Confirm
   m_TagString: Untagged
@@ -368,7 +367,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 64.64708}
+  m_AnchoredPosition: {x: 0.00012207031, y: 64.647095}
   m_SizeDelta: {x: -1760.6062, y: -1024.3197}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &44678094
@@ -409,27 +408,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44678091}
   m_CullTransparentMesh: 1
---- !u!114 &44678096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44678091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d766b390a7fb140a0728c20e5aee90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correct: {fileID: 235177923}
-  wrong: {fileID: 83594429}
-  gameOver: {fileID: 0}
-  inputNum1: {fileID: 1811866930}
-  inputNum2: {fileID: 799104432}
-  inputNum3: {fileID: 1205526461}
-  Heart1: {fileID: 1360961887}
-  Heart2: {fileID: 1630817758}
-  Heart3: {fileID: 1859283237}
 --- !u!1 &72973634
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: -931, y: -523.864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &83594431
@@ -633,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -868,7 +846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: -931, y: -523.864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &138691217
@@ -1178,7 +1156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: -931, y: -523.864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235177925
@@ -1254,7 +1232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: -931, y: -523.864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255810612
@@ -2284,7 +2262,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0.00012207031, y: 0}
   m_SizeDelta: {x: -931, y: -523.864}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972578778
@@ -2605,7 +2583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3799,8 +3777,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: WRONG
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
-  m_sharedMaterial: {fileID: -2008594235216732685, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4740,7 +4718,6 @@ GameObject:
   - component: {fileID: 1770443315}
   - component: {fileID: 1770443314}
   - component: {fileID: 1770443319}
-  - component: {fileID: 1770443318}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4840,27 +4817,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1770443318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770443313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d766b390a7fb140a0728c20e5aee90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correct: {fileID: 235177923}
-  wrong: {fileID: 83594429}
-  gameOver: {fileID: 255810610}
-  inputNum1: {fileID: 1811866930}
-  inputNum2: {fileID: 799104432}
-  inputNum3: {fileID: 1205526461}
-  Heart1: {fileID: 1360961887}
-  Heart2: {fileID: 1630817758}
-  Heart3: {fileID: 1859283237}
 --- !u!114 &1770443319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4870,42 +4826,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770443313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577a91ce4e94e77409030fa74f5d9dd9, type: 3}
+  m_Script: {fileID: 11500000, guid: bbb719ebd95900544a5b3a41b74d1671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
-  - RT_coef1: 1
-    reactant1: Ba
-    RT_coef2: 1
-    reactant2: F2
-    PD_coef1: 1
-    product1: BaF2
-    PD_coef2: 0
-    product2: 
   - RT_coef1: 2
-    reactant1: Na
-    RT_coef2: 1
-    reactant2: Cl2
-    PD_coef1: 2
-    product1: NaCl
-    PD_coef2: 0
-    product2: 
-  - RT_coef1: 2
-    reactant1: Ca
+    reactant1: H2
     RT_coef2: 1
     reactant2: O2
     PD_coef1: 2
-    product1: CaO
+    product1: H2O
     PD_coef2: 0
     product2: 
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 1
+    reactant2: C6H12O6
+    PD_coef1: 2
+    product1: C2H5OH
+    PD_coef2: 2
+    product2: CO2
+  - RT_coef1: 1
+    reactant1: HCl
+    RT_coef2: 1
+    reactant2: NaOH
+    PD_coef1: 1
+    product1: NaCl
+    PD_coef2: 1
+    product2: H2O
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 1
+    reactant2: PCl5
+    PD_coef1: 1
+    product1: PCl3
+    PD_coef2: 1
+    product2: Cl2
   equationText1: {fileID: 1237684621}
   equationText2: {fileID: 1028990975}
   equationText3: {fileID: 516701006}
   equationText4: {fileID: 1579546251}
+  timeBetweenEquations: 1
+  Switch1: {fileID: 1373719512}
   Switch4: {fileID: 1296691139}
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
   gameOver: {fileID: 255810610}
+  Heart1: {fileID: 1360961887}
+  Heart2: {fileID: 1630817758}
+  Heart3: {fileID: 1859283237}
+  inputNum1: {fileID: 1811866930}
+  inputNum2: {fileID: 799104432}
+  inputNum3: {fileID: 1205526461}
+  inputNum4: {fileID: 1205526461}
 --- !u!1 &1798498255
 GameObject:
   m_ObjectHideFlags: 0
@@ -5398,8 +5371,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1770443318}
-        m_TargetAssemblyTypeName: Confirm, Assembly-CSharp
+      - m_Target: {fileID: 1770443319}
+        m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
         m_Arguments:
@@ -5432,8 +5405,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: CONFIRM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
-  m_sharedMaterial: {fileID: -2008594235216732685, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5721,8 +5694,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: GAME OVER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
-  m_sharedMaterial: {fileID: -2008594235216732685, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6177,8 +6150,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: CORRECT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
-  m_sharedMaterial: {fileID: -2008594235216732685, guid: c6b433e1a0b43d748a4b802a2128f1aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

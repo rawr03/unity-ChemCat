@@ -424,6 +424,7 @@ MonoBehaviour:
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
   gameOver: {fileID: 255810610}
+  nextLevel: {fileID: 0}
   inputNum1: {fileID: 1811866930}
   inputNum2: {fileID: 799104432}
   inputNum3: {fileID: 1205526461}
@@ -4740,7 +4741,6 @@ GameObject:
   - component: {fileID: 1770443315}
   - component: {fileID: 1770443314}
   - component: {fileID: 1770443319}
-  - component: {fileID: 1770443318}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4840,27 +4840,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1770443318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770443313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d766b390a7fb140a0728c20e5aee90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  correct: {fileID: 235177923}
-  wrong: {fileID: 83594429}
-  gameOver: {fileID: 255810610}
-  inputNum1: {fileID: 1811866930}
-  inputNum2: {fileID: 799104432}
-  inputNum3: {fileID: 1205526461}
-  Heart1: {fileID: 1360961887}
-  Heart2: {fileID: 1630817758}
-  Heart3: {fileID: 1859283237}
 --- !u!114 &1770443319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4890,78 +4869,87 @@ MonoBehaviour:
     product1: NaCl
     PD_coef2: 0
     product2: 
-  - RT_coef1: 3
-    reactant1: H2
-    RT_coef2: 1
-    reactant2: N2
+  - RT_coef1: 1
+    reactant1: N2
+    RT_coef2: 3
+    reactant2: H2
     PD_coef1: 2
     product1: NH3
     PD_coef2: 0
     product2: 
-  - RT_coef1: 2
-    reactant1: Ca
+  - RT_coef1: 0
+    reactant1: 
     RT_coef2: 1
-    reactant2: O2
+    reactant2: C6H12O6
     PD_coef1: 2
-    product1: CaO
-    PD_coef2: 0
-    product2: 
+    product1: C2H5OH
+    PD_coef2: 2
+    product2: CO2
   - RT_coef1: 1
-    reactant1: C
+    reactant1: HCl
     RT_coef2: 1
-    reactant2: O2
-    PD_coef1: 2
-    product1: CO2
-    PD_coef2: 0
-    product2: 
-  - RT_coef1: 1
-    reactant1: C
-    RT_coef2: 2
-    reactant2: S
+    reactant2: NaOH
     PD_coef1: 1
-    product1: CS2
-    PD_coef2: 0
-    product2: 
+    product1: NaCl
+    PD_coef2: 1
+    product2: H2O
   - RT_coef1: 1
-    reactant1: P4
-    RT_coef2: 6
-    reactant2: H2
-    PD_coef1: 4
-    product1: PH3
-    PD_coef2: 0
-    product2: 
-  - RT_coef1: 1
-    reactant1: S8
-    RT_coef2: 8
+    reactant1: CH4
+    RT_coef2: 2
     reactant2: O2
-    PD_coef1: 8
-    product1: SO2
-    PD_coef2: 0
-    product2: 
-  - RT_coef1: 4
-    reactant1: Cr
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 2
-    product1: Cr2O3
-    PD_coef2: 0
-    product2: 
+    PD_coef1: 1
+    product1: CO2
+    PD_coef2: 2
+    product2: H2O
+  - RT_coef1: 3
+    reactant1: AgNO3
+    RT_coef2: 1
+    reactant2: K3PO4
+    PD_coef1: 1
+    product1: AgPO4
+    PD_coef2: 3
+    product2: KNO3
   - RT_coef1: 2
-    reactant1: Al
-    RT_coef2: 3
-    reactant2: Br2
-    PD_coef1: 2
-    product1: AlBr3
-    PD_coef2: 0
-    product2: 
+    reactant1: C2H6
+    RT_coef2: 7
+    reactant2: O2
+    PD_coef1: 4
+    product1: CO2
+    PD_coef2: 6
+    product2: H2O
+  - RT_coef1: 1
+    reactant1: SiO2
+    RT_coef2: 6
+    reactant2: HF
+    PD_coef1: 1
+    product1: H2SiF6
+    PD_coef2: 2
+    product2: H2O
+  - RT_coef1: 6
+    reactant1: CO2
+    RT_coef2: 6
+    reactant2: H2O
+    PD_coef1: 1
+    product1: C6H12O6
+    PD_coef2: 6
+    product2: O2
   equationText1: {fileID: 1237684621}
   equationText2: {fileID: 1028990975}
   equationText3: {fileID: 516701006}
   equationText4: {fileID: 1579546251}
+  timeBetweenEquations: 1
+  Switch1: {fileID: 1373719512}
   Switch4: {fileID: 1296691139}
   correct: {fileID: 235177923}
   wrong: {fileID: 83594429}
   gameOver: {fileID: 255810610}
+  Heart1: {fileID: 1360961887}
+  Heart2: {fileID: 1630817758}
+  Heart3: {fileID: 1859283237}
+  inputNum1: {fileID: 1811866930}
+  inputNum2: {fileID: 799104432}
+  inputNum3: {fileID: 1205526461}
+  inputNum4: {fileID: 139510293}
 --- !u!1 &1798498255
 GameObject:
   m_ObjectHideFlags: 0
@@ -5454,8 +5442,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1770443318}
-        m_TargetAssemblyTypeName: Confirm, Assembly-CSharp
+      - m_Target: {fileID: 1770443319}
+        m_TargetAssemblyTypeName: GameControl, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
         m_Arguments:

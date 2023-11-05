@@ -10,15 +10,6 @@ using UnityEngine.SceneManagement;
 
 public class QuizControl : MonoBehaviour
 {
-    /*
-    // Switch related
-    public Text CurrentNum;
-    public int number = 1;
-    public GameObject plus;
-    public GameObject minus;
-    */
-
-    // Equation related
     public Equations[] problems;
     private static List<Equations> unansweredProblems;
 
@@ -138,7 +129,6 @@ public class QuizControl : MonoBehaviour
         Debug.Log("Answers: " + Element1 + " + " + Element2 + " -> " + Element3 + " + " + Element4);
     }
 
-
     IEnumerator TransitionToNextProblem()
     {
         // Remove current spawned problem from the list
@@ -147,22 +137,6 @@ public class QuizControl : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    /*
-    IEnumerator EnablePanel()
-    {
-        if (Confirm.outcome == 2)
-            {
-                gameOver.gameObject.SetActive(true);
-            }
-        else if (Confirm.outcome == 1)
-            {
-                correct.gameObject.SetActive(true);
-                //nextLevel.gameObject.SetActive(true);
-            }
-        yield return new WaitForSeconds(0.1f);
-    }
-    */
 
     public void CheckAnswer()
     {

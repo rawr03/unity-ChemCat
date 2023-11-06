@@ -32,13 +32,21 @@ public class QuizControl : MonoBehaviour
     private float timeBetweenEquations = 1f;
 
 
+    // Timer & Score
+    public Slider timerSlider;
+    public Text timerText;
+    public float gameTime;
+    private bool stopTimer;
+
     // Health related 
-    public GameObject Switch1, Switch4, correct, wrong, gameOver;
+    public GameObject Switch1, Switch4, gameOver;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
     // respawn problem
     public static int health;
-
+    public Text GameScoreDisplay;
+    public static int CurrScore;
+    
     // Life related
     public GameObject Heart1, Heart2, Heart3;
     public static float startTime;
@@ -55,17 +63,23 @@ public class QuizControl : MonoBehaviour
     {
         //nextLevel.gameObject.SetActive(false);
 
+        //Setup for Timer
+        stopTimer = false;
+        timerSlider.maxValue = gameTime; 
+        timerSlider.value = gameTime;
+
+        
         // set health to 3, and all hearts must be set active
         health = 3;
+        CurrScore = CurrScore;
+        GameScoreDisplay.text = CurrScore.ToString();
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
         Heart3.gameObject.SetActive(true);
 
         // Switch1, Switch4, correct, wrong and gameOver must be set to false by default
         Switch1.gameObject.SetActive(false);
-        Switch1.gameObject.SetActive(false);
-        correct.gameObject.SetActive(false);
-        wrong.gameObject.SetActive(false);
+        Switch4.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
 
         if (unansweredProblems == null || unansweredProblems.Count == 0)
@@ -97,19 +111,24 @@ public class QuizControl : MonoBehaviour
         equationAnswer4 = currentEquation.PD_coef2;
 
         Debug.Log(equationAnswer1 + " " + equationAnswer2 + " " + equationAnswer3 + " " + equationAnswer4);
-        
+
         // activate switch based on the Problem
-        if (equationAnswer1 != 0)
+        if (equationAnswer1 != 0 && equationAnswer4 == 0)
         {
             Switch1.gameObject.SetActive(true);
             Switch4.gameObject.SetActive(false);
         }
-        else if (equationAnswer4 != 0)
+        else if (equationAnswer4 != 0 && equationAnswer1 == 0)
         {
             Switch1.gameObject.SetActive(false);
             Switch4.gameObject.SetActive(true);
         }
-        
+        else
+        {
+            Switch1.gameObject.SetActive(true);
+            Switch4.gameObject.SetActive(true);
+        }
+
         RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
     }
 
@@ -156,8 +175,9 @@ public class QuizControl : MonoBehaviour
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
             {
                 Debug.Log("Correct");
-                correct.gameObject.SetActive(true);
                 StartCoroutine(TransitionToNextProblem());
+                CurrScore++;
+                GameScoreDisplay.text = CurrScore.ToString();
             }
             else
             {
@@ -170,8 +190,9 @@ public class QuizControl : MonoBehaviour
             if (Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
                 Debug.Log("Correct");
-                correct.gameObject.SetActive(true);
                 StartCoroutine(TransitionToNextProblem());
+                CurrScore++;
+                GameScoreDisplay.text = CurrScore.ToString();
             }
             else
             {
@@ -184,9 +205,9 @@ public class QuizControl : MonoBehaviour
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
                 Debug.Log("Correct");
-                correct.gameObject.SetActive(true);
                 StartCoroutine(TransitionToNextProblem());
-
+                CurrScore++;
+                GameScoreDisplay.text = CurrScore.ToString();
             }
             else
             {
@@ -201,6 +222,24 @@ public class QuizControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Timer
+        float time = gameTime - Time.time;
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time - minutes * 60f);
+        string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+
+        if (time <= 0)
+        {
+            stopTimer = true;
+        }
+
+        if (stopTimer == false)
+        {
+            timerText.text = textTime;
+            timerSlider.value = time;
+        }
+
+        //Health
         switch (health)
         {
             case 3:

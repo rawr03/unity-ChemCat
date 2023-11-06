@@ -175,11 +175,12 @@ public class QuizControl : MonoBehaviour
         {
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
             {
+                addTime = currentEquation.addtnlTime;
+                Debug.Log(addTime);
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
-                addTime = currentEquation.addtnlTime;
             }
             else
             {
@@ -191,11 +192,12 @@ public class QuizControl : MonoBehaviour
         {
             if (Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
+                addTime = currentEquation.addtnlTime;
+                Debug.Log(addTime);
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
-                addTime = currentEquation.addtnlTime;
             }
             else
             {
@@ -207,11 +209,13 @@ public class QuizControl : MonoBehaviour
         {
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
+                addTime = currentEquation.addtnlTime;
+                Debug.Log(addTime);
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
-                addTime = currentEquation.addtnlTime;
+                
             }
             else
             {

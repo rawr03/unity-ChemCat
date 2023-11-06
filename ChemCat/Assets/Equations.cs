@@ -10,5 +10,6 @@ public class Equations
     public string product1;
     public int PD_coef2;
     public string product2;
+    public int addtnlTime;
 
 }

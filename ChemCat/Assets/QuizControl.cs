@@ -29,7 +29,7 @@ public class QuizControl : MonoBehaviour
     private Text equationText4;
 
     [SerializeField]
-    private float timeBetweenEquations = 1f;
+    private float timeBetweenEquations = .01f;
 
 
     // Timer & Score
@@ -37,6 +37,7 @@ public class QuizControl : MonoBehaviour
     public Text timerText;
     public float gameTime;
     private bool stopTimer;
+    public static int addTime;
 
     // Health related 
     public GameObject Switch1, Switch4, gameOver;
@@ -178,6 +179,7 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                addTime = currentEquation.addtnlTime;
             }
             else
             {
@@ -193,6 +195,7 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                addTime = currentEquation.addtnlTime;
             }
             else
             {
@@ -208,6 +211,7 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                addTime = currentEquation.addtnlTime;
             }
             else
             {
@@ -223,7 +227,7 @@ public class QuizControl : MonoBehaviour
     void Update()
     {
         //Timer
-        float time = gameTime - Time.time;
+        float time = gameTime - Time.time + addTime;
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time - minutes * 60f);
         string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
@@ -262,7 +266,6 @@ public class QuizControl : MonoBehaviour
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
-                StartCoroutine(TransitionToNextProblem());
                 break;
         }
     }

@@ -270,6 +270,7 @@ public class QuizControl : MonoBehaviour
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
+                stopTimer = true;
                 break;
         }
     }

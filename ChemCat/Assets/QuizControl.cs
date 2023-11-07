@@ -37,7 +37,7 @@ public class QuizControl : MonoBehaviour
     public Text timerText;
     public float gameTime;
     private bool stopTimer;
-    public static int addTime;
+    public float addTime;
 
     // Health related 
     public GameObject Switch1, Switch4, gameOver;

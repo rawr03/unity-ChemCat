@@ -40,13 +40,21 @@ public class QuizControl : MonoBehaviour
     public float addTime;
 
     // Health related 
-    public GameObject Switch1, Switch4, gameOver;
+    public GameObject Switch1, Switch4, gameOver, newHighscore;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
+
+    //PopUp
+    public static int Highscore;
+    public Text GameOver_Score;
+    public Text GameOver_HighscoreDisplay;
+    public Text Highscore_Score;
+    public Text Highscore_HighscoreDisplay;
 
     // respawn problem
     public static int health;
     public Text GameScoreDisplay;
     public static int CurrScore;
+    
     
     // Life related
     public GameObject Heart1, Heart2, Heart3;
@@ -82,6 +90,7 @@ public class QuizControl : MonoBehaviour
         Switch1.gameObject.SetActive(false);
         Switch4.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
+        newHighscore.gameObject.SetActive(false);
 
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
@@ -171,41 +180,7 @@ public class QuizControl : MonoBehaviour
         Num4.Trim();
         Debug.Log("Input: " + Num1 + ", " + Num2 + ", " + Num3 + ", " + Num4);
 
-        if (Element4 == "0")
-        {
-            if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
-            {
-                addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
-                Debug.Log("Correct");
-                StartCoroutine(TransitionToNextProblem());
-                CurrScore++;
-                GameScoreDisplay.text = CurrScore.ToString();
-            }
-            else
-            {
-                Debug.Log("Wrong");
-                health--;
-            }
-        }
-        else if (Element1 == "0")
-        {
-            if (Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
-            {
-                addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
-                Debug.Log("Correct");
-                StartCoroutine(TransitionToNextProblem());
-                CurrScore++;
-                GameScoreDisplay.text = CurrScore.ToString();
-            }
-            else
-            {
-                Debug.Log("Wrong");
-                health--;
-            }
-        }
-        else
+        if (equationAnswer1 != 0 && equationAnswer4 != 0)
         {
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
@@ -223,7 +198,59 @@ public class QuizControl : MonoBehaviour
                 health--;
             }
         }
+        else if (equationAnswer1 != 0 && equationAnswer4 == 0)
+        {
+            if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
+            {
+                addTime = currentEquation.addtnlTime;
+                Debug.Log(addTime);
+                Debug.Log("Correct");
+                StartCoroutine(TransitionToNextProblem());
+                CurrScore++;
+                GameScoreDisplay.text = CurrScore.ToString();
+            }
+            else
+            {
+                Debug.Log("Wrong");
+                health--;
+            }
+        }
+        else if (equationAnswer1 == 0 && equationAnswer4 != 0)
+        {
+            if (Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
+            {
+                addTime = currentEquation.addtnlTime;
+                Debug.Log(addTime);
+                Debug.Log("Correct");
+                StartCoroutine(TransitionToNextProblem());
+                CurrScore++;
+                GameScoreDisplay.text = CurrScore.ToString();
+            }
+            else
+            {
+                Debug.Log("Wrong");
+                health--;
+            }
+        }
+        
         // StartCoroutine(EnablePanel());
+    }
+
+    void CheckHighscore()
+    {
+        if (CurrScore > Highscore)
+            {
+                newHighscore.gameObject.SetActive(true);
+                Highscore = CurrScore;
+                Highscore_Score.text = Highscore.ToString();
+                Highscore_HighscoreDisplay.text = CurrScore.ToString();
+            }
+            else
+            {
+                gameOver.gameObject.SetActive(true);
+                GameOver_Score.text = CurrScore.ToString();
+                GameOver_HighscoreDisplay.text = Highscore.ToString();
+            }
     }
 
 
@@ -239,6 +266,7 @@ public class QuizControl : MonoBehaviour
         if (time <= 0)
         {
             stopTimer = true;
+            CheckHighscore();
         }
 
         if (stopTimer == false)
@@ -271,6 +299,7 @@ public class QuizControl : MonoBehaviour
                 Heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
                 stopTimer = true;
+                CheckHighscore();
                 break;
         }
     }

@@ -33,7 +33,7 @@ public class StandardControl : MonoBehaviour
 
 
     // Health related 
-    public GameObject Switch1, Switch4, gameOver, nextLevel, perfect, great, good;
+    public GameObject Switch1, Switch4, gameOver, perfect, great, good;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
     // respawn problem
@@ -65,7 +65,6 @@ public class StandardControl : MonoBehaviour
         gameOver.gameObject.SetActive(false);
 
         // hide floating docks
-        nextLevel.gameObject.SetActive(false);
         perfect.gameObject.SetActive(false);
         great.gameObject.SetActive(false);
         good.gameObject.SetActive(false);
@@ -163,13 +162,7 @@ public class StandardControl : MonoBehaviour
         {
             good.gameObject.SetActive(true);
         }
-        else
-        {
-            gameOver.gameObject.SetActive(true);
-        }
-
         yield return new WaitForSeconds(timeBetweenEquations);
-        nextLevel.gameObject.SetActive(true);
     }
 
 
@@ -229,6 +222,10 @@ public class StandardControl : MonoBehaviour
         // StartCoroutine(EnablePanel());
     }
 
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     // Update is called once per frame
     void Update()
@@ -254,6 +251,7 @@ public class StandardControl : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
+                gameOver.gameObject.SetActive(true);
                 StartCoroutine(TransitionToNextLevel());
                 break;
         }

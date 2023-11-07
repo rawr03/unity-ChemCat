@@ -253,6 +253,13 @@ public class QuizControl : MonoBehaviour
             }
     }
 
+    void Retry()
+    {
+        newHighscore.gameObject.SetActive(false);
+        gameOver.gameObject.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 
     // Update is called once per frame
     void Update()

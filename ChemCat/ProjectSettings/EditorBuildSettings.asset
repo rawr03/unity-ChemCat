@@ -33,6 +33,15 @@ EditorBuildSettings:
     path: Assets/Scenes/EasyLevel2.unity
     guid: 41e79507c32a6ff41a29bf0719b7b986
   - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level1.unity
+    guid: cc76a4594ac1a504da423c440992a549
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level2.unity
+    guid: 956809c30da42164892b686dbc257f7f
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level3.unity
+    guid: 3c5474e2a5d04e04eb9124186964c211
+  - enabled: 1
     path: Assets/Scenes/DraftQuiz2.unity
     guid: 059f7ab05a824ab4f98a38f49f7aceef
   m_configObjects: {}

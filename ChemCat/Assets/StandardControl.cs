@@ -159,9 +159,13 @@ public class StandardControl : MonoBehaviour
         {
             great.gameObject.SetActive(true);
         }
-        else
+        else if (health == 1)
         {
             good.gameObject.SetActive(true);
+        }
+        else
+        {
+            gameOver.gameObject.SetActive(true);
         }
 
         yield return new WaitForSeconds(timeBetweenEquations);
@@ -250,7 +254,6 @@ public class StandardControl : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
                 StartCoroutine(TransitionToNextLevel());
                 break;
         }

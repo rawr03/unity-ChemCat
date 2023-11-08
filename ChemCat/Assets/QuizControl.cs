@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class QuizControl : MonoBehaviour
 {
@@ -31,6 +32,11 @@ public class QuizControl : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = .01f;
 
+    // Timer
+    float time = 0f;
+    int minutes = 0;
+    int seconds = 0;
+    string textTime;
 
     // Timer & Score
     public Slider timerSlider;
@@ -40,7 +46,7 @@ public class QuizControl : MonoBehaviour
     public float addTime;
 
     // Health related 
-    public GameObject Switch1, Switch4, gameOver, newHighscore;
+    public GameObject Switch1, Switch4, gameOver, newHighscore, settings;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
     //PopUp
@@ -55,7 +61,6 @@ public class QuizControl : MonoBehaviour
     public Text GameScoreDisplay;
     public static int CurrScore;
     
-    
     // Life related
     public GameObject Heart1, Heart2, Heart3;
     public static float startTime;
@@ -66,12 +71,11 @@ public class QuizControl : MonoBehaviour
     private static string Num1, Num2, Num3, Num4;
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
- 
 
     void Start()
     {
         //nextLevel.gameObject.SetActive(false);
-
+    
         //Setup for Timer
         stopTimer = false;
         timerSlider.maxValue = gameTime; 
@@ -238,6 +242,7 @@ public class QuizControl : MonoBehaviour
 
     void CheckHighscore()
     {
+        time = 180;
         if (CurrScore > Highscore)
             {
                 newHighscore.gameObject.SetActive(true);
@@ -253,22 +258,20 @@ public class QuizControl : MonoBehaviour
             }
     }
 
-    void Retry()
+    public void Retry()
     {
+        Debug.Log("This button is working.");
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-
-    // Update is called once per frame
-    void Update()
+    void Timer()
     {
-        //Timer
-        float time = gameTime - Time.time + addTime;
-        int minutes = Mathf.FloorToInt(time / 60);
-        int seconds = Mathf.FloorToInt(time - minutes * 60f);
-        string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+        time = gameTime - Time.deltaTime + addTime;
+        minutes = Mathf.FloorToInt(time / 60);
+        seconds = Mathf.FloorToInt(time - minutes * 60f);
+        textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
 
         if (time <= 0)
         {
@@ -281,6 +284,22 @@ public class QuizControl : MonoBehaviour
             timerText.text = textTime;
             timerSlider.value = time;
         }
+
+        if (settings.gameObject.active)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //Timer
+        Timer();
 
         //Health
         switch (health)

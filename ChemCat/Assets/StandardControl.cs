@@ -55,6 +55,7 @@ public class StandardControl : MonoBehaviour
     {
         // set health to 3, and all hearts must be set active
         health = 3;
+        
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
         Heart3.gameObject.SetActive(true);
@@ -74,8 +75,8 @@ public class StandardControl : MonoBehaviour
             unansweredProblems = problems.ToList<Equations>();
         }
 
-        // call to get random Equation
         GetRandomEquation();
+        // call to get random Equation
     }
 
 
@@ -225,6 +226,7 @@ public class StandardControl : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOver.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

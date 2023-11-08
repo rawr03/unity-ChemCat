@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Standard Mode.unity
     guid: d866c4cb929200b46bc704ca5373bd80
   - enabled: 1
-    path: Assets/Scenes/QuizMode.unity
-    guid: bf8e851f6d73d1949823546ebaaa636e
+    path: Assets/Scenes/QuizMode_ANDEE.unity
+    guid: d4fc5f916be53df4091d60cc27039787
   - enabled: 1
     path: Assets/Scenes/Level_Select/Easy Level.unity
     guid: e55b7980a36cebf4b93fb23a19322fc4
@@ -33,6 +33,66 @@ EditorBuildSettings:
     path: Assets/Scenes/EasyLevel2.unity
     guid: 41e79507c32a6ff41a29bf0719b7b986
   - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level1.unity
+    guid: 7fce2b2a2b1571e459c675d8a6a77656
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level2.unity
+    guid: fc299006101d16a4c801d276d932db4a
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level3.unity
+    guid: e75871c715271214fb4bce8c16b1135d
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level4.unity
+    guid: 235b9576fca7449498c571a725a4ea0d
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level5.unity
+    guid: 6a21a8828f87c3c4991ab164a73f5ba8
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level6.unity
+    guid: 7d487b419d67a5a479630d478f35fe0c
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level7.unity
+    guid: e9b38658ae92afc428ad35272032b802
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level8.unity
+    guid: 65f7f0c9f16220c43b69966102137851
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level9.unity
+    guid: d554afc6ad06b114cb8e79334e510f13
+  - enabled: 1
+    path: Assets/Scenes/S_EasyLevels/Easy_Level10.unity
+    guid: 9fe8c2e5a156b9b4ba438f7af689b51b
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level1.unity
+    guid: 38cdff6bc71dd3147bf207cbcc8c0e79
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level2.unity
+    guid: a222ef0daec5c8946806258182a6130e
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level3.unity
+    guid: 13449e2e09b697546b545e582247ff42
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level4.unity
+    guid: 50021f1666de6b641beef73ce0ea2f72
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level5.unity
+    guid: 9b011f904131bc5478a04cc1eea64d48
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level6.unity
+    guid: 046fa915bed75b545a354af75fb70cee
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level7.unity
+    guid: b1bf3a63beb1aa54e8e1d5872461affd
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level8.unity
+    guid: 194e80e3dea203c48a6ebed1751e772e
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level9.unity
+    guid: 10669691874a914459ff6951420841db
+  - enabled: 1
+    path: Assets/Scenes/S_MediumLevels/Medium Level10.unity
+    guid: 6144fcdc86aff564a90a9a7b21929d39
+  - enabled: 1
     path: Assets/Scenes/S_HardLevels/Hard_Level1.unity
     guid: cc76a4594ac1a504da423c440992a549
   - enabled: 1
@@ -42,6 +102,24 @@ EditorBuildSettings:
     path: Assets/Scenes/S_HardLevels/Hard_Level3.unity
     guid: 3c5474e2a5d04e04eb9124186964c211
   - enabled: 1
-    path: Assets/Scenes/DraftQuiz2.unity
-    guid: 059f7ab05a824ab4f98a38f49f7aceef
+    path: Assets/Scenes/S_HardLevels/Hard_Level4.unity
+    guid: cb2d57ec7f290be4dbfd83cfec3500e8
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level5.unity
+    guid: 44d3522e5c8ab8b4ca3723ed36dc0d62
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level6.unity
+    guid: 9dae92bb2dd34fe49ad24038d4ee105d
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level7.unity
+    guid: 2b22eff3981d07b4fbab97f868b72e89
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level8.unity
+    guid: 6bde88ddaeb4ce2478538d29b9526e03
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level9.unity
+    guid: d207cf4632db3af4f96cd9118213f03c
+  - enabled: 1
+    path: Assets/Scenes/S_HardLevels/Hard_Level10.unity
+    guid: 5be350a843eb43b47b6b20dee055d863
   m_configObjects: {}

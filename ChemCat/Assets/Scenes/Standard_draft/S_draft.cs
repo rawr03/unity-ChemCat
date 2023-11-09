@@ -7,9 +7,8 @@ using Unity.VisualScripting;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
-public class QuizControl : MonoBehaviour
+public class S_draft : MonoBehaviour
 {
     public Equations[] problems;
     private static List<Equations> unansweredProblems;
@@ -30,37 +29,19 @@ public class QuizControl : MonoBehaviour
     private Text equationText4;
 
     [SerializeField]
-    private float timeBetweenEquations = .01f;
+    private float timeBetweenEquations = 1f;
 
-    // Timer
-    float time = 0f;
-    int minutes = 0;
-    int seconds = 0;
-    string textTime;
+    [SerializeField]
+    private int currentEquationIndex;
 
-    // Timer & Score
-    public Slider timerSlider;
-    public Text timerText;
-    public float gameTime;
-    private bool stopTimer;
-    public float addTime;
 
     // Health related 
-    public GameObject Switch1, Switch4, gameOver, newHighscore, settings;
+    public GameObject Switch1, Switch4, gameOver, perfect, great, good;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
-
-    //PopUp
-    public static int Highscore;
-    public Text GameOver_Score;
-    public Text GameOver_HighscoreDisplay;
-    public Text Highscore_Score;
-    public Text Highscore_HighscoreDisplay;
 
     // respawn problem
     public static int health;
-    public Text GameScoreDisplay;
-    public static int CurrScore;
-    
+
     // Life related
     public GameObject Heart1, Heart2, Heart3;
     public static float startTime;
@@ -72,46 +53,41 @@ public class QuizControl : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
+
     void Start()
     {
-        //nextLevel.gameObject.SetActive(false);
-
-        //Setup for Timer
-        gameTime = 180;
-        stopTimer = false;
-        timerSlider.maxValue = gameTime; 
-        timerSlider.value = gameTime;
-
-        
         // set health to 3, and all hearts must be set active
         health = 3;
-        CurrScore = CurrScore;
-        GameScoreDisplay.text = CurrScore.ToString();
+        
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
         Heart3.gameObject.SetActive(true);
 
         // Switch1, Switch4, correct, wrong and gameOver must be set to false by default
         Switch1.gameObject.SetActive(false);
-        Switch4.gameObject.SetActive(false);
+        Switch1.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
-        newHighscore.gameObject.SetActive(false);
+
+        // hide floating docks
+        perfect.gameObject.SetActive(false);
+        great.gameObject.SetActive(false);
+        good.gameObject.SetActive(false);
 
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
             unansweredProblems = problems.ToList<Equations>();
         }
 
-        // call to get random Equation
         GetRandomEquation();
+        // call to get random Equation
     }
 
 
     public void GetRandomEquation()
     {
         // take random index
-        int randomEquationIndex = Random.Range(0, unansweredProblems.Count);
-        currentEquation = unansweredProblems[randomEquationIndex];
+        // int randomEquationIndex = Random.Range(0, unansweredProblems.Count);
+        currentEquation = unansweredProblems[currentEquationIndex];
 
         // equation Text displayed
         equationText1.text = currentEquation.reactant1;
@@ -163,6 +139,7 @@ public class QuizControl : MonoBehaviour
         Debug.Log("Answers: " + Element1 + " + " + Element2 + " -> " + Element3 + " + " + Element4);
     }
 
+    /*
     IEnumerator TransitionToNextProblem()
     {
         // Remove current spawned problem from the list
@@ -170,7 +147,27 @@ public class QuizControl : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenEquations);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(NextLevel.buildIndex);
     }
+    */
+
+    IEnumerator TransitionToNextLevel()
+    {
+        if (health == 3)
+        {
+            perfect.gameObject.SetActive(true);
+        }
+        else if (health == 2)
+        {
+            great.gameObject.SetActive(true);
+        }
+        else if (health == 1)
+        {
+            good.gameObject.SetActive(true);
+        }
+        yield return new WaitForSeconds(timeBetweenEquations);
+    }
+
 
     public void CheckAnswer()
     {
@@ -185,34 +182,12 @@ public class QuizControl : MonoBehaviour
         Num4.Trim();
         Debug.Log("Input: " + Num1 + ", " + Num2 + ", " + Num3 + ", " + Num4);
 
-        if (equationAnswer1 != 0 && equationAnswer4 != 0)
-        {
-            if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
-            {
-                addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
-                Debug.Log("Correct");
-                StartCoroutine(TransitionToNextProblem());
-                CurrScore++;
-                GameScoreDisplay.text = CurrScore.ToString();
-                
-            }
-            else
-            {
-                Debug.Log("Wrong");
-                health--;
-            }
-        }
-        else if (equationAnswer1 != 0 && equationAnswer4 == 0)
+        if (Element4 == "0")
         {
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
             {
-                addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
                 Debug.Log("Correct");
-                StartCoroutine(TransitionToNextProblem());
-                CurrScore++;
-                GameScoreDisplay.text = CurrScore.ToString();
+                StartCoroutine(TransitionToNextLevel());
             }
             else
             {
@@ -220,16 +195,12 @@ public class QuizControl : MonoBehaviour
                 health--;
             }
         }
-        else if (equationAnswer1 == 0 && equationAnswer4 != 0)
+        else if (Element1 == "0")
         {
             if (Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
-                addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
                 Debug.Log("Correct");
-                StartCoroutine(TransitionToNextProblem());
-                CurrScore++;
-                GameScoreDisplay.text = CurrScore.ToString();
+                StartCoroutine(TransitionToNextLevel());
             }
             else
             {
@@ -237,67 +208,32 @@ public class QuizControl : MonoBehaviour
                 health--;
             }
         }
-        
-        // StartCoroutine(EnablePanel());
-    }
-
-    void CheckHighscore()
-    {
-        if (CurrScore > Highscore)
+        else
+        {
+            if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
-                newHighscore.gameObject.SetActive(true);
-                Highscore = CurrScore;
-                Highscore_Score.text = Highscore.ToString();
-                Highscore_HighscoreDisplay.text = CurrScore.ToString();
+                Debug.Log("Correct");
+                StartCoroutine(TransitionToNextLevel());
+
             }
             else
             {
-                gameOver.gameObject.SetActive(true);
-                GameOver_Score.text = CurrScore.ToString();
-                GameOver_HighscoreDisplay.text = Highscore.ToString();
+                Debug.Log("Wrong");
+                health--;
             }
+        }
+        // StartCoroutine(EnablePanel());
     }
 
     public void Retry()
     {
-        CurrScore = 0;
-        time = 180;
-        Debug.Log(time);
-        newHighscore.gameObject.SetActive(false);
-        gameOver.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        gameOver.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //timer
-        time = gameTime - Time.time + addTime;
-        minutes = Mathf.FloorToInt(time / 60);
-        seconds = Mathf.FloorToInt(time - minutes * 60f);
-        textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
-
-        if (time <= 0)
-        {
-            stopTimer = true;
-            CheckHighscore();
-        }
-
-        if (stopTimer == false)
-        {
-            timerText.text = textTime;
-            timerSlider.value = time;
-        }
-
-        if (settings.gameObject.active)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
-        //Health
         switch (health)
         {
             case 3:
@@ -320,8 +256,7 @@ public class QuizControl : MonoBehaviour
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
-                stopTimer = true;
-                CheckHighscore();
+                StartCoroutine(TransitionToNextLevel());
                 break;
         }
     }

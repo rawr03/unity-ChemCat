@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
+using System.ComponentModel;
 
 public class StandardControl : MonoBehaviour
 {
@@ -163,6 +164,7 @@ public class StandardControl : MonoBehaviour
         {
             good.gameObject.SetActive(true);
         }
+        //Score.completed == true;
         yield return new WaitForSeconds(timeBetweenEquations);
     }
 

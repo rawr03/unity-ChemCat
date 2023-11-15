@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 public class QuizControl : MonoBehaviour
 {
@@ -18,16 +19,16 @@ public class QuizControl : MonoBehaviour
 
     // display Text of Equation Problem
     [SerializeField]
-    private Text equationText1;
+    private TextMeshProUGUI equationText1;
 
     [SerializeField]
-    private Text equationText2;
+    private TextMeshProUGUI equationText2;
 
     [SerializeField]
-    private Text equationText3;
+    private TextMeshProUGUI equationText3;
 
     [SerializeField]
-    private Text equationText4;
+    private TextMeshProUGUI equationText4;
 
     [SerializeField]
     private float timeBetweenEquations = .01f;

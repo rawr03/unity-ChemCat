@@ -7495,10 +7495,15 @@ MonoBehaviour:
   equationText3: {fileID: 1624295166}
   equationText4: {fileID: 619452026}
   timeBetweenEquations: 1
+  time: 0
+  minutes: 0
+  seconds: 0
+  textTime: 
   timerSlider: {fileID: 1726054337}
   timerText: {fileID: 1151292445}
   gameTime: 180
   addTime: 0
+  elapsedtime: 0
   Switch1: {fileID: 1373719512}
   Switch4: {fileID: 1296691139}
   gameOver: {fileID: 1816524188}

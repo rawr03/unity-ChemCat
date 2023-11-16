@@ -33,6 +33,10 @@ public class QuizControl : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = .01f;
 
+    // anim
+    public TextMeshProUGUI addtnlTime;
+    //private Animator anim;
+
     // Timer
     public float time = 0f;
     public int minutes = 0;
@@ -52,7 +56,7 @@ public class QuizControl : MonoBehaviour
     public float gameTime;
     private bool stopTimer;
     public float addTime;
-    public float elapsedtime;
+    public float elapsedTime;
     
 
     // Health related 
@@ -84,10 +88,14 @@ public class QuizControl : MonoBehaviour
 
     void Start()
     {
+        //anim = GetComponent<Animator>();
         settings.gameObject.SetActive(false);
-        time = 0f;
-        //Setup for Timer
-        ResetTime();
+
+        //Setup for Time
+        stopTimer = false;
+        timerSlider.maxValue = gameTime;
+        timerSlider.value = gameTime;
+        // gameTime = 180f;
 
         // set health to 3, and all hearts must be set active
         health = 3;
@@ -152,8 +160,10 @@ public class QuizControl : MonoBehaviour
             Switch4.gameObject.SetActive(true);
         }
 
+        addtnlTime.text = "+" + currentEquation.addtnlTime.ToString();
         RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
     }
+
 
     public static void RecordAnswer(int equationAnswer1, int equationAnswer2, int equationAnswer3, int equationAnswer4)
     {
@@ -173,6 +183,8 @@ public class QuizControl : MonoBehaviour
 
     IEnumerator TransitionToNextProblem()
     {
+         addtnlTime.gameObject.SetActive(true);
+        
         // Remove current spawned problem from the list
         unansweredProblems.Remove(currentEquation);
         yield return new WaitForSeconds(timeBetweenEquations);
@@ -211,7 +223,6 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
-                
             }
             else
             {
@@ -240,6 +251,7 @@ public class QuizControl : MonoBehaviour
         {
             if (Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
+                // anim.SetBool("Correct", true);
                 addTime = currentEquation.addtnlTime;
                 Debug.Log(addTime);
                 Debug.Log("Correct");
@@ -278,35 +290,12 @@ public class QuizControl : MonoBehaviour
     {
         Debug.Log("Retry");
         CurrScore = 0;
-        ResetTime();
+        gameTime = 180;
         //Debug.Log(time);
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
-        SceneManager.LoadScene("QuizMode_ANDEE");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         
-    }
-
-    public void ResetTime()
-    {
-        time = 180f;
-        timerSlider.maxValue = time;
-        timerSlider.value = time;
-        minutes = Mathf.FloorToInt(time / 60);
-        seconds = Mathf.FloorToInt(time - minutes * 60f);
-        textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
-    }
-
-    public void Countdown()
-    {
-        /*
-        stopTimer = false;
-        timerSlider.maxValue = gameTime;
-        timerSlider.value = gameTime;
-        */
-        time = gameTime - Time.time + addTime;
-        minutes = Mathf.FloorToInt(time / 60);
-        seconds = Mathf.FloorToInt(time - minutes * 60f);
-        textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
     }
 
     /*
@@ -348,7 +337,13 @@ public class QuizControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Countdown();
+        elapsedTime += Time.deltaTime;
+        time = gameTime - elapsedTime + addTime;
+        // Debug.Log(time);
+        // time += addTime;
+        minutes = Mathf.FloorToInt(time / 60);
+        seconds = Mathf.FloorToInt(time - minutes * 60f);
+        textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
 
         if (time <= 0)
         {

@@ -10,7 +10,7 @@ public class GamePlayFunctionalities : MonoBehaviour
     public int number = 1;
     public GameObject plus;
     public GameObject minus;
-    public string Textnumber; 
+    //public string Textnumber; 
     public void Add()
     {
         if (number < 9)

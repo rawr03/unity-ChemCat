@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class S_draft : MonoBehaviour
 {
@@ -17,16 +18,16 @@ public class S_draft : MonoBehaviour
 
     // display Text of Equation Problem
     [SerializeField]
-    private Text equationText1;
+    private TextMeshProUGUI equationText1;
 
     [SerializeField]
-    private Text equationText2;
+    private TextMeshProUGUI equationText2;
 
     [SerializeField]
-    private Text equationText3;
+    private TextMeshProUGUI equationText3;
 
     [SerializeField]
-    private Text equationText4;
+    private TextMeshProUGUI equationText4;
 
     [SerializeField]
     private float timeBetweenEquations = 1f;
@@ -35,10 +36,15 @@ public class S_draft : MonoBehaviour
     private int currentEquationIndex;
 
 
-    // Health related 
-    public GameObject Switch1, Switch4, gameOver, perfect, great, good;
-    public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
+    
+    public TextMeshProUGUI Level;
 
+    // Pop ups
+    public GameObject Switch1, Switch4, gameOver, perfect, great, good;
+
+    // Reactants and Products
+    public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
+   
     // respawn problem
     public static int health;
 
@@ -46,9 +52,10 @@ public class S_draft : MonoBehaviour
     public GameObject Heart1, Heart2, Heart3;
     public static float startTime;
 
-    // Start is called before the first frame update
+    // Coefficients 
     public GameObject inputNum1, inputNum2, inputNum3, inputNum4;
 
+    public static int LevelNum;
     private static string Num1, Num2, Num3, Num4;
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
@@ -58,7 +65,10 @@ public class S_draft : MonoBehaviour
     {
         // set health to 3, and all hearts must be set active
         health = 3;
-        
+
+        LevelNum = currentEquationIndex + 1;
+        Level.text = LevelNum.ToString();
+
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
         Heart3.gameObject.SetActive(true);
@@ -81,6 +91,7 @@ public class S_draft : MonoBehaviour
         GetRandomEquation();
         // call to get random Equation
     }
+
 
 
     public void GetRandomEquation()
@@ -225,6 +236,8 @@ public class S_draft : MonoBehaviour
         // StartCoroutine(EnablePanel());
     }
 
+    
+
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -234,6 +247,7 @@ public class S_draft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         switch (health)
         {
             case 3:

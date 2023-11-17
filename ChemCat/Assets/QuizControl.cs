@@ -43,6 +43,8 @@ public class QuizControl : MonoBehaviour
     public int seconds = 0;
     public string textTime;
 
+    public int gameScore;
+
     /*
     public Slider timerSlider;
     public float sliderTimer;
@@ -99,7 +101,7 @@ public class QuizControl : MonoBehaviour
 
         // set health to 3, and all hearts must be set active
         health = 3;
-        CurrScore = CurrScore;
+        CurrScore = gameScore+ CurrScore;
         GameScoreDisplay.text = CurrScore.ToString();
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
@@ -191,6 +193,7 @@ public class QuizControl : MonoBehaviour
 
         if (currentEquation != null)
         {
+            gameScore = CurrScore;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else

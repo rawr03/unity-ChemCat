@@ -36,10 +36,14 @@ public class S_draft : MonoBehaviour
     private int currentEquationIndex;
 
 
-    // Health related 
-    public GameObject Switch1, Switch4, gameOver, perfect, great, good;
-    public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
+    
+    public TextMeshProUGUI Level;
 
+    // Pop ups
+    public GameObject Switch1, Switch4, gameOver, perfect, great, good;
+
+    // Reactants and Products
+    public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
    
     // respawn problem
     public static int health;
@@ -48,27 +52,22 @@ public class S_draft : MonoBehaviour
     public GameObject Heart1, Heart2, Heart3;
     public static float startTime;
 
-    // Start is called before the first frame update
+    // Coefficients 
     public GameObject inputNum1, inputNum2, inputNum3, inputNum4;
 
+    public static int LevelNum;
     private static string Num1, Num2, Num3, Num4;
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
-    /*
-    // Visuals
-    public GameObject React_1_1, React_1_2, React_1_3, React_1_4, React_1_5, React_1_6, React_1_7, React_1_8, React_1_9;
-    public GameObject React_2_1, React_2_2, React_2_3, React_2_4, React_2_5, React_2_6, React_2_7, React_2_8, React_2_9;
-    public GameObject Prod_1_1, Prod_1_2, Prod_1_3, Prod_1_4, Prod_1_5, Prod_1_6, Prod_1_7, Prod_1_8, Prod_1_9;
-    public GameObject Prod_2_1, Prod_2_2, Prod_2_3, Prod_2_4, Prod_2_5, Prod_2_6, Prod_2_7, Prod_2_8, Prod_2_9;
-    */
 
     void Start()
     {
         // set health to 3, and all hearts must be set active
         health = 3;
 
-        //inactiveObj();
+        LevelNum = currentEquationIndex + 1;
+        Level.text = LevelNum.ToString();
 
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
@@ -93,51 +92,7 @@ public class S_draft : MonoBehaviour
         // call to get random Equation
     }
 
-    /*
-    public void inactiveObj()
-    {
-        React_1_1.gameObject.SetActive(false);
-        React_1_2.gameObject.SetActive(false);
-        React_1_3.gameObject.SetActive(false);
-        React_1_4.gameObject.SetActive(false);
-        React_1_5.gameObject.SetActive(false);
-        React_1_6.gameObject.SetActive(false);
-        React_1_7.gameObject.SetActive(false);
-        React_1_8.gameObject.SetActive(false);
-        React_1_9.gameObject.SetActive(false);
 
-        React_2_1.gameObject.SetActive(true);
-        React_2_2.gameObject.SetActive(false);
-        React_2_3.gameObject.SetActive(false);
-        React_2_4.gameObject.SetActive(false);
-        React_2_5.gameObject.SetActive(false);
-        React_2_6.gameObject.SetActive(false);
-        React_2_7.gameObject.SetActive(false);
-        React_2_8.gameObject.SetActive(false);
-        React_2_9.gameObject.SetActive(false);
-
-        Prod_1_1.gameObject.SetActive(true);
-        Prod_1_2.gameObject.SetActive(false);
-        Prod_1_3.gameObject.SetActive(false);
-        Prod_1_4.gameObject.SetActive(false);
-        Prod_1_5.gameObject.SetActive(false);
-        Prod_1_6.gameObject.SetActive(false);
-        Prod_1_7.gameObject.SetActive(false);
-        Prod_1_8.gameObject.SetActive(false);
-        Prod_1_9.gameObject.SetActive(false);
-
-        Prod_2_1.gameObject.SetActive(false);
-        Prod_2_2.gameObject.SetActive(false);
-        Prod_2_3.gameObject.SetActive(false);
-        Prod_2_4.gameObject.SetActive(false);
-        Prod_2_5.gameObject.SetActive(false);
-        Prod_2_6.gameObject.SetActive(false);
-        Prod_2_7.gameObject.SetActive(false);
-        Prod_2_8.gameObject.SetActive(false);
-        Prod_2_9.gameObject.SetActive(false);
-
-    }
-    */
 
     public void GetRandomEquation()
     {
@@ -281,35 +236,7 @@ public class S_draft : MonoBehaviour
         // StartCoroutine(EnablePanel());
     }
 
-    /*
-    public void VisualSimulator(string Num1, string Num2, string Num3, string Num4)
-    {
-        if (Num1 == "2")
-        {
-            React_1_1.gameObject.SetActive(true);
-            React_1_2.gameObject.SetActive(true);
-            React_1_3.gameObject.SetActive(false);
-            React_1_4.gameObject.SetActive(false);
-            React_1_5.gameObject.SetActive(false);
-            React_1_6.gameObject.SetActive(false);
-            React_1_7.gameObject.SetActive(false);
-            React_1_8.gameObject.SetActive(false);
-            React_1_9.gameObject.SetActive(false);
-        }
-        if (Num1 == "3")
-        {
-            React_1_1.gameObject.SetActive(true);
-            React_1_2.gameObject.SetActive(true);
-            React_1_3.gameObject.SetActive(true);
-            React_1_4.gameObject.SetActive(false);
-            React_1_5.gameObject.SetActive(false);
-            React_1_6.gameObject.SetActive(false);
-            React_1_7.gameObject.SetActive(false);
-            React_1_8.gameObject.SetActive(false);
-            React_1_9.gameObject.SetActive(false);
-        }
-    }
-    */
+    
 
     public void Retry()
     {
@@ -320,7 +247,7 @@ public class S_draft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //VisualSimulator(Num1,Num2, Num3, Num4);
+        
         switch (health)
         {
             case 3:

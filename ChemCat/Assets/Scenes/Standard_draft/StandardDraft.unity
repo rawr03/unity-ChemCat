@@ -3194,7 +3194,8 @@ MonoBehaviour:
   equationText3: {fileID: 275019600}
   equationText4: {fileID: 1884704810}
   timeBetweenEquations: 1
-  currentEquationIndex: 1
+  currentEquationIndex: 5
+  Level: {fileID: 207314419}
   Switch1: {fileID: 657138075}
   Switch4: {fileID: 1884704809}
   gameOver: {fileID: 1301598711}

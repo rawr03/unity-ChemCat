@@ -37,7 +37,7 @@ public class SwitchTest : MonoBehaviour
     
     public void Visuals(int number)
     {
-        number = number;
+        //number = number;
         switch (number)
         {
             

@@ -6995,7 +6995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 266589020865087852, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_Pivot.x
@@ -7292,7 +7292,7 @@ MonoBehaviour:
   Switch4: {fileID: 1296691139}
   gameOver: {fileID: 1816524188}
   newHighscore: {fileID: 1623353676}
-  settings: {fileID: 0}
+  settings: {fileID: 1884306794}
   GameOver_Score: {fileID: 696884528}
   GameOver_HighscoreDisplay: {fileID: 1917923553}
   Highscore_Score: {fileID: 1581749100}
@@ -8418,6 +8418,11 @@ RectTransform:
   m_AnchoredPosition: {x: -102.00569, y: -43.44688}
   m_SizeDelta: {x: 240, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1884306794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 266589020865087852, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
+  m_PrefabInstance: {fileID: 1738070749}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1915913287
 GameObject:
   m_ObjectHideFlags: 0

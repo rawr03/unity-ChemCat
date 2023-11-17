@@ -9,7 +9,7 @@ using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class VizTest : MonoBehaviour
+public class VisualsControl : MonoBehaviour
 {
     public GameObject E1, E2, E3, E4, E5, E6, E7, E8, E9;
     public GameObject inputNum;
@@ -19,7 +19,7 @@ public class VizTest : MonoBehaviour
 
     public void Visuals()
     {
-        Num = inputNum.GetComponent<TextMeshProUGUI>().text;
+        Num = inputNum.GetComponent<Text>().text;
         Num.Trim();
 
         switch (Num)

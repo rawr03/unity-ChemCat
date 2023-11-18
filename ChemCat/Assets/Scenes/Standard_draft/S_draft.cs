@@ -38,8 +38,8 @@ public class S_draft : MonoBehaviour
     public static int PassCurrentIndex;
     public static string ElemText1, ElemText2, ElemText3, ElemText4;
 
+    public TextMeshProUGUI showDifficulty;
 
-    
     public TextMeshProUGUI Level;
 
     // Pop ups
@@ -59,6 +59,7 @@ public class S_draft : MonoBehaviour
     public GameObject inputNum1, inputNum2, inputNum3, inputNum4;
 
     public static int LevelNum;
+    public string difficulty;
     private static string Num1, Num2, Num3, Num4;
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
@@ -71,6 +72,7 @@ public class S_draft : MonoBehaviour
         PassCurrentIndex = currentEquationIndex;
         LevelNum = currentEquationIndex + 1;
         Level.text = LevelNum.ToString();
+        showDifficulty.text = difficulty.ToString();        
 
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);

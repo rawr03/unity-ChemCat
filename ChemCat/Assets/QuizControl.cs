@@ -366,18 +366,22 @@ public class QuizControl : MonoBehaviour
             timerSlider.value = time;
         }
 
-        if (gameOver.gameObject.active)
+        if (gameOver.gameObject.activeSelf)
         {
             Time.timeScale = 0;
             AudioManager.Instance.musicSource.Stop();
+            //AudioManager.Instance.PlaySFX("Correct");
         }
         else
         {
             Time.timeScale = 1;
-            AudioManager.Instance.musicSource.Play();
+            //AudioManager.Instance.musicSource.mute = true;
+        
+        
+            
         }
 
-        if (settings.gameObject.active)
+        if (settings.gameObject.activeSelf)
         {
             Time.timeScale = 0;
             AudioManager.Instance.musicSource.Pause();
@@ -385,7 +389,7 @@ public class QuizControl : MonoBehaviour
         else
         {
             Time.timeScale = 1;
-            AudioManager.Instance.musicSource.Play();
+            AudioManager.Instance.musicSource.UnPause();
         }
 
         //Health
@@ -413,6 +417,7 @@ public class QuizControl : MonoBehaviour
                 gameOver.gameObject.SetActive(true);
                 stopTimer = true;
                 CheckHighscore();
+                AudioManager.Instance.PlaySFX("Correct");
                 break;
         }
     }

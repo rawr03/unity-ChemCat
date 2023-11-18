@@ -30,7 +30,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         PlayMusic("Tiktok");
-        musicSource.Play();
+        //musicSource.Play();
     }
 
     public void PlayMusic(string name)

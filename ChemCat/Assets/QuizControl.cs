@@ -9,6 +9,8 @@ using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
+
 
 public class QuizControl : MonoBehaviour
 {
@@ -32,6 +34,7 @@ public class QuizControl : MonoBehaviour
 
     [SerializeField]
     private float timeBetweenEquations = .01f;
+
 
     // anim
     public TextMeshProUGUI addtnlTime;
@@ -101,7 +104,7 @@ public class QuizControl : MonoBehaviour
 
         // set health to 3, and all hearts must be set active
         health = 3;
-        CurrScore = gameScore+ CurrScore;
+        CurrScore = gameScore + CurrScore;
         GameScoreDisplay.text = CurrScore.ToString();
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
@@ -122,13 +125,19 @@ public class QuizControl : MonoBehaviour
         GetRandomEquation();
     }
 
+    /*Sound Sound;
+
+    public void Awake()
+    {
+        Sound = GameObject.FindGameObjectWithTag("Audio").GetComponent<Sound>();
+    }*/
 
     public void GetRandomEquation()
     {
         // take random index
         int randomEquationIndex = Random.Range(0, unansweredProblems.Count);
         currentEquation = unansweredProblems[randomEquationIndex];
-
+        
         health = 3;
 
         // equation Text displayed
@@ -226,11 +235,15 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                //Sound.PlaySFX(Sound.Correct);
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                //Sound.PlaySFX(Sound.Wrong);
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else if (equationAnswer1 != 0 && equationAnswer4 == 0)
@@ -243,11 +256,15 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                //Sound.PlaySFX(Sound.Correct);
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                //Sound.PlaySFX(Sound.Wrong);
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else if (equationAnswer1 == 0 && equationAnswer4 != 0)
@@ -261,11 +278,15 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                //Sound.PlaySFX(Sound.Correct);
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                //Sound.PlaySFX(Sound.Wrong);
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         
@@ -352,6 +373,8 @@ public class QuizControl : MonoBehaviour
         {
             stopTimer = true;
             CheckHighscore();
+            
+            //Sound.PlaySFX(Sound.TimesUp);
         }
 
         if (stopTimer == false)
@@ -360,9 +383,18 @@ public class QuizControl : MonoBehaviour
             timerSlider.value = time;
         }
 
-        if (settings.gameObject.active || gameOver.gameObject.active)
+        if (settings.gameObject.active)
         {
             Time.timeScale = 0;
+            
+        }
+        if (gameOver.gameObject.active)
+        {
+            Time.timeScale = 0;
+            //Sound.PlaySFX(Sound.LevelComplete);
+            AudioManager.Instance.musicSource.Stop();
+            AudioManager.Instance.PlaySFX("LevelComplete");
+
         }
         else
         {

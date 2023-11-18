@@ -9,8 +9,6 @@ using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
-using Unity.VisualScripting.Antlr3.Runtime;
-
 
 public class QuizControl : MonoBehaviour
 {
@@ -35,7 +33,6 @@ public class QuizControl : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = .01f;
 
-
     // anim
     public TextMeshProUGUI addtnlTime;
     //private Animator anim;
@@ -54,7 +51,7 @@ public class QuizControl : MonoBehaviour
     public bool stopTimer = false;
     */
 
-    
+
     // Timer & Score
     public Slider timerSlider;
     public Text timerText;
@@ -62,7 +59,7 @@ public class QuizControl : MonoBehaviour
     private bool stopTimer;
     public float addTime;
     public float elapsedTime;
-    
+
 
     // Health related 
     public GameObject Switch1, Switch4, gameOver, newHighscore, settings;
@@ -79,7 +76,7 @@ public class QuizControl : MonoBehaviour
     public static int health;
     public Text GameScoreDisplay;
     public static int CurrScore;
-    
+
     // Life related
     public GameObject Heart1, Heart2, Heart3;
     public static float startTime;
@@ -125,19 +122,13 @@ public class QuizControl : MonoBehaviour
         GetRandomEquation();
     }
 
-    /*Sound Sound;
-
-    public void Awake()
-    {
-        Sound = GameObject.FindGameObjectWithTag("Audio").GetComponent<Sound>();
-    }*/
 
     public void GetRandomEquation()
     {
         // take random index
         int randomEquationIndex = Random.Range(0, unansweredProblems.Count);
         currentEquation = unansweredProblems[randomEquationIndex];
-        
+
         health = 3;
 
         // equation Text displayed
@@ -194,8 +185,8 @@ public class QuizControl : MonoBehaviour
 
     IEnumerator TransitionToNextProblem()
     {
-         addtnlTime.gameObject.SetActive(true);
-        
+        addtnlTime.gameObject.SetActive(true);
+
         // Remove current spawned problem from the list
         unansweredProblems.Remove(currentEquation);
         yield return new WaitForSeconds(timeBetweenEquations);
@@ -209,7 +200,7 @@ public class QuizControl : MonoBehaviour
         {
             GetRandomEquation();
         }
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void CheckAnswer()
@@ -235,14 +226,12 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
-                //Sound.PlaySFX(Sound.Correct);
                 AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //Sound.PlaySFX(Sound.Wrong);
                 AudioManager.Instance.PlaySFX("Wrong");
             }
         }
@@ -256,14 +245,12 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
-                //Sound.PlaySFX(Sound.Correct);
                 AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //Sound.PlaySFX(Sound.Wrong);
                 AudioManager.Instance.PlaySFX("Wrong");
             }
         }
@@ -278,36 +265,34 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
-                //Sound.PlaySFX(Sound.Correct);
                 AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //Sound.PlaySFX(Sound.Wrong);
                 AudioManager.Instance.PlaySFX("Wrong");
             }
         }
-        
+
         // StartCoroutine(EnablePanel());
     }
 
     void CheckHighscore()
     {
         if (CurrScore > Highscore)
-            {
-                newHighscore.gameObject.SetActive(true);
-                Highscore = CurrScore;
-                Highscore_Score.text = Highscore.ToString();
-                Highscore_HighscoreDisplay.text = CurrScore.ToString();
-            }
-            else
-            {
-                gameOver.gameObject.SetActive(true);
-                GameOver_Score.text = CurrScore.ToString();
-                GameOver_HighscoreDisplay.text = Highscore.ToString();
-            }
+        {
+            newHighscore.gameObject.SetActive(true);
+            Highscore = CurrScore;
+            Highscore_Score.text = Highscore.ToString();
+            Highscore_HighscoreDisplay.text = CurrScore.ToString();
+        }
+        else
+        {
+            gameOver.gameObject.SetActive(true);
+            GameOver_Score.text = CurrScore.ToString();
+            GameOver_HighscoreDisplay.text = Highscore.ToString();
+        }
     }
 
     public void Retry()
@@ -319,7 +304,7 @@ public class QuizControl : MonoBehaviour
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
+
     }
 
     /*
@@ -373,8 +358,6 @@ public class QuizControl : MonoBehaviour
         {
             stopTimer = true;
             CheckHighscore();
-            
-            //Sound.PlaySFX(Sound.TimesUp);
         }
 
         if (stopTimer == false)
@@ -383,22 +366,26 @@ public class QuizControl : MonoBehaviour
             timerSlider.value = time;
         }
 
-        if (settings.gameObject.active)
-        {
-            Time.timeScale = 0;
-            
-        }
         if (gameOver.gameObject.active)
         {
             Time.timeScale = 0;
-            //Sound.PlaySFX(Sound.LevelComplete);
             AudioManager.Instance.musicSource.Stop();
-            AudioManager.Instance.PlaySFX("LevelComplete");
-
         }
         else
         {
             Time.timeScale = 1;
+            AudioManager.Instance.musicSource.Play();
+        }
+
+        if (settings.gameObject.active)
+        {
+            Time.timeScale = 0;
+            AudioManager.Instance.musicSource.Pause();
+        }
+        else
+        {
+            Time.timeScale = 1;
+            AudioManager.Instance.musicSource.Play();
         }
 
         //Health

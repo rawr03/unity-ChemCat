@@ -9,26 +9,18 @@ using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class VisualsControl : MonoBehaviour
+public class origVisualsControl : MonoBehaviour
 {
     public GameObject E1, E2, E3, E4, E5, E6, E7, E8, E9;
     public GameObject inputNum;
 
     private static string Num;
-    public Sprite[] sprites;
 
-    void SetupSprites()
-    {
-        sprites = Resources.LoadAll("StoryModeMolecules", typeof(Sprite)).Cast<Sprite>().ToArray();
-
-
-    }
 
     public void Visuals()
     {
         Num = inputNum.GetComponent<Text>().text;
         Num.Trim();
-        SetupSprites();
 
         switch (Num)
         {

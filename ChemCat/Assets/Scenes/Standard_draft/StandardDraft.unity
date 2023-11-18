@@ -1262,6 +1262,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5987137674999669716, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: sprites.Array.size
+      value: 22
+      objectReference: {fileID: 0}
     - target: {fileID: 6020131034333869457, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

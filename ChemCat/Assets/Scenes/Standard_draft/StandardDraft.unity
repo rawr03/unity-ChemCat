@@ -592,6 +592,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5987137674999669716, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: switchNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6020131034333869457, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1166,6 +1170,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095586835890462773, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095586835890462773, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095586835890462773, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095586835890462773, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095586835890462773, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3113256583745235377, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1238,6 +1262,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4235427202771107345, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235427202771107345, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235427202771107345, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235427202771107345, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4477485062519601908, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1261,6 +1301,14 @@ PrefabInstance:
     - target: {fileID: 4477485062519601908, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987137674999669716, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: switchNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987137674999669716, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: sprites.Array.size
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6020131034333869457, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1289,6 +1337,10 @@ PrefabInstance:
     - target: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_Name
       value: Switch1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762098777045991432, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7145591846531847049, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3066,9 +3118,9 @@ RectTransform:
   - {fileID: 934209791}
   - {fileID: 943785125}
   - {fileID: 1289263401198149553}
-  - {fileID: 1198154413}
   - {fileID: 968078308}
   - {fileID: 1456693215}
+  - {fileID: 1198154413}
   - {fileID: 1917141255}
   - {fileID: 1121325378}
   - {fileID: 784867101}
@@ -3110,23 +3162,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
-  - RT_coef1: 1
+  - RT_coef1: 2
     reactant1: H2
     RT_coef2: 1
-    reactant2: F2
+    reactant2: O2
     PD_coef1: 2
-    product1: HF
+    product1: H2O
     PD_coef2: 0
     product2: 
     addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 4
-    reactant2: PCl3
-    PD_coef1: 1
-    product1: P4
-    PD_coef2: 6
-    product2: Cl2
+  - RT_coef1: 2
+    reactant1: Na
+    RT_coef2: 1
+    reactant2: Cl2
+    PD_coef1: 2
+    product1: NaCl
+    PD_coef2: 0
+    product2: 
     addtnlTime: 0
   - RT_coef1: 2
     reactant1: Al
@@ -3205,7 +3257,7 @@ MonoBehaviour:
   equationText3: {fileID: 275019600}
   equationText4: {fileID: 1884704810}
   timeBetweenEquations: 1
-  currentEquationIndex: 5
+  currentEquationIndex: 1
   Level: {fileID: 207314419}
   Switch1: {fileID: 657138075}
   Switch4: {fileID: 1884704809}
@@ -3707,6 +3759,10 @@ PrefabInstance:
     - target: {fileID: 4477485062519601908, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987137674999669716, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: switchNum
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6020131034333869457, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4393,6 +4449,10 @@ PrefabInstance:
     - target: {fileID: 4477485062519601908, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987137674999669716, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: switchNum
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6020131034333869457, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_AnchorMax.y

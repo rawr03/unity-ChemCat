@@ -9,7 +9,7 @@ using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class S_draft : MonoBehaviour
+public class S_draft1orig : MonoBehaviour
 {
     public Equations[] problems;
     private static List<Equations> unansweredProblems;
@@ -34,9 +34,6 @@ public class S_draft : MonoBehaviour
 
     [SerializeField]
     private int currentEquationIndex;
-
-    public static int PassCurrentIndex;
-    public static string ElemText1, ElemText2, ElemText3, ElemText4;
 
 
     
@@ -68,7 +65,7 @@ public class S_draft : MonoBehaviour
     {
         // set health to 3, and all hearts must be set active
         health = 3;
-        PassCurrentIndex = currentEquationIndex;
+
         LevelNum = currentEquationIndex + 1;
         Level.text = LevelNum.ToString();
 
@@ -134,21 +131,7 @@ public class S_draft : MonoBehaviour
             Switch4.gameObject.SetActive(true);
         }
 
-        RecordElements(currentEquation.reactant1, currentEquation.reactant2, currentEquation.product1, currentEquation.product2);
         RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
-    }
-
-    public static void RecordElements(string elem1, string elem2, string elem3, string elem4)
-    {
-        ElemText1 = elem1;
-        ElemText2 = elem2;
-        ElemText3 = elem3;
-        ElemText4 = elem4;
-        Debug.Log(ElemText1);
-        Debug.Log(ElemText2);
-        Debug.Log(ElemText3);
-        Debug.Log(ElemText4);
-        //VisualsControl.SetupSprites(ElemText1, ElemText2, ElemText3, ElemText4);
     }
 
     public static void RecordAnswer(int equationAnswer1, int equationAnswer2, int equationAnswer3, int equationAnswer4)

@@ -11,24 +11,105 @@ using TMPro;
 
 public class VisualsControl : MonoBehaviour
 {
+    //public Equations[] problems;
+    //private static List<Equations> Problems;
+    //private Equations currentEquation;
+
     public GameObject E1, E2, E3, E4, E5, E6, E7, E8, E9;
     public GameObject inputNum;
+    private SpriteRenderer rend;
 
-    private static string Num;
+    
     public Sprite[] sprites;
+    //public int CurrentIndex;
+    public string Element1, Element2, Element3, Element4, Element;
+    private static string Num;
+    public int switchNum;
 
-    void SetupSprites()
+    public void SetupSprites()
     {
         sprites = Resources.LoadAll("StoryModeMolecules", typeof(Sprite)).Cast<Sprite>().ToArray();
+        
+        chooseSwitch();
 
+        for (int i = 0; i < sprites.Length; i++)  
+        {
+            if (sprites[i].name == Element)
+            {
+                //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
+                E1.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E2.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E3.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E4.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E5.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E6.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E7.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E8.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+                E9.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+          
+            };
+        }
+        
+
+        
+    }
+
+    public void chooseSwitch()
+    {
+        Element1 = S_draft.ElemText1;
+        Element2 = S_draft.ElemText2;
+        Element3 = S_draft.ElemText3;
+        Element4 = S_draft.ElemText4;
+
+        if (switchNum==1) 
+        {
+            Element = Element1;
+        }
+        else if (switchNum == 2) 
+        { 
+            Element = Element2;
+        }
+        else if (switchNum == 3)
+        {
+            Element = Element3;
+        }
+        else if(switchNum == 4)
+        {
+            Element = Element4;
+        }
+    }
+
+    public void test()
+    {
+        //Debug.Log(sprites.Length);
+        //Debug.Log(CurrentIndex);
+        //Debug.Log(Element1);
+        //Debug.Log(Element2);
+        //Debug.Log(Element3);
+        //Debug.Log(Element4);
+        //Debug.Log(sprites[1]);
+/*
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            if (sprites[8].name==Element2)
+            {
+                Debug.Log("True");
+            }
+            else
+            {
+                Debug.Log("False");
+            };
+        };
+*/        
+        
 
     }
 
     public void Visuals()
     {
+        SetupSprites();
         Num = inputNum.GetComponent<Text>().text;
         Num.Trim();
-        SetupSprites();
 
         switch (Num)
         {
@@ -165,5 +246,6 @@ public class VisualsControl : MonoBehaviour
     void Update()
     {
         Visuals();
+        //Debug.Log(CurrentIndex);
     }
 }

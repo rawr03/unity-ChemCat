@@ -979,6 +979,13 @@ MonoBehaviour:
   E8: {fileID: 2115540323969020018}
   E9: {fileID: 5327301360134113257}
   inputNum: {fileID: 7910823954012562389}
+  sprites: []
+  Element1: 
+  Element2: 
+  Element3: 
+  Element4: 
+  Element: 
+  switchNum: 0
 --- !u!1 &7910823954012562389
 GameObject:
   m_ObjectHideFlags: 0

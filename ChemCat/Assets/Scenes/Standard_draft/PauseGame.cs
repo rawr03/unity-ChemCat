@@ -5,13 +5,14 @@ using UnityEngine;
 public class PauseGame : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject settings, reminder, instructions;
+    public GameObject settings, reminder, instructions, switches;
 
     public void Resume()
     {
         settings.gameObject.SetActive(false);
         reminder.gameObject.SetActive(false);
         instructions.gameObject.SetActive(false);
+        switches.gameObject.SetActive(true);
         //AudioManager.Instance.musicSource.UnPause();
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -22,6 +23,7 @@ public class PauseGame : MonoBehaviour
         settings.gameObject.SetActive(true);
         reminder.gameObject.SetActive(false);
         instructions.gameObject.SetActive(false);
+        switches.gameObject.SetActive(false);
         //AudioManager.Instance.musicSource.Pause();
         Time.timeScale = 0f;  
         GameIsPaused = true;
@@ -32,6 +34,7 @@ public class PauseGame : MonoBehaviour
         settings.gameObject.SetActive(false);
         reminder.gameObject.SetActive(true);
         instructions.gameObject.SetActive(false);
+        switches.gameObject.SetActive(false);
         //AudioManager.Instance.musicSource.Pause();
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -42,6 +45,7 @@ public class PauseGame : MonoBehaviour
         settings.gameObject.SetActive(false);
         reminder.gameObject.SetActive(false);
         instructions.gameObject.SetActive(true);
+        switches.gameObject.SetActive(false);
         //AudioManager.Instance.musicSource.UnPause();
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -53,6 +57,7 @@ public class PauseGame : MonoBehaviour
         reminder.gameObject.SetActive(false);
         settings.gameObject.SetActive(false);
         instructions.gameObject.SetActive(false);
+        switches.gameObject.SetActive(true);
     }
 
     // Update is called once per frame

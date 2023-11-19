@@ -62,7 +62,7 @@ public class QuizControl : MonoBehaviour
     
 
     // Health related 
-    public GameObject Switch1, Switch4, gameOver, newHighscore, settings;
+    public GameObject Switch1, Switch4, gameOver, newHighscore;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
     //PopUp
@@ -91,7 +91,7 @@ public class QuizControl : MonoBehaviour
     void Start()
     {
         //anim = GetComponent<Animator>();
-        settings.gameObject.SetActive(false);
+        //settings.gameObject.SetActive(false);
 
         //Setup for Time
         stopTimer = false;
@@ -337,6 +337,8 @@ public class QuizControl : MonoBehaviour
     }
     */
 
+
+
     // Update is called once per frame
     void Update()
     {
@@ -360,6 +362,8 @@ public class QuizControl : MonoBehaviour
             timerSlider.value = time;
         }
 
+        
+        /*
         if (settings.gameObject.active || gameOver.gameObject.active)
         {
             Time.timeScale = 0;
@@ -368,6 +372,7 @@ public class QuizControl : MonoBehaviour
         {
             Time.timeScale = 1;
         }
+        */
 
         //Health
         switch (health)

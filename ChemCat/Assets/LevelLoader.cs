@@ -9,11 +9,7 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
     public float transitionTime = 5f;
-    
-
-
-    
-
+   
     public void LoadNextLevel(string sceneName)
     {
         StartCoroutine(LoadLevel(sceneName));

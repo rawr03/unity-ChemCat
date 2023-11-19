@@ -25,10 +25,25 @@ public class VisualsControl : MonoBehaviour
     public string Element1, Element2, Element3, Element4, Element;
     private static string Num;
     public int switchNum;
+    public string difficulty; 
 
     public void SetupSprites()
     {
-        sprites = Resources.LoadAll("StoryModeMolecules", typeof(Sprite)).Cast<Sprite>().ToArray();
+        difficulty = S_draft.Diff;
+
+        if (difficulty == "Easy")
+        {
+            sprites = Resources.LoadAll("EasyStandardMolecules", typeof(Sprite)).Cast<Sprite>().ToArray();
+        }
+        else if (difficulty == "Medium")
+        {
+            sprites = Resources.LoadAll("MediumStandardMolecules", typeof(Sprite)).Cast<Sprite>().ToArray();
+        }
+        else
+        {
+            sprites = Resources.LoadAll("StoryModeMolecules", typeof(Sprite)).Cast<Sprite>().ToArray();
+        }
+        
         
         chooseSwitch();
 

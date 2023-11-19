@@ -16,6 +16,12 @@ public class S_draft : MonoBehaviour
 
     private Equations currentEquation;
 
+    //FIELDS TO BE CHANGE
+    [SerializeField]
+    private int currentEquationIndex;
+    public string difficulty;
+    ///////////
+
     // display Text of Equation Problem
     [SerializeField]
     private TextMeshProUGUI equationText1;
@@ -32,11 +38,10 @@ public class S_draft : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = 1f;
 
-    [SerializeField]
-    private int currentEquationIndex;
+    
 
     public static int PassCurrentIndex;
-    public static string ElemText1, ElemText2, ElemText3, ElemText4;
+    public static string ElemText1, ElemText2, ElemText3, ElemText4, Diff;
 
     public TextMeshProUGUI showDifficulty;
 
@@ -59,7 +64,7 @@ public class S_draft : MonoBehaviour
     public GameObject inputNum1, inputNum2, inputNum3, inputNum4;
 
     public static int LevelNum;
-    public string difficulty;
+
     private static string Num1, Num2, Num3, Num4;
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
@@ -136,20 +141,22 @@ public class S_draft : MonoBehaviour
             Switch4.gameObject.SetActive(true);
         }
 
-        RecordElements(currentEquation.reactant1, currentEquation.reactant2, currentEquation.product1, currentEquation.product2);
+        RecordElements(currentEquation.reactant1, currentEquation.reactant2, currentEquation.product1, currentEquation.product2, difficulty);
         RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
     }
 
-    public static void RecordElements(string elem1, string elem2, string elem3, string elem4)
+    public static void RecordElements(string elem1, string elem2, string elem3, string elem4, string DiffLevel)
     {
         ElemText1 = elem1;
         ElemText2 = elem2;
         ElemText3 = elem3;
         ElemText4 = elem4;
+        Diff = DiffLevel;
         Debug.Log(ElemText1);
         Debug.Log(ElemText2);
         Debug.Log(ElemText3);
         Debug.Log(ElemText4);
+
         //VisualsControl.SetupSprites(ElemText1, ElemText2, ElemText3, ElemText4);
     }
 

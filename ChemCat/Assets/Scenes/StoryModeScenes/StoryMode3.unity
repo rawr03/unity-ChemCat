@@ -7514,7 +7514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   problems:
   - RT_coef1: 2
-    reactant1: H
+    reactant1: H2
     RT_coef2: 1
     reactant2: O2
     PD_coef1: 2
@@ -7572,7 +7572,7 @@ MonoBehaviour:
     RT_coef2: 1
     reactant2: K3PO4
     PD_coef1: 1
-    product1: AgPO4
+    product1: Ag3PO4
     PD_coef2: 3
     product2: KNO3
     addtnlTime: 0

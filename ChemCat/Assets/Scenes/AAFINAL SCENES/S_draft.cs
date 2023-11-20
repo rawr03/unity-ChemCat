@@ -38,7 +38,7 @@ public class S_draft : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = 1f;
 
-    
+
 
     public static int PassCurrentIndex;
     public static string ElemText1, ElemText2, ElemText3, ElemText4, Diff;
@@ -52,7 +52,7 @@ public class S_draft : MonoBehaviour
 
     // Reactants and Products
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
-   
+
     // respawn problem
     public static int health;
 
@@ -77,7 +77,7 @@ public class S_draft : MonoBehaviour
         PassCurrentIndex = currentEquationIndex;
         LevelNum = currentEquationIndex + 1;
         Level.text = LevelNum.ToString();
-        showDifficulty.text = difficulty.ToString();        
+        showDifficulty.text = difficulty.ToString();
 
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
@@ -269,8 +269,6 @@ public class S_draft : MonoBehaviour
         }
         // StartCoroutine(EnablePanel());
     }
-
-    
 
     public void Retry()
     {

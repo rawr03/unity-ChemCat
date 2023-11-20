@@ -147,7 +147,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-
     public void StartPlay()
     {   
         db.gameObject.SetActive(false);

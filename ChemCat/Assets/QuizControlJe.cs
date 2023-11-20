@@ -9,6 +9,7 @@ using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class QuizControl : MonoBehaviour
 {
@@ -62,7 +63,7 @@ public class QuizControl : MonoBehaviour
 
 
     // Health related 
-    public GameObject Switch1, Switch4, gameOver, newHighscore, settings;
+    public GameObject Switch1, Switch4, gameOver, newHighscore /*, settings, exit*/;
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
     //PopUp
@@ -88,10 +89,16 @@ public class QuizControl : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
+    
+
     void Start()
     {
         //anim = GetComponent<Animator>();
-        settings.gameObject.SetActive(false);
+        //exit.gameObject.SetActive(false);
+        //settings.gameObject.SetActive(false);
+
+        //tiktok time
+        //AudioManager.Instance.PlayMusic("Tiktok");
 
         //Setup for Time
         stopTimer = false;
@@ -101,6 +108,7 @@ public class QuizControl : MonoBehaviour
 
         // set health to 3, and all hearts must be set active
         health = 3;
+        Debug.Log(health);
         CurrScore = gameScore + CurrScore;
         GameScoreDisplay.text = CurrScore.ToString();
         Heart1.gameObject.SetActive(true);
@@ -246,6 +254,7 @@ public class QuizControl : MonoBehaviour
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
                 AudioManager.Instance.PlaySFX("Correct");
+
             }
             else
             {
@@ -304,6 +313,7 @@ public class QuizControl : MonoBehaviour
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.Instance.musicSource.UnPause();
 
     }
 
@@ -366,31 +376,27 @@ public class QuizControl : MonoBehaviour
             timerSlider.value = time;
         }
 
-        if (gameOver.gameObject.activeSelf)
-        {
-            Time.timeScale = 0;
-            AudioManager.Instance.musicSource.Stop();
-            //AudioManager.Instance.PlaySFX("Correct");
-        }
-        else
-        {
-            Time.timeScale = 1;
-            //AudioManager.Instance.musicSource.mute = true;
         
-        
+        if (PauseGame.GameIsPaused == true)
+        {
+            Debug.Log("Paused");
+            //Time.timeScale = 0;
+            //AudioManager.Instance.musicSource.Pause();
             
+            /*
+            if (gameOver.gameObject.activeSelf == false)
+            {
+                AudioManager.Instance.musicSource.UnPause();
+            }
+            */
         }
+        else 
+        {
+            Debug.Log("Play");
+            //Time.timeScale = 1;
+        }
+        
 
-        if (settings.gameObject.activeSelf)
-        {
-            Time.timeScale = 0;
-            AudioManager.Instance.musicSource.Pause();
-        }
-        else
-        {
-            Time.timeScale = 1;
-            AudioManager.Instance.musicSource.UnPause();
-        }
 
         //Health
         switch (health)
@@ -417,7 +423,9 @@ public class QuizControl : MonoBehaviour
                 gameOver.gameObject.SetActive(true);
                 stopTimer = true;
                 CheckHighscore();
-                AudioManager.Instance.PlaySFX("Correct");
+                /*AudioManager.Instance.sfxSource.PlayDelayed(2);
+                AudioManager.Instance.PlaySFX("GameOver");
+                //AudioManager.Instance.PlaySFX("GameOver");*/
                 break;
         }
     }

@@ -1,36 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
-    //Instance to access this anywhere
     public static AudioManager Instance;
 
     public Sound[] musicSounds, sfxSounds;
     public AudioSource musicSource, sfxSource;
 
-    //Instance
-    public void Awake()
+    private bool isMusicMuted = false;
+    private bool isSFXMuted = false;
+
+    private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            Debug.Log("Object is Not Destroyed");
         }
         else
         {
             Destroy(gameObject);
         }
-
     }
 
     private void Start()
     {
-        PlayMusic("Tiktok");
-        //musicSource.Play();
+        PlayMusic("BGMusic");
     }
 
     public void PlayMusic(string name)
@@ -59,5 +56,68 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(s.clip);
         }
     }
+
+    public void MuteMusic()
+    {
+        if (musicSource != null)
+        {
+            isMusicMuted = !isMusicMuted;
+            musicSource.mute = isMusicMuted;
+        }
+        else
+        {
+            Debug.Log("musicSource is null");
+        }
+    }
+
+    public void MuteSfx()
+    {
+        if (sfxSource != null)
+        {
+            isSFXMuted = !isSFXMuted;
+            sfxSource.mute = isSFXMuted;
+        }
+        else
+        {
+            Debug.Log("sfxSource is null");
+        }
+    }
+
+    public bool IsMusicMuted()
+    {
+        return isMusicMuted;
+    }
+
+    public bool IsSFXMuted()
+    {
+        return isSFXMuted;
+    }
+
+    public void UnmuteMusic()
+    {
+        if (musicSource != null)
+        {
+            isMusicMuted = false;
+            musicSource.mute = false;
+
+            if (!musicSource.isPlaying)
+            {
+                musicSource.Play();
+            }
+        }
+    }
+
+    public void UnmuteSfx()
+    {
+        if (sfxSource != null)
+        {
+            isSFXMuted = false;
+            sfxSource.mute = false;
+
+            if (!sfxSource.isPlaying)
+            {
+                sfxSource.Play();
+            }
+        }
+    }
 }
-    

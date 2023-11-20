@@ -229,11 +229,13 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else if (equationAnswer1 != 0 && equationAnswer4 == 0)
@@ -246,11 +248,14 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                AudioManager.Instance.PlaySFX("Wrong");
+
             }
         }
         else if (equationAnswer1 == 0 && equationAnswer4 != 0)
@@ -264,11 +269,13 @@ public class QuizControl : MonoBehaviour
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
 
@@ -301,6 +308,7 @@ public class QuizControl : MonoBehaviour
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.Instance.PlayMusic("BGMusic");
 
     }
 
@@ -399,6 +407,7 @@ public class QuizControl : MonoBehaviour
                 gameOver.gameObject.SetActive(true);
                 stopTimer = true;
                 CheckHighscore();
+                //AudioManager.Instance.PlaySFX("GameOver"); 
                 break;
         }
     }

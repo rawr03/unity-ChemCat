@@ -6774,7 +6774,7 @@ MonoBehaviour:
     PD_coef2: 2
     product2: SO2
     addtnlTime: 0
-  currentEquationIndex: 6
+  currentEquationIndex: 9
   difficulty: Medium
   equationText1: {fileID: 657138076}
   equationText2: {fileID: 2000886161}

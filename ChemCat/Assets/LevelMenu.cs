@@ -12,8 +12,8 @@ public class LevelMenu : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void NextLevel(string sceneName)
+    public void NextLevel()
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }

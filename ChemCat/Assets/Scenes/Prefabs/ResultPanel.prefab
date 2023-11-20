@@ -933,17 +933,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: PERFECT!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6601691708181b24ea3e387e2f030d0e, type: 2}
-  m_sharedMaterial: {fileID: -8182192946092750736, guid: 6601691708181b24ea3e387e2f030d0e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
+  m_sharedMaterial: {fileID: -7327683115952806994, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4285135103
-  m_fontColor: {r: 1, g: 0.972549, b: 0.4117647, a: 1}
+  m_fontColor: {r: 1, g: 0.9725491, b: 0.41176474, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 1
   m_fontColorGradient:

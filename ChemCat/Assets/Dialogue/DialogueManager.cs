@@ -102,6 +102,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End");
         prop.gameObject.SetActive(false);
         StartPlay();
+
     }
 
     public void SetupSprites()

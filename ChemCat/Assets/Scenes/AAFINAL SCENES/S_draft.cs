@@ -193,14 +193,17 @@ public class S_draft : MonoBehaviour
         if (health == 3)
         {
             perfect.gameObject.SetActive(true);
+            AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 2)
         {
             great.gameObject.SetActive(true);
+            AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 1)
         {
             good.gameObject.SetActive(true);
+            AudioManager.Instance.PlaySFX("LevelComplete");
         }
         yield return new WaitForSeconds(timeBetweenEquations);
     }
@@ -225,11 +228,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else if (Element1 == "0")
@@ -238,11 +243,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else
@@ -251,12 +258,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         // StartCoroutine(EnablePanel());
@@ -266,6 +274,7 @@ public class S_draft : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         gameOver.gameObject.SetActive(false);
+        AudioManager.Instance.PlayMusic("BGMusic");
     }
 
     // Update is called once per frame
@@ -294,6 +303,7 @@ public class S_draft : MonoBehaviour
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
+                AudioManager.Instance.musicSource.Pause();
                 StartCoroutine(TransitionToNextLevel());
                 break;
         }

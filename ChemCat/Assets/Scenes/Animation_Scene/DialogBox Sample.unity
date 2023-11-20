@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 34409070}
   - component: {fileID: 34409073}
   - component: {fileID: 34409072}
+  - component: {fileID: 34409074}
   m_Layer: 5
   m_Name: ChemcatFace
   m_TagString: Untagged
@@ -236,6 +237,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &34409074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34409068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828f9cf27bcc3a84fb2176e2dc8803ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85284332
 GameObject:
   m_ObjectHideFlags: 0

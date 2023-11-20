@@ -10,6 +10,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 using UnityEngine.UIElements;
@@ -28,7 +29,9 @@ public class CutsceneManager : MonoBehaviour
     // Sprite
     public GameObject CurrentFace;
     private string propName;
+    
 
+   
     //public DialogueArray dialogueArray;
 
     // Start is called before the first frame update
@@ -95,6 +98,7 @@ public class CutsceneManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End");
+        SceneManager.LoadScene("StoryMode1");
         //prop.gameObject.SetActive(false);
         //StartPlay();
     }

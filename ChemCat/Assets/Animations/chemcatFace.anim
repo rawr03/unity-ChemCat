@@ -470,7 +470,7 @@ AnimationClip:
   m_Events:
   - time: 4
     functionName: OpenLevel
-    data: 
+    data: Introduction
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

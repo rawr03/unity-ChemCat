@@ -2059,7 +2059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &449404193
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2069,17 +2069,17 @@ RectTransform:
   m_GameObject: {fileID: 449404192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5151032, y: 0.5151032, z: 0.5151032}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1167980067}
   - {fileID: 2011370083}
   - {fileID: 207314418}
-  m_Father: {fileID: 1902591675}
+  m_Father: {fileID: 1198154413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 181, y: 329}
+  m_AnchoredPosition: {x: 94.73367, y: 202.91571}
   m_SizeDelta: {x: 603.54724, y: 97.06775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &529440869
@@ -3188,6 +3188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Switch1
       objectReference: {fileID: 0}
+    - target: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6762098777045991432, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       propertyPath: m_CullTransparentMesh
       value: 1
@@ -3330,7 +3334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 384, y: -206.08702}
+  m_AnchoredPosition: {x: 384, y: -206.08704}
   m_SizeDelta: {x: -60.641, y: -60.699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &673684227
@@ -3425,7 +3429,7 @@ PrefabInstance:
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 6601691708181b24ea3e387e2f030d0e, type: 2}
+      objectReference: {fileID: 11400000, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontStyle
       value: 0
@@ -3449,7 +3453,7 @@ PrefabInstance:
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -8182192946092750736, guid: 6601691708181b24ea3e387e2f030d0e, type: 2}
+      objectReference: {fileID: -7327683115952806994, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4285135103
@@ -3474,6 +3478,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1770443319}
+    - target: {fileID: 6154372256286383639, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Main Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 6795399065625981490, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3588,7 +3596,7 @@ PrefabInstance:
       objectReference: {fileID: 1770443319}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Easy_Level_3
+      value: StoryMode4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5134,6 +5142,7 @@ RectTransform:
   - {fileID: 2000886159}
   - {fileID: 275019598}
   - {fileID: 1884704807}
+  - {fileID: 449404193}
   m_Father: {fileID: 1902591675}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6469,7 +6478,7 @@ PrefabInstance:
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 6601691708181b24ea3e387e2f030d0e, type: 2}
+      objectReference: {fileID: 11400000, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontStyle
       value: 0
@@ -6489,7 +6498,7 @@ PrefabInstance:
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -8182192946092750736, guid: 6601691708181b24ea3e387e2f030d0e, type: 2}
+      objectReference: {fileID: -7327683115952806994, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4285135103
@@ -6522,6 +6531,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1770443319}
+    - target: {fileID: 6154372256286383639, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Main Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 6795399065625981490, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6632,7 +6645,7 @@ PrefabInstance:
       objectReference: {fileID: 1770443319}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Easy_Level_3
+      value: StoryMode4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6911,7 +6924,7 @@ GameObject:
   - component: {fileID: 1707604929}
   - component: {fileID: 1707604928}
   - component: {fileID: 1707604927}
-  - component: {fileID: 1707604926}
+  - component: {fileID: 1707604930}
   m_Layer: 5
   m_Name: dbTrig
   m_TagString: Untagged
@@ -6938,99 +6951,6 @@ RectTransform:
   m_AnchoredPosition: {x: -489.73047, y: -272.99908}
   m_SizeDelta: {x: 971.7458, y: 546.61}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1707604926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707604924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c87a1e8c9de24c14294df37d9cce3296, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    problem: H2O
-    sentences:
-    - "Let\u2019s start simple, this is the universal solvent WATER. Good ole H2O.  "
-    - "Each molecule of water consists of two atoms of Hydrogen (H) and one atom
-      of Oxygen (O). \r"
-    - See this Equation? It represents the formation of water.
-    - 'The left side has reactants and the right side has products. '
-    - 'The small number to the right of an element are called subscripts. Subscripts
-      are already set so you CANNOT change them. '
-    - "Notice in H2O. You might think that O does not have a subscript, actually
-      it DOES only it isn\u2019t written. "
-    - 'An element without a subscript means it has a subscript of 1. '
-    - "  \rCoefficients indicate the number of molecules. A chemical without a coefficient
-      would have 1 as its coefficient."
-    - Changing this will affect the number of atoms because each coefficient is distributed
-      for EVERY element of a molecule.
-    - "It\u2019s basically a numbers game, see? If you made a list of all the elements
-      and counted them, you will notice..."
-    - "they DON\u2019T have the same number."
-    - 'Therefore, this equation is UNBALANCED. '
-    - 'I need you to add the correct number of elements to balance both sides of
-      the equation. '
-    - To add 1 to the Coefficient click the (+) sign above and click the (-) to subtract.
-    - "Try to balance the equation of Water.\r"
-    - 'Then you click CONFIRM when you think it is balanced.  '
-    - But be careful, if you answer wrong, you lose a life!
-    - "Don\u2019t worry though cuz you have more than one. "
-    - "But wait, there\u2019s MORE. To help you for now, here\u2019s a visual aid
-      to help you keep track of the elements."
-    - "Here a tip to balance equations:\r\n\r\n1. Count the number of elements on
-      each side. \r\r"
-    - "\r2. Change a coefficient if any of the elements are not equal."
-    - '3. Count the number again to compare if the element count is the same. If
-      not, repeat step 2. '
-    - "Remember these three steps \u2014 count, change a coefficient, and count again. "
-  dialogueArray:
-  - propName: e1_water
-    expression: 5
-  - propName: e1_water
-    expression: 4
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
-  - propName: e1_water
-    expression: 0
 --- !u!114 &1707604927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7075,7 +6995,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1707604926}
+      - m_Target: {fileID: 1707604930}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
@@ -7125,6 +7045,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707604924}
   m_CullTransparentMesh: 1
+--- !u!114 &1707604930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707604924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87a1e8c9de24c14294df37d9cce3296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    problem: H2O
+    sentences:
+    - "Ever heard of Ammonia(NH3)? It\u2019s a gas that has a STRONG odor. "
+    - 'If you ever want to know what it smells like just go to a public restroom.  '
+    - Why the bathroom, you may ask? Because ammonia is present in one of the waste
+      products of your body!
+    - "Pee.. I\u2019m talking about pee."
+    - "The stronger it smells, the higher the concentration of ammonia, which might
+      mean you\u2019re dehydrated."
+    - 'So remember to drinks lots of water!   '
+    - You already know what to do.
+  dialogueArray:
+  - propName: e3_nose
+    expression: 0
+  - propName: e3_nose
+    expression: 0
+  - propName: e3_nose
+    expression: 0
 --- !u!1 &1709836331
 GameObject:
   m_ObjectHideFlags: 0
@@ -7374,7 +7325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 262.5921, y: -206.08702}
+  m_AnchoredPosition: {x: 262.5921, y: -206.08704}
   m_SizeDelta: {x: -60.641, y: -60.699}
   m_Pivot: {x: 0.49999955, y: 0.49999982}
 --- !u!114 &1760077090
@@ -7502,7 +7453,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1966518521}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -7562,98 +7513,98 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
-  - RT_coef1: 1
-    reactant1: H2
-    RT_coef2: 1
-    reactant2: F2
-    PD_coef1: 2
-    product1: HF
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 4
-    reactant2: PCl3
-    PD_coef1: 1
-    product1: P4
-    PD_coef2: 6
-    product2: Cl2
-    addtnlTime: 0
   - RT_coef1: 2
-    reactant1: Al
-    RT_coef2: 3
-    reactant2: Br2
-    PD_coef1: 2
-    product1: AlBr3
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 2
-    reactant2: NO
-    PD_coef1: 1
-    product1: N2
-    PD_coef2: 1
-    product2: O2
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 2
-    reactant2: SO3
-    PD_coef1: 2
-    product1: SO2
-    PD_coef2: 1
-    product2: O2
-    addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: P4
-    RT_coef2: 6
-    reactant2: H2
-    PD_coef1: 4
-    product1: PH3
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: PCl5
-    PD_coef1: 1
-    product1: PCl3
-    PD_coef2: 1
-    product2: Cl2
-    addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: N2
+    reactant1: H
     RT_coef2: 1
     reactant2: O2
     PD_coef1: 2
-    product1: N2O
+    product1: H2O
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: Na
+    RT_coef2: 1
+    reactant2: Cl2
+    PD_coef1: 2
+    product1: NaCl
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: N2
+    RT_coef2: 3
+    reactant2: H2
+    PD_coef1: 2
+    product1: NH3
     PD_coef2: 0
     product2: 
     addtnlTime: 0
   - RT_coef1: 0
     reactant1: 
     RT_coef2: 1
-    reactant2: C2H6
-    PD_coef1: 1
-    product1: C2H4
-    PD_coef2: 1
-    product2: H2
+    reactant2: C6H12O6
+    PD_coef1: 2
+    product1: C2H5OH
+    PD_coef2: 2
+    product2: CO2
     addtnlTime: 0
   - RT_coef1: 1
-    reactant1: C2H2
-    RT_coef2: 2
-    reactant2: H2
+    reactant1: HCl
+    RT_coef2: 1
+    reactant2: NaOH
     PD_coef1: 1
-    product1: C2H6
-    PD_coef2: 0
-    product2: 
+    product1: NaCl
+    PD_coef2: 1
+    product2: H2O
     addtnlTime: 0
-  currentEquationIndex: 3
-  difficulty: Easy
+  - RT_coef1: 1
+    reactant1: CH4
+    RT_coef2: 2
+    reactant2: O2
+    PD_coef1: 1
+    product1: CO2
+    PD_coef2: 2
+    product2: H2O
+    addtnlTime: 0
+  - RT_coef1: 3
+    reactant1: AgNO3
+    RT_coef2: 1
+    reactant2: K3PO4
+    PD_coef1: 1
+    product1: AgPO4
+    PD_coef2: 3
+    product2: KNO3
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: C2H6
+    RT_coef2: 7
+    reactant2: O2
+    PD_coef1: 4
+    product1: CO2
+    PD_coef2: 6
+    product2: H2O
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: SiO2
+    RT_coef2: 6
+    reactant2: HF
+    PD_coef1: 1
+    product1: H2SiF6
+    PD_coef2: 2
+    product2: H2O
+    addtnlTime: 0
+  - RT_coef1: 6
+    reactant1: CO2
+    RT_coef2: 6
+    reactant2: H2O
+    PD_coef1: 1
+    product1: C6H12O6
+    PD_coef2: 6
+    product2: O2
+    addtnlTime: 0
+  currentEquationIndex: 2
+  difficulty: 
   equationText1: {fileID: 657138076}
   equationText2: {fileID: 2000886161}
   equationText3: {fileID: 275019600}
@@ -7721,7 +7672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 141.20607, y: -206.08702}
+  m_AnchoredPosition: {x: 141.20607, y: -206.08704}
   m_SizeDelta: {x: -60.641, y: -60.699}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779184768
@@ -7811,7 +7762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -310.4, y: 205}
+  m_AnchoredPosition: {x: -310.39996, y: 205}
   m_SizeDelta: {x: -939.853, y: -506.6022}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781695438
@@ -8362,7 +8313,6 @@ RectTransform:
   - {fileID: 968078308}
   - {fileID: 1456693215}
   - {fileID: 1198154413}
-  - {fileID: 449404193}
   - {fileID: 1121325378}
   - {fileID: 784867101}
   - {fileID: 109323548}
@@ -9200,7 +9150,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_text
-      value: GREAT
+      value: GREAT!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
+    - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3463176721732696900, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_IsActive
@@ -9222,6 +9180,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1770443319}
+    - target: {fileID: 6154372256286383639, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Main Menu
+      objectReference: {fileID: 0}
     - target: {fileID: 6795399065625981490, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9332,7 +9294,7 @@ PrefabInstance:
       objectReference: {fileID: 1770443319}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Easy_Level_3
+      value: StoryMode4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9566,7 +9528,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1052, y: -383.33}
+  m_AnchoredPosition: {x: -1052, y: -383.32996}
   m_SizeDelta: {x: 190, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2076467679
@@ -10612,7 +10574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7873990119716232994, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8560924833230063595, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_AnchoredPosition.x

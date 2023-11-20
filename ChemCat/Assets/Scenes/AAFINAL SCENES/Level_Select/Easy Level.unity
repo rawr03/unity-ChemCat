@@ -429,7 +429,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_7
+          m_StringArgument: Easy 7
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &251372690
@@ -783,7 +783,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_10
+          m_StringArgument: Easy 10
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &323494247
@@ -1004,7 +1004,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_3
+          m_StringArgument: Easy 3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &403637203
@@ -1285,7 +1285,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_1
+          m_StringArgument: Easy 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &472702877
@@ -1767,7 +1767,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_4
+          m_StringArgument: Easy 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &724898870
@@ -2777,7 +2777,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_5
+          m_StringArgument: Easy 5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1275707064
@@ -3058,7 +3058,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_6
+          m_StringArgument: Easy 6
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1451470226
@@ -3645,7 +3645,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_9
+          m_StringArgument: Easy 9
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1890142968
@@ -3791,7 +3791,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_8
+          m_StringArgument: Easy 8
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1892293215
@@ -4146,7 +4146,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Easy_Level_2
+          m_StringArgument: Easy 2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1928592982

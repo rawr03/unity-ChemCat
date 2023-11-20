@@ -32,6 +32,10 @@ public class GamePlayFunctionalities : MonoBehaviour
         }
     }
 
+    public void SetOne()
+    {
+        number = 1;
+    }
  
 
     // Start is called before the first frame update

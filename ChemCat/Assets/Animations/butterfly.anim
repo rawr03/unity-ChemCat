@@ -606,7 +606,7 @@ AnimationClip:
   m_Events:
   - time: 5
     functionName: OpenLevel
-    data: Main Menu
+    data: EndCutScene
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

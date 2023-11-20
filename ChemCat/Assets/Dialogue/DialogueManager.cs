@@ -1,122 +1,82 @@
+using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Xml.Linq;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
+using UnityEngine.U2D;
 using UnityEngine.UIElements;
-
-/*
- * smile;
-    public Sprite openmouthsmile;
-    public Sprite angry;
-    public Sprite sad;
-    public Sprite scared;
-    public Sprite smart;
-    public Sprite cat;
-    public Sprite meh; 
- */
-public enum Expression
-{
-    smile,
-    openmouthsmile,
-    angry,
-    sad,
-    scared,
-    smart,
-    cat,
-    meh
-}
-
-/*
-private Character caaa;
-public Stage Speaker
-{
-    get { return AudioSpeakerMode; }
-}*/
 
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
-    //private int Index = 0;
     public float DialogueSpeed;
-    public Image Face;
 
+    public int attempt;
+    public Sprite[] sprites;
+    //private Sprite sprite;
+    public int dialogueIndex = 0;
 
-    public Expression expresssion;
+    // Sprite
+    public GameObject CurrentFace;
+    private string propName;
+    public GameObject prop;
 
-    public Expression Expression
-    {
-        set
-        {
-            Sprite sprite;
-            if (value == Expression.smile)
-            {
-                //sprite = Stage.smile;
-            }
-            else if (value == Expression.openmouthsmile)
-            {
-                //sprite = Stage.openmouthsmile;
-            }
-            else if (value == Expression.angry)
-            {
-                //sprite = Stage.angry;
-            }
-            else if (value == Expression.sad)
-            {
-                //sprite = Stage.sad;
-            }
-            else if (value == Expression.scared)
-            {
-                //sprite = Stage.scared;
-            }   
-            else if (value == Expression.smart)
-            {
-                //sprite = Stage.smart;
-            }
-            else if (value == Expression.cat)
-            {
-                //sprite = Stage.cat;
-            }
-            else
-            {
-                //sprite = Stage.meh;
-            }
-            //Stage.sprite = sprite;
-        }
-    }
+    public GameObject db, visSim;
 
     // Start is called before the first frame update
     void Start()
     {
+        visSim.gameObject.SetActive(false);
+        prop.gameObject.SetActive(false);
         sentences = new Queue<string>();
+
         //Trigger();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting dialogue for problem #" + dialogue.problem);
-
-        sentences.Clear();
-
-        foreach (string sentence in dialogue.sentences)
+        if (attempt == 0)
         {
-            sentences.Enqueue(sentence);
+            Debug.Log("Starting dialogue for problem #" + dialogue.problem);
+            //dialogueArray = new DialogueArray();
+
+            sentences.Clear();
+
+            foreach (string sentence in dialogue.sentences)
+            {
+                dialogueIndex++;
+                sentences.Enqueue(sentence);
+                //line = sentence;
+                //DialogueArray = new DialogueArray();
+                //GetDialogueInfo();
+            }
+            attempt++;
+            DisplayNextSentence();
+        }
+        else
+        {
+            DisplayNextSentence();
         }
 
-        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        
-        if(sentences.Count == 0)
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-       
+
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
@@ -128,7 +88,7 @@ public class DialogueManager : MonoBehaviour
 
         foreach (char letter in sentence.ToCharArray())
         {
-            dialogueText.text += letter;    
+            dialogueText.text += letter;
             yield return new WaitForSeconds(DialogueSpeed);
         }
     }
@@ -136,6 +96,76 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End");
+        prop.gameObject.SetActive(false);
+        StartPlay();
     }
-    // Update is called once per frame
+
+    public void SetupSprites()
+    {
+        sprites = Resources.LoadAll("storymode", typeof(Sprite)).Cast<Sprite>().ToArray();
+
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            if (sprites[i].name == propName)
+            {
+                Debug.Log("Sprite is set");
+                prop.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+            }
+        }
+        //E.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+    }
+
+    public void GetDialogueInfo(DialogueArray dialogueArray)
+    {
+        SetupSprites();
+        //ChangeSprite();
+        prop.gameObject.SetActive(true);
+        propName = dialogueArray.propName;
+    }
+
+    /*
+    public static int GetIndex(this Enum value)
+    {
+        Array values = Enum.GetValues(value.GetType());
+        return Array.IndexOf(values, value);
+    }*/
+
+    
+    public void ChangeSprite()
+    {
+        sprites = Resources.LoadAll<Sprite>("sp_egg").ToArray();
+        /*
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            if (sprites[i] == indexNumber)
+            {
+                Debug.Log("Sprite is set");
+                CurrentFace.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+            }
+        }*/
+    }
+    //expression.ToSafeString();
+    //Debug.Log(expression.ToString());
+
+    //Sname = string;
+    /*
+    //string[] names = System.Enum.GetNames(typeof(Expression));
+    for (int i = 0; i < sprites.Length; i++)
+    {
+        if ( ==)
+        {
+            Debug.Log("Sprite is set");
+            CurrentFace.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+        }
+    }
+    //expression = DialogueArray.expression
+    //if(expression)
+    //CurrentFace.GetComponent<UnityEngine.UI.Image>().sprite = expression;
+    */
+
+    public void StartPlay()
+    {   
+        db.gameObject.SetActive(false);
+        visSim.gameObject.SetActive(true);
+    }
 }

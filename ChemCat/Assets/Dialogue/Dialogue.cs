@@ -15,15 +15,15 @@ public class Dialogue
 
 public enum Expression
 {
-    smile = 0,
-    openmouthsmile = 1,
-    closedsmile = 2,
-    angry = 3,
-    sad = 4,
-    scared = 5,
-    smart = 6,
-    cat = 7,
-    meh = 8
+    smile,
+    openmouthsmile,
+    closedsmile,
+    angry,  
+    sad,
+    scared,
+    smart,
+    cat,
+    meh
 }
 
 /*

@@ -237,7 +237,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 55
   m_fontSizeMax: 75
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1123,6 +1123,56 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &140430539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 140430541}
+  - component: {fileID: 140430540}
+  m_Layer: 0
+  m_Name: CutsceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &140430540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140430539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7d8134a5d0a4e42838b7409195c513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 9633952}
+  DialogueSpeed: 0.025
+  attempt: 0
+  sprites: []
+  dialogueIndex: 0
+  CurrentFace: {fileID: 691499471}
+--- !u!4 &140430541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140430539}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.08464384, z: 90.82672}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &197818122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,6 +1389,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 259564148}
     m_Modifications:
+    - target: {fileID: 409952317365359397, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22.399998
+      objectReference: {fileID: 0}
     - target: {fileID: 921446499464024147, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1757,7 +1811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.2115545
+      value: -7.2115555
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2586,6 +2640,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 259564148}
     m_Modifications:
+    - target: {fileID: 409952317365359397, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22.399998
+      objectReference: {fileID: 0}
     - target: {fileID: 1457951027139356074, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2936,40 +2994,19 @@ MonoBehaviour:
       talk.. or have a conscience\u2026"
     - "Well anyways, I\u2019m here to tell you how to play my game!"
   dialogueArray:
-  - lineIndex: 0
-    propName: e1_water
-    sprite: {fileID: 691499471}
-    image: {fileID: 0}
+  - propName: e1_water
     expression: 0
-  - lineIndex: 1
-    propName: 
-    sprite: {fileID: 0}
-    image: {fileID: 0}
+  - propName: 
     expression: 0
-  - lineIndex: 3
-    propName: 
-    sprite: {fileID: 0}
-    image: {fileID: 0}
+  - propName: 
     expression: 0
-  - lineIndex: 4
-    propName: 
-    sprite: {fileID: 0}
-    image: {fileID: 0}
+  - propName: 
     expression: 0
-  - lineIndex: 5
-    propName: 
-    sprite: {fileID: 0}
-    image: {fileID: 0}
+  - propName: 
     expression: 0
-  - lineIndex: 6
-    propName: 
-    sprite: {fileID: 0}
-    image: {fileID: 0}
+  - propName: 
     expression: 0
-  - lineIndex: 
-    propName: 
-    sprite: {fileID: 0}
-    image: {fileID: 0}
+  - propName: 
     expression: 0
 --- !u!114 &603709184
 MonoBehaviour:
@@ -3017,7 +3054,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 603709183}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
+        m_MethodName: TriggerCutscene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5110,7 +5147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1160062599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5126,9 +5163,15 @@ MonoBehaviour:
   dialogueText: {fileID: 9633952}
   DialogueSpeed: 0.025
   attempt: 0
+  sprites: []
   dialogueIndex: 0
-  Face: {fileID: 691499471}
+  CurrentFace: {fileID: 691499471}
   prop: {fileID: 1902828916}
+  db: {fileID: 1575326508}
+  visSim: {fileID: 0}
+  dialogueArray:
+    propName: 
+    expression: 0
 --- !u!224 &1160062600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6685,7 +6728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.2115545
+      value: -7.2115555
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7151,6 +7194,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 259564148}
     m_Modifications:
+    - target: {fileID: 409952317365359397, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22.399998
+      objectReference: {fileID: 0}
     - target: {fileID: 2989988796971092364, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 250
@@ -8347,5 +8394,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1966518522}
   - {fileID: 1160062600}
+  - {fileID: 140430541}
   - {fileID: 1770443317}
   - {fileID: 1448003017}

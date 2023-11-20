@@ -21,4 +21,13 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
+    public void TriggerCutscene()
+    {
+        FindObjectOfType<CutsceneManager>().StartDialogue(dialogue);
+
+        for (int i = 0; i < dialogueArray.Length; i++)
+        {
+            FindObjectOfType<DialogueManager>().GetDialogueInfo(dialogueArray[i]);
+        }
+    }
 }

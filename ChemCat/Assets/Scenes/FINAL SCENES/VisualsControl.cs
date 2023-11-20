@@ -52,16 +52,16 @@ public class VisualsControl : MonoBehaviour
             if (sprites[i].name == Element)
             {
                 //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
-                E1.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E2.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E3.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E4.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E5.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E6.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E7.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E8.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-                E9.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
-          
+                E1.GetComponent<Image>().sprite = sprites[i];
+                E2.GetComponent<Image>().sprite = sprites[i];
+                E3.GetComponent<Image>().sprite = sprites[i];
+                E4.GetComponent<Image>().sprite = sprites[i];
+                E5.GetComponent<Image>().sprite = sprites[i];
+                E6.GetComponent<Image>().sprite = sprites[i];
+                E7.GetComponent<Image>().sprite = sprites[i];
+                E8.GetComponent<Image>().sprite = sprites[i];
+                E9.GetComponent<Image>().sprite = sprites[i];
+            
             };
         }
         
@@ -248,6 +248,18 @@ public class VisualsControl : MonoBehaviour
                 E8.gameObject.SetActive(true);
                 E9.gameObject.SetActive(true);
                 break;
+            case null:
+                E1.gameObject.SetActive(false);
+                E2.gameObject.SetActive(false);
+                E3.gameObject.SetActive(false);
+                E4.gameObject.SetActive(false);
+                E5.gameObject.SetActive(false);
+                E6.gameObject.SetActive(false);
+                E7.gameObject.SetActive(false);
+                E8.gameObject.SetActive(false);
+                E9.gameObject.SetActive(false);
+                break;
+
         }
     }
 

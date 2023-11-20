@@ -6,6 +6,7 @@ MonoImporter:
   defaultReferences:
   - smile: {fileID: -1935409025, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}
   - openmouthsmile: {fileID: -808675164, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}
+  - closedsmile: {fileID: 766271816, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}
   - angry: {fileID: 588465491, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}
   - sad: {fileID: -1018149019, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}
   - scared: {fileID: -1665133110, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}

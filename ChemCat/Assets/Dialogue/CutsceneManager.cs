@@ -14,35 +14,30 @@ using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 using UnityEngine.UIElements;
 
-public class DialogueManager : MonoBehaviour
+public class CutsceneManager : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
     public float DialogueSpeed;
 
     public int attempt;
-    //public Sprite[] sprites;
-    public Sprite[] expressions;
+    public Sprite[] sprites;
     //private Sprite sprite;
     public int dialogueIndex = 0;
 
     // Sprite
-    public GameObject currentFace;
+    public GameObject CurrentFace;
     private string propName;
-    public GameObject prop;
-    public int index;
 
-    public GameObject db, visSim;
-    public DialogueArray dialogueArray;
-
-    //public Expression faces;
+    //public DialogueArray dialogueArray;
 
     // Start is called before the first frame update
     void Start()
     {
-        visSim.gameObject.SetActive(false);
-        prop.gameObject.SetActive(false);
+        //visSim.gameObject.SetActive(false);
+        //prop.gameObject.SetActive(false);
         sentences = new Queue<string>();
+
         //Trigger();
     }
 
@@ -61,7 +56,7 @@ public class DialogueManager : MonoBehaviour
                 sentences.Enqueue(sentence);
                 //line = sentence;
                 //DialogueArray = new DialogueArray();
-                GetDialogueInfo(dialogueArray);
+                //GetDialogueInfo(dialogueArray);
             }
             attempt++;
             DisplayNextSentence();
@@ -100,57 +95,70 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End");
-        prop.gameObject.SetActive(false);
-        StartPlay();
+        //prop.gameObject.SetActive(false);
+        //StartPlay();
     }
 
     public void SetupSprites()
     {
-        expressions = Resources.LoadAll("storymode", typeof(Sprite)).Cast<Sprite>().ToArray();
+        sprites = Resources.LoadAll("storymode", typeof(Sprite)).Cast<Sprite>().ToArray();
 
-        for (int i = 0; i < expressions.Length; i++)
+        for (int i = 0; i < sprites.Length; i++)
         {
-            if (expressions[i].name == propName)
+            if (sprites[i].name == propName)
             {
                 Debug.Log("Sprite is set");
-                prop.GetComponent<UnityEngine.UI.Image>().sprite = expressions[i];
+                //prop.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
             }
         }
         //E.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
     }
 
     public void GetDialogueInfo(DialogueArray dialogueArray)
-    {   /*if (currentLine == dialogue.sentence[i])
-        if(currentIndex == string.Empty)
-        {
-            propName = dialogueArray.propName;
-            index = (int)expressions.GetValue(index);
-            SetupSprites();
-            ChangeFace(index);
-        }*/
-        propName = dialogueArray.propName;
-        //index = (int)expressions.GetValue(index);
+    {
         SetupSprites();
-        //ChangeFace(index);
-        prop.gameObject.SetActive(true);
+        //ChangeSprite();
+        //prop.gameObject.SetActive(true);
+        propName = dialogueArray.propName;
     }
 
-    public void ChangeFace(int index)
+    /*
+    public static int GetIndex(this Enum value)
     {
-        for (int i = 0; i < expressions.Length; i++)
+        Array values = Enum.GetValues(value.GetType());
+        return Array.IndexOf(values, value);
+    }*/
+
+    
+    public void ChangeSprite()
+    {
+        sprites = Resources.LoadAll<Sprite>("sp_egg").ToArray();
+        /*
+        for (int i = 0; i < sprites.Length; i++)
         {
-            if (i == index)
+            if (sprites[i] == indexNumber)
             {
-                //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
-                currentFace.GetComponent<Image>().sprite = expressions[i];
-            };
+                Debug.Log("Sprite is set");
+                CurrentFace.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
+            }
+        }*/
+    }
+    //expression.ToSafeString();
+    //Debug.Log(expression.ToString());
+
+    //Sname = string;
+    /*
+    //string[] names = System.Enum.GetNames(typeof(Expression));
+    for (int i = 0; i < sprites.Length; i++)
+    {
+        if ( ==)
+        {
+            Debug.Log("Sprite is set");
+            CurrentFace.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
         }
     }
-
-
-    public void StartPlay()
-    {   
-        db.gameObject.SetActive(false);
-        visSim.gameObject.SetActive(true);
-    }
+    //expression = DialogueArray.expression
+    //if(expression)
+    //CurrentFace.GetComponent<UnityEngine.UI.Image>().sprite = expression;
+    */
 }

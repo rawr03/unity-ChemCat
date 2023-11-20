@@ -7060,13 +7060,7 @@ MonoBehaviour:
   dialogue:
     problem: NaCl
     sentences:
-    - 'GenericPropertyJSON:{"name":"sentences","type":-1,"arraySize":5,"arrayType":"string","children":[{"name":"Array","type":-1,"arraySize":5,"arrayType":"string","children":[{"name":"size","type":12,"val":5},{"name":"data","type":3,"val":"Everyone
-      knows what Salt is, also known as Sodium Chloride (NaCl). "},{"name":"data","type":3,"val":"It\u2019s
-      what you use to make food delicious! It\u2019s what makes the sea \u2013salty! 
-      "},{"name":"data","type":3,"val":"Funfact: Did you know that salt crystals
-      are cubic in nature?"},{"name":"data","type":3,"val":"It\u2019s because of
-      the way (Na-Cl) is arranged like a lattice. "},{"name":"data","type":3,"val":"Much
-      like before this equation is unbalanced. Fill in the coefficients. "}]}]}'
+    - Everyone knows what Salt is, also known as Sodium Chloride (NaCl).
     - "It\u2019s what you use to make food delicious! It\u2019s what makes the sea
       \u2013salty!  "
     - 'Funfact: Did you know that salt crystals are cubic in nature?'
@@ -9297,7 +9291,7 @@ PrefabInstance:
       objectReference: {fileID: 1770443319}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: StoryMode2
+      value: StoryMode3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

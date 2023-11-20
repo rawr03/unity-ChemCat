@@ -11464,14 +11464,18 @@ MonoBehaviour:
   dialogue:
     problem: Glass
     sentences:
-    - "Glass Etching is an art technique that uses an abrasive or acidic chemical
-      to \u201Croughen\u201D its surface. They look very pretty! "
-    - When glass, also known as silicon dioxide (SiO2) is exposed to an abrasive
-      substance like Hydrofluoric acid (HF) the surface exposed slightly dissolves.
-    - The silicon from the glass combines with the acid forming  Hexafluorosilicic
-      acid (H2SiF6) and water (H2O) as a by product.
+    - Ooh next one is my favorite! The photosynthesis!
+    - 'Photosynthesis is the process used by plants to make their own food. '
+    - 'The process involves sunlight, water, and carbon dioxide in the air to produce
+      food (glucose) and release oxygen into the atmosphere.     '
+    - 'Carbon dioxide (CO2) and water (H2O) are transformed into glucose (C6H12O6)
+      and oxygen (O2) using energy from sunlight.  '
     - This process is essential for the production of food (glucose) and the release
       of oxygen into the atmosphere, which is vital for all living organisms on Earth.
+    - "Did you know that \u201CPhoto\u201D means light in greek and \u201Csynthesis\u201D
+      means combining?"
+    - 'Photosynthesis literally means combining water and carbon dioxide in the presence
+      of light. '
   dialogueArray:
   - propName: e10_photosynthesis
     expression: 0
@@ -13143,7 +13147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984801616}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

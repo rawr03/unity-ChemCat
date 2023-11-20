@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 4608559495998011335}
   - component: {fileID: 7988803126424152647}
   - component: {fileID: 7765629881118840139}
+  - component: {fileID: 8542659431596311065}
   m_Layer: 5
   m_Name: btn.retry
   m_TagString: Untagged
@@ -479,6 +480,18 @@ MonoBehaviour:
           m_StringArgument: StoryMode
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8542659431596311065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001069636700806388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381807c7c9faa884483233c314ea2a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031217819356263929
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,6 +504,7 @@ GameObject:
   - component: {fileID: 602641761146584114}
   - component: {fileID: 1198796292664766669}
   - component: {fileID: 1076378525972216273}
+  - component: {fileID: 156297913249732117}
   m_Layer: 5
   m_Name: btn.back
   m_TagString: Untagged
@@ -612,6 +626,18 @@ MonoBehaviour:
           m_StringArgument: Easy Level
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &156297913249732117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031217819356263929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381807c7c9faa884483233c314ea2a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2264255203803987883
 GameObject:
   m_ObjectHideFlags: 0

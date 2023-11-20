@@ -20,9 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Animation_Scene/EatingLeavesAnim.unity
     guid: 9dcb74d639823b84a9433bad88685f97
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AAFINAL SCENES/CheckQuizMode.unity
-    guid: 80b77422a1ce76848b10c99541b5bbe3
+    guid: 4f4af5fdebf3eca4fbe8e41ce7063753
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Standard Mode.unity
+    guid: d866c4cb929200b46bc704ca5373bd80
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/EasyStandard.unity
+    guid: 8cf765b653f40e54f9c6cf009a873432
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Level_Select/Easy Level.unity
+    guid: e55b7980a36cebf4b93fb23a19322fc4
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Level_Select/Medium Level.unity
     guid: e8e3b956a4dec5b499b307361f9fbc6e

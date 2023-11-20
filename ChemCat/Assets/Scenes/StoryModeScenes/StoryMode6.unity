@@ -5509,7 +5509,7 @@ PrefabInstance:
       objectReference: {fileID: 1770443319}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: StoryMode6
+      value: StoryMode7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10748,7 +10748,7 @@ PrefabInstance:
       objectReference: {fileID: 1770443319}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: StoryMode6
+      value: StoryMode7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14074,7 +14074,7 @@ PrefabInstance:
       objectReference: {fileID: 1770443319}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: StoryMode6
+      value: StoryMode7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

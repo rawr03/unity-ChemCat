@@ -29,8 +29,8 @@ public class CutsceneManager : MonoBehaviour
     // Sprite
     public GameObject CurrentFace;
     private string propName;
-    
 
+    private int SceneIndex;
    
     //public DialogueArray dialogueArray;
 
@@ -97,8 +97,17 @@ public class CutsceneManager : MonoBehaviour
 
     void EndDialogue()
     {
-        Debug.Log("End");
-        SceneManager.LoadScene("StoryMode1");
+        SceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (SceneIndex == 23)
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+        else
+        {
+            Debug.Log("End");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         //prop.gameObject.SetActive(false);
         //StartPlay();
     }

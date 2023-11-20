@@ -11668,17 +11668,22 @@ MonoBehaviour:
   dialogue:
     problem: SilverNPotassium
     sentences:
-    - Methane (CH4) is a greenhouse gas which means it traps heat in the atmosphere.
-    - 'One of the main source of its emmission is from agriculture and livestock,
-      like cows burping or farting. '
-    - When you hear the word combustion, think - FIRE
-    - "Yes, that\u2019s right. Farts are FLAMMABLE. And no, you shouldn\u2019t test
-      that."
-    - Thus the combustion of Methane(CH4) plus Oxygen(O2) from the air will produce
-      water vapor (H2O) and carbon dioxide (CO2).
+    - When silver nitrate (AgNO3) reacts with potassium phosphate (K3PO4), a double
+      displacement reaction occurs,
+    - and the products are silver phosphate (Ag3PO4) and potassium nitrate (KNO3).
+    - Imagine this equation as 2 different set of balls. The yellow and violet balls
+      represent silver nitrate (AgNO3)
+    - 'and the green and red ball represents potassium phosphate (K3PO4).  '
     - In fact, the products from a hydrocarbon COMBUSTION usually are water and carbon
       dioxide, regardless of what chemical it started as.
-    - As per usual, go ahead and balance the formula.
+    - In simple terms, the silver from the silver nitrate joins with the phosphate
+      from the potassium phosphate, and they create a new thing called "silver phosphate."
+    - In simple terms, the silver from the silver nitrate joins with the phosphate
+      from the potassium phosphate, and they create a new thing called "silver phosphate."
+    - 'It''s like mixing yellow and red balls to create a new set of balls! And the
+      potassium from the potassium phosphate team up with the nitrate from the silver
+      nitrate to make "potassium nitrate." '
+    - I bet you can also balance this one! I believe in you!
   dialogueArray:
   - propName: AgNO3
     expression: 0

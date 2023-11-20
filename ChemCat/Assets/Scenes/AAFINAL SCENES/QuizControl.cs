@@ -128,6 +128,7 @@ public class QuizControl : MonoBehaviour
         // take random index
         int randomEquationIndex = Random.Range(0, unansweredProblems.Count);
         currentEquation = unansweredProblems[randomEquationIndex];
+        addtnlTime.gameObject.SetActive(false);
 
         health = 3;
 
@@ -185,7 +186,9 @@ public class QuizControl : MonoBehaviour
 
     IEnumerator TransitionToNextProblem()
     {
-         addtnlTime.gameObject.SetActive(true);
+        Debug.Log("Next");
+         
+        addtnlTime.gameObject.SetActive(true);
         
         // Remove current spawned problem from the list
         unansweredProblems.Remove(currentEquation);
@@ -201,6 +204,7 @@ public class QuizControl : MonoBehaviour
             GetRandomEquation();
         }
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
 
     public void CheckAnswer()

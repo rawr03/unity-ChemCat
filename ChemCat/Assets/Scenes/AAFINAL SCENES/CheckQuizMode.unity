@@ -5482,7 +5482,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1771529015}
-  - {fileID: 1774389554}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038921884
@@ -7363,7 +7362,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1771529019}
         m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -7707,6 +7706,7 @@ GameObject:
   - component: {fileID: 1358301882}
   - component: {fileID: 1358301884}
   - component: {fileID: 1358301883}
+  - component: {fileID: 1358301885}
   m_Layer: 5
   m_Name: btn_Confirm
   m_TagString: Untagged
@@ -7772,6 +7772,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358301881}
   m_CullTransparentMesh: 1
+--- !u!114 &1358301885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358301881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1358301883}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1771529019}
+        m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
+        m_MethodName: CheckAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1362490120
 GameObject:
   m_ObjectHideFlags: 0
@@ -9592,6 +9648,7 @@ GameObject:
   - component: {fileID: 1771529019}
   - component: {fileID: 1771529020}
   - component: {fileID: 1771529021}
+  - component: {fileID: 1771529022}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -9623,6 +9680,7 @@ RectTransform:
   - {fileID: 701995848}
   - {fileID: 937580429}
   - {fileID: 782745361}
+  - {fileID: 1774389554}
   m_Father: {fileID: 1038074261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9955,6 +10013,22 @@ MonoBehaviour:
   reminder: {fileID: 319615814}
   instructions: {fileID: 701995847}
   switches: {fileID: 820240503}
+--- !u!114 &1771529022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771529014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e003ffdfdacf04bb782e8dd01231c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentNum: {fileID: 0}
+  number: 1
+  plus: {fileID: 0}
+  minus: {fileID: 0}
 --- !u!1 &1774389553
 GameObject:
   m_ObjectHideFlags: 0
@@ -9967,8 +10041,7 @@ GameObject:
   - component: {fileID: 1774389559}
   - component: {fileID: 1774389558}
   - component: {fileID: 1774389557}
-  - component: {fileID: 1774389556}
-  - component: {fileID: 1774389555}
+  - component: {fileID: 1774389560}
   m_Layer: 5
   m_Name: AddTIme
   m_TagString: Untagged
@@ -9984,119 +10057,17 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774389553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 0.23307, y: 0.23307, z: 0.23307}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1038074261}
+  m_Father: {fileID: 1771529015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 239.36584, y: 190.09503}
+  m_AnchoredPosition: {x: 100, y: 277}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1774389555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774389553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb719ebd95900544a5b3a41b74d1671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  problems:
-  - RT_coef1: 2
-    reactant1: H2
-    RT_coef2: 1
-    reactant2: O2
-    PD_coef1: 2
-    product1: H2O
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 5
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: C6H12O6
-    PD_coef1: 2
-    product1: C2H5OH
-    PD_coef2: 2
-    product2: CO2
-    addtnlTime: 5
-  - RT_coef1: 1
-    reactant1: HCl
-    RT_coef2: 1
-    reactant2: NaOH
-    PD_coef1: 1
-    product1: NaCl
-    PD_coef2: 1
-    product2: H2O
-    addtnlTime: 10
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: PCl5
-    PD_coef1: 1
-    product1: PCl3
-    PD_coef2: 1
-    product2: Cl2
-    addtnlTime: 10
-  equationText1: {fileID: 0}
-  equationText2: {fileID: 0}
-  equationText3: {fileID: 0}
-  equationText4: {fileID: 0}
-  timeBetweenEquations: 1
-  addtnlTime: {fileID: 1774389558}
-  time: 0
-  minutes: 0
-  seconds: 0
-  textTime: 
-  gameScore: 0
-  timerSlider: {fileID: 0}
-  timerText: {fileID: 0}
-  gameTime: 180
-  addTime: 0
-  elapsedTime: 0
-  Switch1: {fileID: 0}
-  Switch4: {fileID: 0}
-  gameOver: {fileID: 0}
-  newHighscore: {fileID: 0}
-  GameOver_Score: {fileID: 0}
-  GameOver_HighscoreDisplay: {fileID: 0}
-  Highscore_Score: {fileID: 0}
-  Highscore_HighscoreDisplay: {fileID: 0}
-  GameScoreDisplay: {fileID: 0}
-  Heart1: {fileID: 0}
-  Heart2: {fileID: 0}
-  Heart3: {fileID: 0}
-  inputNum1: {fileID: 0}
-  inputNum2: {fileID: 0}
-  inputNum3: {fileID: 0}
-  inputNum4: {fileID: 0}
---- !u!95 &1774389556
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774389553}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cf2e694306cb753498b98ad834361781, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!225 &1774389557
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10156,7 +10127,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
+  m_fontSize: 53.3
   m_fontSizeBase: 65
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -10172,7 +10143,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -10206,6 +10177,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1774389553}
   m_CullTransparentMesh: 1
+--- !u!95 &1774389560
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774389553}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf2e694306cb753498b98ad834361781, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1786143875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 266589020865087852, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}

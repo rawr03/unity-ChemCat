@@ -29,6 +29,9 @@ public class VisualsControl : MonoBehaviour
 
     public void SetupSprites()
     {
+        sprites = Resources.LoadAll("ALLelements", typeof(Sprite)).Cast<Sprite>().ToArray();
+
+        /*
         difficulty = S_draft.Diff;
 
         if (difficulty == "Easy")
@@ -43,8 +46,8 @@ public class VisualsControl : MonoBehaviour
         {
             sprites = Resources.LoadAll("StoryModeMolecules", typeof(Sprite)).Cast<Sprite>().ToArray();
         }
-        
-        
+        */
+
         chooseSwitch();
 
         for (int i = 0; i < sprites.Length; i++)  

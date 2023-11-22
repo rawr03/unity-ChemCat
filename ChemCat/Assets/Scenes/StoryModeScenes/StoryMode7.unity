@@ -12125,7 +12125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   problems:
   - RT_coef1: 2
-    reactant1: H
+    reactant1: H2
     RT_coef2: 1
     reactant2: O2
     PD_coef1: 2

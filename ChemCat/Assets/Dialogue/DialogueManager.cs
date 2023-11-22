@@ -158,7 +158,7 @@ public class DialogueManager : MonoBehaviour
     public void StartPlay()
     {   
         db.gameObject.SetActive(false);
-        visSim.gameObject.SetActive(true);
+        //visSim.gameObject.SetActive(true);
     }
 
     public void Skip()

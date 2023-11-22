@@ -8,12 +8,13 @@ using System.Xml.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.SceneManagement;
+//using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TextCore.Text;
 using UnityEngine.U2D;
 using UnityEngine.UIElements;
+
 
 public class CutsceneManager : MonoBehaviour
 {

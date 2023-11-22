@@ -10,6 +10,9 @@ public class DialogueTrigger : MonoBehaviour
     public DialogueArray[] dialogueArray;
     //public Matrix[][] matrix;
     //public DialogueInfoList dialogueInfoList;
+    [SerializeField] private Animator myAnimationControl;
+    public GameObject molecule;
+    //public int convoLine = 0;
 
     public void TriggerDialogue()
     {
@@ -17,6 +20,7 @@ public class DialogueTrigger : MonoBehaviour
 
         for(int i = 0; i < dialogueArray.Length; i++)
         {
+            //TrigConvo(c);
             FindObjectOfType<DialogueManager>().GetDialogueInfo(dialogueArray[i]);
         }
     }
@@ -30,4 +34,21 @@ public class DialogueTrigger : MonoBehaviour
             FindObjectOfType<DialogueManager>().GetDialogueInfo(dialogueArray[i]);
         }
     }
+
+    /*
+    public void TrigConvo(int convoLine)
+    {
+        convoLine = 1;
+        Debug.Log("This is line " + convoLine);
+
+        if (convoLine == 3)
+        {
+            molecule.SetActive(true);
+            myAnimationControl.SetInteger("line", convoLine);
+        }
+        else
+        {
+            myAnimationControl.SetInteger("line", convoLine);
+        }
+    }*/
 }

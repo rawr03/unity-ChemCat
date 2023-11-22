@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Xml.Linq;
 using TMPro;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -16,7 +17,7 @@ using UnityEngine.UIElements;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI dialogueText, skip, eq;
     private Queue<string> sentences;
     public float DialogueSpeed;
 
@@ -35,11 +36,16 @@ public class DialogueManager : MonoBehaviour
     public GameObject db, visSim;
     public DialogueArray dialogueArray;
 
+    //Water water;
+
+    //call script
+
     //public Expression faces;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updateGFF
     void Start()
     {
+        //eq.enabled = false; 
         visSim.gameObject.SetActive(false);
         prop.gameObject.SetActive(false);
         sentences = new Queue<string>();
@@ -57,7 +63,6 @@ public class DialogueManager : MonoBehaviour
 
             foreach (string sentence in dialogue.sentences)
             {
-                dialogueIndex++;
                 sentences.Enqueue(sentence);
                 //line = sentence;
                 //DialogueArray = new DialogueArray();
@@ -65,26 +70,28 @@ public class DialogueManager : MonoBehaviour
             }
             attempt++;
             DisplayNextSentence();
+            //water.TrigConvo();
         }
         else
         {
             DisplayNextSentence();
+            //water.TrigConvo();
         }
-
     }
 
     public void DisplayNextSentence()
     {
+        dialogueIndex++;
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
+
 
     IEnumerator TypeSentence(string sentence)
     {
@@ -113,7 +120,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (expressions[i].name == propName)
             {
-                Debug.Log("Sprite is set");
+                //Debug.Log("Sprite is set");
                 prop.GetComponent<UnityEngine.UI.Image>().sprite = expressions[i];
             }
         }
@@ -153,4 +160,10 @@ public class DialogueManager : MonoBehaviour
         db.gameObject.SetActive(false);
         visSim.gameObject.SetActive(true);
     }
+
+    public void Skip()
+    {
+        EndDialogue();
+    }
+
 }

@@ -63,15 +63,17 @@ public class PauseGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         if (GameIsPaused)
         {
-            Resume();
+            Time.timeScale = 0f;
+            //Resume();
         }
         else
         {
-            Pause();
+            Time.timeScale = 1f;
+            //Pause();
         }
-        */
+        
     }
 }

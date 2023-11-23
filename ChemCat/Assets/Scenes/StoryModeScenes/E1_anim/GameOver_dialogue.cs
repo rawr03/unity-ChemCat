@@ -1,12 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextAnim : MonoBehaviour
+public class GameOver_dialogue : MonoBehaviour
 {
-
-    public static Action OnShowProp;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +14,5 @@ public class NextAnim : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void ShowProp()
-    {
-        OnShowProp?.Invoke();
     }
 }

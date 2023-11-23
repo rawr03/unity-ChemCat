@@ -20,7 +20,6 @@ public class DialogueTrigger : MonoBehaviour
 
         for(int i = 0; i < dialogueArray.Length; i++)
         {
-            //TrigConvo(c);
             FindObjectOfType<DialogueManager>().GetDialogueInfo(dialogueArray[i]);
         }
     }

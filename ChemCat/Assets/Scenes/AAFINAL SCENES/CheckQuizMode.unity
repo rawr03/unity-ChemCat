@@ -10022,8 +10022,8 @@ MonoBehaviour:
   newHighscore: {fileID: 937580428}
   GameOver_Score: {fileID: 0}
   GameOver_HighscoreDisplay: {fileID: 0}
-  Highscore_Score: {fileID: 0}
-  Highscore_HighscoreDisplay: {fileID: 0}
+  Highscore_Score: {fileID: 1374844917}
+  Highscore_HighscoreDisplay: {fileID: 1537413561}
   GameScoreDisplay: {fileID: 0}
   Heart1: {fileID: 0}
   Heart2: {fileID: 0}

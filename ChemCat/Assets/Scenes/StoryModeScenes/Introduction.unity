@@ -707,7 +707,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &28238782
 RectTransform:
   m_ObjectHideFlags: 0
@@ -724,7 +724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -370.7002, y: -190.30008}
+  m_AnchoredPosition: {x: 0.000030518, y: -9.6}
   m_SizeDelta: {x: 300, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28238783
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1150608740, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}
+  m_Sprite: {fileID: -808675164, guid: 3d86becfa2326ea4b8f749251f76850d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -994,7 +994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &120773621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1133,6 +1133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 140430541}
   - component: {fileID: 140430540}
+  - component: {fileID: 140430542}
   m_Layer: 0
   m_Name: CutsceneManager
   m_TagString: Untagged
@@ -1173,6 +1174,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &140430542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140430539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b8888687c4fae4684bd89de0458cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  Sp_eggs: []
+  charCenter: {fileID: 28238781}
 --- !u!1 &197818122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,7 +3007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    problem: H2O
+    problem: IntroductionEgg
     sentences:
     - "Hi! I\u2019m ChemCat!"
     - "Now I know what you're thinking. \r"
@@ -3001,21 +3017,9 @@ MonoBehaviour:
     - "-well technically I\u2019m a caterpillar egg and I\u2019m not supposed to
       talk.. or have a conscience\u2026"
     - "Well anyways, I\u2019m here to tell you how to play my game!"
-  dialogueArray:
-  - propName: e1_water
-    expression: 0
-  - propName: 
-    expression: 0
-  - propName: 
-    expression: 0
-  - propName: 
-    expression: 0
-  - propName: 
-    expression: 0
-  - propName: 
-    expression: 0
-  - propName: 
-    expression: 0
+  dialogueArray: []
+  myAnimationControl: {fileID: 0}
+  molecule: {fileID: 1902828916}
 --- !u!114 &603709184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,6 +3067,18 @@ MonoBehaviour:
       - m_Target: {fileID: 603709183}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerCutscene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 140430542}
+        m_TargetAssemblyTypeName: ChangeFace, Assembly-CSharp
+        m_MethodName: TrigUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3202,7 +3218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &691499472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5155,7 +5171,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1160062599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5169,18 +5185,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 9633952}
+  skip: {fileID: 0}
   DialogueSpeed: 0.025
   attempt: 0
   expressions: []
   dialogueIndex: 0
   currentFace: {fileID: 0}
+  egg: {fileID: 0}
   prop: {fileID: 1902828916}
   index: 0
   db: {fileID: 1575326508}
-  visSim: {fileID: 0}
+  vimSim: {fileID: 0}
   dialogueArray:
     propName: 
-    expression: 0
 --- !u!224 &1160062600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5351,7 +5368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1173251130
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5994,7 +6011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1341803590
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6191,6 +6208,8 @@ MonoBehaviour:
       talk.. or have a conscience\u2026"
     - "Well anyways, I\u2019m here to tell you how to play my game!"
   dialogueArray: []
+  myAnimationControl: {fileID: 0}
+  molecule: {fileID: 0}
 --- !u!114 &1388361983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6514,7 +6533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1463176197
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6847,7 +6866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1559048114
 RectTransform:
   m_ObjectHideFlags: 0

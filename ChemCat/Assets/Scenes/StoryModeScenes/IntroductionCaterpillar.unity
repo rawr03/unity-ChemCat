@@ -1339,6 +1339,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 259564148}
     m_Modifications:
+    - target: {fileID: 409952317365359397, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22.399998
+      objectReference: {fileID: 0}
     - target: {fileID: 921446499464024147, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1761,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.2115545
+      value: -7.2115555
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2590,6 +2594,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 259564148}
     m_Modifications:
+    - target: {fileID: 409952317365359397, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22.399998
+      objectReference: {fileID: 0}
     - target: {fileID: 1457951027139356074, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2933,7 +2941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    problem: H2O
+    problem: Caterpillar
     sentences:
     - "Surpriseeee!!! Would ya look at that! I\u2019m an actual caterpillar!"
     - "Aren\u2019t I adorable?"
@@ -2944,9 +2952,9 @@ MonoBehaviour:
     - Use them sparingly, the equations will only get harder from here.
   dialogueArray:
   - propName: 
-    expression: 0
   - propName: 
-    expression: 0
+  myAnimationControl: {fileID: 0}
+  molecule: {fileID: 0}
 --- !u!114 &603709184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2994,6 +3002,18 @@ MonoBehaviour:
       - m_Target: {fileID: 603709183}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerCutscene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1493819887}
+        m_TargetAssemblyTypeName: ChangeCat, Assembly-CSharp
+        m_MethodName: TrigUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5100,18 +5120,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 9633952}
+  skip: {fileID: 0}
   DialogueSpeed: 0.025
   attempt: 0
   expressions: []
   dialogueIndex: 0
   currentFace: {fileID: 0}
+  egg: {fileID: 0}
   prop: {fileID: 1902828916}
   index: 0
   db: {fileID: 0}
-  visSim: {fileID: 0}
+  vimSim: {fileID: 0}
   dialogueArray:
     propName: 
-    expression: 0
 --- !u!224 &1160062600
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6122,6 +6143,8 @@ MonoBehaviour:
       talk.. or have a conscience\u2026"
     - "Well anyways, I\u2019m here to tell you how to play my game!"
   dialogueArray: []
+  myAnimationControl: {fileID: 0}
+  molecule: {fileID: 0}
 --- !u!114 &1388361983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6588,6 +6611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1493819886}
   - component: {fileID: 1493819885}
+  - component: {fileID: 1493819887}
   m_Layer: 0
   m_Name: CutsceneManager
   m_TagString: Untagged
@@ -6628,6 +6652,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1493819887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493819884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ac35026dd64ea4d9c6222956278b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  Sp_eggs: []
+  charCenter: {fileID: 1588487310}
+  sprite: {fileID: 691499471}
 --- !u!1001 &1512358433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6718,7 +6758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -7.2115545
+      value: -7.2115555
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7101,6 +7141,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581998632}
   m_CullTransparentMesh: 1
+--- !u!1 &1588487310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1588487311}
+  - component: {fileID: 1588487313}
+  - component: {fileID: 1588487312}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1588487311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588487310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1770443317}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30, y: 42}
+  m_SizeDelta: {x: 456, y: 428}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1588487312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588487310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2143362095, guid: 167723f35b184e1408d67808e2d2a701, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1588487313
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588487310}
+  m_CullTransparentMesh: 1
 --- !u!1 &1642395965
 GameObject:
   m_ObjectHideFlags: 0
@@ -7184,6 +7299,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 259564148}
     m_Modifications:
+    - target: {fileID: 409952317365359397, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 22.399998
+      objectReference: {fileID: 0}
     - target: {fileID: 2989988796971092364, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 250
@@ -7573,6 +7692,7 @@ RectTransform:
   - {fileID: 259564148}
   - {fileID: 799688500}
   - {fileID: 1575326509}
+  - {fileID: 1588487311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

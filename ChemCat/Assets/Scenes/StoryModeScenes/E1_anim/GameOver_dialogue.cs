@@ -210,6 +210,15 @@ public class GameOver_dialogue : MonoBehaviour
         }
 
 
+        faces = Resources.LoadAll<Sprite>("sp_egg");
+        for (int i = 0; i < faces.Length; i++)
+        {
+            if (i == dialogueIndex)
+            {
+                //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
+                egg.GetComponent<UnityEngine.UI.Image>().sprite = faces[i];
+            };
+        }
     }
 
     public void Anim()

@@ -1,16 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using System.Linq;
-using Unity.VisualScripting;
-using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class S_draft : MonoBehaviour
+public class StoryControl : MonoBehaviour
 {
+    // Start is called before the first frame update
     public Equations[] problems;
     private List<Equations> unansweredProblems;
 
@@ -38,8 +36,6 @@ public class S_draft : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = 1f;
 
-
-
     public static int PassCurrentIndex;
     public static string ElemText1, ElemText2, ElemText3, ElemText4, Diff;
 
@@ -48,7 +44,8 @@ public class S_draft : MonoBehaviour
     public TextMeshProUGUI Level;
 
     // Pop ups
-    public GameObject Switch1, Switch4, gameOver, perfect, great, good;
+    public GameObject Switch1, Switch4, gameOver, perfect, great, good, vimSim;
+
 
     // Reactants and Products
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
@@ -61,7 +58,7 @@ public class S_draft : MonoBehaviour
     public static float startTime;
 
     // Coefficients 
-    public GameObject inputNum1, inputNum2, inputNum3, inputNum4;
+    public GameObject inputNum1, inputNum2, inputNum3, inputNum4, gameOverAnim, gameOverPanel, Db;
 
     public static int LevelNum;
 
@@ -69,6 +66,7 @@ public class S_draft : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
+    DialogueManager dm;
 
     void Start()
     {
@@ -79,19 +77,19 @@ public class S_draft : MonoBehaviour
         Level.text = LevelNum.ToString();
         showDifficulty.text = difficulty.ToString();
 
-        Heart1.gameObject.SetActive(true);
-        Heart2.gameObject.SetActive(true);
-        Heart3.gameObject.SetActive(true);
+        Heart1.SetActive(true);
+        Heart2.SetActive(true);
+        Heart3.SetActive(true);
 
         // Switch1, Switch4, correct, wrong and gameOver must be set to false by default
-        Switch1.gameObject.SetActive(false);
-        Switch1.gameObject.SetActive(false);
-        gameOver.gameObject.SetActive(false);
+        Switch1.SetActive(false);
+        Switch1.SetActive(false);
+        gameOver.SetActive(false);
 
         // hide floating docks
-        perfect.gameObject.SetActive(false);
-        great.gameObject.SetActive(false);
-        good.gameObject.SetActive(false);
+        perfect.SetActive(false);
+        great.SetActive(false);
+        good.SetActive(false);
 
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
@@ -127,18 +125,18 @@ public class S_draft : MonoBehaviour
         // activate switch based on the Problem
         if (equationAnswer1 != 0 && equationAnswer4 == 0)
         {
-            Switch1.gameObject.SetActive(true);
-            Switch4.gameObject.SetActive(false);
+            Switch1.SetActive(true);
+            Switch4.SetActive(false);
         }
         else if (equationAnswer4 != 0 && equationAnswer1 == 0)
         {
-            Switch1.gameObject.SetActive(false);
-            Switch4.gameObject.SetActive(true);
+            Switch1.SetActive(false);
+            Switch4.SetActive(true);
         }
         else
         {
-            Switch1.gameObject.SetActive(true);
-            Switch4.gameObject.SetActive(true);
+            Switch1.SetActive(true);
+            Switch4.SetActive(true);
         }
 
         RecordElements(currentEquation.reactant1, currentEquation.reactant2, currentEquation.product1, currentEquation.product2, difficulty);
@@ -192,18 +190,18 @@ public class S_draft : MonoBehaviour
     {
         if (health == 3)
         {
-            perfect.gameObject.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            perfect.SetActive(true);
+            //AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 2)
         {
-            great.gameObject.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            great.SetActive(true);
+            //AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 1)
         {
-            good.gameObject.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            good.SetActive(true);
+            //AudioManager.Instance.PlaySFX("LevelComplete");
         }
         yield return new WaitForSeconds(timeBetweenEquations);
     }
@@ -215,7 +213,7 @@ public class S_draft : MonoBehaviour
         Num2 = inputNum2.GetComponent<Text>().text;
         Num3 = inputNum3.GetComponent<Text>().text;
         Num4 = inputNum4.GetComponent<Text>().text;
-
+        
         Num1.Trim();
         Num2.Trim();
         Num3.Trim();
@@ -228,13 +226,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                //AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                AudioManager.Instance.PlaySFX("Wrong");
+                //AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else if (Element1 == "0")
@@ -243,13 +241,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                //AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                AudioManager.Instance.PlaySFX("Wrong");
+                //AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else
@@ -258,13 +256,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                //AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                AudioManager.Instance.PlaySFX("Wrong");
+                //AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         // StartCoroutine(EnablePanel());
@@ -273,37 +271,40 @@ public class S_draft : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        gameOver.gameObject.SetActive(false);
-        AudioManager.Instance.PlayMusic("BGMusic");
+        Db.SetActive(false);
+        vimSim.SetActive(true);
+        dm.Skip();
+        //AudioManager.Instance.PlayMusic("BGMusic");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         switch (health)
         {
             case 3:
-                Heart1.gameObject.SetActive(true);
-                Heart2.gameObject.SetActive(true);
-                Heart3.gameObject.SetActive(true);
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
                 break;
             case 2:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(true);
-                Heart3.gameObject.SetActive(true);
+                Heart1.SetActive(false);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
                 break;
             case 1:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(false);
-                Heart3.gameObject.SetActive(true);
+                Heart1.SetActive(false);
+                Heart2.SetActive(false);
+                Heart3.SetActive(true);
                 break;
             case 0:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(false);
-                Heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
-                AudioManager.Instance.musicSource.Pause();
+                Heart1.SetActive(false);
+                Heart2.SetActive(false);
+                Heart3.SetActive(false);
+                gameOver.SetActive(true);
+                //AudioManager.Instance.musicSource.Pause();
+                gameOverAnim.SetActive(true);
                 StartCoroutine(TransitionToNextLevel());
                 break;
         }

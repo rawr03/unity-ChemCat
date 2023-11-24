@@ -6804,7 +6804,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1771529019}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
@@ -7571,7 +7571,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1771529019}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -7854,7 +7854,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1771529019}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1
@@ -8025,7 +8025,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1771529019}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
@@ -9854,9 +9854,9 @@ GameObject:
   - component: {fileID: 1771529018}
   - component: {fileID: 1771529017}
   - component: {fileID: 1771529016}
-  - component: {fileID: 1771529019}
   - component: {fileID: 1771529020}
   - component: {fileID: 1771529021}
+  - component: {fileID: 1771529022}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -9959,240 +9959,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1771529019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771529014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbb719ebd95900544a5b3a41b74d1671, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  problems:
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: PCl5
-    PD_coef1: 1
-    product1: PCl3
-    PD_coef2: 1
-    product2: Cl2
-    addtnlTime: 3
-  - RT_coef1: 1
-    reactant1: CH2O
-    RT_coef2: 1
-    reactant2: H2
-    PD_coef1: 1
-    product1: CH3OH
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 3
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: CH3OH
-    PD_coef1: 1
-    product1: CO
-    PD_coef2: 2
-    product2: H2
-    addtnlTime: 3
-  - RT_coef1: 1
-    reactant1: H2
-    RT_coef2: 1
-    reactant2: F2
-    PD_coef1: 2
-    product1: HF
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 3
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 2
-    reactant2: HCl
-    PD_coef1: 1
-    product1: H2
-    PD_coef2: 1
-    product2: Cl2
-    addtnlTime: 3
-  - RT_coef1: 1
-    reactant1: CH2O
-    RT_coef2: 1
-    reactant2: H2
-    PD_coef1: 1
-    product1: CH3OH
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 3
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: C2H6
-    PD_coef1: 1
-    product1: C2H4
-    PD_coef2: 1
-    product2: H2
-    addtnlTime: 3
-  - RT_coef1: 2
-    reactant1: C
-    RT_coef2: 2
-    reactant2: H2O
-    PD_coef1: 1
-    product1: CH4
-    PD_coef2: 1
-    product2: CO2
-    addtnlTime: 5
-  - RT_coef1: 1
-    reactant1: CH4
-    RT_coef2: 2
-    reactant2: H2O
-    PD_coef1: 3
-    product1: H2
-    PD_coef2: 1
-    product2: CO
-    addtnlTime: 5
-  - RT_coef1: 1
-    reactant1: C2H4
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 2
-    product1: CO2
-    PD_coef2: 2
-    product2: H2O
-    addtnlTime: 5
-  - RT_coef1: 1
-    reactant1: C2H6
-    RT_coef2: 1
-    reactant2: Cl2
-    PD_coef1: 1
-    product1: C2H5Cl
-    PD_coef2: 1
-    product2: HCl
-    addtnlTime: 5
-  - RT_coef1: 1
-    reactant1: CH4
-    RT_coef2: 4
-    reactant2: S
-    PD_coef1: 1
-    product1: CS2
-    PD_coef2: 2
-    product2: H2S
-    addtnlTime: 5
-  - RT_coef1: 1
-    reactant1: CS2
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 1
-    product1: CO2
-    PD_coef2: 2
-    product2: SO2
-    addtnlTime: 5
-  - RT_coef1: 1
-    reactant1: SO2
-    RT_coef2: 2
-    reactant2: H2
-    PD_coef1: 1
-    product1: S
-    PD_coef2: 2
-    product2: H2O
-    addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: C2H5OH
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 2
-    product1: CO2
-    PD_coef2: 3
-    product2: H2O
-    addtnlTime: 10
-  - RT_coef1: 2
-    reactant1: CO2
-    RT_coef2: 3
-    reactant2: H2O
-    PD_coef1: 1
-    product1: C2H5OH
-    PD_coef2: 3
-    product2: O2
-    addtnlTime: 10
-  - RT_coef1: 4
-    reactant1: CO2
-    RT_coef2: 6
-    reactant2: H2O
-    PD_coef1: 2
-    product1: C2H6
-    PD_coef2: 7
-    product2: O2
-    addtnlTime: 10
-  - RT_coef1: 2
-    reactant1: C2H2
-    RT_coef2: 5
-    reactant2: O2
-    PD_coef1: 4
-    product1: CO2
-    PD_coef2: 2
-    product2: H2O
-    addtnlTime: 10
-  - RT_coef1: 4
-    reactant1: CO2
-    RT_coef2: 2
-    reactant2: H2O
-    PD_coef1: 2
-    product1: C2H2
-    PD_coef2: 5
-    product2: O2
-    addtnlTime: 10
-  - RT_coef1: 4
-    reactant1: NH3
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 2
-    product1: N2
-    PD_coef2: 6
-    product2: H2O
-    addtnlTime: 10
-  - RT_coef1: 2
-    reactant1: N2
-    RT_coef2: 6
-    reactant2: H2O
-    PD_coef1: 4
-    product1: NH3
-    PD_coef2: 3
-    product2: O2
-    addtnlTime: 10
-  equationText1: {fileID: 1952184659}
-  equationText2: {fileID: 1169121510}
-  equationText3: {fileID: 2028961340}
-  equationText4: {fileID: 381028433}
-  timeBetweenEquations: 0.005
-  addtnlTime: {fileID: 1774389558}
-  time: 0
-  minutes: 0
-  seconds: 0
-  textTime: 
-  gameScore: 0
-  timerSlider: {fileID: 237127427}
-  timerText: {fileID: 1634775150}
-  gameTime: 180
-  addTime: 0
-  elapsedTime: 0
-  Switch1: {fileID: 201778917}
-  Switch4: {fileID: 1798977462}
-  gameOver: {fileID: 782745360}
-  newHighscore: {fileID: 937580428}
-  GameOver_Score: {fileID: 803872338}
-  GameOver_HighscoreDisplay: {fileID: 767866091}
-  Highscore_Score: {fileID: 1374844917}
-  Highscore_HighscoreDisplay: {fileID: 1537413561}
-  GameScoreDisplay: {fileID: 1938721704}
-  Heart1: {fileID: 1869896207}
-  Heart2: {fileID: 263662210}
-  Heart3: {fileID: 1094385602}
-  inputNum1: {fileID: 572556928}
-  inputNum2: {fileID: 1239953168}
-  inputNum3: {fileID: 1022548976}
-  inputNum4: {fileID: 1889401997}
 --- !u!114 &1771529020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10221,6 +9987,51 @@ MonoBehaviour:
   reminder: {fileID: 319615814}
   instructions: {fileID: 701995847}
   switches: {fileID: 820240503}
+--- !u!114 &1771529022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771529014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e2edd447c23d18409409f86f0466751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  problems: []
+  equationText1: {fileID: 1952184659}
+  equationText2: {fileID: 1169121510}
+  equationText3: {fileID: 2028961340}
+  equationText4: {fileID: 381028433}
+  timeBetweenEquations: 0.01
+  addtnlTime: {fileID: 1774389558}
+  time: 0
+  minutes: 0
+  seconds: 0
+  textTime: 
+  gameScore: 0
+  timerSlider: {fileID: 237127427}
+  timerText: {fileID: 1634775150}
+  gameTime: 0
+  addTime: 0
+  elapsedTime: 0
+  Switch1: {fileID: 201778917}
+  Switch4: {fileID: 1798977462}
+  gameOver: {fileID: 782745360}
+  newHighscore: {fileID: 937580428}
+  GameOver_Score: {fileID: 0}
+  GameOver_HighscoreDisplay: {fileID: 0}
+  Highscore_Score: {fileID: 0}
+  Highscore_HighscoreDisplay: {fileID: 0}
+  GameScoreDisplay: {fileID: 0}
+  Heart1: {fileID: 0}
+  Heart2: {fileID: 0}
+  Heart3: {fileID: 0}
+  inputNum1: {fileID: 572556928}
+  inputNum2: {fileID: 1239953168}
+  inputNum3: {fileID: 1022548976}
+  inputNum4: {fileID: 1889401997}
 --- !u!1 &1774389553
 GameObject:
   m_ObjectHideFlags: 0
@@ -11232,7 +11043,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1771529019}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: QuizControl, Assembly-CSharp
         m_MethodName: Retry
         m_Mode: 1

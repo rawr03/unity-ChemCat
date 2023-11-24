@@ -12,7 +12,7 @@ using TMPro;
 public class S_draft : MonoBehaviour
 {
     public Equations[] problems;
-    private List<Equations> unansweredProblems;
+    private static List<Equations> unansweredProblems;
 
     private Equations currentEquation;
 

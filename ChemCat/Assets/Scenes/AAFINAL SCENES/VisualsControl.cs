@@ -144,7 +144,7 @@ public class VisualsControl : MonoBehaviour
                 E9.gameObject.SetActive(false);
            */
             case "1":
-                E1.SetActive(true);
+                E1.gameObject.SetActive(true);
                 E2.gameObject.SetActive(false);
                 E3.gameObject.SetActive(false);
                 E4.gameObject.SetActive(false);
@@ -264,6 +264,12 @@ public class VisualsControl : MonoBehaviour
                 break;
 
         }
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame

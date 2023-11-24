@@ -34,16 +34,22 @@ public class DialogueManager : MonoBehaviour
     public int index;
 
     public GameObject db, visSim;
-    //public DialogueArray dialogueArray;
+    public DialogueArray dialogueArray;
 
+    //Water water;
 
+    //call script
+
+    //public Expression faces;
 
     // Start is called before the first frame updateGFF
     void Start()
-    {   
-        visSim.SetActive(false);
-        prop.SetActive(false);
+    {
+        //eq.enabled = false; 
+        visSim.gameObject.SetActive(false);
+        prop.gameObject.SetActive(false);
         sentences = new Queue<string>();
+        //Trigger();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -60,14 +66,16 @@ public class DialogueManager : MonoBehaviour
                 sentences.Enqueue(sentence);
                 //line = sentence;
                 //DialogueArray = new DialogueArray();
-                //GetDialogueInfo(dialogueArray);
+                GetDialogueInfo(dialogueArray);
             }
             attempt++;
             DisplayNextSentence();
+            //water.TrigConvo();
         }
         else
         {
             DisplayNextSentence();
+            //water.TrigConvo();
         }
     }
 
@@ -84,6 +92,7 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(TypeSentence(sentence));
     }
 
+
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
@@ -98,7 +107,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End");
-        prop.SetActive(false);
+        prop.gameObject.SetActive(false);
         StartPlay();
 
     }
@@ -111,26 +120,28 @@ public class DialogueManager : MonoBehaviour
         {
             if (expressions[i].name == propName)
             {
+                //Debug.Log("Sprite is set");
                 prop.GetComponent<UnityEngine.UI.Image>().sprite = expressions[i];
             }
         }
         //E.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
     }
 
-    /*
     public void GetDialogueInfo(DialogueArray dialogueArray)
-    {   if (currentLine == dialogue.sentence[i])
+    {   /*if (currentLine == dialogue.sentence[i])
         if(currentIndex == string.Empty)
         {
             propName = dialogueArray.propName;
             index = (int)expressions.GetValue(index);
             SetupSprites();
             ChangeFace(index);
-        }
+        }*/
         propName = dialogueArray.propName;
+        //index = (int)expressions.GetValue(index);
         SetupSprites();
-        prop.SetActive(true);
-    }*/
+        //ChangeFace(index);
+        prop.gameObject.SetActive(true);
+    }
 
     public void ChangeFace(int index)
     {
@@ -138,6 +149,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (i == index)
             {
+                //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
                 currentFace.GetComponent<Image>().sprite = expressions[i];
             };
         }
@@ -145,7 +157,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartPlay()
     {   
-        db.SetActive(false);
+        db.gameObject.SetActive(false);
+        //visSim.gameObject.SetActive(true);
     }
 
     public void Skip()

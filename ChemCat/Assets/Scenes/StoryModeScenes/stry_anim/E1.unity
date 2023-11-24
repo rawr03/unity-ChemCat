@@ -5694,6 +5694,166 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341014580}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/E1.unity
+=======
+--- !u!1 &341135544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 341135545}
+  - component: {fileID: 341135549}
+  - component: {fileID: 341135548}
+  - component: {fileID: 341135547}
+  - component: {fileID: 341135546}
+  m_Layer: 5
+  m_Name: dbTrig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &341135545
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341135544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2136806991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -489.73047, y: -272.99908}
+  m_SizeDelta: {x: 971.7458, y: 546.61}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &341135546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341135544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87a1e8c9de24c14294df37d9cce3296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    problem: GameOver
+    sentences:
+    - Oh.....
+    - "That\u2019s okay\u2026 Thank you for trying."
+    - Goodbye cruel world.
+    - ...
+    - '......... '
+    - '..................... '
+    - "Just kidding, I\u2019m fine. Getting a game over just resets me to your last
+      CHECKPOINT! "
+    - "So you can try as many times as you\u2019d like! Wanna try again?"
+--- !u!114 &341135547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341135544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 341135548}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 341135546}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &341135548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341135544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &341135549
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341135544}
+  m_CullTransparentMesh: 1
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E1_anim/E1.unity
 --- !u!1 &344020640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5725,7 +5885,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 559391171}
   skip: {fileID: 1376735977}
-  eq: {fileID: 0}
   DialogueSpeed: 0.025
   attempt: 0
   expressions: []
@@ -5734,10 +5893,14 @@ MonoBehaviour:
   prop: {fileID: 2103668025}
   index: 0
   db: {fileID: 579482663}
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/E1.unity
   visSim: {fileID: 1902591674}
   dialogueArray:
     propName: 
     expression: 0
+=======
+  vimSim: {fileID: 1902591674}
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E1_anim/E1.unity
 --- !u!224 &344020642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21727,6 +21890,87 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485393433}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/E1.unity
+=======
+--- !u!1 &1490213415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1490213418}
+  - component: {fileID: 1490213417}
+  - component: {fileID: 1490213416}
+  m_Layer: 0
+  m_Name: GameOverManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1490213416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490213415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f64fa2848b9983e4e9df009d3be96f98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 844699327}
+  skip: {fileID: 1376735977}
+  DialogueSpeed: 0.25
+  attempt: 0
+  expressions: []
+  dialogueIndex: 0
+  currentFace: {fileID: 1385143482}
+  prop: {fileID: 2103668025}
+  index: 0
+  db: {fileID: 579482663}
+  vimSim: {fileID: 1902591674}
+--- !u!114 &1490213417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490213415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e5a1754638ebf40bb17f32b5efc9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 844699327}
+  skip: {fileID: 1105616868}
+  DialogueSpeed: 0.025
+  dialogueIndex: 0
+  index: 0
+  egg: {fileID: 1833529894}
+  gameOverAnim: {fileID: 1869695223}
+  gameOverPanel: {fileID: 1301598711}
+  faces: []
+  attempt: 0
+--- !u!4 &1490213418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490213415}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 243.8739, y: 137.51913, z: 6.152251}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E1_anim/E1.unity
 --- !u!1001 &1490966953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24593,11 +24837,14 @@ MonoBehaviour:
     - '3. Count the number again to compare if the element count is the same. If
       not, repeat step 2. '
     - "Remember these three steps \u2014 count, change a coefficient, and count again. "
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/E1.unity
   dialogueArray:
   - propName: e1_water
     expression: 6
   myAnimationControl: {fileID: 0}
   molecule: {fileID: 2139738447}
+=======
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E1_anim/E1.unity
 --- !u!114 &1707604927
 MonoBehaviour:
   m_ObjectHideFlags: 0

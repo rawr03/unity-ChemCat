@@ -7,6 +7,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+<<<<<<< Updated upstream
     public DialogueArray[] dialogueArray;
     //public Matrix[][] matrix;
     //public DialogueInfoList dialogueInfoList;
@@ -14,6 +15,8 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject molecule;
     //public int convoLine = 0;
 
+=======
+>>>>>>> Stashed changes
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

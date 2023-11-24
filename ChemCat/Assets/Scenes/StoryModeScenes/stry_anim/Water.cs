@@ -5,70 +5,97 @@ using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
 using System.Linq;
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/Water.cs
+=======
+using System;
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E4_anim/Ethanol.cs
 
 public class Water : MonoBehaviour
 {
     [SerializeField] private Animator myAnimationControl;
 
-    public GameObject egg, prop, molecule, line1, line2, eq_Text, subscripts, eq_H2O, eq_2, distribCoef, listeq, vimSim, viseq, confirm, gameplay, hearts, black, startPlay, visSimAnim;
+    public GameObject egg, Db, vimSim, e4_anim1, e4_anim2, e4_anim3, e4_anim4, e4_anim5, e4_anim6;
     private int convoLine = 0;
     //public TextMeshProUGUI equationText_anim;
-
+    public int index = 0;
     public Sprite[] Sp_eggs;
+    //public string[] Sp_faces;
 
-    /// <summary>
-    /// DialogueManager dialogueManager;
-    /// </summary>
+    /*
+    public string Stage;
+    //public Sprite portrait;
+    //public Sprite portraitAngry;
+    
+
+
+    ChemCat Face List:
+
+    smile(0);
+    openmouthsmile(1);
+    closedsmile(2);
+    angry(3);
+    sad(4);
+    scared(5);
+    smart(6);
+    cat(7);
+    meh(8);
+    */
+
+
 
     public void Start()
     {
-        //convoLine = 0;
-        eq_Text.SetActive(false);
+        
     }
 
     public void TrigUpdate()
     {
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/Water.cs
         //egg.GetComponent<Image>().sprite = Resources.LoadAll("sp_egg", typeof(Sprite));
         //equationText_anim.enabled = false;
+=======
+        LoadSprite();
+        egg.SetActive(true);
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E4_anim/Ethanol.cs
         Debug.Log(convoLine);
         if (convoLine == 0)
         {
-            myAnimationControl.Play("e1_show");
+            e4_anim1.SetActive(true);
+            ChangeSprite(6);
         }
         else if (convoLine == 1)
         {
-            molecule.SetActive(true);
-            myAnimationControl.Play("e1_moveleft");
-            myAnimationControl.Play("e1_Mole");
+            e4_anim1.SetActive(false);
+            e4_anim2.SetActive(true);
+            ChangeSprite(2);
         }
         else if (convoLine == 2)
         {
-            eq_Text.SetActive(true);
-            prop.transform.localScale = new Vector3(0, 0, 0);
-            molecule.SetActive(false);
-            myAnimationControl.Play("e1_eq");
+            e4_anim2.SetActive(false);
+            e4_anim3.SetActive(true);
+            ChangeSprite(1);
         }
         else if (convoLine == 3)
         {
-            line1.SetActive(true);
-            myAnimationControl.Play("e1_eq1");
-            line2.SetActive(true);
-            myAnimationControl.Play("e1_eq2");
+            e4_anim3.SetActive(false);
+            e4_anim4.SetActive(true);
+            ChangeSprite(1);
         }
-        else if (convoLine == 4)
+        else if (convoLine == 4 || convoLine == 5)
         {
-            line1.SetActive(false);
-            line2.SetActive(false);
-            subscripts.SetActive(true);
+            e4_anim4.SetActive(false);
+            e4_anim5.SetActive(true);
+            ChangeSprite(6);
         }
-        else if (convoLine == 5 || convoLine == 6)
+        else if (convoLine == 6)
         {
-            subscripts.SetActive(false);
-            eq_Text.SetActive(false);
-            eq_H2O.SetActive(true);
+            e4_anim5.SetActive(false);
+            e4_anim6.SetActive(true);
+            ChangeSprite(6);
         }
-        else if (convoLine == 7)
+        else
         {
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/Water.cs
             eq_H2O.SetActive(false);
             eq_2.SetActive(true);
         }
@@ -113,6 +140,9 @@ public class Water : MonoBehaviour
             hearts.SetActive(false);
             gameplay.SetActive(true);
             //confirm.SetActive(true);
+=======
+            HideAll();
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E4_anim/Ethanol.cs
         }
 
         Next();
@@ -130,8 +160,27 @@ public class Water : MonoBehaviour
         convoLine++;
     }
 
+    public void LoadSprite()
+    {
+        Sp_eggs = Resources.LoadAll<Sprite>("sp_egg");
+
+    }
+
+    public void ChangeSprite(int index)
+    {
+        for (int i = 0; i < Sp_eggs.Length; i++)
+        {
+            if (i == index)
+            {
+                //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
+                egg.GetComponent<Image>().sprite = Sp_eggs[i];
+            };
+        }
+    }
+
     public void HideAll()
     {
+<<<<<<< Updated upstream:ChemCat/Assets/Scenes/StoryModeScenes/stry_anim/Water.cs
         prop.SetActive(false);
         molecule.SetActive(false); 
         line1.SetActive(false);
@@ -149,5 +198,16 @@ public class Water : MonoBehaviour
         hearts.SetActive(false); 
         black.SetActive(false);
         startPlay.SetActive(true);
+=======
+        egg.SetActive(false);
+        Db.SetActive(false);
+        e4_anim1.SetActive(false); 
+        e4_anim2.SetActive(false); 
+        e4_anim3.SetActive(false); 
+        e4_anim4.SetActive(false); 
+        e4_anim5.SetActive(false); 
+        e4_anim6.SetActive(false);
+        //vimSim.SetActive(true);
+>>>>>>> Stashed changes:ChemCat/Assets/Scenes/StoryModeScenes/E4_anim/Ethanol.cs
     }
 }

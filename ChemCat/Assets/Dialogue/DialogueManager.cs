@@ -17,7 +17,7 @@ using UnityEngine.UIElements;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText, skip, eq;
+    public TextMeshProUGUI dialogueText, skip;
     private Queue<string> sentences;
     public float DialogueSpeed;
 
@@ -33,8 +33,13 @@ public class DialogueManager : MonoBehaviour
     public GameObject prop;
     public int index;
 
+<<<<<<< Updated upstream
     public GameObject db, visSim;
     public DialogueArray dialogueArray;
+=======
+    public GameObject db, vimSim;
+    //public DialogueArray dialogueArray;
+>>>>>>> Stashed changes
 
     //Water water;
 
@@ -44,10 +49,16 @@ public class DialogueManager : MonoBehaviour
 
     // Start is called before the first frame updateGFF
     void Start()
+<<<<<<< Updated upstream
     {
         //eq.enabled = false; 
         visSim.gameObject.SetActive(false);
         prop.gameObject.SetActive(false);
+=======
+    {   
+        vimSim.SetActive(false);
+        prop.SetActive(false);
+>>>>>>> Stashed changes
         sentences = new Queue<string>();
         //Trigger();
     }
@@ -107,7 +118,11 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End");
+<<<<<<< Updated upstream
         prop.gameObject.SetActive(false);
+=======
+        //prop.SetActive(false);
+>>>>>>> Stashed changes
         StartPlay();
 
     }
@@ -157,8 +172,13 @@ public class DialogueManager : MonoBehaviour
 
     public void StartPlay()
     {   
+<<<<<<< Updated upstream
         db.gameObject.SetActive(false);
         //visSim.gameObject.SetActive(true);
+=======
+        db.SetActive(false);
+        vimSim.SetActive(true);
+>>>>>>> Stashed changes
     }
 
     public void Skip()

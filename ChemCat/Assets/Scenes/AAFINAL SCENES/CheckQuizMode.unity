@@ -10020,14 +10020,14 @@ MonoBehaviour:
   Switch4: {fileID: 1798977462}
   gameOver: {fileID: 782745360}
   newHighscore: {fileID: 937580428}
-  GameOver_Score: {fileID: 0}
-  GameOver_HighscoreDisplay: {fileID: 0}
+  GameOver_Score: {fileID: 803872338}
+  GameOver_HighscoreDisplay: {fileID: 767866091}
   Highscore_Score: {fileID: 1374844917}
   Highscore_HighscoreDisplay: {fileID: 1537413561}
-  GameScoreDisplay: {fileID: 0}
-  Heart1: {fileID: 0}
-  Heart2: {fileID: 0}
-  Heart3: {fileID: 0}
+  GameScoreDisplay: {fileID: 1938721704}
+  Heart1: {fileID: 1869896207}
+  Heart2: {fileID: 263662210}
+  Heart3: {fileID: 1094385602}
   inputNum1: {fileID: 572556928}
   inputNum2: {fileID: 1239953168}
   inputNum3: {fileID: 1022548976}

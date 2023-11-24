@@ -13,7 +13,7 @@ using TMPro;
 public class RevisedQuizMode : MonoBehaviour
 {
     public Equations[] problems;
-    private static List<Equations> unansweredProblems;
+    private List<Equations> unansweredProblems;
 
     private Equations currentEquation;
 

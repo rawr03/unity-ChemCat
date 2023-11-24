@@ -56,6 +56,7 @@ public class Water : MonoBehaviour
         Debug.Log(convoLine);
         if (convoLine == 0)
         {
+            prop.SetActive(true);
             myAnimationControl.Play("e1_show");
             ChangeSprite(6);
         }

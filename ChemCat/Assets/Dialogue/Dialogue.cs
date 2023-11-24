@@ -13,6 +13,7 @@ public class Dialogue
     public string[] sentences;
 }
 
+
 public enum Expression
 {
     smile,
@@ -26,15 +27,17 @@ public enum Expression
     meh
 }
 
+
 [System.Serializable]
 public class DialogueInfoList
 {
     public List<DialogueArray> list = new List<DialogueArray> ();
 }
 
+
 [System.Serializable]
 public class DialogueArray
 {
     public string propName;
-    public Expression expression;
+    //public Expression expression;
 }

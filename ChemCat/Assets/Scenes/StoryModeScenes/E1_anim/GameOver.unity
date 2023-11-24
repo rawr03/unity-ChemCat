@@ -11827,7 +11827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 11d0f0b993c0d0a4482fc19409cd05e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e11f1d9bd2077ea43be52c144de36317, type: 2}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15628,6 +15628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 983758971}
   - component: {fileID: 983758972}
+  - component: {fileID: 983758973}
   m_Layer: 5
   m_Name: GameOverAnim
   m_TagString: Untagged
@@ -15680,6 +15681,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &983758973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983758970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2e5a1754638ebf40bb17f32b5efc9b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText: {fileID: 2027661547}
+  skip: {fileID: 716281592}
+  DialogueSpeed: 0.025
+  dialogueIndex: 0
+  index: 0
+  db: {fileID: 983758970}
+  egg: {fileID: 1930667044}
+  faces: []
 --- !u!1 &999893328
 GameObject:
   m_ObjectHideFlags: 0
@@ -30423,11 +30444,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    problem: H2O
+    problem: GameOver
     sentences:
     - Oh.....
     - "That\u2019s okay\u2026 Thank you for trying."
     - Goodbye cruel world.
+    - ...
+    - '......... '
+    - '..................... '
+    - "Just kidding, I\u2019m fine. Getting a game over just resets me to your last
+      CHECKPOINT! "
+    - "So you can try as many times as you\u2019d like! Wanna try again?"
   dialogueArray:
   - propName: e1_water
     expression: 6
@@ -32046,8 +32073,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.70288, y: -185.67499}
-  m_SizeDelta: {x: 1279.072, y: 170.9286}
+  m_AnchoredPosition: {x: 4.2987, y: -185.67499}
+  m_SizeDelta: {x: 1461.7292, y: 170.9286}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027661547
 MonoBehaviour:
@@ -32103,8 +32130,8 @@ MonoBehaviour:
   m_fontSizeMin: 55
   m_fontSizeMax: 63
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 5
   m_wordSpacing: 0

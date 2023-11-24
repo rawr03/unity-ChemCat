@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
     public int index;
 
     public GameObject db, visSim;
-    public DialogueArray dialogueArray;
+    //public DialogueArray dialogueArray;
 
 
 
@@ -60,7 +60,7 @@ public class DialogueManager : MonoBehaviour
                 sentences.Enqueue(sentence);
                 //line = sentence;
                 //DialogueArray = new DialogueArray();
-                GetDialogueInfo(dialogueArray);
+                //GetDialogueInfo(dialogueArray);
             }
             attempt++;
             DisplayNextSentence();
@@ -117,19 +117,20 @@ public class DialogueManager : MonoBehaviour
         //E.GetComponent<UnityEngine.UI.Image>().sprite = sprites[i];
     }
 
+    /*
     public void GetDialogueInfo(DialogueArray dialogueArray)
-    {   /*if (currentLine == dialogue.sentence[i])
+    {   if (currentLine == dialogue.sentence[i])
         if(currentIndex == string.Empty)
         {
             propName = dialogueArray.propName;
             index = (int)expressions.GetValue(index);
             SetupSprites();
             ChangeFace(index);
-        }*/
+        }
         propName = dialogueArray.propName;
         SetupSprites();
         prop.SetActive(true);
-    }
+    }*/
 
     public void ChangeFace(int index)
     {

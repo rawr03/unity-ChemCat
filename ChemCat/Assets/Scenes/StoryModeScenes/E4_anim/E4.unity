@@ -233,14 +233,14 @@ RectTransform:
   m_GameObject: {fileID: 61683767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0289186, y: 1.0289186, z: 1.0289186}
+  m_LocalScale: {x: 0.5299992, y: 0.5299992, z: 0.5299992}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1770443317}
+  m_Father: {fileID: 579482666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -719.662, y: -368.7625}
+  m_AnchoredPosition: {x: -370.70013, y: -190.36543}
   m_SizeDelta: {x: 300, y: 280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &61683769
@@ -1744,7 +1744,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 776774893}
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
 --- !u!224 &275019598 stripped
 RectTransform:
@@ -2712,6 +2711,9 @@ MonoBehaviour:
     - "Just kidding, I\u2019m fine. Getting a game over just resets me to your last
       CHECKPOINT! "
     - "So you can try as many times as you\u2019d like! Wanna try again?"
+  dialogueArray: []
+  myAnimationControl: {fileID: 0}
+  molecule: {fileID: 0}
 --- !u!114 &341135547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2910,14 +2912,13 @@ MonoBehaviour:
   expressions: []
   dialogueIndex: 0
   currentFace: {fileID: 1385143482}
+  egg: {fileID: 61683767}
   prop: {fileID: 2103668025}
   index: 0
   db: {fileID: 579482663}
   vimSim: {fileID: 1902591674}
-  visSim: {fileID: 1902591674}
   dialogueArray:
     propName: 
-    expression: 0
 --- !u!224 &344020642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3940,13 +3941,12 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalScale: {x: 0.5151032, y: 0.5151032, z: 0.5151032}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1167980067}
   - {fileID: 2011370083}
   - {fileID: 207314418}
-  m_Father: {fileID: 1902591675}
+  m_Father: {fileID: 1198154413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3958,13 +3958,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5327301360134113257, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
   m_PrefabInstance: {fileID: 2000886158}
   m_PrefabAsset: {fileID: 0}
-  m_Father: {fileID: 1198154413}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 94.73367, y: 202.91571}
-  m_SizeDelta: {x: 603.54724, y: 97.06775}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &529440869
 GameObject:
   m_ObjectHideFlags: 0
@@ -4477,7 +4470,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1385143483}
-  - {fileID: 1376735975}
   m_Father: {fileID: 579482666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -4812,11 +4804,8 @@ RectTransform:
   - {fileID: 85676211}
   - {fileID: 1707604925}
   - {fileID: 1376735975}
-  - {fileID: 2103668026}
+  - {fileID: 61683768}
   - {fileID: 1403470268}
-  - {fileID: 2073535566}
-  - {fileID: 559391169}
-  - {fileID: 1707604925}
   m_Father: {fileID: 1770443317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
@@ -4914,7 +4903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &625316810
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5359,7 +5348,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 657138082}
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
 --- !u!224 &657138073 stripped
 RectTransform:
@@ -5611,7 +5599,6 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -8182192946092750736, guid: 6601691708181b24ea3e387e2f030d0e, type: 2}
-      objectReference: {fileID: -7327683115952806994, guid: 949435eeec7db354b9d54e504179dafe, type: 2}
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4285135103
@@ -5619,7 +5606,6 @@ PrefabInstance:
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4177409129386647263, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_Name
@@ -5756,7 +5742,6 @@ PrefabInstance:
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StoryMode2
-      value: EggCrackAnim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10103,7 +10088,6 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 2000886158}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127942613}
-  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8e003ffdfdacf04bb782e8dd01231c0, type: 3}
@@ -10349,13 +10333,11 @@ GameObject:
   - component: {fileID: 1376735976}
   m_Layer: 5
   m_Name: Skip
-  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-  m_IsActive: 0
 --- !u!224 &1376735975
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10366,21 +10348,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.53, y: 0.53, z: 0.53}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 579482666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -107.61309, y: 48.656956}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 559391169}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -9, y: 2}
+  m_AnchoredPosition: {x: -122.45306, y: 53.426945}
   m_SizeDelta: {x: 187.98499, y: 70.544}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376735976
@@ -10427,24 +10401,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 344020641}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: Skip
-        m_Mode: 1
+      - m_Target: {fileID: 2103668032}
+        m_TargetAssemblyTypeName: Ethanol, Assembly-CSharp
+        m_MethodName: HideAll
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2103668032}
-        m_TargetAssemblyTypeName: Ethanol, Assembly-CSharp
-        m_MethodName: HideAll
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 344020641}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: DisplayNextSentence
+        m_MethodName: Skip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10475,7 +10446,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: '>>SKIP'
-  m_text: <<BACK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d398ced2fc1401b47b4caa92eb9cb459, type: 2}
   m_sharedMaterial: {fileID: -4116674956789085639, guid: d398ced2fc1401b47b4caa92eb9cb459, type: 2}
@@ -10799,7 +10769,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
-  m_IsActive: 1
 --- !u!224 &1385143483
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11974,7 +11943,6 @@ PrefabInstance:
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StoryMode2
-      value: EggCrackAnim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13109,6 +13077,9 @@ MonoBehaviour:
     - 'Just remember to consider EVERY element on BOTH sides. '
     - 'Coefficients are DISTRIBUTED to EACH element of a molecule. So multiply the
       COEFFICIENT to the SUBSCRIPT.  '
+  dialogueArray: []
+  myAnimationControl: {fileID: 0}
+  molecule: {fileID: 0}
 --- !u!114 &1707604927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13154,6 +13125,17 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1707604926}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1707604930}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
@@ -13243,13 +13225,11 @@ MonoBehaviour:
       COEFFICIENT to the SUBSCRIPT.  '
   dialogueArray:
   - propName: e4_alcohol
-    expression: 0
   - propName: e4_alcohol
-    expression: 0
   - propName: e4_alcohol
-    expression: 0
   - propName: e4_alcohol
-    expression: 0
+  myAnimationControl: {fileID: 0}
+  molecule: {fileID: 0}
 --- !u!1 &1709836331
 GameObject:
   m_ObjectHideFlags: 0
@@ -13838,7 +13818,6 @@ RectTransform:
   m_Children:
   - {fileID: 934209791}
   - {fileID: 721995567}
-  - {fileID: 1902591675}
   - {fileID: 93386632}
   - {fileID: 1962031870}
   - {fileID: 976257589}
@@ -13847,10 +13826,8 @@ RectTransform:
   - {fileID: 1777835230}
   - {fileID: 684975756}
   - {fileID: 579482666}
-  - {fileID: 61683768}
-  - {fileID: 1869695224}
   - {fileID: 1902591675}
-  - {fileID: 579482666}
+  - {fileID: 1869695224}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13878,7 +13855,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770443313}
   m_Enabled: 0
-  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0e767326df4b9b4d9a405f1aecdbdc1, type: 3}
   m_Name: 
@@ -13944,7 +13920,6 @@ MonoBehaviour:
     reactant2: K3PO4
     PD_coef1: 1
     product1: AgPO4
-    product1: Ag3PO4
     PD_coef2: 3
     product2: KNO3
     addtnlTime: 0
@@ -13976,7 +13951,6 @@ MonoBehaviour:
     product2: O2
     addtnlTime: 0
   currentEquationIndex: 0
-  currentEquationIndex: 3
   difficulty: 
   equationText1: {fileID: 657138076}
   equationText2: {fileID: 2000886161}
@@ -15079,7 +15053,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1884704816}
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
 --- !u!224 &1884704807 stripped
 RectTransform:
@@ -15479,10 +15452,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1232871717}
   - {fileID: 625316810}
@@ -15491,7 +15460,6 @@ RectTransform:
   - {fileID: 968078308}
   - {fileID: 1456693215}
   - {fileID: 1198154413}
-  - {fileID: 449404193}
   - {fileID: 1121325378}
   - {fileID: 784867101}
   - {fileID: 109323548}
@@ -16338,7 +16306,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2041730078}
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
 --- !u!224 &2000886159 stripped
 RectTransform:
@@ -16906,7 +16873,6 @@ PrefabInstance:
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_text
       value: GREAT
-      value: GREAT!
       objectReference: {fileID: 0}
     - target: {fileID: 3012938513256412994, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_fontAsset
@@ -17051,7 +17017,6 @@ PrefabInstance:
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StoryMode2
-      value: EggCrackAnim
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18010,7 +17975,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-  m_IsActive: 0
 --- !u!224 &2103668026
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18038,7 +18002,6 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103668025}
   m_Enabled: 0
-  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -18052,7 +18015,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 11c0d02aaeeacb741b7ab4dc4f994c4e, type: 3}
-  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18938,8 +18900,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1770443322}
         m_TargetAssemblyTypeName: StoryControl, Assembly-CSharp
-      - m_Target: {fileID: 1770443320}
-        m_TargetAssemblyTypeName: S_draft, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
         m_Arguments:
@@ -19165,7 +19125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -19174,7 +19134,7 @@ PrefabInstance:
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1770443319}
+      objectReference: {fileID: 1770443322}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -19189,7 +19149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenLevel
+      value: Retry
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -19197,7 +19157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelMenu, Assembly-CSharp
+      value: StoryControl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -19211,9 +19171,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1770443320}
     - target: {fileID: 7873990119716232994, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_Name
       value: gameOver

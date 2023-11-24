@@ -88,6 +88,10 @@ public class Ethanol : MonoBehaviour
             e4_anim6.SetActive(true);
             ChangeSprite(6);
         }
+        else if (convoLine == 7)
+        {
+            e4_anim6.SetActive(false);
+        }
         Next();
     }
 
@@ -116,6 +120,14 @@ public class Ethanol : MonoBehaviour
 
     public void HideAll()
     {
+        //egg.SetActive(false);
+        e4_anim1.SetActive(false);
+        e4_anim2.SetActive(false); 
+        e4_anim3.SetActive(false); 
+        e4_anim4.SetActive(false); 
+        e4_anim5.SetActive(false); 
+        e4_anim6.SetActive(false);
+        Db.SetActive(false);
         /*
         prop.SetActive(false);
         molecule.SetActive(false);

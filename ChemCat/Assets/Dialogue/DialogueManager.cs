@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
     public int dialogueIndex = 0;
 
     // Sprite
-    public GameObject currentFace;
+    public GameObject currentFace, egg;
     private string propName;
     public GameObject prop;
     public int index;
@@ -105,7 +105,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("End");
-        prop.gameObject.SetActive(false);
+        egg.SetActive(false);
         //prop.SetActive(false);
         prop.SetActive(false);
         StartPlay();
@@ -153,16 +153,15 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartPlay()
-    {   
-        db.gameObject.SetActive(false);
-        //visSim.gameObject.SetActive(true);
+    {
+        //egg.SetActive(false);
         db.SetActive(false);
         vimSim.SetActive(true);
-        db.SetActive(false);
     }
 
     public void Skip()
     {
+        //egg.SetActive(false);
         EndDialogue();
     }
 

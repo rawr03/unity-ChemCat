@@ -7,7 +7,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-    public DialogueArray[] dialogueArray;
+    //public DialogueArray[] dialogueArray;
     //public Matrix[][] matrix;
     //public DialogueInfoList dialogueInfoList;
     [SerializeField] private Animator myAnimationControl;
@@ -17,38 +17,15 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-
-        for(int i = 0; i < dialogueArray.Length; i++)
-        {
-            //TrigConvo(c);
-            FindObjectOfType<DialogueManager>().GetDialogueInfo(dialogueArray[i]);
-        }
     }
 
     public void TriggerCutscene()
     {
         FindObjectOfType<CutsceneManager>().StartDialogue(dialogue);
-
-        for (int i = 0; i < dialogueArray.Length; i++)
-        {
-            FindObjectOfType<DialogueManager>().GetDialogueInfo(dialogueArray[i]);
-        }
     }
 
-    /*
-    public void TrigConvo(int convoLine)
+    public void TriggerGameOver()
     {
-        convoLine = 1;
-        Debug.Log("This is line " + convoLine);
-
-        if (convoLine == 3)
-        {
-            molecule.SetActive(true);
-            myAnimationControl.SetInteger("line", convoLine);
-        }
-        else
-        {
-            myAnimationControl.SetInteger("line", convoLine);
-        }
-    }*/
+        FindObjectOfType<GameOver_dialogue>().GStartDialogue(dialogue);
+    }
 }

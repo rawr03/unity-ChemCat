@@ -6469,6 +6469,7 @@ MonoBehaviour:
     - "Just kidding, I\u2019m fine. Getting a game over just resets me to your last
       CHECKPOINT! "
     - "So you can try as many times as you\u2019d like! Wanna try again?"
+  dialogueArray: []
   myAnimationControl: {fileID: 0}
   molecule: {fileID: 0}
 --- !u!114 &341135547
@@ -6601,14 +6602,13 @@ MonoBehaviour:
   expressions: []
   dialogueIndex: 0
   currentFace: {fileID: 1385143482}
+  egg: {fileID: 85676210}
   prop: {fileID: 2103668025}
   index: 0
   db: {fileID: 579482663}
-  visSim: {fileID: 1902591674}
+  vimSim: {fileID: 1902591674}
   dialogueArray:
     propName: 
-    expression: 0
-  vimSim: {fileID: 1902591674}
 --- !u!224 &344020642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23688,24 +23688,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490213415}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f64fa2848b9983e4e9df009d3be96f98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 844699327}
   skip: {fileID: 1376735977}
-  eq: {fileID: 0}
   DialogueSpeed: 0.25
   attempt: 0
   expressions: []
   dialogueIndex: 0
   currentFace: {fileID: 1385143482}
+  egg: {fileID: 1833529894}
   prop: {fileID: 2103668025}
   index: 0
   db: {fileID: 579482663}
   vimSim: {fileID: 1902591674}
-  visSim: {fileID: 1902591674}
+  dialogueArray:
+    propName: 
 --- !u!114 &1490213417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23728,6 +23729,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1301598711}
   faces: []
   attempt: 0
+  difficulty: Easy
 --- !u!4 &1490213418
 Transform:
   m_ObjectHideFlags: 0
@@ -26616,7 +26618,6 @@ MonoBehaviour:
     - "Remember these three steps \u2014 count, change a coefficient, and count again. "
   dialogueArray:
   - propName: e1_water
-    expression: 6
   myAnimationControl: {fileID: 0}
   molecule: {fileID: 2139738447}
 --- !u!114 &1707604927
@@ -27888,6 +27889,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1301598711}
   faces: []
   attempt: 0
+  difficulty: 
 --- !u!1 &1772765266 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5840641387955766857, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
@@ -29759,7 +29761,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869695223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2e5a1754638ebf40bb17f32b5efc9b2, type: 3}
   m_Name: 
@@ -29774,6 +29776,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1301598711}
   faces: []
   attempt: 0
+  difficulty: Easy
 --- !u!95 &1869695226
 Animator:
   serializedVersion: 5

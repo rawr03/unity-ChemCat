@@ -6,6 +6,7 @@ using System.Linq;
 using System.Reflection;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 //using UnityEngine.UI;
 
@@ -25,83 +26,12 @@ public class GameOver_dialogue : MonoBehaviour
     //public float DialogueSpeed;
 
     public int attempt;
-    //public Sprite[] sprites;
-    //public Sprite[] expressions;
-    //private Sprite sprite;
-    //public int dialogueIndex = 0;
-
-    // Sprite
-    //public GameObject currentFace;
-    //private string propName;
-    //public GameObject prop;
-    //public int index;
-
-    //public GameObject db, visSim;
-
-
-    // Start is called before the first frame updateGFF
-
-    /*
-    void Start()
-    {
-        gmSentences = new Queue<string>();
-    }
-
-    public void GStartDialogue(Dialogue dialogue)
-    {
-        Debug.Log("Starting dialogue for problem #" + dialogue.problem);
-        gmSentences.Clear();
-
-        foreach (string gSentence in dialogue.sentences)
-        {
-            gmSentences.Enqueue(gSentence);
-            //Debug.Log(sentence);
-        }
-            DisplayNextSentence();
-    }
-
-    public void DisplayNextSentence()
-    {
-        dialogueIndex++;
-        if (gmSentences.Count == 0)
-        {
-            GEndDialogue();
-            return;
-        }
-        string gSentence = gmSentences.Dequeue();
-        Debug.Log(gSentence);
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(gSentence));
-    }
-
-    IEnumerator TypeSentence(string gSentence)
-    {
-        dialogueText.text = "";
-
-        foreach (char letter in gSentence.ToCharArray())
-        {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(DialogueSpeed);
-        }
-    }
-
-    void GEndDialogue()
-    {
-        Debug.Log("End");
-        gameOverAnim.SetActive(false);  
-
-    }
-
-    public void GSkip()
-    {
-        GEndDialogue();
-    }
-    */
-
+    public string difficulty;
     void Start()
     {
         //visSim.SetActive(false);
         //prop.SetActive(false);
+        index = 0;
         sentences = new Queue<string>();
     }
 
@@ -111,15 +41,12 @@ public class GameOver_dialogue : MonoBehaviour
         {
             Debug.Log("Starting dialogue for problem #" + dialogue.problem);
             //dialogueArray = new DialogueArray();
-
+            Debug.Log(index);
             sentences.Clear();
 
             foreach (string sentence in dialogue.sentences)
             {
                 sentences.Enqueue(sentence);
-                //line = sentence;
-                //DialogueArray = new DialogueArray();
-                //GetDialogueInfo(dialogueArray);
             }
             attempt++;
             DisplayNextSentence();
@@ -132,13 +59,14 @@ public class GameOver_dialogue : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        Anim();
-        dialogueIndex++;
+        index++;
+        //Debug.Log(difficulty);
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
+        Anim();
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
@@ -179,26 +107,25 @@ public class GameOver_dialogue : MonoBehaviour
 
     public void GChangeFace(int dialogueIndex)
     {
-        if (StoryControl.Diff == "Easy")
+        Debug.Log(difficulty);
+        if (difficulty == "Easy")
         {
             faces = Resources.LoadAll<Sprite>("sp_egg");
             for (int i = 0; i < faces.Length; i++)
             {
                 if (i == dialogueIndex)
                 {
-                    //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
                     egg.GetComponent<UnityEngine.UI.Image>().sprite = faces[i];
                 }
             }
         }
-        else if (StoryControl.Diff == "Medium")
+        else if (difficulty == "Medium")
         {
             faces = Resources.LoadAll<Sprite>("sp_caterpillar");
             for (int i = 0; i < faces.Length; i++)
             {
                 if (i == dialogueIndex)
                 {
-                    //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
                     egg.GetComponent<UnityEngine.UI.Image>().sprite = faces[i];
                 }
             }
@@ -208,27 +135,16 @@ public class GameOver_dialogue : MonoBehaviour
             faces = Resources.LoadAll<Sprite>("pupa");
             egg.GetComponent<UnityEngine.UI.Image>().sprite = faces[0];
         }
-
-
-        faces = Resources.LoadAll<Sprite>("sp_egg");
-        for (int i = 0; i < faces.Length; i++)
-        {
-            if (i == dialogueIndex)
-            {
-                //E1.GetComponent<SpriteRenderer>().sprite = sprites[i];
-                egg.GetComponent<UnityEngine.UI.Image>().sprite = faces[i];
-            };
-        }
     }
 
     public void Anim()
     {
-        if(dialogueIndex == 0 || dialogueIndex == 1 || dialogueIndex == 2 || dialogueIndex == 3 || 
-           dialogueIndex == 4 || dialogueIndex == 5)
+        if(index == 0 || index == 1 || index == 2 || index == 3 || 
+           index == 4 || index == 5 || index == 6)
         {
             GChangeFace(4);
         }
-        else if(dialogueIndex == 6)
+        else if(index == 7)
         {
             GChangeFace(1);
         }

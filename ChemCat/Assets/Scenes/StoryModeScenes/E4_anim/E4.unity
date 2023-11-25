@@ -11689,6 +11689,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1301598711}
   faces: []
   attempt: 0
+  difficulty: Easy
 --- !u!4 &1490213418
 Transform:
   m_ObjectHideFlags: 0
@@ -14135,6 +14136,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1301598711}
   faces: []
   attempt: 0
+  difficulty: Easy
 --- !u!1 &1772765266 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5840641387955766857, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
@@ -14693,6 +14695,7 @@ MonoBehaviour:
   gameOverPanel: {fileID: 1301598711}
   faces: []
   attempt: 0
+  difficulty: 
 --- !u!95 &1869695226
 Animator:
   serializedVersion: 5

@@ -3,9 +3,6 @@ using UnityEngine.UI;
 
 public class Methane : MonoBehaviour
 {
-    // Start is called before the first frame update
-    //[SerializeField] private Animator myAnimationControl;
-
     public GameObject egg, eggCenter, Db, vimSim, e6_anim1, e6_anim2, e6_anim3, e6_anim4, e6_anim5; // e4_anim6;
     private int convoLine = 0;
     public int index = 0;
@@ -23,11 +20,6 @@ public class Methane : MonoBehaviour
     cat(7);
     meh(8);
     */
-
-    public void Start()
-    {
-        //eggCenter.SetActive(false);
-    }
 
     public void TrigUpdate()
     {
@@ -52,7 +44,7 @@ public class Methane : MonoBehaviour
         {
             e6_anim2.SetActive(false);
             e6_anim3.SetActive(true);
-            ChangeSprite(2);
+            ChangeSprite(1);
         }
         else if (convoLine == 3)
         {
@@ -64,7 +56,7 @@ public class Methane : MonoBehaviour
         {
             e6_anim4.SetActive(false);
             e6_anim5.SetActive(true);
-            ChangeSprite(6);
+            ChangeSprite(0);
         }
         else
         {

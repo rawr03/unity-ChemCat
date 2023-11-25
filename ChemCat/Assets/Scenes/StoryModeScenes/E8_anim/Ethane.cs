@@ -1,17 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-using Unity.VisualScripting;
-using System.Linq;
-using System;
 
-public class Ethanol : MonoBehaviour
+public class Ethane : MonoBehaviour
 {
     [SerializeField] private Animator myAnimationControl;
 
-    public GameObject egg, Db, vimSim, e4_anim1, e4_anim2, e4_anim3, e4_anim4, e4_anim5, e4_anim6;
+    public GameObject pupa, db_pupa, Db, db_anim, vimSim, e8_anim1, e8_anim2, e8_anim3, e8_anim4, e8_anim5;
     private int convoLine = 0;
     public int index = 0;
     public Sprite[] Sp_eggs;
@@ -37,49 +32,45 @@ public class Ethanol : MonoBehaviour
 
     public void TrigUpdate()
     {
-
+        pupa.SetActive(false);
+        
         LoadSprite();
-        egg.SetActive(true);
-
         Debug.Log(convoLine);
         if (convoLine == 0)
         {
-            e4_anim1.SetActive(true);
-            ChangeSprite(6);
+            db_pupa.SetActive(true);
+            e8_anim1.SetActive(true);
         }
         else if (convoLine == 1)
         {
-            e4_anim1.SetActive(false);
-            e4_anim2.SetActive(true);
+            db_pupa.SetActive(false);
+            db_anim.SetActive(true);
+            e8_anim1.SetActive(false);
+            e8_anim2.SetActive(true);
             ChangeSprite(2);
         }
         else if (convoLine == 2)
         {
-            e4_anim2.SetActive(false);
-            e4_anim3.SetActive(true);
+            e8_anim2.SetActive(false);
+            e8_anim3.SetActive(true);
             ChangeSprite(1);
         }
         else if (convoLine == 3)
         {
-            e4_anim3.SetActive(false);
-            e4_anim4.SetActive(true);
+            e8_anim3.SetActive(false);
+            e8_anim4.SetActive(true);
             ChangeSprite(1);
         }
-        else if (convoLine == 4 || convoLine == 5)
+        else if (convoLine == 4)
         {
-            e4_anim4.SetActive(false);
-            e4_anim5.SetActive(true);
+            e8_anim4.SetActive(false);
+            e8_anim5.SetActive(true);
             ChangeSprite(6);
         }
-        else if (convoLine == 6)
+        else if (convoLine == 5)
         {
-            e4_anim5.SetActive(false);
-            e4_anim6.SetActive(true);
+            e8_anim5.SetActive(false);
             ChangeSprite(6);
-        }
-        else if (convoLine == 7)
-        {
-            e4_anim6.SetActive(false);
         }
         Next();
     }
@@ -101,20 +92,19 @@ public class Ethanol : MonoBehaviour
         {
             if (i == index)
             {
-                egg.GetComponent<Image>().sprite = Sp_eggs[i];
+                //egg.GetComponent<Image>().sprite = Sp_eggs[i];
             };
         }
     }
 
     public void HideAll()
     {
-        //egg.SetActive(false);
-        e4_anim1.SetActive(false);
-        e4_anim2.SetActive(false); 
-        e4_anim3.SetActive(false); 
-        e4_anim4.SetActive(false); 
-        e4_anim5.SetActive(false); 
-        e4_anim6.SetActive(false);
+        e8_anim1.SetActive(false);
+        e8_anim2.SetActive(false);
+        e8_anim3.SetActive(false);
+        e8_anim4.SetActive(false);
+        e8_anim5.SetActive(false);
         Db.SetActive(false);
+        db_anim.SetActive(false);
     }
 }

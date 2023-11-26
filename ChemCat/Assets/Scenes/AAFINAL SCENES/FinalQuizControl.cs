@@ -88,6 +88,10 @@ public class QuizControl : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
+    // Reset Switch
+    public GameObject Switch2, Switch3;
+
+
     void Start()
     {
         //anim = GetComponent<Animator>();
@@ -165,6 +169,16 @@ public class QuizControl : MonoBehaviour
 
         addtnlTime.text = "+" + currentEquation.addtnlTime.ToString();
         RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
+        
+        Switch1.GetComponent<GamePlayFunctionalities>().number = 1;
+        Switch2.GetComponent<GamePlayFunctionalities>().number = 1;
+        Switch3.GetComponent<GamePlayFunctionalities>().number = 1;
+        Switch4.GetComponent<GamePlayFunctionalities>().number = 1;
+        inputNum1.GetComponent<Text>().text = "1";
+        inputNum2.GetComponent<Text>().text = "1";
+        inputNum3.GetComponent<Text>().text = "1";
+        inputNum4.GetComponent<Text>().text = "1";
+
     }
 
 
@@ -191,8 +205,14 @@ public class QuizControl : MonoBehaviour
         // Remove current spawned problem from the list
         unansweredProblems.Remove(currentEquation);
         yield return new WaitForSeconds(timeBetweenEquations);
+        
+        GetRandomEquation();
 
-        if (currentEquation != null)
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
+        /*
+        if (unansweredProblems != null)
         {
             gameScore = CurrScore;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -201,6 +221,7 @@ public class QuizControl : MonoBehaviour
         {
             GetRandomEquation();
         }
+        */
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

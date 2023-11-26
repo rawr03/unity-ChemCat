@@ -18,6 +18,16 @@ public class PauseGame : MonoBehaviour
         GameIsPaused = false;
     }
 
+    public void ExitPlayTime()
+    {
+        settings.gameObject.SetActive(false);
+        reminder.gameObject.SetActive(false);
+        instructions.gameObject.SetActive(false);
+        AudioManager.Instance.PlayMusic("BGMusic");
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
     public void Pause()
     {
         settings.gameObject.SetActive(true);

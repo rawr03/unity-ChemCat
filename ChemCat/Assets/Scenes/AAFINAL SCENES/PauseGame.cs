@@ -63,6 +63,7 @@ public class PauseGame : MonoBehaviour
     public void ResumeTime()
     {
         Time.timeScale = 1f;
+        AudioManager.Instance.PlayMusic("BGMusic");
         GameIsPaused = false;
     }
 

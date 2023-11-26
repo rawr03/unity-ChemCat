@@ -60,7 +60,7 @@ public class QuizControl : MonoBehaviour
     private float Maxtime;
     public float addTime;
     public float elapsedTime;
-    public static float UsedTime;
+    public float UsedTime;
 
 
     // Health related 
@@ -333,10 +333,12 @@ public class QuizControl : MonoBehaviour
 
     public void IntlzdAftEXIT()
     {
-        Maxtime = 180;
-        UsedTime = 0;
+        Maxtime = 180f;
+        UsedTime = 0f;
         CurrScore = 0;
         gameTime = 180f;
+        Debug.Log("Exit Successful");
+        Debug.Log(Maxtime+"  "+UsedTime+ "  " +CurrScore + "  " +gameTime);
     }
 
 

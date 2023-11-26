@@ -89,7 +89,6 @@ public class QuizControl : MonoBehaviour
     private static string Num1, Num2, Num3, Num4;
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
-
     
 
     void Start()
@@ -99,11 +98,12 @@ public class QuizControl : MonoBehaviour
         addtnlTime.gameObject.SetActive(false);
 
         //Setup for Time
-        Maxtime = 180;
+        //Maxtime = 180;
+        gameTime = 180;
         stopTimer = false;
-        timerSlider.maxValue = Maxtime;
+        timerSlider.maxValue = gameTime; //Maxtime;
         timerSlider.value = time; //gameTime;
-        gameTime = 180 - UsedTime;
+        //gameTime = 180 - UsedTime;
         Debug.Log(UsedTime);
         // gameTime = 180f;
 
@@ -173,6 +173,11 @@ public class QuizControl : MonoBehaviour
 
         addtnlTime.text = "+" + currentEquation.addtnlTime.ToString();
         RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
+
+        //inputNum1.GetComponent<Text>().text = "1";
+        //inputNum2.GetComponent<Text>().text = "1";
+        //inputNum3.GetComponent<Text>().text = "1";
+        //inputNum4.GetComponent<Text>().text = "1";
     }
 
 
@@ -200,9 +205,8 @@ public class QuizControl : MonoBehaviour
         unansweredProblems.Remove(currentEquation);
         yield return new WaitForSeconds(timeBetweenEquations);
 
-        if (currentEquation != null)
+        if (unansweredProblems == null)
         {
-            Debug.Log(UsedTime);
             gameScore = CurrScore;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -323,6 +327,7 @@ public class QuizControl : MonoBehaviour
         CurrScore = 0;
         UsedTime = 0f;   
         gameTime = 180f;
+        time = gameTime;
         //Debug.Log(time);
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
@@ -333,10 +338,11 @@ public class QuizControl : MonoBehaviour
 
     public void IntlzdAftEXIT()
     {
-        Maxtime = 180;
+        Maxtime = 180f;
         UsedTime = 0;
         CurrScore = 0;
         gameTime = 180f;
+        time = gameTime;
     }
 
 

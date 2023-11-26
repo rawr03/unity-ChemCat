@@ -64,6 +64,7 @@ public class PauseGame : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = false;
+        AudioManager.Instance.PlayMusic("BGMusic");
     }
 
     // Update is called once per frame

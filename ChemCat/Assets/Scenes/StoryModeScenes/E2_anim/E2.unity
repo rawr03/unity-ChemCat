@@ -9612,9 +9612,18 @@ MonoBehaviour:
     - Everyone knows what Salt is, also known as Sodium Chloride (NaCl).
     - "It\u2019s what you use to make food delicious! It\u2019s what makes the sea
       \u2013salty!  "
+
     - 'Funfact: Did you know that salt crystals are cubic in nature?'
     - "It\u2019s because of the way (Na-Cl) is arranged like a lattice. "
     - 'Much like before this equation is unbalanced. Fill in the coefficients. '
+
+    - 'Funfact: Did you know that salt crystals are cubic in nature?  '
+    - "It\u2019s because of the way (Na-Cl) is arranged like a lattice. "
+    - This is a little confusing to look at given how long it is.
+    - 'Just remember to consider EVERY element on BOTH sides. '
+    - 'Coefficients are DISTRIBUTED to EACH element of a molecule. So multiply the
+      COEFFICIENT to the SUBSCRIPT.  '
+
   dialogueArray:
   - propName: e4_alcohol
   - propName: e4_alcohol

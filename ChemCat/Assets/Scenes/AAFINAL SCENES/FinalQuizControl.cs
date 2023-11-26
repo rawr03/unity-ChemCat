@@ -60,7 +60,9 @@ public class QuizControl : MonoBehaviour
     private float Maxtime;
     public float addTime;
     public float elapsedTime;
+    public static float forTimeResetOnExit;
     public float UsedTime;
+    public static bool ContinueIndicator;
 
 
     // Health related 
@@ -97,14 +99,34 @@ public class QuizControl : MonoBehaviour
         //anim = GetComponent<Animator>();
         //gameOver.gameObject.SetActive(true);
         //addtnlTime.gameObject.SetActive(false);
+        
+        if (ContinueIndicator == false)
+        {
+            Debug.Log("S : " + UsedTime);
+            Debug.Log("S : " + forTimeResetOnExit);
+            Debug.Log("NEW GAME");
+            gameTime = 180 - UsedTime;
+        }
+        else
+        {
+            Debug.Log("S : " + UsedTime);
+            Debug.Log("S : " + forTimeResetOnExit);
+            Debug.Log("CONTINUED");
+            gameTime = 180 - forTimeResetOnExit;
+        }
+        
+
+        //gameTime = 180 - UsedTime; //Nagrereset si Timer Upon Exit
+        //gameTime = 180 - forTimeResetOnExit //Gumagana yung timer in game
 
         //Setup for Time
         Maxtime = 180;
         stopTimer = false;
+        ContinueIndicator = true;
         timerSlider.maxValue = Maxtime;
         timerSlider.value = time; //gameTime;
-        gameTime = 180 - UsedTime;
-        Debug.Log(UsedTime);
+        
+        //Debug.Log(UsedTime);
         // gameTime = 180f;
 
         // set health to 3, and all hearts must be set active
@@ -153,7 +175,7 @@ public class QuizControl : MonoBehaviour
         equationAnswer3 = currentEquation.PD_coef1;
         equationAnswer4 = currentEquation.PD_coef2;
 
-        Debug.Log(equationAnswer1 + " " + equationAnswer2 + " " + equationAnswer3 + " " + equationAnswer4);
+        //Debug.Log(equationAnswer1 + " " + equationAnswer2 + " " + equationAnswer3 + " " + equationAnswer4);
 
         // activate switch based on the Problem
         if (equationAnswer1 != 0 && equationAnswer4 == 0)
@@ -203,7 +225,7 @@ public class QuizControl : MonoBehaviour
 
         if (currentEquation != null)
         {
-            Debug.Log(UsedTime);
+            Debug.Log("UsedTime before LoadScene: " + UsedTime);
             gameScore = CurrScore;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -234,21 +256,21 @@ public class QuizControl : MonoBehaviour
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
             {
                 addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
+                //Debug.Log(addTime);
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
                 AudioManager.Instance.PlaySFX("Correct");
                 //addtnlTime.text = "+" + currentEquation.addtnlTime.ToString();
-                Debug.Log(currentEquation.addtnlTime);
+                //Debug.Log(currentEquation.addtnlTime);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
                 AudioManager.Instance.PlaySFX("Wrong");
-                Debug.Log(currentEquation.addtnlTime);
+                //Debug.Log(currentEquation.addtnlTime);
             }
         }
         else if (equationAnswer1 != 0 && equationAnswer4 == 0)
@@ -256,21 +278,21 @@ public class QuizControl : MonoBehaviour
             if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
             {
                 addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
+                //Debug.Log(addTime);
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
                 AudioManager.Instance.PlaySFX("Correct");
                 //addtnlTime.text = "+" + currentEquation.addtnlTime.ToString();
-                Debug.Log(currentEquation.addtnlTime);
+                //Debug.Log(currentEquation.addtnlTime);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
                 AudioManager.Instance.PlaySFX("Wrong");
-                Debug.Log(currentEquation.addtnlTime);
+                //Debug.Log(currentEquation.addtnlTime);
 
             }
         }
@@ -280,21 +302,21 @@ public class QuizControl : MonoBehaviour
             {
                 // anim.SetBool("Correct", true);
                 addTime = currentEquation.addtnlTime;
-                Debug.Log(addTime);
+                //Debug.Log(addTime);
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextProblem());
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
                 AudioManager.Instance.PlaySFX("Correct");
                 //addtnlTime.text = "+" + addTime.ToString();
-                Debug.Log(currentEquation.addtnlTime);
+                //Debug.Log(currentEquation.addtnlTime);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
                 AudioManager.Instance.PlaySFX("Wrong");
-                Debug.Log(currentEquation.addtnlTime);
+                //Debug.Log(currentEquation.addtnlTime);
             }
         }
 
@@ -303,8 +325,8 @@ public class QuizControl : MonoBehaviour
 
     void CheckHighscore()
     {
-        Debug.Log(PlayerPrefs.GetInt("NewHighScore"));
-        Debug.Log(CurrScore);
+        //Debug.Log(PlayerPrefs.GetInt("NewHighScore"));
+        //Debug.Log(CurrScore);
 
 
         if (PlayerPrefs.GetInt("NewHighScore") < CurrScore)
@@ -334,12 +356,14 @@ public class QuizControl : MonoBehaviour
         Debug.Log("Retry");
         CurrScore = 0;
         UsedTime = 0f;
+        forTimeResetOnExit = 0f;
         gameTime = 180f;
         //Debug.Log(time);
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         AudioManager.Instance.PlayMusic("BGMusic");
+        ContinueIndicator = false;
 
     }
 
@@ -347,10 +371,12 @@ public class QuizControl : MonoBehaviour
     {
         Maxtime = 180f;
         UsedTime = 0f;
+        forTimeResetOnExit = 0f;
         CurrScore = 0;
         gameTime = 180f;
+        ContinueIndicator = false;
         Debug.Log("Exit Successful");
-        Debug.Log(Maxtime + "  " + UsedTime + "  " + CurrScore + "  " + gameTime);
+        Debug.Log(Maxtime + "  " + UsedTime + "  " + forTimeResetOnExit + "  " + CurrScore + "  " + gameTime);
     }
 
     public void ResetHighScore()
@@ -400,7 +426,9 @@ public class QuizControl : MonoBehaviour
         elapsedTime += Time.deltaTime;
         time = gameTime - elapsedTime + addTime;
         UsedTime = 180 - time;
-        // Debug.Log(time);
+        forTimeResetOnExit = 180 - time;
+
+        //Debug.Log("UPDATE : "+ forTimeResetOnExit);
         // time += addTime;
         minutes = Mathf.FloorToInt(time / 60);
         seconds = Mathf.FloorToInt(time - minutes * 60f);

@@ -10364,6 +10364,7 @@ MonoBehaviour:
   addTime: 0
   elapsedTime: 0
   UsedTime: 0
+  ContinueIndicator: 0
   Switch1: {fileID: 201778917}
   Switch4: {fileID: 1798977462}
   gameOver: {fileID: 782745360}

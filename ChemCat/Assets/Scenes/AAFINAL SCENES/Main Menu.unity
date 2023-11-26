@@ -960,6 +960,8 @@ MonoBehaviour:
   musicSounds:
   - name: BGMusic
     clip: {fileID: 8300000, guid: ed25d41e16fe0e240867f18e13ba9588, type: 3}
+  - name: BGMusicSM
+    clip: {fileID: 8300000, guid: 5c897344499ed4546849b3a093988d26, type: 3}
   sfxSounds:
   - name: Correct
     clip: {fileID: 8300000, guid: 61abbeba8c2c5024784d14a99ca489ab, type: 3}
@@ -971,6 +973,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ada613288be28334ba537b5e22f9b43a, type: 3}
   - name: GameOver
     clip: {fileID: 8300000, guid: 9b03c8e0a3c074a4885d69efbb2dfe8b, type: 3}
+  - name: GameOverAnim1
+    clip: {fileID: 8300000, guid: 48bc95eacbe4a9b44ad52a2f8b996a62, type: 3}
+  - name: E1_WaterDrop
+    clip: {fileID: 8300000, guid: b6f8014a01fb5a04d94f941d8d4e26da, type: 3}
+  - name: E2_SaltShake
+    clip: {fileID: 8300000, guid: 29c79a6f33b8290479293b7ac50717ed, type: 3}
   musicSource: {fileID: 726465442}
   sfxSource: {fileID: 1452881024}
 --- !u!224 &819568032

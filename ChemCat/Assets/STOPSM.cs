@@ -15,5 +15,6 @@ public class STOPSM : MonoBehaviour
     private void MusicMuted()
     {
         AudioManager.Instance.musicSource.Stop();
+        AudioManager.Instance.PlayMusic("BGMusicSM");
     }
 }

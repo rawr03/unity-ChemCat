@@ -69,6 +69,9 @@ public class S_draft : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
+    //save to playerPrefs
+    LevelController lvlController;
+
 
     void Start()
     {
@@ -192,7 +195,7 @@ public class S_draft : MonoBehaviour
     {
         if (health == 3)
         {
-            perfect.gameObject.SetActive(true);
+            perfect.gameObject.SetActive(true); 
             AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 2)
@@ -205,6 +208,7 @@ public class S_draft : MonoBehaviour
             good.gameObject.SetActive(true);
             AudioManager.Instance.PlaySFX("LevelComplete");
         }
+        PlayerPrefs.SetInt("Score" + difficulty.ToLower() + LevelNum, health);
         yield return new WaitForSeconds(timeBetweenEquations);
     }
 

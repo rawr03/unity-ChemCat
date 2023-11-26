@@ -1747,6 +1747,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876588575}
   m_CullTransparentMesh: 1
+--- !u!1 &1000129725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000129727}
+  - component: {fileID: 1000129726}
+  m_Layer: 0
+  m_Name: LevelController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1000129726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000129725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79cc5cf02e3457a499dec1d6ed1e87a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lv1: {fileID: 472702876}
+  lv2: {fileID: 1928592981}
+  lv3: {fileID: 403637202}
+  lv4: {fileID: 724898869}
+  lv5: {fileID: 1275707063}
+  lv6: {fileID: 1451470225}
+  lv7: {fileID: 251372689}
+  lv8: {fileID: 1892293214}
+  lv9: {fileID: 1890142967}
+  lv10: {fileID: 323494246}
+--- !u!4 &1000129727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000129725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 222.3434, y: 200.41669, z: -2.944083}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1009714129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3931,3 +3985,4 @@ SceneRoots:
   - {fileID: 2088684642}
   - {fileID: 1444240294}
   - {fileID: 538152627}
+  - {fileID: 1000129727}

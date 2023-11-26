@@ -10210,6 +10210,7 @@ MonoBehaviour:
   Switch4: {fileID: 1798977462}
   gameOver: {fileID: 782745360}
   newHighscore: {fileID: 937580428}
+  Highscore: 0
   GameOver_Score: {fileID: 803872338}
   GameOver_HighscoreDisplay: {fileID: 767866091}
   Highscore_Score: {fileID: 1374844917}

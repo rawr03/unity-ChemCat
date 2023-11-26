@@ -68,7 +68,7 @@ public class QuizControl : MonoBehaviour
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
 
     //PopUp
-    public static int Highscore;
+    public int Highscore;
     public Text GameOver_Score;
     public Text GameOver_HighscoreDisplay;
     public Text Highscore_Score;
@@ -95,8 +95,8 @@ public class QuizControl : MonoBehaviour
     void Start()
     {
         //anim = GetComponent<Animator>();
-        //settings.gameObject.SetActive(false);
-        addtnlTime.gameObject.SetActive(false);
+        //gameOver.gameObject.SetActive(true);
+        //addtnlTime.gameObject.SetActive(false);
 
         //Setup for Time
         Maxtime = 180;
@@ -121,6 +121,7 @@ public class QuizControl : MonoBehaviour
         Switch4.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
         newHighscore.gameObject.SetActive(false);
+                
 
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
@@ -302,18 +303,29 @@ public class QuizControl : MonoBehaviour
 
     void CheckHighscore()
     {
-        if (CurrScore > Highscore)
+        Debug.Log(PlayerPrefs.GetInt("NewHighScore"));
+        Debug.Log(CurrScore);
+
+
+        if (PlayerPrefs.GetInt("NewHighScore") < CurrScore)
         {
+            PlayerPrefs.SetInt("NewHighScore",CurrScore);
             newHighscore.gameObject.SetActive(true);
-            Highscore = CurrScore;
-            Highscore_Score.text = Highscore.ToString();
-            Highscore_HighscoreDisplay.text = CurrScore.ToString();
+            //Highscore = CurrScore;
+            Highscore_Score.text =  PlayerPrefs.GetInt("NewHighScore", 0).ToString();
+            Highscore_HighscoreDisplay.text = PlayerPrefs.GetInt("NewHighScore", 0).ToString();
+            Debug.Log("NEW HIGH SCORE");
         }
-        else
+        else if (PlayerPrefs.GetInt("NewHighScore") > CurrScore)
         {
             gameOver.gameObject.SetActive(true);
             GameOver_Score.text = CurrScore.ToString();
-            GameOver_HighscoreDisplay.text = Highscore.ToString();
+            GameOver_HighscoreDisplay.text = PlayerPrefs.GetInt("NewHighScore", 0).ToString();
+            Debug.Log("GAME OVER");
+        }
+        else
+        {
+            Debug.Log("FAILED TO CHECK");
         }
     }
 
@@ -436,7 +448,7 @@ public class QuizControl : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
-                gameOver.gameObject.SetActive(true);
+                //gameOver.gameObject.SetActive(true);
                 stopTimer = true;
                 CheckHighscore();
                 //AudioManager.Instance.PlaySFX("GameOver"); 

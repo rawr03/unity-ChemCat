@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 
 public class Score : MonoBehaviour
@@ -7,7 +9,11 @@ public class Score : MonoBehaviour
     public GameObject stars, star1, star2, star3;
 
     public bool completed;
-    public int recordScore;
+    public int lvlNum;
+    public TextMeshProUGUI Diff;
+    public string lvlDiff;
+
+    public int recordScore = 0;
 
     /*
  namespace LevelUnlockSystem
@@ -77,13 +83,15 @@ namespace LevelUnlockSystem
     // Start is called before the first frame update
     void Start()
     {
+        lvlDiff = Diff.text;
         stars.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(completed == true)
+        recordScore = PlayerPrefs.GetInt("Score" + lvlDiff + lvlNum);
+        if (completed == true)
         {
             stars.SetActive(true);
         }

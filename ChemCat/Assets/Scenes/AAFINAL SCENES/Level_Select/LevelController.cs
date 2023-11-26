@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class LevelController : MonoBehaviour
 {
     public string lvlDiff;
+    public string lvlNum;
     public int stars;
     public Button lv1, lv2, lv3, lv4, lv5, lv6, lv7, lv8, lv9, lv10;
     int levelPassed;
@@ -58,7 +59,7 @@ public class LevelController : MonoBehaviour
     {
         for (int i = 1; i <= 10; i++)
         {
-            ScoreSummary[i] = PlayerPrefs.GetInt("Score" + lvlDiff + i);
+            //ScoreSummary[i] = PlayerPrefs.GetInt("Score" + lvlDiff + i);
         }
     }
 
@@ -67,8 +68,9 @@ public class LevelController : MonoBehaviour
         RecordScores();
     }
 
-    void ShowStars()
+    private void ShowStar()
     {
-        //PlayerPrefs.GetInt("Score" + lvlDiff + i);
+        //lvlNum = lv1.GetComponentInChildren<Text>();
     }
+
 }

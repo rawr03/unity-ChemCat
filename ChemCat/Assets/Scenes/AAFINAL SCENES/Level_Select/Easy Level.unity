@@ -2195,6 +2195,9 @@ MonoBehaviour:
   star2: {fileID: 1978129694}
   star3: {fileID: 1801592506}
   completed: 1
+  lvlNum: 0
+  Diff: {fileID: 1201717096}
+  lvlDiff: 
   recordScore: 0
 --- !u!1 &1009714129
 GameObject:
@@ -3140,6 +3143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79cc5cf02e3457a499dec1d6ed1e87a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvlDiff: 
+  stars: 0
   lv1: {fileID: 472702876}
   lv2: {fileID: 1928592981}
   lv3: {fileID: 403637202}
@@ -3150,6 +3155,10 @@ MonoBehaviour:
   lv8: {fileID: 1892293214}
   lv9: {fileID: 1890142967}
   lv10: {fileID: 323494246}
+  ScoreSummary: 
+  Star1: {fileID: 0}
+  Star2: {fileID: 0}
+  Star3: {fileID: 0}
 --- !u!4 &1596330174
 Transform:
   m_ObjectHideFlags: 0

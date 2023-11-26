@@ -60,6 +60,13 @@ public class PauseGame : MonoBehaviour
         switches.gameObject.SetActive(true);
     }
 
+    public void StartTimeAgain()
+    {
+        Time.timeScale = 1f;
+        AudioManager.Instance.PlayMusic("BGMusic");
+        GameIsPaused = false;
+    }
+
     // Update is called once per frame
     void Update()
     {

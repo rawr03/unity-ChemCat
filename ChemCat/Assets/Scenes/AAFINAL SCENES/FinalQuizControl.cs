@@ -57,8 +57,10 @@ public class QuizControl : MonoBehaviour
     public Text timerText;
     public float gameTime;
     private bool stopTimer;
+    private float Maxtime;
     public float addTime;
     public float elapsedTime;
+    public float UsedTime;
 
 
     // Health related 
@@ -88,15 +90,21 @@ public class QuizControl : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
+
+
     void Start()
     {
         //anim = GetComponent<Animator>();
         //settings.gameObject.SetActive(false);
+        addtnlTime.gameObject.SetActive(false);
 
         //Setup for Time
+        Maxtime = 180;
         stopTimer = false;
-        timerSlider.maxValue = gameTime;
-        timerSlider.value = gameTime;
+        timerSlider.maxValue = Maxtime;
+        timerSlider.value = time; //gameTime;
+        gameTime = 180 - UsedTime;
+        Debug.Log(UsedTime);
         // gameTime = 180f;
 
         // set health to 3, and all hearts must be set active
@@ -194,6 +202,7 @@ public class QuizControl : MonoBehaviour
 
         if (currentEquation != null)
         {
+            Debug.Log(UsedTime);
             gameScore = CurrScore;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
@@ -230,12 +239,15 @@ public class QuizControl : MonoBehaviour
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
                 AudioManager.Instance.PlaySFX("Correct");
+                //addtnlTime.text = "+" + currentEquation.addtnlTime.ToString();
+                Debug.Log(currentEquation.addtnlTime);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
                 AudioManager.Instance.PlaySFX("Wrong");
+                Debug.Log(currentEquation.addtnlTime);
             }
         }
         else if (equationAnswer1 != 0 && equationAnswer4 == 0)
@@ -249,12 +261,15 @@ public class QuizControl : MonoBehaviour
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
                 AudioManager.Instance.PlaySFX("Correct");
+                //addtnlTime.text = "+" + currentEquation.addtnlTime.ToString();
+                Debug.Log(currentEquation.addtnlTime);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
                 AudioManager.Instance.PlaySFX("Wrong");
+                Debug.Log(currentEquation.addtnlTime);
 
             }
         }
@@ -270,12 +285,15 @@ public class QuizControl : MonoBehaviour
                 CurrScore++;
                 GameScoreDisplay.text = CurrScore.ToString();
                 AudioManager.Instance.PlaySFX("Correct");
+                //addtnlTime.text = "+" + addTime.ToString();
+                Debug.Log(currentEquation.addtnlTime);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
                 AudioManager.Instance.PlaySFX("Wrong");
+                Debug.Log(currentEquation.addtnlTime);
             }
         }
 
@@ -303,7 +321,8 @@ public class QuizControl : MonoBehaviour
     {
         Debug.Log("Retry");
         CurrScore = 0;
-        gameTime = 180;
+        UsedTime = 0f;
+        gameTime = 180f;
         //Debug.Log(time);
         newHighscore.gameObject.SetActive(false);
         gameOver.gameObject.SetActive(false);
@@ -312,12 +331,24 @@ public class QuizControl : MonoBehaviour
 
     }
 
+    public void IntlzdAftEXIT()
+    {
+        Maxtime = 180f;
+        UsedTime = 0f;
+        CurrScore = 0;
+        gameTime = 180f;
+        Debug.Log("Exit Successful");
+        Debug.Log(Maxtime + "  " + UsedTime + "  " + CurrScore + "  " + gameTime);
+    }
+
+
+
     /*
     public void Countdown()
     {
         // StartCoroutine(StarttheTimeTicker());
         //timer
-        
+
     }
     */
 
@@ -339,7 +370,7 @@ public class QuizControl : MonoBehaviour
                 timerSlider.value = sliderTimer;
             }
         }
-        
+
     }
 
     public void StopTimer()
@@ -353,6 +384,7 @@ public class QuizControl : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
         time = gameTime - elapsedTime + addTime;
+        UsedTime = 180 - time;
         // Debug.Log(time);
         // time += addTime;
         minutes = Mathf.FloorToInt(time / 60);

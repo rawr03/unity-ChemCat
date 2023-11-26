@@ -2352,7 +2352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523855634176775953, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Retry
+      value: IntlzdAftEXIT
       objectReference: {fileID: 0}
     - target: {fileID: 7523855634176775953, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -5116,6 +5116,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889879267}
   m_CullTransparentMesh: 1
+--- !u!1 &908954680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+  m_PrefabInstance: {fileID: 97184945}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &935169809
 GameObject:
   m_ObjectHideFlags: 0
@@ -10257,6 +10262,8 @@ MonoBehaviour:
   inputNum2: {fileID: 1239953168}
   inputNum3: {fileID: 1022548976}
   inputNum4: {fileID: 1889401997}
+  Switch2: {fileID: 908954680}
+  Switch3: {fileID: 2111978169}
 --- !u!114 &1771529020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11844,6 +11851,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2095869426}
   m_CullTransparentMesh: 1
+--- !u!1 &2111978169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}
+  m_PrefabInstance: {fileID: 2129156595}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2129156595
 PrefabInstance:
   m_ObjectHideFlags: 0

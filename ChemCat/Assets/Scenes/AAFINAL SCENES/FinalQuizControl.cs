@@ -353,7 +353,10 @@ public class QuizControl : MonoBehaviour
         Debug.Log(Maxtime + "  " + UsedTime + "  " + CurrScore + "  " + gameTime);
     }
 
-
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteKey("NewHighScore");
+    }
 
     /*
     public void Countdown()

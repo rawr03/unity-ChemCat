@@ -336,18 +336,14 @@ public class QuizControl : MonoBehaviour
             //Highscore = CurrScore;
             Highscore_Score.text =  PlayerPrefs.GetInt("NewHighScore", 0).ToString();
             Highscore_HighscoreDisplay.text = PlayerPrefs.GetInt("NewHighScore", 0).ToString();
-            Debug.Log("NEW HIGH SCORE");
+            //Debug.Log("NEW HIGH SCORE");
         }
         else if (PlayerPrefs.GetInt("NewHighScore") > CurrScore)
         {
             gameOver.gameObject.SetActive(true);
             GameOver_Score.text = CurrScore.ToString();
             GameOver_HighscoreDisplay.text = PlayerPrefs.GetInt("NewHighScore", 0).ToString();
-            Debug.Log("GAME OVER");
-        }
-        else
-        {
-            Debug.Log("FAILED TO CHECK");
+            //Debug.Log("GAME OVER");
         }
     }
 

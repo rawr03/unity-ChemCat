@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class Neutralization : MonoBehaviour
 {
+    [SerializeField] private Animator myAnimationControl;
 
     public GameObject egg, eggCenter, Db, vimSim, e5_anim1, e5_anim2, e5_anim3, e5_anim4, e5_anim5; // e4_anim6;
     private int convoLine = 0;
@@ -21,6 +22,11 @@ public class Neutralization : MonoBehaviour
     cat(7);
     meh(8);
     */
+
+    public void Start()
+    {
+        myAnimationControl.Play("Checkpoint_Anim");
+    }
 
     public void TrigUpdate()
     {

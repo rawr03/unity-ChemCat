@@ -27,7 +27,7 @@ public class Ethane : MonoBehaviour
 
     public void Start()
     {
-        
+        myAnimationControl.Play("Checkpoint_Anim");
     }
 
     public void TrigUpdate()

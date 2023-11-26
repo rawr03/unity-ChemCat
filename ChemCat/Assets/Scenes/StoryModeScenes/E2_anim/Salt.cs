@@ -9,7 +9,7 @@ using System;
 
 public class Salt : MonoBehaviour
 {
-
+    [SerializeField] private Animator myAnimationControl;
 
     public GameObject egg, Db, vimSim, e2_anim1, e2_anim2, e2_anim3, e2_anim4; // e2_anim5, e2_anim6;
     private int convoLine = 0;
@@ -32,7 +32,7 @@ public class Salt : MonoBehaviour
 
     public void Start()
     {
-
+        myAnimationControl.Play("Checkpoint_Anim");
     }
 
     public void TrigUpdate()

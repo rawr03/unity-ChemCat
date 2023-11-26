@@ -90,6 +90,8 @@ public class QuizControl : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
+    
+
     void Start()
     {
         //anim = GetComponent<Animator>();
@@ -100,7 +102,7 @@ public class QuizControl : MonoBehaviour
         Maxtime = 180;
         stopTimer = false;
         timerSlider.maxValue = Maxtime;
-        timerSlider.value = gameTime;
+        timerSlider.value = time; //gameTime;
         gameTime = 180 - UsedTime;
         Debug.Log(UsedTime);
         // gameTime = 180f;
@@ -329,44 +331,54 @@ public class QuizControl : MonoBehaviour
 
     }
 
-    /*
-    public void Countdown()
+    public void IntlzdAftEXIT()
     {
-        // StartCoroutine(StarttheTimeTicker());
-        //timer
-        
+        Maxtime = 180;
+        UsedTime = 0;
+        CurrScore = 0;
+        gameTime = 180f;
     }
-    */
 
-    /*
-    IEnumerator StarttheTimeTicker()
+
+    
+/*
+public void Countdown()
+{
+    // StartCoroutine(StarttheTimeTicker());
+    //timer
+
+}
+*/
+
+/*
+IEnumerator StarttheTimeTicker()
+{
+    while (stopTimer = false)
     {
-        while (stopTimer = false)
+        sliderTimer -= time.deltaTime;
+        yield return new waitforseconds(0.001f);
+
+        if (sliderTimer <= 0)
         {
-            sliderTimer -= time.deltaTime;
-            yield return new waitforseconds(0.001f);
-
-            if (sliderTimer <= 0)
-            {
-                stopTimer = true;
-            }
-
-            if (stopTimer == false)
-            {
-                timerSlider.value = sliderTimer;
-            }
+            stopTimer = true;
         }
-        
+
+        if (stopTimer == false)
+        {
+            timerSlider.value = sliderTimer;
+        }
     }
 
-    public void StopTimer()
-    {
-        stopTimer = true;
-    }
-    */
+}
 
-    // Update is called once per frame
-    void Update()
+public void StopTimer()
+{
+    stopTimer = true;
+}
+*/
+
+// Update is called once per frame
+void Update()
     {
         elapsedTime += Time.deltaTime;
         time = gameTime - elapsedTime + addTime;

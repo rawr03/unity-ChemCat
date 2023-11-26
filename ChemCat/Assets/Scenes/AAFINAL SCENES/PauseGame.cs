@@ -60,6 +60,12 @@ public class PauseGame : MonoBehaviour
         switches.gameObject.SetActive(true);
     }
 
+    public void ResumeTime()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
     // Update is called once per frame
     void Update()
     {

@@ -4791,9 +4791,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fab67b5f988cf144abefa0d819dc3101, type: 3}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1770443319}
+    - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StoryMode2
@@ -9027,8 +9035,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Ethane, Assembly-CSharp
+      - m_Target: {fileID: 2103668036}
+        m_TargetAssemblyTypeName: Photosynthesis, Assembly-CSharp
         m_MethodName: HideAll
         m_Mode: 1
         m_Arguments:
@@ -10549,9 +10557,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1770443319}
+    - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StoryMode2
@@ -12259,7 +12275,6 @@ GameObject:
   - component: {fileID: 1770443316}
   - component: {fileID: 1770443315}
   - component: {fileID: 1770443314}
-  - component: {fileID: 1770443320}
   - component: {fileID: 1770443319}
   - component: {fileID: 1770443321}
   - component: {fileID: 1770443322}
@@ -12376,131 +12391,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828f9cf27bcc3a84fb2176e2dc8803ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1770443320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770443313}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0e767326df4b9b4d9a405f1aecdbdc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  problems:
-  - RT_coef1: 2
-    reactant1: H2
-    RT_coef2: 1
-    reactant2: O2
-    PD_coef1: 2
-    product1: H2O
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: Na
-    RT_coef2: 1
-    reactant2: Cl2
-    PD_coef1: 2
-    product1: NaCl
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: N2
-    RT_coef2: 3
-    reactant2: H2
-    PD_coef1: 2
-    product1: NH3
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: C6H12O6
-    PD_coef1: 2
-    product1: C2H5OH
-    PD_coef2: 2
-    product2: CO2
-    addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: HCl
-    RT_coef2: 1
-    reactant2: NaOH
-    PD_coef1: 1
-    product1: NaCl
-    PD_coef2: 1
-    product2: H2O
-    addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: CH4
-    RT_coef2: 2
-    reactant2: O2
-    PD_coef1: 1
-    product1: CO2
-    PD_coef2: 2
-    product2: H2O
-    addtnlTime: 0
-  - RT_coef1: 3
-    reactant1: AgNO3
-    RT_coef2: 1
-    reactant2: K3PO4
-    PD_coef1: 1
-    product1: AgPO4
-    PD_coef2: 3
-    product2: KNO3
-    addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: C2H6
-    RT_coef2: 7
-    reactant2: O2
-    PD_coef1: 4
-    product1: CO2
-    PD_coef2: 6
-    product2: H2O
-    addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: SiO2
-    RT_coef2: 6
-    reactant2: HF
-    PD_coef1: 1
-    product1: H2SiF6
-    PD_coef2: 2
-    product2: H2O
-    addtnlTime: 0
-  - RT_coef1: 6
-    reactant1: CO2
-    RT_coef2: 6
-    reactant2: H2O
-    PD_coef1: 1
-    product1: C6H12O6
-    PD_coef2: 6
-    product2: O2
-    addtnlTime: 0
-  currentEquationIndex: 0
-  difficulty: 
-  equationText1: {fileID: 657138076}
-  equationText2: {fileID: 2000886161}
-  equationText3: {fileID: 275019600}
-  equationText4: {fileID: 1884704810}
-  timeBetweenEquations: 1
-  showDifficulty: {fileID: 1167980068}
-  Level: {fileID: 207314419}
-  Switch1: {fileID: 657138075}
-  Switch4: {fileID: 1884704809}
-  gameOver: {fileID: 1301598711}
-  perfect: {fileID: 690767070}
-  great: {fileID: 2050198878}
-  good: {fileID: 1490966954}
-  Heart1: {fileID: 710339052}
-  Heart2: {fileID: 1485393433}
-  Heart3: {fileID: 1781695436}
-  inputNum1: {fileID: 657138074}
-  inputNum2: {fileID: 2000886160}
-  inputNum3: {fileID: 275019599}
-  inputNum4: {fileID: 1884704808}
 --- !u!114 &1770443321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14722,9 +14612,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fab67b5f988cf144abefa0d819dc3101, type: 3}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1770443319}
+    - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 8273886764281692265, guid: e079f0c13d4e5a347a38683051b4365a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: StoryMode2
@@ -14821,8 +14719,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: CO2 + H20 -> O2 + C6H12O6
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a4e4bae9a6df87344bb04cc51b460419, type: 2}
+  m_sharedMaterial: {fileID: -8876377081170549583, guid: a4e4bae9a6df87344bb04cc51b460419, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15634,7 +15532,6 @@ GameObject:
   - component: {fileID: 2103668027}
   - component: {fileID: 2103668030}
   - component: {fileID: 2103668029}
-  - component: {fileID: 2103668035}
   - component: {fileID: 2103668036}
   m_Layer: 5
   m_Name: Prop
@@ -15733,30 +15630,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2103668035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103668025}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e7179d0944bb294b8d4e22df99404b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAnimationControl: {fileID: 2103668030}
-  pupa: {fileID: 427876252}
-  db_pupa: {fileID: 1377046226}
-  Db: {fileID: 579482663}
-  db_anim: {fileID: 2095729333}
-  vimSim: {fileID: 1902591674}
-  e9_anim1: {fileID: 0}
-  e9_anim2: {fileID: 1973500436}
-  e9_anim3: {fileID: 362409129}
-  e9_anim4: {fileID: 908281497}
-  index: 0
-  Sp_eggs: []
 --- !u!114 &2103668036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16605,7 +16478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -16614,7 +16487,7 @@ PrefabInstance:
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1770443322}
+      objectReference: {fileID: 1770443319}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -16629,7 +16502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Retry
+      value: OpenLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -16637,7 +16510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StoryControl, Assembly-CSharp
+      value: LevelMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -16645,7 +16518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: StoryMode2
+      value: StoryMode8
       objectReference: {fileID: 0}
     - target: {fileID: 7765629881118840139, guid: 1f5eeadc60e7e7942af4dc0e10d8900d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName

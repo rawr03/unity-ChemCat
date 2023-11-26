@@ -9,9 +9,9 @@ using System;
 
 public class Salt : MonoBehaviour
 {
-    
 
-    public GameObject egg, Db, vimSim, e2_anim1, e2_anim2, e2_anim3, e2_anim4, e2_anim5, e2_anim6;
+
+    public GameObject egg, Db, vimSim, e2_anim1, e2_anim2, e2_anim3, e2_anim4; // e2_anim5, e2_anim6;
     private int convoLine = 0;
     public int index = 0;
     public Sprite[] Sp_eggs;
@@ -53,33 +53,21 @@ public class Salt : MonoBehaviour
             e2_anim2.SetActive(true);
             ChangeSprite(2);
         }
-        else if (convoLine == 2)
+        else if (convoLine == 2 || convoLine == 3)
         {
             e2_anim2.SetActive(false);
             e2_anim3.SetActive(true);
             ChangeSprite(6);
         }
-        else if (convoLine == 3)
+        else if (convoLine == 4)
         {
             e2_anim3.SetActive(false);
             e2_anim4.SetActive(true);
             ChangeSprite(1);
         }
-        else if (convoLine == 4 || convoLine == 5)
+        else
         {
-            e2_anim4.SetActive(false);
-            e2_anim5.SetActive(true);
-            ChangeSprite(6);
-        }
-        else if (convoLine == 6)
-        {
-            e2_anim5.SetActive(false);
-            e2_anim6.SetActive(true);
-            ChangeSprite(6);
-        }
-        else if (convoLine == 7)
-        {
-            e2_anim6.SetActive(false);
+            HideAll();
         }
         Next();
     }
@@ -113,8 +101,8 @@ public class Salt : MonoBehaviour
         e2_anim2.SetActive(false);
         e2_anim3.SetActive(false);
         e2_anim4.SetActive(false);
-        e2_anim5.SetActive(false);
-        e2_anim6.SetActive(false);
+        //e2_anim5.SetActive(false);
+        //e2_anim6.SetActive(false);
         Db.SetActive(false);
     }
 }

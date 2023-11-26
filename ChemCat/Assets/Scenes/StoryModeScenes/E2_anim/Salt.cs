@@ -46,18 +46,21 @@ public class Salt : MonoBehaviour
         {
             e2_anim1.SetActive(true);
             ChangeSprite(6);
+            
         }
         else if (convoLine == 1)
         {
             e2_anim1.SetActive(false);
             e2_anim2.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("E2_SaltShake", true);
         }
         else if (convoLine == 2 || convoLine == 3)
         {
             e2_anim2.SetActive(false);
             e2_anim3.SetActive(true);
             ChangeSprite(6);
+            AudioManager.Instance.StopSFX();
         }
         else if (convoLine == 4)
         {

@@ -14,6 +14,6 @@ public class ForButtons : MonoBehaviour
 
     private void BClickSound()
     {
-        //AudioManager.Instance.PlaySFX("Click");
+        AudioManager.Instance.PlaySFX("Click");
     }
 }

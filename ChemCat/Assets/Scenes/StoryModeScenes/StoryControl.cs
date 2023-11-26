@@ -191,17 +191,17 @@ public class StoryControl : MonoBehaviour
         if (health == 3)
         {
             perfect.SetActive(true);
-            //AudioManager.Instance.PlaySFX("LevelComplete");
+            AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 2)
         {
             great.SetActive(true);
-            //AudioManager.Instance.PlaySFX("LevelComplete");
+            AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 1)
         {
             good.SetActive(true);
-            //AudioManager.Instance.PlaySFX("LevelComplete");
+            AudioManager.Instance.PlaySFX("LevelComplete");
         }
         yield return new WaitForSeconds(timeBetweenEquations);
     }
@@ -226,13 +226,13 @@ public class StoryControl : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                //AudioManager.Instance.PlaySFX("Correct");
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //AudioManager.Instance.PlaySFX("Wrong");
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else if (Element1 == "0")
@@ -241,13 +241,13 @@ public class StoryControl : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                //AudioManager.Instance.PlaySFX("Correct");
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //AudioManager.Instance.PlaySFX("Wrong");
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else
@@ -256,13 +256,13 @@ public class StoryControl : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                //AudioManager.Instance.PlaySFX("Correct");
+                AudioManager.Instance.PlaySFX("Correct");
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //AudioManager.Instance.PlaySFX("Wrong");
+                AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         // StartCoroutine(EnablePanel());
@@ -303,7 +303,7 @@ public class StoryControl : MonoBehaviour
                 Heart2.SetActive(false);
                 Heart3.SetActive(false);
                 gameOver.SetActive(true);
-                //AudioManager.Instance.musicSource.Pause();
+                AudioManager.Instance.musicSource.Pause();
                 gameOverAnim.SetActive(true);
                 StartCoroutine(TransitionToNextLevel());
                 break;

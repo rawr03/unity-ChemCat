@@ -33,12 +33,14 @@ public class GameOver_dialogue : MonoBehaviour
         //prop.SetActive(false);
         index = 0;
         sentences = new Queue<string>();
+        
     }
 
     public void GStartDialogue(Dialogue dialogue)
     {
         if (attempt == 0)
         {
+            //AudioManager.Instance.PlaySFX("GameOverAnim1");
             Debug.Log("Starting dialogue for problem #" + dialogue.problem);
             //dialogueArray = new DialogueArray();
             Debug.Log(index);

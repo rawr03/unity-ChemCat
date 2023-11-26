@@ -59,6 +59,7 @@ public class Water : MonoBehaviour
             prop.SetActive(true);
             myAnimationControl.Play("e1_show");
             ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("E1_WaterDrop");
         }
         else if (convoLine == 1)
         {

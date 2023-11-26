@@ -18,17 +18,17 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryModeScenes/Introduction.unity
     guid: 8fbe8c23446a94e45bb0439e2e33115a
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode1.unity
-    guid: f7a53cfe69362894d84b61b8ba287336
+    path: Assets/Scenes/StoryModeScenes/E1.unity
+    guid: f38aff11ec7b83640aa1a11ae310cc34
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode2.unity
-    guid: 92bcb6cf03d0c5045b1e1ea2eb407171
+    path: Assets/Scenes/StoryModeScenes/E2.unity
+    guid: 04ba491e275a2a7439accd2471a30d8f
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode3.unity
-    guid: 93a38f8e08f6b724e88625192b5cba48
+    path: Assets/Scenes/StoryModeScenes/E3.unity
+    guid: 5aadf7a51800e5e4b9f043e843de92b9
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode4.unity
-    guid: 13455d9b03b11bd41a01ed2a3e25723c
+    path: Assets/Scenes/StoryModeScenes/E4.unity
+    guid: b0be700780d212b4089e3e80c78a9237
   - enabled: 1
     path: Assets/Scenes/Animation_Scene/EggCrackAnim.unity
     guid: b37235a777906974ba2864693715cba8
@@ -36,14 +36,14 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryModeScenes/IntroductionCaterpillar.unity
     guid: 581500ec4de41ed4c96dd867f10ffa58
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode5.unity
-    guid: 4129cf5cecb15ee40bbcfe6a45781807
+    path: Assets/Scenes/StoryModeScenes/E5.unity
+    guid: 99abba91949278046bf6d79f4b454f5c
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode6.unity
-    guid: a12f5d1fde2c33d4e8571ebd7c0cfeea
+    path: Assets/Scenes/StoryModeScenes/E6.unity
+    guid: 47d5981b05011ba46b038f56699c352f
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode7.unity
-    guid: 6497ec89ae07fc043a33fbcefc719c2a
+    path: Assets/Scenes/StoryModeScenes/E7.unity
+    guid: c7e5559e8b4c1444e8691fcda3a9b9d5
   - enabled: 1
     path: Assets/Scenes/Animation_Scene/EatingLeavesAnim.unity
     guid: 9dcb74d639823b84a9433bad88685f97
@@ -54,14 +54,14 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryModeScenes/IntroductionPupa.unity
     guid: 69a99b855a38146459fa3e1b75520b1e
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode8.unity
-    guid: 27c83ca4e10ec624a9a3072baaf5b82c
+    path: Assets/Scenes/StoryModeScenes/E8.unity
+    guid: cdc1a7d35d1e7e84ea549e6378f513c6
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode9.unity
-    guid: d6f85cef204591e4db0c1db64dcf0c5c
+    path: Assets/Scenes/StoryModeScenes/E9.unity
+    guid: 34ccacb3b9d16c64abff1aca07f09823
   - enabled: 1
-    path: Assets/Scenes/StoryModeScenes/StoryMode10.unity
-    guid: 7e0637d4e98aa25479aef5a04b1704cc
+    path: Assets/Scenes/StoryModeScenes/E10.unity
+    guid: a80ab4d884d471141b639b521c4aebde
   - enabled: 1
     path: Assets/Scenes/Animation_Scene/NewShakePupa.unity
     guid: 4a7bb2aabdd9a33429d32525a7cd270d

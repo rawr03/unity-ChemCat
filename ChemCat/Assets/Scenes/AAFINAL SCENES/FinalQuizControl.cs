@@ -207,7 +207,7 @@ public class QuizControl : MonoBehaviour
     {
         addtnlTime.gameObject.SetActive(false);
         addtnlTime.gameObject.SetActive(true);
-
+        time = time + addTime;
         // Remove current spawned problem from the list
         unansweredProblems.Remove(currentEquation);
         yield return new WaitForSeconds(timeBetweenEquations);
@@ -393,7 +393,6 @@ public void StopTimer()
 // Update is called once per frame
 void Update()
     {
-        time = time + addTime;
         elapsedTime += Time.deltaTime;
         time = gameTime - elapsedTime;
         //UsedTime = 180 - time;

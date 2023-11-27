@@ -155,4 +155,22 @@ public class GameOver_dialogue : MonoBehaviour
             GChangeFace(2);
         }
     }
+
+    public void GOverSFX()
+    {
+        AudioManager.Instance.PlaySFX("GameOverAnim1"); 
+    }
 }
+
+/*ChemCat Face List:
+
+smile(0);
+openmouthsmile(1);
+closedsmile(2);
+angry(3);
+sad(4);
+scared(5);
+smart(6);
+cat(7);
+meh(8);
+*/

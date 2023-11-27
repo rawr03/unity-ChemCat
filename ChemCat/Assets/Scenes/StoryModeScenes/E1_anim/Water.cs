@@ -174,7 +174,7 @@ public class Water : MonoBehaviour
             visSimAnim.SetActive(false);
             gameplay.SetActive(true);
             ChangeSprite(6);
-            AudioManager.Instance.PlaySFX("Correct", false, 1f);
+            AudioManager.Instance.PlaySFX("Correct", false, 1.5f);
         }
         else if (convoLine == 20 || convoLine == 21)
         {

@@ -10508,7 +10508,7 @@ MonoBehaviour:
     addtnlTime: 5
   - RT_coef1: 1
     reactant1: CH4
-    RT_coef2: 2
+    RT_coef2: 1
     reactant2: H2O
     PD_coef1: 3
     product1: H2
@@ -10559,7 +10559,7 @@ MonoBehaviour:
     product1: S
     PD_coef2: 2
     product2: H2O
-    addtnlTime: 0
+    addtnlTime: 10
   - RT_coef1: 1
     reactant1: C2H5OH
     RT_coef2: 3

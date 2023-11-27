@@ -22,16 +22,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+        time: 5.5
         value: 0
         inSlope: 0
         outSlope: 0
@@ -40,16 +31,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 7
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 8
+        time: 6.5
         value: 1
         inSlope: 0
         outSlope: 0
@@ -69,32 +51,26 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: d64efcbb5a8c8554cb94483bf52a49f2, type: 3}
-    - time: 0.5
-      value: {fileID: 21300000, guid: b269f9bdcf03c9b45bb322cc5c6f7b4d, type: 3}
-    - time: 1
-      value: {fileID: 21300000, guid: 6b4970eb52bba2148b1a09360fcdbf0d, type: 3}
-    - time: 1.5
       value: {fileID: 21300000, guid: 715dd5512bd270644a07c0f0cb51cd30, type: 3}
-    - time: 2
+    - time: 0.5
       value: {fileID: 21300000, guid: 75fa129b8b8495347ba2f08a6c855a38, type: 3}
-    - time: 2.5
+    - time: 1
       value: {fileID: 21300000, guid: cf4bcd7bdecbf25459daa35dd919de94, type: 3}
-    - time: 3
+    - time: 1.5
       value: {fileID: 21300000, guid: b5d1c7407b84faa4187df41644894d2a, type: 3}
-    - time: 3.5
+    - time: 2
       value: {fileID: 21300000, guid: 18e61ddefc023c949a3effe0d37da299, type: 3}
-    - time: 4
+    - time: 2.5
       value: {fileID: 21300000, guid: b140d13fdcc7b254595467c5a02f7e74, type: 3}
-    - time: 4.5
+    - time: 3
       value: {fileID: 21300000, guid: 78d4342cd6723fc4cb5088333f74bef1, type: 3}
-    - time: 5
+    - time: 3.5
       value: {fileID: 21300000, guid: e04da81b7323e8646a78895594c08a97, type: 3}
-    - time: 5.5
+    - time: 4
       value: {fileID: 21300000, guid: be19f84651e77c247ba50bb6488f71a3, type: 3}
-    - time: 6
+    - time: 4.5
       value: {fileID: 21300000, guid: df7c2d906666ac24ca6587cd5c4fa804, type: 3}
-    - time: 6.5
+    - time: 5
       value: {fileID: 21300000, guid: 1fb28ea5beec8344586a4698ab5e6039, type: 3}
     attribute: m_Sprite
     path: 
@@ -127,9 +103,6 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d64efcbb5a8c8554cb94483bf52a49f2, type: 3}
-    - {fileID: 21300000, guid: b269f9bdcf03c9b45bb322cc5c6f7b4d, type: 3}
-    - {fileID: 21300000, guid: 6b4970eb52bba2148b1a09360fcdbf0d, type: 3}
     - {fileID: 21300000, guid: 715dd5512bd270644a07c0f0cb51cd30, type: 3}
     - {fileID: 21300000, guid: 75fa129b8b8495347ba2f08a6c855a38, type: 3}
     - {fileID: 21300000, guid: cf4bcd7bdecbf25459daa35dd919de94, type: 3}
@@ -146,7 +119,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 8
+    m_StopTime: 6.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -167,16 +140,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
+        time: 5.5
         value: 0
         inSlope: 0
         outSlope: 0
@@ -185,16 +149,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 7
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 8
+        time: 6.5
         value: 1
         inSlope: 0
         outSlope: 0
@@ -214,7 +169,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 8
+  - time: 6.5
     functionName: OpenLevel
     data: IntroductionPupa
     objectReferenceParameter: {fileID: 0}

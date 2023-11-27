@@ -176,7 +176,7 @@ AnimationClip:
   m_Events:
   - time: 10
     functionName: OpenLevel
-    data: Pupa
+    data: Move
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

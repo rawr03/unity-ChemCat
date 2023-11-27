@@ -69,7 +69,7 @@ public class Ammonia : MonoBehaviour
         {
             e3_anim1.SetActive(false);
             e3_anim2.SetActive(true);
-            ChangeSprite(2);
+            ChangeSprite(8);
             AudioManager.Instance.PlaySFX("ToiletFlush");
         }
         else if (convoLine == 4)

@@ -75,9 +75,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryModeScenes/EndCutScene.unity
     guid: 0964155e21db76c4a8683a010f969fb7
   - enabled: 1
-    path: Assets/Scenes/Animation_Scene/DbPupa.unity
-    guid: a3c61e84270d3f34b90854687d332dad
-  - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Standard Mode.unity
     guid: d866c4cb929200b46bc704ca5373bd80
   - enabled: 1

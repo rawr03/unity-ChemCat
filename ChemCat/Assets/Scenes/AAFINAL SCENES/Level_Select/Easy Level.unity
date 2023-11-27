@@ -2896,6 +2896,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4135543308801679759, guid: d172b9a8809b9c1409b6bcc6b248b87c, type: 3}
+      propertyPath: difficulty
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4311711054293402327, guid: d172b9a8809b9c1409b6bcc6b248b87c, type: 3}
       propertyPath: m_text
       value: 1

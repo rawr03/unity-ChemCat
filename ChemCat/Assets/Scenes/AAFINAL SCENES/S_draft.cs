@@ -280,19 +280,12 @@ public class S_draft : MonoBehaviour
                 //Debug.Log(PlayerPrefs.GetInt("LevelPassedE", 2));
                 Debug.Log("Saved Score: " + PlayerPrefs.GetInt("ScoreE" + LevelNum, 0));
 
-                if(PlayerPrefs.GetInt("ScoreE" + LevelNum, 0) < health)
-                {
-                    PlayerPrefs.SetInt("ScoreE" + LevelNum, health);
-                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreE" + LevelNum, 0));
-                }
             }
-            else
+
+            if (PlayerPrefs.GetInt("ScoreE" + LevelNum, 0) < health)
             {
-                if (PlayerPrefs.GetInt("ScoreE" + LevelNum, 0) < health)
-                {
-                    PlayerPrefs.SetInt("ScoreE" + LevelNum, health);
-                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreE" + LevelNum, 0));
-                }
+                PlayerPrefs.SetInt("ScoreE" + LevelNum, health);
+                Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreE" + LevelNum, 0));
             }
             
         }

@@ -72,9 +72,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StoryModeScenes/IntroductionCat.unity
     guid: da4f0d84a5b063746b31a8ccd5edce24
   - enabled: 1
-    path: Assets/Scenes/Animation_Scene/Butterfly.unity
-    guid: 7c99d704bb8ffb049b4c6608cbce2610
-  - enabled: 1
     path: Assets/Scenes/StoryModeScenes/EndCutScene.unity
     guid: 0964155e21db76c4a8683a010f969fb7
   - enabled: 1
@@ -185,4 +182,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/CheckQuizMode.unity
     guid: 80b77422a1ce76848b10c99541b5bbe3
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/QUIZ_PRESTART.unity
+    guid: 17362b360ae471b4ea3bc591b175ebcf
   m_configObjects: {}

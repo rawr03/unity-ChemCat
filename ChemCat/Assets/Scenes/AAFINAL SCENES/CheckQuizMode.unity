@@ -2452,11 +2452,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.000244
+      value: -14.000488
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.000061
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2709,9 +2709,9 @@ RectTransform:
   - {fileID: 266332001}
   m_Father: {fileID: 1771529015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 775.00006, y: 345.00003}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -184.99994, y: -194.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &349088562
@@ -3047,11 +3047,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.000244
+      value: -14.000488
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.000061
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4611,7 +4611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.000244, y: -8.000061}
+  m_AnchoredPosition: {x: -14.000488, y: -8}
   m_SizeDelta: {x: -1819.6387, y: -980.3594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &709618849
@@ -4646,10 +4646,10 @@ RectTransform:
   - {fileID: 237127426}
   m_Father: {fileID: 1771529015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.233963, y: 274.10785}
-  m_SizeDelta: {x: 1656.946, y: 265.51566}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -2.233963, y: -265.89215}
+  m_SizeDelta: {x: 1656.946, y: 265.51562}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &767866089
 GameObject:
@@ -5469,9 +5469,9 @@ RectTransform:
   - {fileID: 1938721703}
   m_Father: {fileID: 1771529015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 635.3701, y: 338.91827}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 635.3701, y: -201.08173}
   m_SizeDelta: {x: 381.39514, y: 135.89484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &962755421
@@ -8320,10 +8320,10 @@ RectTransform:
   - {fileID: 1290815082}
   m_Father: {fileID: 1771529015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 658.0001, y: -341.99997}
-  m_SizeDelta: {x: -1760.6062, y: -1024.3197}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -302.49988, y: 198.00003}
+  m_SizeDelta: {x: 160.3938, y: 55.680298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358301883
 MonoBehaviour:
@@ -8614,10 +8614,10 @@ RectTransform:
   - {fileID: 887173916}
   m_Father: {fileID: 1771529015}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00024414062, y: -19.649963}
-  m_SizeDelta: {x: -931, y: -523.864}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 960.50024, y: -559.64996}
+  m_SizeDelta: {x: 990, y: 556.136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378931987
 MonoBehaviour:
@@ -10388,7 +10388,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

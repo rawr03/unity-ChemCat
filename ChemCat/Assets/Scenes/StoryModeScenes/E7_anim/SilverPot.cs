@@ -52,12 +52,20 @@ public class SilverPot : MonoBehaviour
             e7_anim2.SetActive(false);
             e7_anim3.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("Blink");
         }
-        else if (convoLine == 6 || convoLine == 7)
+        else if (convoLine == 6)
         {
             e7_anim3.SetActive(false);
             e7_anim4.SetActive(true);
             ChangeSprite(0);
+        }
+        else if (convoLine == 7)
+        {
+            e7_anim3.SetActive(false);
+            e7_anim4.SetActive(true);
+            ChangeSprite(0);
+            AudioManager.Instance.PlaySFX("Yay", false, 1f);
         }
         else
         {

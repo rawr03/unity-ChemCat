@@ -973,6 +973,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 0e1d6ed85b981554ba8e03f697ad8323, type: 3}
   - name: BoilingWater
     clip: {fileID: 8300000, guid: f13960266331f2b4b96423e0fa0e1cf6, type: 3}
+  - name: Boing
+    clip: {fileID: 8300000, guid: 5a001c37f3c0ca7459dccddd5781c9f5, type: 3}
+  - name: Burp
+    clip: {fileID: 8300000, guid: 8116ca548533a6a4893aad303de95a1f, type: 3}
   - name: Campfire
     clip: {fileID: 8300000, guid: 7d174869554bd184ca38ccf4d2f37be8, type: 3}
   - name: Checkpoint
@@ -983,10 +987,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2c37326243272f143bc6f4450c88debf, type: 3}
   - name: Correct
     clip: {fileID: 8300000, guid: 61abbeba8c2c5024784d14a99ca489ab, type: 3}
-  - name: Dundunduun
-    clip: {fileID: 8300000, guid: 76fb7b8eb35caad4090b3e25dafdb7a0, type: 3}
+  - name: Dundundun
+    clip: {fileID: 8300000, guid: cb9d06f303a1e97468926020bf8f2ac9, type: 3}
   - name: EggCrack
     clip: {fileID: 8300000, guid: 92600e3aa968fa74ca54e1a4fef24faf, type: 3}
+  - name: Engk
+    clip: {fileID: 8300000, guid: 595991cff394e7a45b57384ec4549877, type: 3}
   - name: Fart
     clip: {fileID: 8300000, guid: b9beca1db5b4cd14994b0bd94b7abaa0, type: 3}
   - name: GameOver
@@ -1016,7 +1022,7 @@ MonoBehaviour:
   - name: ToiletFlush
     clip: {fileID: 8300000, guid: 921fe53e67b88f048a8cc20abd32eb29, type: 3}
   - name: WahWahWah
-    clip: {fileID: 8300000, guid: e66d07a88ef0fe8459cf0fb6dd188ff7, type: 3}
+    clip: {fileID: 8300000, guid: f8184c67d3beccc45a5d3824ea3fbb28, type: 3}
   - name: WaterDrop
     clip: {fileID: 8300000, guid: b6f8014a01fb5a04d94f941d8d4e26da, type: 3}
   - name: Wings

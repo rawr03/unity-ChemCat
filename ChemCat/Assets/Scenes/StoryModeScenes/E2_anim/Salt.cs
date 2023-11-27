@@ -32,7 +32,9 @@ public class Salt : MonoBehaviour
 
     public void Start()
     {
+        //AudioManager.Instance.PlayMusic("BGMusicSM");
         myAnimationControl.Play("Checkpoint_Anim");
+        AudioManager.Instance.PlaySFX("Checkpoint");
     }
 
     public void TrigUpdate()
@@ -46,7 +48,8 @@ public class Salt : MonoBehaviour
         {
             e2_anim1.SetActive(true);
             ChangeSprite(6);
-            
+            AudioManager.Instance.PlaySFX("Checkpoint");
+
         }
         else if (convoLine == 1)
         {
@@ -55,18 +58,27 @@ public class Salt : MonoBehaviour
             ChangeSprite(2);
             AudioManager.Instance.PlaySFX("SaltShake", true);
         }
-        else if (convoLine == 2 || convoLine == 3)
+        else if (convoLine == 2)
         {
             e2_anim2.SetActive(false);
             e2_anim3.SetActive(true);
             ChangeSprite(6);
             AudioManager.Instance.StopSFX();
+            AudioManager.Instance.PlaySFX("Sparkle");
+        }
+        else if (convoLine == 3)
+        {
+            e2_anim2.SetActive(false);
+            e2_anim3.SetActive(true);
+            ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Wow");
         }
         else if (convoLine == 4)
         {
             e2_anim3.SetActive(false);
             e2_anim4.SetActive(true);
             ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("Whoosh", false, 1f);
         }
         else
         {

@@ -40,6 +40,7 @@ public class Glass : MonoBehaviour
         {
             db_pupa.SetActive(true);
             e9_anim1.SetActive(true);
+            AudioManager.Instance.PlaySFX("GlassDing"); 
         }
         else if (convoLine == 1)
         {
@@ -48,12 +49,14 @@ public class Glass : MonoBehaviour
             e9_anim1.SetActive(false);
             e9_anim2.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("AcidBubbling");
         }
         else if (convoLine == 2)
         {
             e9_anim2.SetActive(false);
             e9_anim3.SetActive(true);
             ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("AcidBubbling");
         }
         else if (convoLine == 3)
         {

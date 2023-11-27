@@ -42,8 +42,8 @@ public class Water : MonoBehaviour
 
     public void Start()
     {
+        //AudioManager.Instance.PlaySFX("Boing", false);
         myAnimationControl.Play("egg_SP");
-        //AudioManager.Instance.PlaySFX("Bounce", false);
         //egg.SetActive(true);
         egg_center.SetActive(false);
         //convoLine = 0;
@@ -60,7 +60,7 @@ public class Water : MonoBehaviour
             prop.SetActive(true);
             myAnimationControl.Play("e1_show");
             ChangeSprite(6);
-            AudioManager.Instance.PlaySFX("WaterDrop", true);
+            AudioManager.Instance.PlaySFX("WaterDrop");
         }
         else if (convoLine == 1)
         {
@@ -76,7 +76,7 @@ public class Water : MonoBehaviour
             molecule.SetActive(false);
             myAnimationControl.Play("e1_eq");
             ChangeSprite(1);
-            AudioManager.Instance.StopSFX();
+            AudioManager.Instance.PlaySFX("Whoosh");
         }
         else if (convoLine == 3)
         {
@@ -92,28 +92,38 @@ public class Water : MonoBehaviour
             line2.SetActive(false);
             subscripts.SetActive(true);
         }
-        else if (convoLine == 5 || convoLine == 6)
+        else if (convoLine == 5)
         {
             subscripts.SetActive(false);
             eq_Text.SetActive(false);
             eq_H2O.SetActive(true);
             ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 2f);
+        }
+        else if (convoLine == 6)
+        {
+            subscripts.SetActive(false);
+            eq_Text.SetActive(false);
+            eq_H2O.SetActive(true);
         }
         else if (convoLine == 7)
         {
             eq_H2O.SetActive(false);
             eq_2.SetActive(true);
+            
         }
         else if (convoLine == 8)
         {
             eq_2.SetActive(false);
             distribCoef.SetActive(true);
+            AudioManager.Instance.StopSFX();
         }
         else if (convoLine == 9)
         {
             ChangeSprite(2);
             distribCoef.SetActive(false);
             listeq.SetActive(true);
+            AudioManager.Instance.PlaySFX("Engk", false, 3f);
         }
         else if (convoLine == 10 || convoLine == 11)
         {
@@ -130,21 +140,25 @@ public class Water : MonoBehaviour
             viseq.SetActive(false);
             vimSim.SetActive(true);
             ChangeSprite(0);
+            AudioManager.Instance.PlaySFX("Click");
         }
         else if (convoLine == 15)
         {
             vimSim.SetActive(false);
             confirm.SetActive(true);
+            AudioManager.Instance.PlaySFX("Click");
         }
         else if (convoLine == 16)
         {
             confirm.SetActive(false);
             hearts.SetActive(true);
             ChangeSprite(5);
+            AudioManager.Instance.PlaySFX("Dundundun");
         }
         else if (convoLine == 17)
         {
             ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("Sparkle");
         }
         else if (convoLine == 18)
         {
@@ -152,12 +166,30 @@ public class Water : MonoBehaviour
             hearts.SetActive(false);
             visSimAnim.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("Yay");
         }
-        else if (convoLine == 19 || convoLine == 20 || convoLine == 21 || convoLine == 22)
+        else if (convoLine == 19)
+        {
+            
+            visSimAnim.SetActive(false);
+            gameplay.SetActive(true);
+            ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Correct", false, 1f);
+        }
+        else if (convoLine == 20 || convoLine == 21)
+        {
+
+            visSimAnim.SetActive(false);
+            gameplay.SetActive(true);
+            ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Correct");
+        }
+        else if (convoLine == 22)
         {
             visSimAnim.SetActive(false);
             gameplay.SetActive(true);
             ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
         }
         else
         {

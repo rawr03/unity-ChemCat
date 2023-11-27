@@ -226,7 +226,7 @@ public class StoryControl : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                AudioManager.Instance.PlaySFX("LevelComplete");
             }
             else
             {
@@ -241,7 +241,7 @@ public class StoryControl : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                AudioManager.Instance.PlaySFX("LevelComplete");
             }
             else
             {
@@ -256,7 +256,7 @@ public class StoryControl : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                AudioManager.Instance.PlaySFX("LevelComplete");
             }
             else
             {

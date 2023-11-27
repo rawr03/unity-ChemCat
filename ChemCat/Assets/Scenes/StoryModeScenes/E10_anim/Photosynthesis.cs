@@ -40,6 +40,7 @@ public class Photosynthesis : MonoBehaviour
         {
             db_pupa.SetActive(true);
             e10_anim1.SetActive(true);
+            AudioManager.Instance.PlaySFX("BirdsSinging", true);
         }
         else if (convoLine == 2)
         {
@@ -54,8 +55,16 @@ public class Photosynthesis : MonoBehaviour
             e10_anim2.SetActive(false);
             e10_anim3.SetActive(true);
             ChangeSprite(1);
+            AudioManager.Instance.StopSFX();
         }
         else if (convoLine == 4 || convoLine == 5)
+        {
+            e10_anim3.SetActive(false);
+            e10_anim4.SetActive(true);
+            ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 2f);
+        }
+        else if (convoLine == 5)
         {
             e10_anim3.SetActive(false);
             e10_anim4.SetActive(true);
@@ -66,6 +75,8 @@ public class Photosynthesis : MonoBehaviour
             e10_anim4.SetActive(false);
             e10_anim5.SetActive(true);
             ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Sparkle");
+
         }
         else if (convoLine == 7)
         {

@@ -29,6 +29,20 @@ public class ChangeFace : MonoBehaviour
         }
     }
 
+    /*
+    ChemCat Face List:
+
+    smile(0);
+    openmouthsmile(1);
+    closedsmile(2);
+    angry(3);
+    sad(4);
+    scared(5);
+    smart(6);
+    cat(7);
+    meh(8);
+    */
+
     public void TrigUpdate()
     {
         LoadSprite();
@@ -39,6 +53,7 @@ public class ChangeFace : MonoBehaviour
         if (convoLine == 0)
         {
             ChangeSprite(0);
+            AudioManager.Instance.PlaySFX("Sparkle", false);
         }
         else if (convoLine == 1)
         {
@@ -47,6 +62,7 @@ public class ChangeFace : MonoBehaviour
         else if (convoLine == 2)
         {
             ChangeSprite(3);
+            AudioManager.Instance.PlaySFX("AngryCat", false);
         }
         else if (convoLine == 3)
         {
@@ -55,12 +71,18 @@ public class ChangeFace : MonoBehaviour
         else if (convoLine == 4)
         {
             ChangeSprite(7);
+            AudioManager.Instance.PlaySFX("WahWahWah", false, 1f);
         }
         else if (convoLine == 5)
         {
             ChangeSprite(8);
         }
         else if (convoLine == 6)
+        {
+            ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 1.5f);
+        }
+        else if (convoLine == 7)
         {
             ChangeSprite(1);
         }

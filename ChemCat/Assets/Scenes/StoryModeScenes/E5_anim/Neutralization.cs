@@ -46,24 +46,41 @@ public class Neutralization : MonoBehaviour
             e5_anim1.SetActive(false);
             e5_anim2.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("BoilingWater", true);
         }
         else if (convoLine == 3)
         {
             e5_anim2.SetActive(false);
             e5_anim3.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.StopSFX();
+            AudioManager.Instance.PlaySFX("Sparkle");
         }
-        else if (convoLine == 4 || convoLine == 5)
+        else if (convoLine == 4)
         {
             e5_anim3.SetActive(false);
             e5_anim4.SetActive(true);
             ChangeSprite(6);
-        } 
-        else if (convoLine == 6 || convoLine == 7 || convoLine == 8 || convoLine == 9 || convoLine == 10)
+            AudioManager.Instance.PlaySFX("Yay", false, 0.5f);
+        }
+        else if (convoLine == 5)
+        {
+            e5_anim3.SetActive(false);
+            e5_anim4.SetActive(true);
+            ChangeSprite(6);
+        }
+        else if (convoLine == 6 || convoLine == 7 || convoLine == 8 || convoLine == 9)
         {
             e5_anim4.SetActive(false);
             e5_anim5.SetActive(true);
             ChangeSprite(6);
+        }
+        else if (convoLine == 10)
+        {
+            e5_anim3.SetActive(false);
+            e5_anim4.SetActive(true);
+            ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Burp", false, 1f);
         }
         else
         {

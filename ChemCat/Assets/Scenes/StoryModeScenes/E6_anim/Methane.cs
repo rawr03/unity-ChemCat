@@ -33,18 +33,22 @@ public class Methane : MonoBehaviour
         {
             e6_anim1.SetActive(true);
             ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Whoosh");
         }
         else if (convoLine == 1)
         {
             e6_anim1.SetActive(false);
             e6_anim2.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("CowMoo");
+            AudioManager.Instance.PlaySFX("Fart", false, 1f);
         }
         else if (convoLine == 2)
         {
             e6_anim2.SetActive(false);
             e6_anim3.SetActive(true);
             ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("Campfire", true);
         }
         else if (convoLine == 3)
         {
@@ -57,6 +61,7 @@ public class Methane : MonoBehaviour
             e6_anim4.SetActive(false);
             e6_anim5.SetActive(true);
             ChangeSprite(0);
+            AudioManager.Instance.StopSFX();
         }
         else
         {

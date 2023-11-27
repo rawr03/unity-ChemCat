@@ -46,12 +46,14 @@ public class Ethanol : MonoBehaviour
         {
             e4_anim1.SetActive(true);
             ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Slurp");
         }
         else if (convoLine == 1)
         {
             e4_anim1.SetActive(false);
             e4_anim2.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("Sparkle");
         }
         else if (convoLine == 2)
         {

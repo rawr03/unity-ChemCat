@@ -44,8 +44,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySFX(string name, bool loop = false)
+    public void PlaySFX(string name, bool loop = false, float delay = 0f)
     {
+        Invoke("PlayDelayedSFX", delay);
         Sound s = Array.Find(sfxSounds, x => x.name == name);
         if (s == null)
         {
@@ -55,8 +56,11 @@ public class AudioManager : MonoBehaviour
         {
             sfxSource.clip = s.clip; 
             sfxSource.loop = loop;
-            sfxSource.Play();
         }
+    }
+    private void PlayDelayedSFX()
+    {
+        sfxSource.Play();
     }
 
     public void StopSFX()

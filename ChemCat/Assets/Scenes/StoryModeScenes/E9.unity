@@ -7657,6 +7657,7 @@ GameObject:
   - component: {fileID: 1121325381}
   - component: {fileID: 1121325380}
   - component: {fileID: 1121325379}
+  - component: {fileID: 1121325382}
   m_Layer: 5
   m_Name: btn.settings
   m_TagString: Untagged
@@ -7777,6 +7778,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121325377}
   m_CullTransparentMesh: 1
+--- !u!114 &1121325382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121325377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 381807c7c9faa884483233c314ea2a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1127942613 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6207182343303973720, guid: 770c52ef195f84544acf17fd954b79b3, type: 3}

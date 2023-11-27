@@ -9,24 +9,19 @@ public class LevelController : MonoBehaviour
     public string difficulty;
     public Button lv1, lv2, lv3, lv4, lv5, lv6, lv7, lv8, lv9, lv10;
     int levelPassed;
-    public int scoreE1;
-    public int scoreE2;
-    public int scoreE3;
-    public int scoreE4;
-    public int scoreE5;
-    public int scoreE6;
-    public int scoreE7;
-    public int scoreE8;
-    public int scoreE9;
-    public int scoreE10;
-    public int[] Easy;
 
-    List<int> Scores = new List<int>();
+    public int[] Easy;
+    public int[] Medium;
+    public int[] Hard;
+
     
     private void Start()
     {
         //PlayerPrefs.DeleteAll();
-        //difficulty = difficulty.ToUpper();
+        Easy = new int[10];
+        Medium = new int[10];
+        Hard = new int[10];
+
         lv4.interactable = false;
         lv5.interactable = false;
         lv6.interactable = false;
@@ -34,7 +29,9 @@ public class LevelController : MonoBehaviour
         lv8.interactable = false;
         lv9.interactable = false;
         lv10.interactable = false;
-
+        ListArray();
+        
+        /*
         if(difficulty == "Easy")
         {
             ListEasy();
@@ -46,10 +43,20 @@ public class LevelController : MonoBehaviour
         else if (difficulty == "Hard")
         {
             ListHard();
+        }*/
+    }
+
+    void ListArray()
+    {
+        for(int i = 1; i <= Easy.Length; i++)
+        {
+            Easy[i] = PlayerPrefs.GetInt("ScoreE" + i);
+            Medium[i] = PlayerPrefs.GetInt("ScoreM" + i);
+            Hard[i] = PlayerPrefs.GetInt("ScoreH" + i);
         }
     }
 
-    void ListEasy()
+    /*void ListEasy()
     {
         scoreE1 = PlayerPrefs.GetInt("ScoreE" + 1);
         scoreE2 = PlayerPrefs.GetInt("ScoreE" + 2);
@@ -92,6 +99,7 @@ public class LevelController : MonoBehaviour
         scoreE9 = PlayerPrefs.GetInt("ScoreH" + 9);
         scoreE10 = PlayerPrefs.GetInt("ScoreH" + 10);
     }
+    */
 
     private void Update()
     {

@@ -48,6 +48,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Animation_Scene/EatingLeavesAnim.unity
     guid: 9dcb74d639823b84a9433bad88685f97
   - enabled: 1
+    path: Assets/Scenes/Animation_Scene/Move.unity
+    guid: b9961d439c9d6b5408147be0fd04299f
+  - enabled: 1
     path: Assets/Scenes/Animation_Scene/Pupa.unity
     guid: 2565b484b9385884ab96875ccaadec5a
   - enabled: 1

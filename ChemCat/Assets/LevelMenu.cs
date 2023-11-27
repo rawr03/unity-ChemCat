@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelMenu : MonoBehaviour
 {
-    // loads scene
-    // reloads scene
+    int levelNum = 0;
     public void OpenLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -15,5 +14,10 @@ public class LevelMenu : MonoBehaviour
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
+    public void LvlButton(int levelNum)
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + levelNum);
     }
 }

@@ -8,10 +8,9 @@ public class Score : MonoBehaviour
 {
     public GameObject stars, star1, star2, star3;
 
-    public bool completed;
-    public int lvlNum;
-    public TextMeshProUGUI Diff;
-    public string lvlDiff;
+    public string difficulty;
+    public string lvlNum;
+    public int Number;
 
     public int recordScore = 0;
 
@@ -83,40 +82,53 @@ namespace LevelUnlockSystem
     // Start is called before the first frame update
     void Start()
     {
-        lvlDiff = Diff.text;
-        stars.SetActive(false);
+        difficulty = FindObjectOfType<LevelController>().difficulty;
+        Number = int.Parse(lvlNum);
+        stars.SetActive(true);
+    }
+
+    public void ButtonIsClicked()
+    {
+        Debug.Log("Clicked");
     }
 
     // Update is called once per frame
     void Update()
     {
-        recordScore = PlayerPrefs.GetInt("Score" + lvlDiff + lvlNum);
-        if (completed == true)
+        if (difficulty == "Easy")
         {
-            stars.SetActive(true);
+            recordScore = PlayerPrefs.GetInt("ScoreE" + Number);
+        }
+        if (difficulty == "Medium")
+        {
+            recordScore = PlayerPrefs.GetInt("ScoreM" + Number);
+        }
+        if (difficulty == "Hard")
+        {
+            recordScore = PlayerPrefs.GetInt("ScoreH" + Number);
         }
 
         switch (recordScore)
         {
             case 0:
-                star1.gameObject.SetActive(false);
-                star2.gameObject.SetActive(false);
-                star3.gameObject.SetActive(false);
+                star1.SetActive(false);
+                star2.SetActive(false);
+                star3.SetActive(false);
                 break;
             case 1:
-                star1.gameObject.SetActive(true);
-                star2.gameObject.SetActive(false);
-                star3.gameObject.SetActive(false);
+                star1.SetActive(true);
+                star2.SetActive(false);
+                star3.SetActive(false);
                 break;
             case 2:
-                star1.gameObject.SetActive(true);
-                star2.gameObject.SetActive(true);
-                star3.gameObject.SetActive(false);
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(false);
                 break;
             case 3:
-                star1.gameObject.SetActive(true);
-                star2.gameObject.SetActive(true);
-                star3.gameObject.SetActive(true);
+                star1.SetActive(true);
+                star2.SetActive(true);
+                star3.SetActive(true);
                 break;
 
         }

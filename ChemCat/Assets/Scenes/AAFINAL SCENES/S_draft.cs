@@ -69,9 +69,6 @@ public class S_draft : MonoBehaviour
     public static int React1, React2, Prod1, Prod2;
     public static string Element1, Element2, Element3, Element4;
 
-    //save to playerPrefs
-    LevelController lvlController;
-
 
     void Start()
     {
@@ -179,36 +176,26 @@ public class S_draft : MonoBehaviour
         Debug.Log("Answers: " + Element1 + " + " + Element2 + " -> " + Element3 + " + " + Element4);
     }
 
-    /*
-    IEnumerator TransitionToNextProblem()
-    {
-        // Remove current spawned problem from the list
-        unansweredProblems.Remove(currentEquation);
-        yield return new WaitForSeconds(timeBetweenEquations);
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(NextLevel.buildIndex);
-    }
-    */
-
     IEnumerator TransitionToNextLevel()
     {
         if (health == 3)
         {
             perfect.gameObject.SetActive(true); 
             AudioManager.Instance.PlaySFX("LevelComplete");
+            SaveProgress();
         }
         else if (health == 2)
         {
             great.gameObject.SetActive(true);
             AudioManager.Instance.PlaySFX("LevelComplete");
+            SaveProgress();
         }
         else if (health == 1)
         {
             good.gameObject.SetActive(true);
             AudioManager.Instance.PlaySFX("LevelComplete");
+            SaveProgress();
         }
-        PlayerPrefs.SetInt("Score" + difficulty.ToLower() + LevelNum, health);
         yield return new WaitForSeconds(timeBetweenEquations);
     }
 
@@ -279,6 +266,84 @@ public class S_draft : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         gameOver.gameObject.SetActive(false);
         AudioManager.Instance.PlayMusic("BGMusic");
+    }
+
+
+    public void SaveProgress()
+    {
+        Debug.Log(difficulty);
+        if(difficulty == "Easy")
+        {
+            if(PlayerPrefs.GetInt("LevelPassedE", 2) < LevelNum)
+            {
+                PlayerPrefs.SetInt("LevelPassedE", LevelNum);
+                //Debug.Log(PlayerPrefs.GetInt("LevelPassedE", 2));
+                Debug.Log("Saved Score: " + PlayerPrefs.GetInt("ScoreE" + LevelNum, 0));
+
+                if(PlayerPrefs.GetInt("ScoreE" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreE" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreE" + LevelNum, 0));
+                }
+            }
+            else
+            {
+                if (PlayerPrefs.GetInt("ScoreE" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreE" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreE" + LevelNum, 0));
+                }
+            }
+            
+        }
+        else if (difficulty == "Medium")
+        {
+            if (PlayerPrefs.GetInt("LevelPassedM", 2) < LevelNum)
+            {
+                PlayerPrefs.SetInt("LevelPassedM", LevelNum);
+                Debug.Log("Medium: " + PlayerPrefs.GetInt("LevelPassedM", 2));
+                Debug.Log("Saved Score: " + PlayerPrefs.GetInt("ScoreM" + LevelNum, 0));
+
+                if (PlayerPrefs.GetInt("ScoreM" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreM" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreM" + LevelNum, 0));
+                }
+            }
+            else
+            {
+                if (PlayerPrefs.GetInt("ScoreM" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreM" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreM" + LevelNum, 0));
+                }
+            }
+        }
+        else if (difficulty == "Hard")
+        {
+            if (PlayerPrefs.GetInt("LevelPassedH", 2) < LevelNum)
+            {
+                PlayerPrefs.SetInt("LevelPassedH", LevelNum);
+                //Debug.Log(PlayerPrefs.GetInt("LevelPassedH", 2));
+                Debug.Log("Saved Score: " + PlayerPrefs.GetInt("ScoreH" + LevelNum, 0));
+
+                if (PlayerPrefs.GetInt("ScoreH" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreH" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreH" + LevelNum, 0));
+                }
+            }
+            else
+            {
+                if (PlayerPrefs.GetInt("ScoreH" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreH" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreH" + LevelNum, 0));
+                }
+            }
+        }
+        
+
     }
 
     // Update is called once per frame

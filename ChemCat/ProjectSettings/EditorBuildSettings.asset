@@ -85,7 +85,7 @@ EditorBuildSettings:
     guid: d866c4cb929200b46bc704ca5373bd80
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Level_Select/Easy Level.unity
-    guid: e55b7980a36cebf4b93fb23a19322fc4
+    guid: ca22e96a3cddea247ac90c557c4686b3
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 1.unity
     guid: c894527ffb88c0e458f8605430121abc
@@ -118,7 +118,7 @@ EditorBuildSettings:
     guid: 278f35b23d2084446ac701f84199aea1
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Level_Select/Medium Level.unity
-    guid: e8e3b956a4dec5b499b307361f9fbc6e
+    guid: 2eae9bd77aaa80b4a81c454d298fedd1
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 1.unity
     guid: 9edab33e6f27ce1499e2530a937d4c85
@@ -151,7 +151,7 @@ EditorBuildSettings:
     guid: 24bfb714024b79a43b3a9b4846168524
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Level_Select/Hard Level.unity
-    guid: bbba71abe8fd2e34d9b4b8df70b4e8eb
+    guid: 99d834467552738488d1719662bd195f
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 1.unity
     guid: 60630488af0ddf2429045ad57717e555
@@ -185,7 +185,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/CheckQuizMode.unity
     guid: 80b77422a1ce76848b10c99541b5bbe3
-  - enabled: 1
-    path: Assets/Scenes/AAFINAL SCENES/QUIZ_PRESTART.unity
-    guid: 17362b360ae471b4ea3bc591b175ebcf
   m_configObjects: {}

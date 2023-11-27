@@ -26,6 +26,7 @@ public class Neutralization : MonoBehaviour
     public void Start()
     {
         myAnimationControl.Play("Checkpoint_Anim");
+        AudioManager.Instance.PlaySFX("Checkpoint");
     }
 
     public void TrigUpdate()

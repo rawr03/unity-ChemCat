@@ -43,6 +43,7 @@ public class Water : MonoBehaviour
     public void Start()
     {
         myAnimationControl.Play("egg_SP");
+        //AudioManager.Instance.PlaySFX("Bounce", false);
         //egg.SetActive(true);
         egg_center.SetActive(false);
         //convoLine = 0;
@@ -59,13 +60,14 @@ public class Water : MonoBehaviour
             prop.SetActive(true);
             myAnimationControl.Play("e1_show");
             ChangeSprite(6);
-            AudioManager.Instance.PlaySFX("E1_WaterDrop");
+            AudioManager.Instance.PlaySFX("WaterDrop", true);
         }
         else if (convoLine == 1)
         {
             molecule.SetActive(true);
             myAnimationControl.Play("e1_moveleft");
             myAnimationControl.Play("e1_Mole");
+            AudioManager.Instance.PlaySFX("Whoosh");
         }
         else if (convoLine == 2)
         {
@@ -74,6 +76,7 @@ public class Water : MonoBehaviour
             molecule.SetActive(false);
             myAnimationControl.Play("e1_eq");
             ChangeSprite(1);
+            AudioManager.Instance.StopSFX();
         }
         else if (convoLine == 3)
         {

@@ -226,7 +226,7 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Wrong");
                 health--;
-                AudioManager.Instance.PlaySFX("Wrong");
+                //AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else if (Element1 == "0")
@@ -241,7 +241,7 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Wrong");
                 health--;
-                AudioManager.Instance.PlaySFX("Wrong");
+                //AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else
@@ -256,7 +256,7 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Wrong");
                 health--;
-                AudioManager.Instance.PlaySFX("Wrong");
+                
             }
         }
         // StartCoroutine(EnablePanel());
@@ -360,11 +360,13 @@ public class S_draft : MonoBehaviour
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(true);
+                
                 break;
             case 0:
                 Heart1.gameObject.SetActive(false);
                 Heart2.gameObject.SetActive(false);
                 Heart3.gameObject.SetActive(false);
+                
                 gameOver.gameObject.SetActive(true);
                 AudioManager.Instance.musicSource.Pause();
                 StartCoroutine(TransitionToNextLevel());

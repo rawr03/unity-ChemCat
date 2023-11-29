@@ -14138,7 +14138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffe919a47bfb584d89f0a368df2878f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAnimationControl: {fileID: 0}
+  myAnimationControl: {fileID: 2103668030}
   egg: {fileID: 61683767}
   eggCenter: {fileID: 85676210}
   Db: {fileID: 579482663}

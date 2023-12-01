@@ -562,6 +562,7 @@ GameObject:
   - component: {fileID: 2069046457}
   - component: {fileID: 2069046456}
   - component: {fileID: 2069046459}
+  - component: {fileID: 2069046460}
   m_Layer: 5
   m_Name: pupa
   m_TagString: Untagged
@@ -658,6 +659,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 828f9cf27bcc3a84fb2176e2dc8803ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2069046460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069046454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f890653f89d4da842b3e46c11789f054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

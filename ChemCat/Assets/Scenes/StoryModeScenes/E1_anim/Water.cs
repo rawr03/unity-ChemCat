@@ -158,7 +158,7 @@ public class Water : MonoBehaviour
         else if (convoLine == 17)
         {
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Sparkle");
+            AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
         }
         else if (convoLine == 18)
         {
@@ -189,7 +189,7 @@ public class Water : MonoBehaviour
             visSimAnim.SetActive(false);
             gameplay.SetActive(true);
             ChangeSprite(6);
-            AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 1.5f);
         }
         else
         {

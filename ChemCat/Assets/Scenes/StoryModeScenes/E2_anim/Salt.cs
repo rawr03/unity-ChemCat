@@ -34,7 +34,7 @@ public class Salt : MonoBehaviour
     {
         //AudioManager.Instance.PlayMusic("BGMusicSM");
         myAnimationControl.Play("Checkpoint_Anim");
-        AudioManager.Instance.PlaySFX("Checkpoint");
+        //AudioManager.Instance.PlaySFX("Checkpoint");
     }
 
     public void TrigUpdate()
@@ -48,7 +48,7 @@ public class Salt : MonoBehaviour
         {
             e2_anim1.SetActive(true);
             ChangeSprite(6);
-            AudioManager.Instance.PlaySFX("Checkpoint");
+            //AudioManager.Instance.PlaySFX("Checkpoint");
 
         }
         else if (convoLine == 1)

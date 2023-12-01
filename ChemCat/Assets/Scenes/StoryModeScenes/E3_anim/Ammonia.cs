@@ -59,7 +59,7 @@ public class Ammonia : MonoBehaviour
             ChangeSprite(6);
             AudioManager.Instance.PlaySFX("Sniff", false, 1f);
         }
-        else if (convoLine == 1 || convoLine == 2 || convoLine == 3)
+        else if (convoLine == 1 || convoLine == 2)
         {
             e3_anim1.SetActive(false);
             e3_anim2.SetActive(true);
@@ -69,7 +69,7 @@ public class Ammonia : MonoBehaviour
         {
             e3_anim1.SetActive(false);
             e3_anim2.SetActive(true);
-            ChangeSprite(8);
+            ChangeSprite(2);
             AudioManager.Instance.PlaySFX("ToiletFlush");
         }
         else if (convoLine == 4)
@@ -84,7 +84,7 @@ public class Ammonia : MonoBehaviour
             e3_anim3.SetActive(false);
             e3_anim4.SetActive(true);
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Yay");
+            AudioManager.Instance.PlaySFX("Yay", false, 0.5f);
         }
         else if (convoLine == 6)
         {

@@ -40,26 +40,32 @@ public class ChangeCat : MonoBehaviour
         if (convoLine == 0)
         {
             ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("Yay");
         }
         else if (convoLine == 1)
         {
             ChangeSprite(0);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
         }
         else if (convoLine == 2)
         {
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("Wow");
         }
         else if (convoLine == 3)
         {
             ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("LevelComplete", false, 1f);
         }
         else if (convoLine == 4)
         {
             ChangeSprite(0);
+            
         }
         else if (convoLine == 5)
         {
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("Dundundun", false, 0.5f);
         }
         convoLine++;
     }

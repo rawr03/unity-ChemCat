@@ -72,7 +72,7 @@ public class S_draft : MonoBehaviour
 
     void Start()
     {
-        AudioManager.Instance.PlayMusic("BGMusic");
+        //AudioManager.Instance.PlayMusic("BGMusic");
         // set health to 3, and all hearts must be set active
         health = 3;
         PassCurrentIndex = currentEquationIndex;

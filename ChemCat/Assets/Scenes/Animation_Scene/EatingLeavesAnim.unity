@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 127611632}
   - component: {fileID: 127611631}
   - component: {fileID: 127611633}
+  - component: {fileID: 127611634}
   m_Layer: 5
   m_Name: eatingChemcat
   m_TagString: Untagged
@@ -387,6 +388,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &127611634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127611628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f890653f89d4da842b3e46c11789f054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &333007858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,6 +1310,7 @@ GameObject:
   - component: {fileID: 2054882752}
   - component: {fileID: 2054882751}
   - component: {fileID: 2054882750}
+  - component: {fileID: 2054882754}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1392,6 +1406,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2054882754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054882749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f890653f89d4da842b3e46c11789f054, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

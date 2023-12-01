@@ -6588,30 +6588,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 1
+    reactant2: PCl5
+    PD_coef1: 1
+    product1: PCl3
+    PD_coef2: 1
+    product2: Cl2
+    addtnlTime: 0
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 1
+    reactant2: C2H6
+    PD_coef1: 1
+    product1: C2H4
+    PD_coef2: 1
+    product2: H2
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: C2H2
+    RT_coef2: 2
+    reactant2: H2
+    PD_coef1: 1
+    product1: C2H6
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: C
+    RT_coef2: 2
+    reactant2: S
+    PD_coef1: 1
+    product1: CS2
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 0
   - RT_coef1: 1
     reactant1: H2
     RT_coef2: 1
     reactant2: F2
     PD_coef1: 2
     product1: HF
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 4
-    reactant2: PCl3
-    PD_coef1: 1
-    product1: P4
-    PD_coef2: 6
-    product2: Cl2
-    addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: Al
-    RT_coef2: 3
-    reactant2: Br2
-    PD_coef1: 2
-    product1: AlBr3
     PD_coef2: 0
     product2: 
     addtnlTime: 0
@@ -6633,23 +6651,14 @@ MonoBehaviour:
     PD_coef2: 1
     product2: O2
     addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: P4
-    RT_coef2: 6
-    reactant2: H2
-    PD_coef1: 4
-    product1: PH3
-    PD_coef2: 0
-    product2: 
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: PCl5
-    PD_coef1: 1
-    product1: PCl3
+  - RT_coef1: 2
+    reactant1: CO2
+    RT_coef2: 0
+    reactant2: 
+    PD_coef1: 2
+    product1: CO
     PD_coef2: 1
-    product2: Cl2
+    product2: O2
     addtnlTime: 0
   - RT_coef1: 2
     reactant1: N2
@@ -6660,21 +6669,57 @@ MonoBehaviour:
     PD_coef2: 0
     product2: 
     addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: NH3
+    RT_coef2: 0
+    reactant2: 
+    PD_coef1: 1
+    product1: N2
+    PD_coef2: 3
+    product2: H2
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: KClO3
+    RT_coef2: 0
+    reactant2: 
+    PD_coef1: 2
+    product1: KCl
+    PD_coef2: 3
+    product2: O2
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: Al
+    RT_coef2: 3
+    reactant2: Br2
+    PD_coef1: 2
+    product1: AlBr3
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 0
   - RT_coef1: 0
     reactant1: 
     RT_coef2: 1
-    reactant2: C2H6
+    reactant2: P4
+    PD_coef1: 5
+    product1: O2
+    PD_coef2: 2
+    product2: P2O5
+    addtnlTime: 0
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 4
+    reactant2: PCl3
     PD_coef1: 1
-    product1: C2H4
-    PD_coef2: 1
-    product2: H2
+    product1: P4
+    PD_coef2: 6
+    product2: Cl2
     addtnlTime: 0
   - RT_coef1: 1
-    reactant1: C2H2
-    RT_coef2: 2
+    reactant1: P4
+    RT_coef2: 6
     reactant2: H2
-    PD_coef1: 1
-    product1: C2H6
+    PD_coef1: 4
+    product1: PH3
     PD_coef2: 0
     product2: 
     addtnlTime: 0

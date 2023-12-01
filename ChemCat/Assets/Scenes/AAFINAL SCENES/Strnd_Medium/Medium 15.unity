@@ -6700,67 +6700,67 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
-  - RT_coef1: 2
-    reactant1: C
+  - RT_coef1: 1
+    reactant1: CuF2
+    RT_coef2: 1
+    reactant2: Mg
+    PD_coef1: 1
+    product1: Cu
+    PD_coef2: 1
+    product2: MgF2
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: Zn
+    RT_coef2: 1
+    reactant2: CuCl2
+    PD_coef1: 1
+    product1: ZnCl2
+    PD_coef2: 1
+    product2: Cu
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: Zn
     RT_coef2: 2
+    reactant2: HCl
+    PD_coef1: 1
+    product1: ZnCl2
+    PD_coef2: 1
+    product2: H2
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: OF2
+    RT_coef2: 1
     reactant2: H2O
     PD_coef1: 1
-    product1: CH4
-    PD_coef2: 1
-    product2: CO2
+    product1: O2
+    PD_coef2: 2
+    product2: HF
     addtnlTime: 0
   - RT_coef1: 1
-    reactant1: CH4
-    RT_coef2: 4
-    reactant2: S
-    PD_coef1: 1
-    product1: CS2
-    PD_coef2: 2
-    product2: H2S
-    addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: CS2
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 1
-    product1: CO2
-    PD_coef2: 2
-    product2: SO2
-    addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
+    reactant1: Br2
     RT_coef2: 2
-    reactant2: NaClO3
+    reactant2: KI
+    PD_coef1: 1
+    product1: I2
+    PD_coef2: 2
+    product2: KBr
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: Cl2
+    RT_coef2: 2
+    reactant2: NaBr
     PD_coef1: 2
     product1: NaCl
-    PD_coef2: 3
-    product2: O2
-    addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: C2H2
-    RT_coef2: 5
-    reactant2: O2
-    PD_coef1: 4
-    product1: CO2
-    PD_coef2: 2
-    product2: H2O
-    addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: AlI3
-    RT_coef2: 3
-    reactant2: HgCl2
-    PD_coef1: 2
-    product1: AlCI3
-    PD_coef2: 3
-    product2: HgI2
+    PD_coef2: 1
+    product2: Br2
     addtnlTime: 0
   - RT_coef1: 1
-    reactant1: C3H8
-    RT_coef2: 5
-    reactant2: O2
-    PD_coef1: 3
-    product1: CO2
-    PD_coef2: 4
+    reactant1: SO2
+    RT_coef2: 2
+    reactant2: H2
+    PD_coef1: 1
+    product1: S
+    PD_coef2: 2
     product2: H2O
     addtnlTime: 0
   - RT_coef1: 2
@@ -6772,25 +6772,70 @@ MonoBehaviour:
     PD_coef2: 1
     product2: H2
     addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: Fe
+    RT_coef2: 1
+    reactant2: ZnCl2
+    PD_coef1: 2
+    product1: FeCl
+    PD_coef2: 1
+    product2: Zn
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: Al
+    RT_coef2: 3
+    reactant2: CuCl2
+    PD_coef1: 2
+    product1: AlCl3
+    PD_coef2: 3
+    product2: Cu
+    addtnlTime: 0
   - RT_coef1: 1
-    reactant1: SO2
+    reactant1: C3H8
+    RT_coef2: 5
+    reactant2: O2
+    PD_coef1: 3
+    product1: CO2
+    PD_coef2: 4
+    product2: H2O
+    addtnlTime: 0
+  - RT_coef1: 3
+    reactant1: CuSO4
     RT_coef2: 2
-    reactant2: H2
-    PD_coef1: 1
-    product1: S
+    reactant2: Al
+    PD_coef1: 3
+    product1: Cu
+    PD_coef2: 1
+    product2: Al2(SO4)3
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: C2H2
+    RT_coef2: 5
+    reactant2: O2
+    PD_coef1: 4
+    product1: CO2
     PD_coef2: 2
     product2: H2O
     addtnlTime: 0
-  - RT_coef1: 1
-    reactant1: CS2
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 1
-    product1: CO2
-    PD_coef2: 2
-    product2: SO2
+  - RT_coef1: 2
+    reactant1: N2
+    RT_coef2: 6
+    reactant2: H2O
+    PD_coef1: 4
+    product1: NH3
+    PD_coef2: 3
+    product2: O2
     addtnlTime: 0
-  currentEquationIndex: 9
+  - RT_coef1: 3
+    reactant1: Mg
+    RT_coef2: 2
+    reactant2: AlCl3
+    PD_coef1: 2
+    product1: Al
+    PD_coef2: 3
+    product2: MgCl2
+    addtnlTime: 0
+  currentEquationIndex: 14
   difficulty: Medium
   equationText1: {fileID: 657138076}
   equationText2: {fileID: 2000886161}

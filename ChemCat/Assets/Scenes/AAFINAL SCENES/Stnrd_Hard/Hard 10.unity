@@ -6871,23 +6871,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
-  - RT_coef1: 4
-    reactant1: CO2
-    RT_coef2: 2
-    reactant2: H2O
-    PD_coef1: 2
-    product1: C2H2
-    PD_coef2: 5
-    product2: O2
+  - RT_coef1: 1
+    reactant1: NaCl
+    RT_coef2: 1
+    reactant2: AgNO3
+    PD_coef1: 1
+    product1: NaNO3
+    PD_coef2: 1
+    product2: AgCl
     addtnlTime: 0
-  - RT_coef1: 4
-    reactant1: NH3
-    RT_coef2: 3
-    reactant2: O2
-    PD_coef1: 2
-    product1: N2
-    PD_coef2: 6
+  - RT_coef1: 1
+    reactant1: Ba(NO3)2
+    RT_coef2: 1
+    reactant2: Na2SO4
+    PD_coef1: 1
+    product1: BaSO4
+    PD_coef2: 2
+    product2: NaNO3
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: H2SO4
+    RT_coef2: 2
+    reactant2: KOH
+    PD_coef1: 1
+    product1: K2SO4
+    PD_coef2: 2
     product2: H2O
+    addtnlTime: 0
+  - RT_coef1: 1
+    reactant1: CuBr2
+    RT_coef2: 2
+    reactant2: AgNO3
+    PD_coef1: 2
+    product1: AgBr
+    PD_coef2: 1
+    product2: Cu(NO3)2
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: HNO3
+    RT_coef2: 1
+    reactant2: Mg(OH)2
+    PD_coef1: 2
+    product1: H2O
+    PD_coef2: 1
+    product2: Mg(NO3)2
     addtnlTime: 0
   - RT_coef1: 1
     reactant1: C2H5OH
@@ -6903,9 +6930,18 @@ MonoBehaviour:
     RT_coef2: 1
     reactant2: K3PO4
     PD_coef1: 1
-    product1: Ag3PO4
+    product1: 'Ag3PO4 '
     PD_coef2: 3
     product2: KNO3
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: AlI3
+    RT_coef2: 3
+    reactant2: HgCl2
+    PD_coef1: 2
+    product1: AlCl3
+    PD_coef2: 3
+    product2: HgI2
     addtnlTime: 0
   - RT_coef1: 2
     reactant1: C2H2
@@ -6916,14 +6952,50 @@ MonoBehaviour:
     PD_coef2: 2
     product2: H2O
     addtnlTime: 0
-  - RT_coef1: 4
-    reactant1: NH3
-    RT_coef2: 5
-    reactant2: O2
-    PD_coef1: 4
-    product1: NO
+  - RT_coef1: 3
+    reactant1: Ca(OH)2
+    RT_coef2: 2
+    reactant2: H3PO4
+    PD_coef1: 1
+    product1: Ca3(PO4)2
     PD_coef2: 6
     product2: H2O
+    addtnlTime: 0
+  - RT_coef1: 4
+    reactant1: CO2
+    RT_coef2: 2
+    reactant2: H2O
+    PD_coef1: 2
+    product1: C2H2
+    PD_coef2: 5
+    product2: O2
+    addtnlTime: 0
+  - RT_coef1: 2
+    reactant1: K3PO4
+    RT_coef2: 3
+    reactant2: CaCl2
+    PD_coef1: 6
+    product1: KCl
+    PD_coef2: 1
+    product2: Ca3(PO4)2
+    addtnlTime: 0
+  - RT_coef1: 4
+    reactant1: NH3
+    RT_coef2: 3
+    reactant2: O2
+    PD_coef1: 2
+    product1: N2
+    PD_coef2: 6
+    product2: H2O
+    addtnlTime: 0
+  - RT_coef1: 3
+    reactant1: CaCl2
+    RT_coef2: 2
+    reactant2: Na3PO4
+    PD_coef1: 6
+    product1: NaCl
+    PD_coef2: 1
+    product2: Ca3(PO4)2
     addtnlTime: 0
   - RT_coef1: 4
     reactant1: CO2
@@ -6933,33 +7005,6 @@ MonoBehaviour:
     product1: C2H6
     PD_coef2: 7
     product2: O2
-    addtnlTime: 0
-  - RT_coef1: 4
-    reactant1: NH3
-    RT_coef2: 5
-    reactant2: O2
-    PD_coef1: 4
-    product1: NO
-    PD_coef2: 6
-    product2: H2O
-    addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: N2
-    RT_coef2: 6
-    reactant2: H2O
-    PD_coef1: 4
-    product1: NH3
-    PD_coef2: 3
-    product2: O2
-    addtnlTime: 0
-  - RT_coef1: 3
-    reactant1: Ca(OH)2
-    RT_coef2: 2
-    reactant2: H3PO4
-    PD_coef1: 1
-    product1: Ca3(PO4)2
-    PD_coef2: 6
-    product2: H2O
     addtnlTime: 0
   currentEquationIndex: 9
   difficulty: Hard

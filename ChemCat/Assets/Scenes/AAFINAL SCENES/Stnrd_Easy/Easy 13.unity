@@ -6742,10 +6742,10 @@ MonoBehaviour:
     PD_coef2: 1
     product2: O2
     addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: CO2
-    RT_coef2: 0
-    reactant2: 
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: CO2
     PD_coef1: 2
     product1: CO
     PD_coef2: 1
@@ -6760,19 +6760,19 @@ MonoBehaviour:
     PD_coef2: 0
     product2: 
     addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: NH3
-    RT_coef2: 0
-    reactant2: 
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: NH3
     PD_coef1: 1
     product1: N2
     PD_coef2: 3
     product2: H2
     addtnlTime: 0
-  - RT_coef1: 2
-    reactant1: KClO3
-    RT_coef2: 0
-    reactant2: 
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: KClO3
     PD_coef1: 2
     product1: KCl
     PD_coef2: 3

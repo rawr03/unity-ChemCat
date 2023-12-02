@@ -69,6 +69,10 @@ public class Glass : MonoBehaviour
             e9_anim4.SetActive(false);
             ChangeSprite(6);
         }
+        else
+        {
+            HideAll();
+        }
         Next();
     }
 

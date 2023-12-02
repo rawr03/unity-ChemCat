@@ -15254,7 +15254,6 @@ GameObject:
   - component: {fileID: 2103668027}
   - component: {fileID: 2103668030}
   - component: {fileID: 2103668029}
-  - component: {fileID: 2103668032}
   - component: {fileID: 2103668033}
   m_Layer: 5
   m_Name: Prop
@@ -15353,30 +15352,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2103668032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103668025}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d70fa5f0895bf4c947f53043e61712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAnimationControl: {fileID: 2103668030}
-  egg: {fileID: 61683767}
-  Db: {fileID: 579482663}
-  vimSim: {fileID: 1902591674}
-  e4_anim1: {fileID: 93386629}
-  e4_anim2: {fileID: 1962031867}
-  e4_anim3: {fileID: 0}
-  e4_anim4: {fileID: 0}
-  e4_anim5: {fileID: 0}
-  e4_anim6: {fileID: 0}
-  index: 0
-  Sp_eggs: []
 --- !u!114 &2103668033
 MonoBehaviour:
   m_ObjectHideFlags: 0

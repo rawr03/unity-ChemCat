@@ -8785,8 +8785,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2103668034}
-        m_TargetAssemblyTypeName: Ethane, Assembly-CSharp
+      - m_Target: {fileID: 2103668035}
+        m_TargetAssemblyTypeName: Glass, Assembly-CSharp
         m_MethodName: HideAll
         m_Mode: 1
         m_Arguments:
@@ -14760,7 +14760,6 @@ GameObject:
   - component: {fileID: 2103668027}
   - component: {fileID: 2103668030}
   - component: {fileID: 2103668029}
-  - component: {fileID: 2103668034}
   - component: {fileID: 2103668035}
   m_Layer: 5
   m_Name: Prop
@@ -14859,31 +14858,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2103668034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103668025}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c94b585011ca79f4081140e25134fb06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAnimationControl: {fileID: 2103668030}
-  pupa: {fileID: 427876252}
-  db_pupa: {fileID: 1377046226}
-  Db: {fileID: 579482663}
-  db_anim: {fileID: 2095729333}
-  vimSim: {fileID: 1902591674}
-  e8_anim1: {fileID: 0}
-  e8_anim2: {fileID: 0}
-  e8_anim3: {fileID: 0}
-  e8_anim4: {fileID: 0}
-  e8_anim5: {fileID: 0}
-  index: 0
-  Sp_eggs: []
 --- !u!114 &2103668035
 MonoBehaviour:
   m_ObjectHideFlags: 0

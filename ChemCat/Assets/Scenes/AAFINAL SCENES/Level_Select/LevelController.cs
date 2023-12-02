@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class LevelController : MonoBehaviour
 {
     public string difficulty;
-    public Button lv1, lv2, lv3, lv4, lv5, lv6, lv7, lv8, lv9, lv10;
+    public Button lv1, lv2, lv3, lv4, lv5, lv6, lv7, lv8, lv9, lv10, lv11, lv12, lv13, lv14, lv15;
     int levelPassed;
 
     public int[] Easy;
@@ -18,9 +18,9 @@ public class LevelController : MonoBehaviour
     private void Start()
     {
         //PlayerPrefs.DeleteAll();
-        Easy = new int[10];
-        Medium = new int[10];
-        Hard = new int[10];
+        Easy = new int[15];
+        Medium = new int[15];
+        Hard = new int[15];
 
         lv4.interactable = false;
         lv5.interactable = false;
@@ -29,21 +29,19 @@ public class LevelController : MonoBehaviour
         lv8.interactable = false;
         lv9.interactable = false;
         lv10.interactable = false;
+        lv11.interactable = false;
+        lv12.interactable = false;
+        lv13.interactable = false;
+        lv14.interactable = false;
+        lv15.interactable = false;
+
         ListArray();
         
-        /*
-        if(difficulty == "Easy")
-        {
-            ListEasy();
-        }
-        else if(difficulty == "Medium")
-        {
-            ListMedium();
-        }
-        else if (difficulty == "Hard")
-        {
-            ListHard();
-        }*/
+    }
+
+    public void Reset()
+    {
+        PlayerPrefs.DeleteAll();
     }
 
     void ListArray()
@@ -56,50 +54,6 @@ public class LevelController : MonoBehaviour
         }
     }
 
-    /*void ListEasy()
-    {
-        scoreE1 = PlayerPrefs.GetInt("ScoreE" + 1);
-        scoreE2 = PlayerPrefs.GetInt("ScoreE" + 2);
-        scoreE3 = PlayerPrefs.GetInt("ScoreE" + 3);
-        scoreE4 = PlayerPrefs.GetInt("ScoreE" + 4);
-        scoreE5 = PlayerPrefs.GetInt("ScoreE" + 5);
-        scoreE6 = PlayerPrefs.GetInt("ScoreE" + 6);
-        scoreE7 = PlayerPrefs.GetInt("ScoreE" + 7);
-        scoreE8 = PlayerPrefs.GetInt("ScoreE" + 8);
-        scoreE9 = PlayerPrefs.GetInt("ScoreE" + 9);
-        scoreE10 = PlayerPrefs.GetInt("ScoreE" + 10);
-
-    }
-
-    void ListMedium()
-    {
-        scoreE1 = PlayerPrefs.GetInt("ScoreM" + 1);
-        scoreE2 = PlayerPrefs.GetInt("ScoreM" + 2);
-        scoreE3 = PlayerPrefs.GetInt("ScoreM" + 3);
-        scoreE4 = PlayerPrefs.GetInt("ScoreM" + 4);
-        scoreE5 = PlayerPrefs.GetInt("ScoreM" + 5);
-        scoreE6 = PlayerPrefs.GetInt("ScoreM" + 6);
-        scoreE7 = PlayerPrefs.GetInt("ScoreM" + 7);
-        scoreE8 = PlayerPrefs.GetInt("ScoreM" + 8);
-        scoreE9 = PlayerPrefs.GetInt("ScoreM" + 9);
-        scoreE10 = PlayerPrefs.GetInt("ScoreM" + 10);
-
-    }
-
-    void ListHard()
-    {
-        scoreE1 = PlayerPrefs.GetInt("ScoreH" + 1);
-        scoreE2 = PlayerPrefs.GetInt("ScoreH" + 2);
-        scoreE3 = PlayerPrefs.GetInt("ScoreH" + 3);
-        scoreE4 = PlayerPrefs.GetInt("ScoreH" + 4);
-        scoreE5 = PlayerPrefs.GetInt("ScoreH" + 5);
-        scoreE6 = PlayerPrefs.GetInt("ScoreH" + 6);
-        scoreE7 = PlayerPrefs.GetInt("ScoreH" + 7);
-        scoreE8 = PlayerPrefs.GetInt("ScoreH" + 8);
-        scoreE9 = PlayerPrefs.GetInt("ScoreH" + 9);
-        scoreE10 = PlayerPrefs.GetInt("ScoreH" + 10);
-    }
-    */
 
     private void Update()
     {
@@ -171,6 +125,66 @@ public class LevelController : MonoBehaviour
                 lv8.interactable = true;
                 lv9.interactable = true;
                 lv10.interactable = true;
+                break;
+            case 11:
+                lv4.interactable = true;
+                lv5.interactable = true;
+                lv6.interactable = true;
+                lv7.interactable = true;
+                lv8.interactable = true;
+                lv9.interactable = true;
+                lv10.interactable = true;
+                lv11.interactable = true;
+                break;
+            case 12:
+                lv4.interactable = true;
+                lv5.interactable = true;
+                lv6.interactable = true;
+                lv7.interactable = true;
+                lv8.interactable = true;
+                lv9.interactable = true;
+                lv10.interactable = true;
+                lv11.interactable = true;
+                lv12.interactable = true;
+                break;
+            case 13:
+                lv4.interactable = true;
+                lv5.interactable = true;
+                lv6.interactable = true;
+                lv7.interactable = true;
+                lv8.interactable = true;
+                lv9.interactable = true;
+                lv10.interactable = true;
+                lv11.interactable = true;
+                lv12.interactable = true;
+                lv13.interactable = true;
+                break;
+            case 14:
+                lv4.interactable = true;
+                lv5.interactable = true;
+                lv6.interactable = true;
+                lv7.interactable = true;
+                lv8.interactable = true;
+                lv9.interactable = true;
+                lv10.interactable = true;
+                lv11.interactable = true;
+                lv12.interactable = true;
+                lv13.interactable = true;
+                lv14.interactable = true;
+                break;
+            case 15:
+                lv4.interactable = true;
+                lv5.interactable = true;
+                lv6.interactable = true;
+                lv7.interactable = true;
+                lv8.interactable = true;
+                lv9.interactable = true;
+                lv10.interactable = true;
+                lv11.interactable = true;
+                lv12.interactable = true;
+                lv13.interactable = true;
+                lv14.interactable = true;
+                lv15.interactable = true;
                 break;
         }
     }

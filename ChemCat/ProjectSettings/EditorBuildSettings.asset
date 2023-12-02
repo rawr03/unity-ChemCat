@@ -114,6 +114,21 @@ EditorBuildSettings:
     path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 10.unity
     guid: 19e0047480fce38419385bf07470ccd3
   - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 11.unity
+    guid: 2cafdec3b03075e49bc496fa602d4cb9
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 12.unity
+    guid: b56f914d42789fc40bb076bfa3ff37fb
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 13.unity
+    guid: 895a2aa4d3620554f99461719cfd2595
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 14.unity
+    guid: 923e1bdecb38ffb43a190500dc4e9765
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 15.unity
+    guid: bdef7239da80c0244994c12a19bb1e79
+  - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Level_Select/Medium Level.unity
     guid: 2eae9bd77aaa80b4a81c454d298fedd1
   - enabled: 1
@@ -147,6 +162,21 @@ EditorBuildSettings:
     path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 10.unity
     guid: 24700ba68d0cbb2419a2e5bba25c53e3
   - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 11.unity
+    guid: dd97b3bb9743d364f89dfeac328eb085
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 12.unity
+    guid: 056239a6a1925d6418c07c3fad88d688
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 13.unity
+    guid: f6cce84d337327c4b867e24f66c8b8d7
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 14.unity
+    guid: e53a93f7836e7224998d87bfb7236eda
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 15.unity
+    guid: ccb9ffd7ead15fa41b39e1abbb186a8b
+  - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Level_Select/Hard Level.unity
     guid: 99d834467552738488d1719662bd195f
   - enabled: 1
@@ -179,6 +209,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 10.unity
     guid: eae9b16589609ef4ba393528199991cf
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 11.unity
+    guid: 533ad2a118ac92f488ca1e6e472d5888
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 12.unity
+    guid: 0145346ae5e1c92459923bdd146055c7
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 13.unity
+    guid: e40bc5295da02724eb60746f13bc185d
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 14.unity
+    guid: e63860784fd26224ebb143ae3373362b
+  - enabled: 1
+    path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 15.unity
+    guid: 1aabea14cd0c3404a8a68bf574a5b9e0
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/CheckQuizMode.unity
     guid: 80b77422a1ce76848b10c99541b5bbe3

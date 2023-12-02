@@ -6787,14 +6787,14 @@ MonoBehaviour:
     PD_coef2: 0
     product2: 
     addtnlTime: 0
-  - RT_coef1: 0
-    reactant1: 
-    RT_coef2: 1
-    reactant2: P4
-    PD_coef1: 5
-    product1: O2
-    PD_coef2: 2
-    product2: P2O5
+  - RT_coef1: 1
+    reactant1: P4
+    RT_coef2: 5
+    reactant2: O2
+    PD_coef1: 2
+    product1: P2O5
+    PD_coef2: 0
+    product2: 
     addtnlTime: 0
   - RT_coef1: 0
     reactant1: 

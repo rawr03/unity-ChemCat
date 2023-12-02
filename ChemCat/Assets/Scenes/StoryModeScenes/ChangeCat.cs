@@ -64,7 +64,7 @@ public class ChangeCat : MonoBehaviour
         }
         else if (convoLine == 5)
         {
-            ChangeSprite(2);
+            ChangeSprite(5);
             AudioManager.Instance.PlaySFX("Dundundun", false, 0.5f);
         }
         convoLine++;

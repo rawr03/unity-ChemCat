@@ -125,6 +125,7 @@ public class LevelController : MonoBehaviour
                 lv8.interactable = true;
                 lv9.interactable = true;
                 lv10.interactable = true;
+                lv11.interactable = true;
                 break;
             case 11:
                 lv4.interactable = true;
@@ -135,6 +136,7 @@ public class LevelController : MonoBehaviour
                 lv9.interactable = true;
                 lv10.interactable = true;
                 lv11.interactable = true;
+                lv12.interactable = true;
                 break;
             case 12:
                 lv4.interactable = true;
@@ -146,6 +148,7 @@ public class LevelController : MonoBehaviour
                 lv10.interactable = true;
                 lv11.interactable = true;
                 lv12.interactable = true;
+                lv13.interactable = true;
                 break;
             case 13:
                 lv4.interactable = true;
@@ -158,6 +161,7 @@ public class LevelController : MonoBehaviour
                 lv11.interactable = true;
                 lv12.interactable = true;
                 lv13.interactable = true;
+                lv14.interactable = true;
                 break;
             case 14:
                 lv4.interactable = true;
@@ -171,6 +175,7 @@ public class LevelController : MonoBehaviour
                 lv12.interactable = true;
                 lv13.interactable = true;
                 lv14.interactable = true;
+                lv15.interactable = true;
                 break;
             case 15:
                 lv4.interactable = true;

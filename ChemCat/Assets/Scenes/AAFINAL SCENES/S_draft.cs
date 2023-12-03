@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
-using Unity.VisualScripting;
-using System.Runtime.CompilerServices;
-using JetBrains.Annotations;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -74,25 +71,28 @@ public class S_draft : MonoBehaviour
     {
         //AudioManager.Instance.PlayMusic("BGMusic");
         // set health to 3, and all hearts must be set active
+
+        hint = FindObjectOfType<Canvas>().GetComponent<Hint>();
+        //hint = new Hint();
         health = 3;
         PassCurrentIndex = currentEquationIndex;
         LevelNum = currentEquationIndex + 1;
         Level.text = LevelNum.ToString();
         showDifficulty.text = difficulty.ToString();
 
-        Heart1.gameObject.SetActive(true);
-        Heart2.gameObject.SetActive(true);
-        Heart3.gameObject.SetActive(true);
+        Heart1.SetActive(true);
+        Heart2.SetActive(true);
+        Heart3.SetActive(true);
 
         // Switch1, Switch4, correct, wrong and gameOver must be set to false by default
-        Switch1.gameObject.SetActive(false);
-        Switch1.gameObject.SetActive(false);
-        gameOver.gameObject.SetActive(false);
+        Switch1.SetActive(false);
+        Switch1.SetActive(false);
+        gameOver.SetActive(false);
 
         // hide floating docks
-        perfect.gameObject.SetActive(false);
-        great.gameObject.SetActive(false);
-        good.gameObject.SetActive(false);
+        perfect.SetActive(false);
+        great.SetActive(false);
+        good.SetActive(false);
 
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
@@ -128,27 +128,28 @@ public class S_draft : MonoBehaviour
         // activate switch based on the Problem
         if (equationAnswer1 != 0 && equationAnswer4 == 0)
         {
-            Switch1.gameObject.SetActive(true);
-            Switch4.gameObject.SetActive(false);
+            Switch1.SetActive(true);
+            Switch4.SetActive(false);
         }
         else if (equationAnswer4 != 0 && equationAnswer1 == 0)
         {
-            Switch1.gameObject.SetActive(false);
-            Switch4.gameObject.SetActive(true);
+            Switch1.SetActive(false);
+            Switch4.SetActive(true);
         }
         else
         {
-            Switch1.gameObject.SetActive(true);
-            Switch4.gameObject.SetActive(true);
+            Switch1.SetActive(true);
+            Switch4.SetActive(true);
         }
 
         RecordElements(currentEquation.reactant1, currentEquation.reactant2, currentEquation.product1, currentEquation.product2, difficulty);
         RecordAnswer(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
-
-        if(difficulty == "Hard")
+        
+        if (difficulty == "Hard")
         {
-            hint.AssignValues(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4);
+            hint.AssignValues(equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4, currentEquationIndex);
         }
+
     }
 
     public static void RecordElements(string elem1, string elem2, string elem3, string elem4, string DiffLevel)
@@ -158,10 +159,10 @@ public class S_draft : MonoBehaviour
         ElemText3 = elem3;
         ElemText4 = elem4;
         Diff = DiffLevel;
-        Debug.Log(ElemText1);
-        Debug.Log(ElemText2);
-        Debug.Log(ElemText3);
-        Debug.Log(ElemText4);
+        //Debug.Log(ElemText1);
+        //Debug.Log(ElemText2);
+        //Debug.Log(ElemText3);
+        //Debug.Log(ElemText4);
 
         //VisualsControl.SetupSprites(ElemText1, ElemText2, ElemText3, ElemText4);
     }
@@ -180,25 +181,26 @@ public class S_draft : MonoBehaviour
 
         // yes data is transferred
         Debug.Log("Answers: " + Element1 + " + " + Element2 + " -> " + Element3 + " + " + Element4);
+
     }
 
     IEnumerator TransitionToNextLevel()
     {
         if (health == 3)
         {
-            perfect.gameObject.SetActive(true); 
+            perfect.SetActive(true); 
             AudioManager.Instance.PlaySFX("LevelComplete");
             SaveProgress();
         }
         else if (health == 2)
         {
-            great.gameObject.SetActive(true);
+            great.SetActive(true);
             AudioManager.Instance.PlaySFX("LevelComplete");
             SaveProgress();
         }
         else if (health == 1)
         {
-            good.gameObject.SetActive(true);
+            good.SetActive(true);
             AudioManager.Instance.PlaySFX("LevelComplete");
             SaveProgress();
         }
@@ -270,7 +272,7 @@ public class S_draft : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        gameOver.gameObject.SetActive(false);
+        gameOver.SetActive(false);
         AudioManager.Instance.PlayMusic("BGMusic");
     }
 
@@ -352,27 +354,27 @@ public class S_draft : MonoBehaviour
         switch (health)
         {
             case 3:
-                Heart1.gameObject.SetActive(true);
-                Heart2.gameObject.SetActive(true);
-                Heart3.gameObject.SetActive(true);
+                Heart1.SetActive(true);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
                 break;
             case 2:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(true);
-                Heart3.gameObject.SetActive(true);
+                Heart1.SetActive(false);
+                Heart2.SetActive(true);
+                Heart3.SetActive(true);
                 break;
             case 1:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(false);
-                Heart3.gameObject.SetActive(true);
+                Heart1.SetActive(false);
+                Heart2.SetActive(false);
+                Heart3.SetActive(true);
                 
                 break;
             case 0:
-                Heart1.gameObject.SetActive(false);
-                Heart2.gameObject.SetActive(false);
-                Heart3.gameObject.SetActive(false);
+                Heart1.SetActive(false);
+                Heart2.SetActive(false);
+                Heart3.SetActive(false);
                 
-                gameOver.gameObject.SetActive(true);
+                gameOver.SetActive(true);
                 AudioManager.Instance.musicSource.Pause();
                 StartCoroutine(TransitionToNextLevel());
                 break;

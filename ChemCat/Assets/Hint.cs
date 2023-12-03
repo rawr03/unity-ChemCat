@@ -1,5 +1,3 @@
-using JetBrains.Annotations;
-using System.Data.Common;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,19 +8,18 @@ public class Hint : MonoBehaviour
     public Sprite[] Sp_eggs;
     public GameObject heart1, heart2, heart3, caterpillar, Db_hint;
     public TextMeshProUGUI hintText;
-    int index;
     int[] switchNum;
     int[] answers;
     int randIndex;
     int randSwitch;
     int answer;
+    public int currentLevel;
 
     //S_draft s_Draft;
     void Start()
     {
-        //s_Draft = FindObjectOfType<Canvas>().GetComponent<S_draft>();
         Sp_eggs = Resources.LoadAll<Sprite>("sp_caterpillar");
-        randIndex = Random.Range(0, 3); 
+        //Debug.Log(randIndex);
     }
 
     // Update is called once per frame
@@ -40,6 +37,8 @@ public class Hint : MonoBehaviour
         {
             ChangeSprite(1);
         }
+        hintText.text = "Switch " + PlayerPrefs.GetInt("CurrentSwitch" + currentLevel.ToString(), 0) + " has the COEFFICIENT " + PlayerPrefs.GetInt("CurrentAnswer" + currentLevel.ToString(), 0);
+        //hintText.SetText("Switch {0} + has the COEFFICIENT + {1}.", randSwitch, answer);
     }
 
     public void showHint()
@@ -47,27 +46,35 @@ public class Hint : MonoBehaviour
         Db_hint.SetActive(true);
     }
 
-    public void AssignValues(int answer1, int answer2, int answer3,int answer4)
+    public void AssignValues(int answer1, int answer2, int answer3,int answer4, int currentEq)
     {
+        randIndex = Random.Range(0, 4);
         switchNum = new int[4];
+        answers = new int[4];
         switchNum[0] = 1;
         switchNum[1] = 2;
         switchNum[2] = 3;
         switchNum[3] = 4;
         //Debug.Log(switchNum.ToString());
 
-        answers = new int[4];
         answers[0] = answer1;
         answers[1] = answer2;
         answers[2] = answer3;
-        answers[4] = answer4;
+        answers[3] = answer4;
 
         randSwitch = switchNum[randIndex];
         answer = answers[randIndex];
-        //hintText.text = randSwitch.ToString() + " has the COEFFICIENT " + answer.ToString();
-        //hintText.SetText("Switch {0} + has the COEFFICIENT + {1}.", randSwitch, answer);
-        Debug.Log(randSwitch);
-        Debug.Log(answer);
+        //currentLevel = currentEq + 1;
+
+        Debug.Log("Retrieved Equation #: " + currentEq);
+        //currentLevel = currentLevel + 1;
+        
+        //Debug.Log("Retrieved Switch: " + PlayerPrefs.GetInt("CurrentSwitch" + currentLevel));
+        PlayerPrefs.SetInt("CurrentSwitch" + currentLevel, randSwitch);
+        PlayerPrefs.SetInt("CurrentAnswer" + currentLevel, answer);
+        
+        Debug.Log("Retrieved CurrSwitch: " + PlayerPrefs.GetInt("CurrentSwitch" + currentLevel));
+        Debug.Log("Retrieved CurrAnswer: " + PlayerPrefs.GetInt("CurrentAnswer" + currentLevel));
     }
 
     public void ChangeSprite(int index)

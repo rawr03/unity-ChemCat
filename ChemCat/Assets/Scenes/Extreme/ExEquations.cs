@@ -1,0 +1,19 @@
+
+[System.Serializable]
+public class ExEquations
+{
+    public int RT_coef1;
+    public string reactant1;
+    public int RT_sub1;
+    public int RT_coef2;
+    public string reactant2;
+    public int RT_sub2;
+    public int PD_coef1;
+    public string product1;
+    public int PD_sub1;
+    public int PD_coef2;
+    public string product2;
+    public int PD_sub2;
+    public int addtnlTime;
+
+}

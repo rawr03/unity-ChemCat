@@ -1,17 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using Unity.VisualScripting;
-using System.Linq;
-using System;
+
 
 public class Water : MonoBehaviour
 {
     [SerializeField] private Animator myAnimationControl;
 
-    public GameObject egg, egg_center, prop, molecule, line1, line2, eq_Text, subscripts, eq_H2O, eq_2, distribCoef, listeq, vimSim, viseq, confirm, gameplay, hearts, black, startPlay, visSimAnim;
+    public GameObject egg, egg_center, prop, molecule, line1, line2, eq_Text, subscripts, eq_H2O, eq_2, distribCoef, listeq, CO, vimSim, viseq, confirm, gameplay, hearts, black, startPlay, visSimAnim;
     private int convoLine = 0;
     //public TextMeshProUGUI equationText_anim;
     public int index = 0;
@@ -132,35 +127,41 @@ public class Water : MonoBehaviour
         else if (convoLine == 12)
         {
             listeq.SetActive(false);
+            CO.SetActive(true);
+            ChangeSprite(2);
+        }
+        else if (convoLine == 13)
+        {
+            CO.SetActive(false);
             viseq.SetActive(true);
             ChangeSprite(2);
         }
-        else if (convoLine == 13 || convoLine == 14)
+        else if (convoLine == 14 || convoLine == 15)
         {
             viseq.SetActive(false);
             vimSim.SetActive(true);
             ChangeSprite(0);
             AudioManager.Instance.PlaySFX("Click");
         }
-        else if (convoLine == 15)
+        else if (convoLine == 16)
         {
             vimSim.SetActive(false);
             confirm.SetActive(true);
             AudioManager.Instance.PlaySFX("Click");
         }
-        else if (convoLine == 16)
+        else if (convoLine == 17)
         {
             confirm.SetActive(false);
             hearts.SetActive(true);
             ChangeSprite(5);
             AudioManager.Instance.PlaySFX("Dundundun");
         }
-        else if (convoLine == 17)
+        else if (convoLine == 18)
         {
             ChangeSprite(1);
             AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
         }
-        else if (convoLine == 18)
+        else if (convoLine == 19)
         {
             black.SetActive(false);
             hearts.SetActive(false);
@@ -168,7 +169,7 @@ public class Water : MonoBehaviour
             ChangeSprite(2);
             AudioManager.Instance.PlaySFX("Yay");
         }
-        else if (convoLine == 19)
+        else if (convoLine == 20)
         {
             
             visSimAnim.SetActive(false);
@@ -176,7 +177,7 @@ public class Water : MonoBehaviour
             ChangeSprite(6);
             AudioManager.Instance.PlaySFX("Correct", false, 1.5f);
         }
-        else if (convoLine == 20 || convoLine == 21)
+        else if (convoLine == 21 || convoLine == 22)
         {
 
             visSimAnim.SetActive(false);
@@ -184,7 +185,7 @@ public class Water : MonoBehaviour
             ChangeSprite(6);
             AudioManager.Instance.PlaySFX("Correct");
         }
-        else if (convoLine == 22)
+        else if (convoLine == 23)
         {
             visSimAnim.SetActive(false);
             gameplay.SetActive(true);

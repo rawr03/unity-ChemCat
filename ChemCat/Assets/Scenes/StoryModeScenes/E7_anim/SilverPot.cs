@@ -39,7 +39,7 @@ public class SilverPot : MonoBehaviour
         {
             e7_anim5.SetActive(true);
             ChangeSprite(6);
-            AudioManager.Instance.PlaySFX("Sparkle", false, 0.5f);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
         }
         else if (convoLine == 2)
         {

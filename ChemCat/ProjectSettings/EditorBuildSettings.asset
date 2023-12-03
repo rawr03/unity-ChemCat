@@ -81,7 +81,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AAFINAL SCENES/Standard Mode.unity
     guid: d866c4cb929200b46bc704ca5373bd80
   - enabled: 1
-    path: Assets/Scenes/AAFINAL SCENES/Level_Select/Easy Level.unity
+    path: Assets/Animations/Level_Select/Easy Level.unity
     guid: ca22e96a3cddea247ac90c557c4686b3
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 1.unity
@@ -129,7 +129,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AAFINAL SCENES/Stnrd_Easy/Easy 15.unity
     guid: bdef7239da80c0244994c12a19bb1e79
   - enabled: 1
-    path: Assets/Scenes/AAFINAL SCENES/Level_Select/Medium Level.unity
+    path: Assets/Animations/Level_Select/Medium Level.unity
     guid: 2eae9bd77aaa80b4a81c454d298fedd1
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 1.unity
@@ -177,7 +177,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AAFINAL SCENES/Strnd_Medium/Medium 15.unity
     guid: ccb9ffd7ead15fa41b39e1abbb186a8b
   - enabled: 1
-    path: Assets/Scenes/AAFINAL SCENES/Level_Select/Hard Level.unity
+    path: Assets/Animations/Level_Select/Hard Level.unity
     guid: 99d834467552738488d1719662bd195f
   - enabled: 1
     path: Assets/Scenes/AAFINAL SCENES/Stnrd_Hard/Hard 1.unity

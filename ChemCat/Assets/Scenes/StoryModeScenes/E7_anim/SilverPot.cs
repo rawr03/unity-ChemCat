@@ -44,7 +44,7 @@ public class SilverPot : MonoBehaviour
         else if (convoLine == 2)
         {
             e7_anim5.SetActive(false);
-            e7_anim2.SetActive(true);
+            e7_anim1.SetActive(true);
             ChangeSprite(2);
         }
         else if (convoLine == 3)

@@ -57,7 +57,7 @@ public class Ammonia : MonoBehaviour
         {
             e3_anim1.SetActive(true);
             ChangeSprite(6);
-            AudioManager.Instance.PlaySFX("Sniff", false, 1f);
+            AudioManager.Instance.PlaySFX("Sniff", false, 0.25f);
         }
         else if (convoLine == 1 || convoLine == 2)
         {

@@ -80,7 +80,7 @@ public class ChangeFace : MonoBehaviour
         else if (convoLine == 6)
         {
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 0.5f);
         }
         else if (convoLine == 7)
         {

@@ -1163,7 +1163,7 @@ MonoBehaviour:
   - name: Blink
     clip: {fileID: 8300000, guid: 0e1d6ed85b981554ba8e03f697ad8323, type: 3}
   - name: BoilingWater
-    clip: {fileID: 8300000, guid: f13960266331f2b4b96423e0fa0e1cf6, type: 3}
+    clip: {fileID: 8300000, guid: e9d233532f4e2024a89cca3613f947ab, type: 3}
   - name: Boing
     clip: {fileID: 8300000, guid: 5a001c37f3c0ca7459dccddd5781c9f5, type: 3}
   - name: Burp
@@ -1219,11 +1219,11 @@ MonoBehaviour:
   - name: WaterDrop
     clip: {fileID: 8300000, guid: b6f8014a01fb5a04d94f941d8d4e26da, type: 3}
   - name: Wings
-    clip: {fileID: 8300000, guid: 1a6c9dc53d9f53a44b29547d1352c723, type: 3}
+    clip: {fileID: 8300000, guid: ed897d0f19987b9488970e71b4b13602, type: 3}
   - name: Whoosh
     clip: {fileID: 8300000, guid: 6b7fda21a460fa74fa57b9c7b9417cb8, type: 3}
   - name: Wow
-    clip: {fileID: 8300000, guid: cbbbdc2db66f6894aba949037ac51ba5, type: 3}
+    clip: {fileID: 8300000, guid: aa4c59fb3e5705149a1a4e342607c8e3, type: 3}
   - name: Wrong
     clip: {fileID: 8300000, guid: c6cb9cb108d35544bb88e7aa7150e7d3, type: 3}
   - name: Yawn

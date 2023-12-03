@@ -333,14 +333,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 8.266666
-    functionName: NomNomNomsfx
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 9.666667
+  - time: 9
     functionName: StopSFX
     data: 
     objectReferenceParameter: {fileID: 0}

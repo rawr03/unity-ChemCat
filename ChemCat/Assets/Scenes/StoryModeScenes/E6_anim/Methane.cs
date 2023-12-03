@@ -47,14 +47,14 @@ public class Methane : MonoBehaviour
             e6_anim2.SetActive(false);
             e6_anim3.SetActive(true);
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Campfire");
-            AudioManager.Instance.PlaySFX("Fart", false, 0.5f);
+            AudioManager.Instance.PlaySFX("Fart", false, 1f);
         }
         else if (convoLine == 3)
         {
             e6_anim3.SetActive(false);
             e6_anim4.SetActive(true);
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("LighterWFire");
         }
         else if (convoLine == 4 || convoLine == 5 || convoLine == 6)
         {

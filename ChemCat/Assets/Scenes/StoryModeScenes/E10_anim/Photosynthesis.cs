@@ -36,12 +36,18 @@ public class Photosynthesis : MonoBehaviour
 
         LoadSprite();
         Debug.Log(convoLine);
-        if (convoLine == 0 || convoLine == 1)
+        if (convoLine == 0)
         {
             db_pupa.SetActive(true);
             e10_anim1.SetActive(true);
-            AudioManager.Instance.PlaySFX("Sparkle");
+            AudioManager.Instance.PlaySFX("Sparkle", false, 0.5f);
             AudioManager.Instance.PlaySFX("BirdsSinging", true);
+        }
+        else if (convoLine == 1)
+        {
+            db_pupa.SetActive(true);
+            e10_anim1.SetActive(true);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 0.5f);
         }
         else if (convoLine == 2)
         {
@@ -57,20 +63,21 @@ public class Photosynthesis : MonoBehaviour
             e10_anim3.SetActive(true);
             ChangeSprite(1);
             AudioManager.Instance.StopSFX();
+            AudioManager.Instance.PlaySFX("Wow", false, 1f);
         }
         else if (convoLine == 4)
         {
             e10_anim3.SetActive(false);
             e10_anim4.SetActive(true);
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Yay");
+            AudioManager.Instance.PlaySFX("Yay", false, 2f);
         }
         else if (convoLine == 5)
         {
             e10_anim3.SetActive(false);
             e10_anim4.SetActive(true);
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("wow");
+            AudioManager.Instance.PlaySFX("Wow");
         }
         else if (convoLine == 6)
         {

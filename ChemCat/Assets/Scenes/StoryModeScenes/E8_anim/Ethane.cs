@@ -56,7 +56,7 @@ public class Ethane : MonoBehaviour
             e8_anim2.SetActive(false);
             e8_anim3.SetActive(true);
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Wow");
+            AudioManager.Instance.PlaySFX("Wow", false, 0.5f);
         }
         else if (convoLine == 3)
         {

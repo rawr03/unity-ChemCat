@@ -58,6 +58,7 @@ public class ChangeCat : MonoBehaviour
         else if (convoLine == 4)
         {
             ChangeSprite(0);
+            AudioManager.Instance.PlaySFX("Yay", false, 0.5f);
 
         }
         else if (convoLine == 5)

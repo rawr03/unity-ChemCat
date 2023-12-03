@@ -102,6 +102,7 @@ public class CutsceneManager : MonoBehaviour
 
         if (SceneIndex == 23)
         {
+            AudioManager.Instance.PlayMusic("BGMusic");
             SceneManager.LoadScene("Main Menu");
         }
         else

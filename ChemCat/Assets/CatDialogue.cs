@@ -16,7 +16,7 @@ public class CatDialogue : MonoBehaviour
         }
         else if (convoLine == 1)
         {
-            AudioManager.Instance.PlaySFX("Sparkle", false, 1f);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 0.5f);
         }
         else if (convoLine == 2)
         {

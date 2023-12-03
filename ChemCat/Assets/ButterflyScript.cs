@@ -16,7 +16,7 @@ public class ButterflyScript : MonoBehaviour
         }
         else if (convoLine == 2)
         {
-            AudioManager.Instance.PlaySFX("Yay");
+            AudioManager.Instance.PlaySFX("Yay", false, 1f);
         }
         convoLine++;
     }

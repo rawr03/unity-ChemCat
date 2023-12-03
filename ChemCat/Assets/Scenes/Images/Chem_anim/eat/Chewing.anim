@@ -284,64 +284,64 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1
+  - time: 1.3333334
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3
+  - time: 2.1666667
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 4
+  - time: 3.1833334
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 5
+  - time: 4.0833335
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 6
+  - time: 5.1
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 7
+  - time: 6.0833335
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 8
+  - time: 7.2166667
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 9
+  - time: 8.266666
     functionName: NomNomNomsfx
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 9.833333
-    functionName: NomNomNomsfx
+  - time: 9.666667
+    functionName: StopSFX
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

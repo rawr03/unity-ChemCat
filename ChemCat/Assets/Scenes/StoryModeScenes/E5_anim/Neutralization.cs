@@ -79,7 +79,7 @@ public class Neutralization : MonoBehaviour
         else if (convoLine == 10)
         {
             e5_anim3.SetActive(false);
-            e5_anim4.SetActive(true);
+            //e5_anim4.SetActive(true);
             ChangeSprite(6);
             AudioManager.Instance.PlaySFX("Burp", false, 1f);
         }

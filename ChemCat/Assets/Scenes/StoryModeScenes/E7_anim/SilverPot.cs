@@ -30,10 +30,16 @@ public class SilverPot : MonoBehaviour
         Debug.Log(convoLine);
 
 
-        if (convoLine == 0 || convoLine == 1)
+        if (convoLine == 0)
         {
             e7_anim5.SetActive(true);
             ChangeSprite(6);
+        }
+        else if (convoLine == 1)
+        {
+            e7_anim5.SetActive(true);
+            ChangeSprite(6);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 0.5f);
         }
         else if (convoLine == 2)
         {
@@ -47,7 +53,14 @@ public class SilverPot : MonoBehaviour
             e7_anim2.SetActive(true);
             ChangeSprite(1);
         }
-        else if (convoLine == 4 || convoLine == 5)
+        else if (convoLine == 4)
+        {
+            e7_anim2.SetActive(false);
+            e7_anim3.SetActive(true);
+            ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("Blink", false, 0.5f);
+        }
+        else if (convoLine == 5)
         {
             e7_anim2.SetActive(false);
             e7_anim3.SetActive(true);

@@ -41,6 +41,7 @@ public class Ethane : MonoBehaviour
         {
             db_pupa.SetActive(true);
             e8_anim1.SetActive(true);
+            AudioManager.Instance.PlaySFX("Campfire");
         }
         else if (convoLine == 1)
         {
@@ -55,6 +56,7 @@ public class Ethane : MonoBehaviour
             e8_anim2.SetActive(false);
             e8_anim3.SetActive(true);
             ChangeSprite(1);
+            AudioManager.Instance.PlaySFX("Wow");
         }
         else if (convoLine == 3)
         {

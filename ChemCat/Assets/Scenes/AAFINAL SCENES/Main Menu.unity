@@ -1219,7 +1219,7 @@ MonoBehaviour:
   - name: WaterDrop
     clip: {fileID: 8300000, guid: b6f8014a01fb5a04d94f941d8d4e26da, type: 3}
   - name: Wings
-    clip: {fileID: 8300000, guid: 7e1f9d8b44cab3843a02021b644cedd3, type: 3}
+    clip: {fileID: 8300000, guid: 1a6c9dc53d9f53a44b29547d1352c723, type: 3}
   - name: Whoosh
     clip: {fileID: 8300000, guid: 6b7fda21a460fa74fa57b9c7b9417cb8, type: 3}
   - name: Wow

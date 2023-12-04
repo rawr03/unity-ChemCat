@@ -12,6 +12,9 @@ public class ExControl : MonoBehaviour
 
     private ExEquations currentEquation;
 
+    [SerializeField]
+    private TextMeshProUGUI Reactants;
+
     //FIELDS TO BE CHANGE
     [SerializeField]
     private int currentEquationIndex;
@@ -23,16 +26,28 @@ public class ExControl : MonoBehaviour
     private TextMeshProUGUI equationText2;
 
     [SerializeField]
+    private TextMeshProUGUI equationText3;
+
+    [SerializeField]
+    private TextMeshProUGUI equationText4;
+
+    [SerializeField]
     private TextMeshProUGUI equationSub1;
 
     [SerializeField]
     private TextMeshProUGUI equationSub2;
 
     [SerializeField]
+    private TextMeshProUGUI equationSub3;
+
+    [SerializeField]
+    private TextMeshProUGUI equationSub4;
+
+    [SerializeField]
     private float timeBetweenEquations = 1f;
 
     // Reactants and Products
-    public GameObject E1, E2, InputEq; //good, great, perfect;
+    public GameObject E1, E2, E3, E4, InputEq; //good, great, perfect;
     
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
     public static int React1, React2, Prod1, Prod2;
@@ -42,29 +57,36 @@ public class ExControl : MonoBehaviour
     //private static string Num1, Num2, Num3, Num4;
     string builtEq;
 
+    BuildEq bEq;
+
     // respawn problem
     public static int health;
     // Start is called before the first frame update
 
     public void GetRandomEquation()
     {
+        
         currentEquation = unansweredProblems[currentEquationIndex];
+
+        Reactants.text = currentEquation.Equation;
 
         // equation Text displayed
         equationText1.text = currentEquation.reactant1;
         equationText2.text = currentEquation.reactant2;
+        equationText3.text = currentEquation.product1;
+        equationText4.text = currentEquation.product2;
 
         equationSub1.text = currentEquation.RT_sub1;
         equationSub2.text = currentEquation.RT_sub2;
 
         // answer coefficients for spawned problem
-        equationAnswer1 = currentEquation.RT_coef1;
-        equationAnswer2 = currentEquation.RT_coef2;
-        equationAnswer3 = currentEquation.PD_coef1;
-        equationAnswer4 = currentEquation.PD_coef2;
+        //equationAnswer1 = currentEquation.RT_coef1;
+        //equationAnswer2 = currentEquation.RT_coef2;
+        //equationAnswer3 = currentEquation.PD_coef1;
+        //equationAnswer4 = currentEquation.PD_coef2;
 
         Debug.Log(equationAnswer1 + " " + equationAnswer2 + " " + equationAnswer3 + " " + equationAnswer4);
-
+        bEq.HideElements(currentEquation.reactant1, currentEquation.reactant2, currentEquation.product1, currentEquation.product2);
         /*
         // activate switch based on the Problem
         if (equationAnswer1 != 0 && equationAnswer4 == 0)
@@ -102,6 +124,7 @@ public class ExControl : MonoBehaviour
     }
     void Start()
     {
+        bEq = FindObjectOfType<BuildEq>();
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
             unansweredProblems = problems.ToList<ExEquations>();

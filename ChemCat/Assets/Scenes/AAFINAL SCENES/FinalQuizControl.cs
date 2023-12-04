@@ -51,6 +51,11 @@ public class QuizControl : MonoBehaviour
     public bool stopTimer = false;
     */
 
+    //Timer Animation
+    [SerializeField] private Animator SliderAnimator;
+    [SerializeField] private Animator ClockTimerAnimator;
+    //public GameObject TimeSliderAnimation;
+
 
     // Timer & Score
     public Slider timerSlider;
@@ -99,7 +104,10 @@ public class QuizControl : MonoBehaviour
         //anim = GetComponent<Animator>();
         //gameOver.gameObject.SetActive(true);
         //addtnlTime.gameObject.SetActive(false);
-        
+
+        SliderAnimator.Play("TimerDefault");
+        ClockTimerAnimator.Play("ClockTimerDefault");
+
         if (ContinueIndicator == false)
         {
             Debug.Log("S : " + UsedTime);
@@ -338,7 +346,7 @@ public class QuizControl : MonoBehaviour
             Highscore_HighscoreDisplay.text = PlayerPrefs.GetInt("NewHighScore", 0).ToString();
             //Debug.Log("NEW HIGH SCORE");
         }
-        else if (PlayerPrefs.GetInt("NewHighScore") > CurrScore)
+        else if (PlayerPrefs.GetInt("NewHighScore") >= CurrScore)
         {
             gameOver.gameObject.SetActive(true);
             GameOver_Score.text = CurrScore.ToString();
@@ -423,6 +431,9 @@ public class QuizControl : MonoBehaviour
         time = gameTime - elapsedTime + addTime;
         UsedTime = 180 - time;
         forTimeResetOnExit = 180 - time;
+
+        SliderAnimator.SetFloat("_10SecondsSlider", time);
+        ClockTimerAnimator.SetFloat("Time", time);
 
         //Debug.Log("UPDATE : "+ forTimeResetOnExit);
         // time += addTime;

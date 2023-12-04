@@ -9989,6 +9989,7 @@ GameObject:
   - component: {fileID: 1508301667}
   - component: {fileID: 1508301669}
   - component: {fileID: 1508301668}
+  - component: {fileID: 1508301670}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -10053,6 +10054,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508301666}
   m_CullTransparentMesh: 1
+--- !u!95 &1508301670
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508301666}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 461b82c7c238f4d4cb21e0eccef3dd24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1537413559
 GameObject:
   m_ObjectHideFlags: 0
@@ -11376,6 +11398,7 @@ MonoBehaviour:
   seconds: 0
   textTime: 
   gameScore: 0
+  SliderAnimator: {fileID: 1508301670}
   timerSlider: {fileID: 237127427}
   timerText: {fileID: 1634775150}
   gameTime: 180

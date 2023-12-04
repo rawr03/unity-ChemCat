@@ -51,6 +51,10 @@ public class QuizControl : MonoBehaviour
     public bool stopTimer = false;
     */
 
+    //Timer Animation
+    [SerializeField] private Animator SliderAnimator;
+    //public GameObject TimeSliderAnimation;
+
 
     // Timer & Score
     public Slider timerSlider;
@@ -99,7 +103,9 @@ public class QuizControl : MonoBehaviour
         //anim = GetComponent<Animator>();
         //gameOver.gameObject.SetActive(true);
         //addtnlTime.gameObject.SetActive(false);
-        
+
+        SliderAnimator.Play("TimerDefault");
+
         if (ContinueIndicator == false)
         {
             Debug.Log("S : " + UsedTime);
@@ -423,6 +429,8 @@ public class QuizControl : MonoBehaviour
         time = gameTime - elapsedTime + addTime;
         UsedTime = 180 - time;
         forTimeResetOnExit = 180 - time;
+
+        SliderAnimator.SetFloat("_10SecondsSlider", time);
 
         //Debug.Log("UPDATE : "+ forTimeResetOnExit);
         // time += addTime;

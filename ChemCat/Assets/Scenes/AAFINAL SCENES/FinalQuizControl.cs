@@ -53,6 +53,7 @@ public class QuizControl : MonoBehaviour
 
     //Timer Animation
     [SerializeField] private Animator SliderAnimator;
+    [SerializeField] private Animator ClockTimerAnimator;
     //public GameObject TimeSliderAnimation;
 
 
@@ -105,6 +106,7 @@ public class QuizControl : MonoBehaviour
         //addtnlTime.gameObject.SetActive(false);
 
         SliderAnimator.Play("TimerDefault");
+        ClockTimerAnimator.Play("ClockTimerDefault");
 
         if (ContinueIndicator == false)
         {
@@ -431,6 +433,7 @@ public class QuizControl : MonoBehaviour
         forTimeResetOnExit = 180 - time;
 
         SliderAnimator.SetFloat("_10SecondsSlider", time);
+        ClockTimerAnimator.SetFloat("Time", time);
 
         //Debug.Log("UPDATE : "+ forTimeResetOnExit);
         // time += addTime;

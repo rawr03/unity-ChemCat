@@ -123,6 +123,66 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &698155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 698156}
+  - component: {fileID: 698157}
+  m_Layer: 5
+  m_Name: Stream
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &698156
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698155}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1385791234}
+  - {fileID: 1117593894}
+  - {fileID: 772686681}
+  m_Father: {fileID: 934209791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &698157
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698155}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db242984341944447b01a5e89413f03c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &11921070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   E1: {fileID: 1158427063}
   E2: {fileID: 1596067716}
+  E3: {fileID: 0}
+  E4: {fileID: 0}
   Input: {fileID: 550075924}
 --- !u!1 &264980885
 GameObject:
@@ -6753,6 +6815,94 @@ RectTransform:
   m_AnchoredPosition: {x: 225.00002, y: 59.696346}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &772686680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772686681}
+  - component: {fileID: 772686684}
+  - component: {fileID: 772686683}
+  - component: {fileID: 772686682}
+  m_Layer: 5
+  m_Name: Stream3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &772686681
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772686680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5151032, y: 0.5151032, z: 0.5151032}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 698156}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00012575764, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &772686682
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772686680}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &772686683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772686680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4c2c75862c7c5214085d9e3ae165b58c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &772686684
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772686680}
+  m_CullTransparentMesh: 1
 --- !u!1 &773195985
 GameObject:
   m_ObjectHideFlags: 0
@@ -7404,6 +7554,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 625316810}
+  - {fileID: 698156}
   m_Father: {fileID: 1770443317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8681,6 +8832,94 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104439373}
+  m_CullTransparentMesh: 1
+--- !u!1 &1117593893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1117593894}
+  - component: {fileID: 1117593897}
+  - component: {fileID: 1117593896}
+  - component: {fileID: 1117593895}
+  m_Layer: 5
+  m_Name: Stream2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1117593894
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117593893}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5151032, y: 0.5151032, z: 0.5151032}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 698156}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00012575764, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1117593895
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117593893}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1117593896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117593893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3b2fbff155148744284fd39606687b04, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1117593897
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117593893}
   m_CullTransparentMesh: 1
 --- !u!1 &1121325377
 GameObject:
@@ -10562,6 +10801,94 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356399310}
+  m_CullTransparentMesh: 1
+--- !u!1 &1385791233
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1385791234}
+  - component: {fileID: 1385791237}
+  - component: {fileID: 1385791236}
+  - component: {fileID: 1385791235}
+  m_Layer: 5
+  m_Name: Stream1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1385791234
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385791233}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5151032, y: 0.5151032, z: 0.5151032}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 698156}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.00012575764, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &1385791235
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385791233}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1385791236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385791233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5df4732fe35ae444cb8ad681272c1bdb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1385791237
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385791233}
   m_CullTransparentMesh: 1
 --- !u!1 &1399884960
 GameObject:
@@ -13906,210 +14233,171 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   problems:
-  - RT_coef1: 1
-    reactant1: Mg
+  - reactant1: Mg
     RT_sub1: +2
-    RT_coef2: 1
     reactant2: I
     RT_sub2: -1
-    PD_coef1: 0
     product1: MgI2
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: Mg + I2
-  - RT_coef1: 1
-    reactant1: Zn
+  - reactant1: Zn
     RT_sub1: +2
-    RT_coef2: 1
     reactant2: I
     RT_sub2: -1
-    PD_coef1: 1
     product1: ZnI2
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: Zn + I2
-  - RT_coef1: 2
-    reactant1: Na
+  - reactant1: Na
     RT_sub1: +1
-    RT_coef2: 1
     reactant2: Br
     RT_sub2: -1
-    PD_coef1: 2
     product1: NaBr
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: Na + Br2
-  - RT_coef1: 2
-    reactant1: Ca
+  - reactant1: Ca
     RT_sub1: +2
-    RT_coef2: 1
     reactant2: O
     RT_sub2: -2
-    PD_coef1: 1
     product1: CaO
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: Ca + O2
-  - RT_coef1: 0
-    reactant1: Al
+  - reactant1: Al
     RT_sub1: +3
-    RT_coef2: 0
     reactant2: F
     RT_sub2: -1
-    PD_coef1: 0
     product1: AlF3
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: AlF3
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: Ag + S8
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
-  - RT_coef1: 0
-    reactant1: 
+  - reactant1: 
     RT_sub1: 
-    RT_coef2: 0
     reactant2: 
     RT_sub2: 
-    PD_coef1: 0
     product1: 
     PD_sub1: 
-    PD_coef2: 0
     product2: 
     PD_sub2: 
+    Answer: 
     Equation: 
   Reactants: {fileID: 615860964}
   currentEquationIndex: 0
   equationText1: {fileID: 547254199}
   equationText2: {fileID: 320785726}
+  equationText3: {fileID: 0}
+  equationText4: {fileID: 0}
   equationSub1: {fileID: 351781157}
   equationSub2: {fileID: 630340091}
+  equationSub3: {fileID: 0}
+  equationSub4: {fileID: 0}
   timeBetweenEquations: 1
   E1: {fileID: 1158427063}
   E2: {fileID: 1596067716}
+  E3: {fileID: 0}
+  E4: {fileID: 0}
   InputEq: {fileID: 178084029}
   answerEq: 
 --- !u!1 &1779184766

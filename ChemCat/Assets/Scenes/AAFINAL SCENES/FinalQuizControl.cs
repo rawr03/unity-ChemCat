@@ -33,9 +33,8 @@ public class QuizControl : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = .01f;
 
-    // anim
+    // animated time
     public TextMeshProUGUI addtnlTime;
-    //private Animator anim;
 
     // Timer
     public float time = 0f;
@@ -338,7 +337,7 @@ public class QuizControl : MonoBehaviour
             Highscore_HighscoreDisplay.text = PlayerPrefs.GetInt("NewHighScore", 0).ToString();
             //Debug.Log("NEW HIGH SCORE");
         }
-        else if (PlayerPrefs.GetInt("NewHighScore") > CurrScore)
+        else if (PlayerPrefs.GetInt("NewHighScore") >= CurrScore)
         {
             gameOver.gameObject.SetActive(true);
             GameOver_Score.text = CurrScore.ToString();

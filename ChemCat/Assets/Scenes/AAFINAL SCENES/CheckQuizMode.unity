@@ -11409,6 +11409,384 @@ MonoBehaviour:
     PD_coef2: 3
     product2: O2
     addtnlTime: 30
+  - RT_coef1: 1
+    reactant1: C2H2
+    RT_coef2: 2
+    reactant2: H2
+    PD_coef1: 1
+    product1: C2H6
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 1
+    reactant1: C
+    RT_coef2: 1
+    reactant2: O2
+    PD_coef1: 1
+    product1: CO2
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 2
+    reactant1: C
+    RT_coef2: 1
+    reactant2: O2
+    PD_coef1: 2
+    product1: CO
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: CO2
+    PD_coef1: 2
+    product1: CO
+    PD_coef2: 1
+    product2: O2
+    addtnlTime: 10
+  - RT_coef1: 1
+    reactant1: C
+    RT_coef2: 2
+    reactant2: S
+    PD_coef1: 1
+    product1: CS2
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: NH3
+    PD_coef1: 1
+    product1: N2
+    PD_coef2: 3
+    product2: H2
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: NO
+    PD_coef1: 1
+    product1: N2
+    PD_coef2: 1
+    product2: O2
+    addtnlTime: 10
+  - RT_coef1: 2
+    reactant1: N2
+    RT_coef2: 1
+    reactant2: O2
+    PD_coef1: 2
+    product1: N2O
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 1
+    reactant1: P4
+    RT_coef2: 6
+    reactant2: H2
+    PD_coef1: 4
+    product1: PH3
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 1
+    reactant1: P4
+    RT_coef2: 6
+    reactant2: F2
+    PD_coef1: 4
+    product1: PF3
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 1
+    reactant1: P4
+    RT_coef2: 6
+    reactant2: F2
+    PD_coef1: 4
+    product1: PF3
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 4
+    reactant2: PCl3
+    PD_coef1: 1
+    product1: P4
+    PD_coef2: 6
+    product2: Cl2
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 4
+    reactant2: PCl3
+    PD_coef1: 1
+    product1: P4
+    PD_coef2: 6
+    product2: Cl2
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: SO3
+    PD_coef1: 2
+    product1: SO2
+    PD_coef2: 1
+    product2: O2
+    addtnlTime: 10
+  - RT_coef1: 2
+    reactant1: H2
+    RT_coef2: 1
+    reactant2: O2
+    PD_coef1: 2
+    product1: H20
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: Al2O3
+    PD_coef1: 4
+    product1: Al
+    PD_coef2: 3
+    product2: O2
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: KClO3
+    PD_coef1: 2
+    product1: KCl
+    PD_coef2: 3
+    product2: O2
+    addtnlTime: 10
+  - RT_coef1: 1
+    reactant1: S8
+    RT_coef2: 8
+    reactant2: O2
+    PD_coef1: 8
+    product1: SO2
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 1
+    reactant1: P4
+    RT_coef2: 5
+    reactant2: O2
+    PD_coef1: 2
+    product1: P2O5
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 2
+    reactant1: Al
+    RT_coef2: 3
+    reactant2: Br2
+    PD_coef1: 2
+    product1: AlBr3
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 4
+    reactant1: Cr
+    RT_coef2: 3
+    reactant2: O2
+    PD_coef1: 2
+    product1: Cr2O3
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 2
+    reactant1: Na
+    RT_coef2: 1
+    reactant2: Cl2
+    PD_coef1: 1
+    product1: NaCl
+    PD_coef2: 0
+    product2: 
+    addtnlTime: 10
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 1
+    reactant2: C6H12O6
+    PD_coef1: 2
+    product1: C2H5OH
+    PD_coef2: 2
+    product2: CO2
+    addtnlTime: 10
+  - RT_coef1: 2
+    reactant1: F2
+    RT_coef2: 1
+    reactant2: H2O
+    PD_coef1: 1
+    product1: OF2
+    PD_coef2: 2
+    product2: HF
+    addtnlTime: 20
+  - RT_coef1: 1
+    reactant1: OF2
+    RT_coef2: 1
+    reactant2: H2O
+    PD_coef1: 1
+    product1: O2
+    PD_coef2: 2
+    product2: HF
+    addtnlTime: 20
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 2
+    reactant2: NaClO3
+    PD_coef1: 2
+    product1: NaCl
+    PD_coef2: 3
+    product2: O2
+    addtnlTime: 20
+  - RT_coef1: 2
+    reactant1: AlBr3
+    RT_coef2: 3
+    reactant2: Cl2
+    PD_coef1: 2
+    product1: AlCl3
+    PD_coef2: 3
+    product2: Br2
+    addtnlTime: 20
+  - RT_coef1: 2
+    reactant1: Na
+    RT_coef2: 2
+    reactant2: H2O
+    PD_coef1: 2
+    product1: NaOH
+    PD_coef2: 1
+    product2: H2
+    addtnlTime: 20
+  - RT_coef1: 2
+    reactant1: AlI3
+    RT_coef2: 3
+    reactant2: HgCl2
+    PD_coef1: 2
+    product1: AlCl3
+    PD_coef2: 3
+    product2: HgI2
+    addtnlTime: 20
+  - RT_coef1: 1
+    reactant1: C3H8
+    RT_coef2: 5
+    reactant2: O2
+    PD_coef1: 3
+    product1: CO2
+    PD_coef2: 4
+    product2: H2O
+    addtnlTime: 20
+  - RT_coef1: 2
+    reactant1: C2H2
+    RT_coef2: 5
+    reactant2: O2
+    PD_coef1: 4
+    product1: CO2
+    PD_coef2: 2
+    product2: H2O
+    addtnlTime: 20
+  - RT_coef1: 1
+    reactant1: HCl
+    RT_coef2: 1
+    reactant2: NaOH
+    PD_coef1: 1
+    product1: NaCl
+    PD_coef2: 1
+    product2: H2O
+    addtnlTime: 20
+  - RT_coef1: 0
+    reactant1: 
+    RT_coef2: 1
+    reactant2: C6H12O6
+    PD_coef1: 2
+    product1: C2H5OH
+    PD_coef2: 2
+    product2: CO2
+    addtnlTime: 20
+  - RT_coef1: 4
+    reactant1: NH3
+    RT_coef2: 5
+    reactant2: O2
+    PD_coef1: 4
+    product1: NO
+    PD_coef2: 6
+    product2: H2O
+    addtnlTime: 30
+  - RT_coef1: 4
+    reactant1: NO
+    RT_coef2: 6
+    reactant2: H2O
+    PD_coef1: 4
+    product1: NH3
+    PD_coef2: 5
+    product2: O2
+    addtnlTime: 30
+  - RT_coef1: 4
+    reactant1: NH3
+    RT_coef2: 7
+    reactant2: O2
+    PD_coef1: 4
+    product1: NO2
+    PD_coef2: 6
+    product2: H2O
+    addtnlTime: 30
+  - RT_coef1: 4
+    reactant1: NO2
+    RT_coef2: 6
+    reactant2: H2O
+    PD_coef1: 4
+    product1: NH3
+    PD_coef2: 7
+    product2: O2
+    addtnlTime: 30
+  - RT_coef1: 4
+    reactant1: NH3
+    RT_coef2: 6
+    reactant2: NO
+    PD_coef1: 5
+    product1: N2
+    PD_coef2: 6
+    product2: H2O
+    addtnlTime: 30
+  - RT_coef1: 5
+    reactant1: N2
+    RT_coef2: 6
+    reactant2: H2O
+    PD_coef1: 4
+    product1: NH3
+    PD_coef2: 6
+    product2: NO
+    addtnlTime: 30
+  - RT_coef1: 1
+    reactant1: Al2(SO4)3
+    RT_coef2: 3
+    reactant2: Ca(OH)2
+    PD_coef1: 2
+    product1: Al(OH)3
+    PD_coef2: 3
+    product2: CaSO4
+    addtnlTime: 30
+  - RT_coef1: 3
+    reactant1: Ca(OH)2
+    RT_coef2: 2
+    reactant2: H3PO4
+    PD_coef1: 1
+    product1: Ca3(PO4)2
+    PD_coef2: 6
+    product2: H2O
+    addtnlTime: 30
+  - RT_coef1: 3
+    reactant1: AgNO3
+    RT_coef2: 1
+    reactant2: K3PO4
+    PD_coef1: 1
+    product1: Ag3PO4
+    PD_coef2: 3
+    product2: KNO3
+    addtnlTime: 30
   equationText1: {fileID: 1952184659}
   equationText2: {fileID: 1169121510}
   equationText3: {fileID: 2028961340}

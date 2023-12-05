@@ -15290,7 +15290,7 @@ MonoBehaviour:
     PD_coef2: 3
     product2: MgO
     addtnlTime: 0
-  currentEquationIndex: 1
+  currentEquationIndex: 4
   difficulty: Extreme
   equationText1: {fileID: 657138076}
   equationText2: {fileID: 2000886161}
@@ -15548,7 +15548,7 @@ MonoBehaviour:
     Answer: NR
     Equation: AlCl3 + Br2
   Reactants: {fileID: 615860964}
-  currentEquationIndex: 1
+  currentEquationIndex: 4
   equationText1: {fileID: 547254199}
   equationText2: {fileID: 752335654}
   equationText3: {fileID: 152043425}

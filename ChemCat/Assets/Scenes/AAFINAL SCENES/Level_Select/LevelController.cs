@@ -13,14 +13,15 @@ public class LevelController : MonoBehaviour
     public int[] Easy;
     public int[] Medium;
     public int[] Hard;
+    public int[] Extreme;
 
-    
     private void Start()
     {
         //PlayerPrefs.DeleteAll();
         Easy = new int[15];
         Medium = new int[15];
         Hard = new int[15];
+        Extreme = new int[15];
 
         lv4.interactable = false;
         lv5.interactable = false;
@@ -51,6 +52,7 @@ public class LevelController : MonoBehaviour
             Easy[i] = PlayerPrefs.GetInt("ScoreE" + i);
             Medium[i] = PlayerPrefs.GetInt("ScoreM" + i);
             Hard[i] = PlayerPrefs.GetInt("ScoreH" + i);
+            Extreme[i] = PlayerPrefs.GetInt("ScoreEx" + i);
         }
     }
 
@@ -60,17 +62,18 @@ public class LevelController : MonoBehaviour
         if (difficulty == "Easy")
         {
             levelPassed = PlayerPrefs.GetInt("LevelPassedE");
-            //RecordEasy();
         }
         else if (difficulty == "Medium")
         {
             levelPassed = PlayerPrefs.GetInt("LevelPassedM");
-            //RecordMedium();
         }
         else if (difficulty == "Hard")
         {
             levelPassed = PlayerPrefs.GetInt("LevelPassedH");
-            //RecordHard();
+        }
+        else if (difficulty == "Extreme")
+        {
+            levelPassed = PlayerPrefs.GetInt("LevelPassedEx");
         }
 
         switch (levelPassed)

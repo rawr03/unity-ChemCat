@@ -4,12 +4,13 @@ using UnityEngine.UI;
 public class UnlockDiff : MonoBehaviour
 {
 
-    public Button Medium, Hard;
+    public Button Medium, Hard, Extreme;
     // Start is called before the first frame update
     void Start()
     {
         Medium.interactable = false;
         Hard.interactable = false;
+        Extreme.interactable = false;
         Unlock();
     }
 
@@ -24,6 +25,10 @@ public class UnlockDiff : MonoBehaviour
         if (PlayerPrefs.GetInt("LevelPassedM") >= 5)
         {
             Hard.interactable = true;
+        }
+        if (PlayerPrefs.GetInt("LevelPassedH") >= 10)
+        {
+            Extreme.interactable = true;
         }
     }
 

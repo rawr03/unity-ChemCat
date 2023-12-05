@@ -15290,7 +15290,7 @@ MonoBehaviour:
     PD_coef2: 3
     product2: MgO
     addtnlTime: 0
-  currentEquationIndex: 1
+  currentEquationIndex: 9
   difficulty: Extreme
   equationText1: {fileID: 657138076}
   equationText2: {fileID: 2000886161}
@@ -15455,7 +15455,7 @@ MonoBehaviour:
     PD_sub1: +1
     product2: PO4
     PD_sub2: -3
-    Answer: Ag2SO4 + Na3PO4
+    Answer: NaCl + Ca3(PO4)2
     Equation: CaCl2 + Na3PO4
   - reactant1: Zn
     RT_sub1: +2
@@ -15548,7 +15548,7 @@ MonoBehaviour:
     Answer: NR
     Equation: AlCl3 + Br2
   Reactants: {fileID: 615860964}
-  currentEquationIndex: 1
+  currentEquationIndex: 9
   equationText1: {fileID: 547254199}
   equationText2: {fileID: 752335654}
   equationText3: {fileID: 152043425}

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,8 +47,11 @@ public class ExControl : MonoBehaviour
     [SerializeField]
     private float timeBetweenEquations = 1f;
 
+    // health
+    public GameObject heart1, heart2, heart3, gameOver;
+
     // Reactants and Products
-    public GameObject E1, E2, E3, E4, InputEq; //good, great, perfect;
+    public GameObject E1, E2, E3, E4, InputEq, Input2, Input2_1, Input2_2, Em, Em2; //good, great, perfect;
     
     public static int equationAnswer1, equationAnswer2, equationAnswer3, equationAnswer4;
     public static int React1, React2, Prod1, Prod2;
@@ -55,17 +59,19 @@ public class ExControl : MonoBehaviour
     public static string Element1, Element2, Element3, Element4;
     public string answerEq;
     //private static string Num1, Num2, Num3, Num4;
-    string builtEq;
+    string builtEq, builtEq2;
 
     BuildEq bEq;
 
     // respawn problem
-    public static int health;
+    public static int health = 3;
+
+    //string genInput;
+
     // Start is called before the first frame update
 
     public void GetRandomEquation()
     {
-        
         currentEquation = unansweredProblems[currentEquationIndex];
 
         Reactants.text = currentEquation.Equation;
@@ -78,14 +84,9 @@ public class ExControl : MonoBehaviour
 
         equationSub1.text = currentEquation.RT_sub1;
         equationSub2.text = currentEquation.RT_sub2;
+        equationSub3.text = currentEquation.PD_sub1;
+        equationSub4.text = currentEquation.PD_sub2;
 
-        // answer coefficients for spawned problem
-        //equationAnswer1 = currentEquation.RT_coef1;
-        //equationAnswer2 = currentEquation.RT_coef2;
-        //equationAnswer3 = currentEquation.PD_coef1;
-        //equationAnswer4 = currentEquation.PD_coef2;
-
-        Debug.Log(equationAnswer1 + " " + equationAnswer2 + " " + equationAnswer3 + " " + equationAnswer4);
         bEq.HideElements(currentEquation.reactant1, currentEquation.reactant2, currentEquation.product1, currentEquation.product2);
         /*
         // activate switch based on the Problem
@@ -120,116 +121,114 @@ public class ExControl : MonoBehaviour
         Element4 = Prod2.ToString();
 
         // yes data is transferred
-        Debug.Log("Answers: " + Element1 + " + " + Element2 + " -> " + Element3 + " + " + Element4);
+        //Debug.Log("Answers: " + Element1 + " + " + Element2 + " -> " + Element3 + " + " + Element4);
     }
     void Start()
     {
+        Em.SetActive(true);
+        Em2.SetActive(false);
+
+        InputEq.SetActive(false);
+        Input2.SetActive(false);
+
         bEq = FindObjectOfType<BuildEq>();
         if (unansweredProblems == null || unansweredProblems.Count == 0)
         {
             unansweredProblems = problems.ToList<ExEquations>();
         }
         GetRandomEquation();
+
+        if (E3.activeSelf == false && E4.activeSelf == false)
+        {
+            Input2.SetActive(false);
+            InputEq.SetActive(true);
+        }
+        else //if (E3.activeSelf == true && E4.activeSelf == true)
+        {
+            InputEq.SetActive(false);
+            Input2.SetActive(true);
+        }
+
     }
-
-    /*
-    IEnumerator TransitionToNextLevel()
-    {
-        if (health == 3)
-        {
-            perfect.SetActive(true);
-            //AudioManager.Instance.PlaySFX("LevelComplete");
-            //SaveProgress();
-        }
-        else if (health == 2)
-        {
-            great.SetActive(true);
-            //AudioManager.Instance.PlaySFX("LevelComplete");
-            //SaveProgress();
-        }
-        else if (health == 1)
-        {
-            good.SetActive(true);
-            //AudioManager.Instance.PlaySFX("LevelComplete");
-            //SaveProgress();
-        }
-        yield return new WaitForSeconds(timeBetweenEquations);
-    } */
-
 
     public void CheckAnswer()
     {
         // Get input Eq by player
-        builtEq = InputEq.GetComponent<TextMeshProUGUI>().text;
-        builtEq = builtEq.Trim();
-
-        answerEq = currentEquation.product1;
-
-        Debug.Log("Input: " + builtEq);
-        Debug.Log("Answer: " + answerEq);
-
-        if (builtEq.Equals(answerEq))
+        if(E1.activeSelf == true && E2.activeSelf == true && E3.activeSelf == false && E4.activeSelf == false)
         {
-            Debug.Log("Correct!");
-        }
-        else
-        {
-            Debug.Log("Wrong");
-        }
+            builtEq = InputEq.GetComponentInChildren<TextMeshProUGUI>().text;
+            builtEq = builtEq.Trim();
+            answerEq = currentEquation.Answer;
 
-        //StartCoroutine(TransitionToNextLevel());
+            Debug.Log("Input: " + builtEq);
+            Debug.Log("Answer: " + answerEq);
 
-        /*
-        if (Element4 == "0")
-        {
-            if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3))
+            if (builtEq.Equals(answerEq))
             {
-                Debug.Log("Correct");
-                StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                Debug.Log("Correct!");
+                Em.SetActive(false);
+                Em2.SetActive(true);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //AudioManager.Instance.PlaySFX("Wrong");
-            }
-        }
-        else if (Element1 == "0")
-        {
-            if (Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
-            {
-                Debug.Log("Correct");
-                StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
-            }
-            else
-            {
-                Debug.Log("Wrong");
-                health--;
-                //AudioManager.Instance.PlaySFX("Wrong");
             }
         }
         else
         {
-            if (Num1.Equals(Element1) && Num2.Equals(Element2) && Num3.Equals(Element3) && Num4.Equals(Element4))
+            builtEq = Input2_1.GetComponentInChildren<TextMeshProUGUI>().text + " + " + Input2_2.GetComponentInChildren<TextMeshProUGUI>().text;
+            builtEq2 = Input2_2.GetComponentInChildren<TextMeshProUGUI>().text + " + " + Input2_1.GetComponentInChildren<TextMeshProUGUI>().text;
+            answerEq = currentEquation.Answer;
+
+            Debug.Log("Input: " + builtEq + " or " + builtEq2);
+            Debug.Log("Answer: " + answerEq);
+
+            if (builtEq.Equals(answerEq) || builtEq2.Equals(answerEq))
             {
-                Debug.Log("Correct");
-                StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+                Debug.Log("Correct!");
+                Em.SetActive(false);
+                Em2.SetActive(true);
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-
             }
-        } */
-        // StartCoroutine(EnablePanel());
-    }
-    // Update is called once per frame
-    void Update()
-    {
+        }
+
         
+ 
     }
+
+    public void Update()
+    {
+        if (health == 3)
+        {
+            heart1.SetActive(true);
+            heart2.SetActive(true);
+            heart3.SetActive(true);
+        }
+        else if (health == 2)
+        {
+            heart1.SetActive(true);
+            heart2.SetActive(true);
+            heart3.SetActive(false);
+        }
+        else if (health == 1)
+        {
+            heart1.SetActive(true);
+            heart2.SetActive(false);
+            heart3.SetActive(false);
+        }
+        else if(health == 0)
+        {
+            heart1.SetActive(false);
+            heart2.SetActive(false);
+            heart3.SetActive(false);
+            gameOver.SetActive(true);
+        }
+    }
+
 }
+

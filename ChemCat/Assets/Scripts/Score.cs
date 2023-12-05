@@ -14,71 +14,6 @@ public class Score : MonoBehaviour
 
     public int recordScore = 0;
 
-    /*
- namespace LevelUnlockSystem
- {
-    public class LevelSystemManager : MonoBehavior
-    {
-        private static LevelSystemManager instance;
-
-        [SerializeField]
-        private LevelData levelData;
-
-        public LevelData {get => levelData;}
-
-        private void Awake()
-        {
-            if (instance == null)
-            {
-                instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-        }
-    }
-
-
-    [System.Serializable]
-    public class LevelData
-    {
-        public int lasUnlockedLevel = 0;
-        public LevelItem[] levelItemArray;
-    }
-
-    [System.Serializable]
-    public class LevelItem
-    {
-        public bool unlocked;
-        public int starAchieved;
-    }
-}
-
-    */
-
-    /*
-namespace LevelUnlockSystem
-{
-    public class LevelUIManager : MonoBehavior
-    {
-        [SerializeField] private GameObject lvlBtnHolder
-        [SerializeField] private GameObject lvlBtnPrefab;
-
-        public void InitializeUI()
-        {
-            LevelItem[] levelItemArray = LevelSystemManager.Instance.LevelData.levelItemArray;
-            for (int i = 0; i < levelItemArray.Length; i++)
-            {
-
-            }
-        }
-    }
-}
-    */
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +41,10 @@ namespace LevelUnlockSystem
         if (difficulty == "Hard")
         {
             recordScore = PlayerPrefs.GetInt("ScoreH" + Number);
+        }
+        if (difficulty == "Extreme")
+        {
+            recordScore = PlayerPrefs.GetInt("ScoreEx" + Number);
         }
 
         switch (recordScore)

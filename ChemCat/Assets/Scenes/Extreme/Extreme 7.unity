@@ -11922,7 +11922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.000427, y: -8}
+  m_AnchoredPosition: {x: -14.000366, y: -8}
   m_SizeDelta: {x: -1819.6387, y: -980.3594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1448003014
@@ -15290,7 +15290,7 @@ MonoBehaviour:
     PD_coef2: 3
     product2: MgO
     addtnlTime: 0
-  currentEquationIndex: 1
+  currentEquationIndex: 6
   difficulty: Extreme
   equationText1: {fileID: 657138076}
   equationText2: {fileID: 2000886161}
@@ -15405,7 +15405,7 @@ MonoBehaviour:
     PD_sub1: 
     product2: 
     PD_sub2: 
-    Answer: Ag2O
+    Answer: 
     Equation: 'Ag + O2 '
   - reactant1: Na
     RT_sub1: +1
@@ -15548,7 +15548,7 @@ MonoBehaviour:
     Answer: NR
     Equation: AlCl3 + Br2
   Reactants: {fileID: 615860964}
-  currentEquationIndex: 1
+  currentEquationIndex: 6
   equationText1: {fileID: 547254199}
   equationText2: {fileID: 752335654}
   equationText3: {fileID: 152043425}
@@ -19925,7 +19925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.000183
+      value: -14.000122
       objectReference: {fileID: 0}
     - target: {fileID: 1396847502175029448, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -20094,7 +20094,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -14.000183
+      value: -14.000122
       objectReference: {fileID: 0}
     - target: {fileID: 5862265410687519209, guid: 60b86e8b5f09ea24d93f1a44a697c514, type: 3}
       propertyPath: m_AnchoredPosition.y

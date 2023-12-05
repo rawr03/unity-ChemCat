@@ -20,4 +20,13 @@ public class LevelMenu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + levelNum);
     }
+
+    /*SceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+        if (SceneIndex == 23)
+        {
+            AudioManager.Instance.PlayMusic("BGMusic");
+            SceneManager.LoadScene("Main Menu");
+        }
+        else {}*/
 }

@@ -80,6 +80,7 @@ public class Water : MonoBehaviour
             line2.SetActive(true);
             myAnimationControl.Play("e1_eq2");
             ChangeSprite(2);
+            AudioManager.Instance.PlaySFX("Sparkle", false, 0.5f);
         }
         else if (convoLine == 4)
         {

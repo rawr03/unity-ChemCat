@@ -28,7 +28,6 @@ public class Ethane : MonoBehaviour
     public void Start()
     {
         myAnimationControl.Play("Checkpoint_Anim");
-        //AudioManager.Instance.PlaySFX("Checkpoint");
     }
 
     public void TrigUpdate()
@@ -56,7 +55,7 @@ public class Ethane : MonoBehaviour
             e8_anim2.SetActive(false);
             e8_anim3.SetActive(true);
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Wow", false, 0.5f);
+            AudioManager.Instance.PlaySFX("Wow", false, 1.5f);
         }
         else if (convoLine == 3)
         {

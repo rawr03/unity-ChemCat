@@ -13,7 +13,7 @@ public class PauseGame : MonoBehaviour
         reminder.gameObject.SetActive(false);
         instructions.gameObject.SetActive(false);
         switches.gameObject.SetActive(true);
-        AudioManager.Instance.PlayMusic("BGMusic");
+        AudioManager.Instance.musicSource.UnPause();
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
@@ -24,7 +24,7 @@ public class PauseGame : MonoBehaviour
         reminder.gameObject.SetActive(false);
         instructions.gameObject.SetActive(false);
         switches.gameObject.SetActive(false);
-        AudioManager.Instance.musicSource.Stop();
+        AudioManager.Instance.musicSource.Pause();
         Time.timeScale = 0f;  
         GameIsPaused = true;
     }

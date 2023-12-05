@@ -69,7 +69,6 @@ public class S_draft : MonoBehaviour
     Hint hint;
     void Start()
     {
-        //AudioManager.Instance.PlayMusic("BGMusic");
         // set health to 3, and all hearts must be set active
 
         hint = FindObjectOfType<Canvas>().GetComponent<Hint>();
@@ -188,25 +187,26 @@ public class S_draft : MonoBehaviour
     {
         if (health == 3)
         {
-            perfect.SetActive(true); 
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            perfect.SetActive(true);
             SaveProgress();
         }
         else if (health == 2)
         {
             great.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
             SaveProgress();
         }
         else if (health == 1)
         {
             good.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
             SaveProgress();
         }
         yield return new WaitForSeconds(timeBetweenEquations);
     }
 
+    public void Wrong()
+    {
+        AudioManager.Instance.PlaySFX("Wrong");
+    }
 
     public void CheckAnswer()
     {
@@ -227,13 +227,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //AudioManager.Instance.PlaySFX("Wrong");
+                Wrong();
             }
         }
         else if (Element1 == "0")
@@ -242,13 +242,13 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                //AudioManager.Instance.PlaySFX("Wrong");
+                Wrong();
             }
         }
         else
@@ -257,13 +257,14 @@ public class S_draft : MonoBehaviour
             {
                 Debug.Log("Correct");
                 StartCoroutine(TransitionToNextLevel());
-                AudioManager.Instance.PlaySFX("Correct");
+
             }
             else
             {
                 Debug.Log("Wrong");
                 health--;
-                
+                Wrong();
+
             }
         }
         // StartCoroutine(EnablePanel());
@@ -275,7 +276,7 @@ public class S_draft : MonoBehaviour
         gameOver.SetActive(false);
         AudioManager.Instance.PlayMusic("BGMusic");
     }
-
+    
 
     public void SaveProgress()
     {
@@ -367,7 +368,6 @@ public class S_draft : MonoBehaviour
                 Heart1.SetActive(false);
                 Heart2.SetActive(false);
                 Heart3.SetActive(true);
-                
                 break;
             case 0:
                 Heart1.SetActive(false);
@@ -375,8 +375,8 @@ public class S_draft : MonoBehaviour
                 Heart3.SetActive(false);
                 
                 gameOver.SetActive(true);
-                AudioManager.Instance.musicSource.Pause();
-                StartCoroutine(TransitionToNextLevel());
+                AudioManager.Instance.musicSource.Stop();
+                //StartCoroutine(TransitionToNextLevel());
                 break;
         }
     }

@@ -191,17 +191,17 @@ public class StoryControl : MonoBehaviour
         if (health == 3)
         {
             perfect.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            //AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 2)
         {
             great.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            //AudioManager.Instance.PlaySFX("LevelComplete");
         }
         else if (health == 1)
         {
             good.SetActive(true);
-            AudioManager.Instance.PlaySFX("LevelComplete");
+            //AudioManager.Instance.PlaySFX("LevelComplete");
         }
         yield return new WaitForSeconds(timeBetweenEquations);
     }

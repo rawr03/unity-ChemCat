@@ -70,7 +70,7 @@ public class Photosynthesis : MonoBehaviour
             e10_anim3.SetActive(false);
             e10_anim4.SetActive(true);
             ChangeSprite(1);
-            AudioManager.Instance.PlaySFX("Yay", false, 2f);
+            AudioManager.Instance.PlaySFX("Yay", false, 3f);
         }
         else if (convoLine == 5)
         {

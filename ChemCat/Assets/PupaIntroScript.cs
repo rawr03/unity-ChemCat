@@ -11,7 +11,7 @@ public class PupaIntroScript : MonoBehaviour
 
         if (convoLine == 0)
         {
-            AudioManager.Instance.PlaySFX("Yawn");
+            AudioManager.Instance.PlaySFX("Yawn", false, 1f);
         }
         convoLine++;
     }

@@ -125,6 +125,7 @@ public class ExControl : MonoBehaviour
     }
     void Start()
     {
+        health = 3;
         Em.SetActive(true);
         Em2.SetActive(false);
 

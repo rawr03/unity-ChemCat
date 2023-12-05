@@ -67,6 +67,7 @@ public class S_draft : MonoBehaviour
     public static string Element1, Element2, Element3, Element4;
 
     Hint hint;
+
     void Start()
     {
         // set health to 3, and all hearts must be set active
@@ -344,7 +345,29 @@ public class S_draft : MonoBehaviour
                 }
             }
         }
-        
+        else if (difficulty == "Extreme")
+        {
+            if (PlayerPrefs.GetInt("LevelPassedEx", 2) < LevelNum)
+            {
+                PlayerPrefs.SetInt("LevelPassedEx", LevelNum);
+                Debug.Log("Saved Score: " + PlayerPrefs.GetInt("ScoreEx" + LevelNum, 0));
+
+                if (PlayerPrefs.GetInt("ScoreEx" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreEx" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreEx" + LevelNum, 0));
+                }
+            }
+            else
+            {
+                if (PlayerPrefs.GetInt("ScoreEx" + LevelNum, 0) < health)
+                {
+                    PlayerPrefs.SetInt("ScoreEx" + LevelNum, health);
+                    Debug.Log("NewScore" + PlayerPrefs.GetInt("ScoreEx" + LevelNum, 0));
+                }
+            }
+        }
+
 
     }
 

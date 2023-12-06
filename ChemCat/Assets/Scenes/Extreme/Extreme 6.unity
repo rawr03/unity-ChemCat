@@ -1258,7 +1258,7 @@ MonoBehaviour:
     - 'Step 2:  Know the charges of each element.'
     - 'Step 3: When combining the elements in a Double Displacement reaction, combine
       the inner elements first to make the first product,'
-    - ' then the outer elements makes up the second product.'
+    - then the outer elements makes up the second product.
     - Remember, elements with POSITIVE charges should always come FIRST, then followed
       by the element with NEGATIVE charges.
     - 'Step 4: Charges should then be balanced out using the Criss-cross method.'
@@ -6355,7 +6355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &292733219
 RectTransform:
   m_ObjectHideFlags: 0

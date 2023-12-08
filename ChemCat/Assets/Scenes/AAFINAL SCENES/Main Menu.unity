@@ -2053,6 +2053,7 @@ GameObject:
   - component: {fileID: 1708022478}
   - component: {fileID: 1708022482}
   - component: {fileID: 1708022483}
+  - component: {fileID: 1708022484}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2189,6 +2190,21 @@ MonoBehaviour:
   Easy: 
   Medium: 
   Hard: 
+  Extreme: 
+--- !u!114 &1708022484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708022477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a74102238d4e514198fd1fa8acdaa95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Standard: {fileID: 538875660}
+  Quiz: {fileID: 1764405126}
 --- !u!1 &1764405124
 GameObject:
   m_ObjectHideFlags: 0

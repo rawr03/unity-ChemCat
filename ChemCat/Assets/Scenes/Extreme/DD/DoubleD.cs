@@ -42,7 +42,7 @@ public class DoubleD : MonoBehaviour
         {
             Ex_anim0.SetActive(false);
             Ex_anim1.SetActive(true);
-            ChangeSprite(6);
+            ChangeSprite(2);
             Ex_anim1.SetActive(false);
             Ex_anim2.SetActive(true);
         }
@@ -62,14 +62,14 @@ public class DoubleD : MonoBehaviour
         {
             Ex_anim4.SetActive(false);
             Ex_anim5.SetActive(true);
-            ChangeSprite(6);
+            ChangeSprite(1);
             //AudioManager.Instance.PlaySFX("Blink", false, 0.5f);
         }
         else if (convoLine == 6)
         {
             Ex_anim5.SetActive(false);
             Ex_anim6.SetActive(true);
-            ChangeSprite(1);
+            ChangeSprite(2);
             //AudioManager.Instance.PlaySFX("Blink");
         }
         else if (convoLine == 7 || convoLine == 8)
@@ -89,14 +89,14 @@ public class DoubleD : MonoBehaviour
         {
             Ex_anim8.SetActive(false);
             Ex_anim9.SetActive(true);
-            ChangeSprite(1);
+            ChangeSprite(2);
             //AudioManager.Instance.PlaySFX("Yay", false, 1f);
         }
         else if (convoLine == 11)
         {
             Ex_anim9.SetActive(false);
             Ex_anim10.SetActive(true);
-            ChangeSprite(1);
+            ChangeSprite(6);
             //AudioManager.Instance.PlaySFX("Yay", false, 1f);
         }
         else if (convoLine == 12)

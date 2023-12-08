@@ -103,6 +103,7 @@ public class CutsceneManager : MonoBehaviour
         if (SceneIndex == 23)
         {
             AudioManager.Instance.PlayMusic("BGMusic");
+            PlayerPrefs.SetString("Story", "Completed");
             SceneManager.LoadScene("Main Menu");
         }
         else
@@ -110,6 +111,7 @@ public class CutsceneManager : MonoBehaviour
             Debug.Log("End");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+
         //prop.gameObject.SetActive(false);
         //StartPlay();
     }

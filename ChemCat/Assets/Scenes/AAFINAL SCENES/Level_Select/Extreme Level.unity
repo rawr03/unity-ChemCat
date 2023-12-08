@@ -2452,7 +2452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 616791818316723513, guid: d172b9a8809b9c1409b6bcc6b248b87c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Ex 6
+      value: Ex6
       objectReference: {fileID: 0}
     - target: {fileID: 616791818316723513, guid: d172b9a8809b9c1409b6bcc6b248b87c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

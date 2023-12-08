@@ -228,7 +228,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AAFINAL SCENES/Level_Select/Extreme Level.unity
     guid: f47d5a5de35c88949890223dfdbb8671
   - enabled: 1
-    path: Assets/Scenes/Ex_Animation/Ex1.unity
+    path: Assets/Scenes/Extreme/Ex1.unity
     guid: c4b0cabab03ee284682f6d3a804ffe26
   - enabled: 1
     path: Assets/Scenes/Extreme/PreStart-Extreme-Scene 1.unity
@@ -249,7 +249,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Extreme/Extreme 5.unity
     guid: 14714f9220da2544aaf7f084ca700035
   - enabled: 1
-    path: Assets/Scenes/Extreme/Ex 6.unity
+    path: Assets/Scenes/Extreme/Ex6.unity
     guid: 253c7720ef9ca264aa9fde2fa3412c08
   - enabled: 1
     path: Assets/Scenes/Extreme/Extreme 6.unity

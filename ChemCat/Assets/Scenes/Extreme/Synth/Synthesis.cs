@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Synthesis : MonoBehaviour
@@ -159,6 +160,6 @@ public class Synthesis : MonoBehaviour
         Ex_anim9.SetActive(false);
         Ex_anim10.SetActive(false);
         Ex_anim11.SetActive(false);
-        Db.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Single : MonoBehaviour
@@ -191,6 +192,6 @@ public class Single : MonoBehaviour
         SR_anim15.SetActive(false);
         SR_anim16.SetActive(false);
         SR_anim17.SetActive(false);
-        Db.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

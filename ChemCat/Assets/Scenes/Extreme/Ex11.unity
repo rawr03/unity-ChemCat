@@ -3086,7 +3086,7 @@ GameObject:
   - component: {fileID: 322991539}
   - component: {fileID: 322991536}
   - component: {fileID: 322991538}
-  - component: {fileID: 322991537}
+  - component: {fileID: 322991542}
   m_Layer: 5
   m_Name: Prop
   m_TagString: Untagged
@@ -3115,28 +3115,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &322991537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322991535}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2fb0cf3b81b961408499df16f0c538b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myAnimationControl: {fileID: 0}
-  egg: {fileID: 313319203}
-  Db: {fileID: 1739382219}
-  vimSim: {fileID: 0}
-  e2_anim1: {fileID: 0}
-  e2_anim2: {fileID: 0}
-  e2_anim3: {fileID: 0}
-  e2_anim4: {fileID: 0}
-  index: 0
-  Sp_eggs: []
 --- !u!225 &322991538
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3206,6 +3184,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &322991542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322991535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094a978c26ac75e429f8e9d7cfaaca09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  egg: {fileID: 2136572677}
+  Db: {fileID: 1739382219}
+  SR_anim2: {fileID: 1519105602}
+  SR_anim3: {fileID: 1256679540}
+  SR_anim4: {fileID: 1045225414}
+  SR_anim5: {fileID: 640616274}
+  SR_anim6: {fileID: 2020732392}
+  SR_anim7: {fileID: 189432126}
+  SR_anim8: {fileID: 2004875926}
+  SR_anim9: {fileID: 1215262884}
+  SR_anim10: {fileID: 1133575744}
+  SR_anim11: {fileID: 771172450}
+  SR_anim12: {fileID: 516433596}
+  SR_anim13: {fileID: 367248116}
+  SR_anim14: {fileID: 1236440811}
+  SR_anim15: {fileID: 887747226}
+  SR_anim16: {fileID: 1993704986}
+  SR_anim17: {fileID: 2027890840}
+  index: 0
+  Sp_caterpillar: []
 --- !u!1 &329424893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,7 +3883,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190335
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -16684,7 +16694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    problem: Double Displacement
+    problem: Single
     sentences:
     - "You are almost through with this challenge; one last lesson and you\u2019ll
       be in the finish line WOOOHOOO!"
@@ -16696,15 +16706,23 @@ MonoBehaviour:
     - "Let\u2019s predict the product of this equation."
     - Step 1. Disregard all subscripts.
     - 'Step 2. Know the charges of each element. '
-    - Step 3. Analyze the REACTANTS and figure out if you have 2 Halogens or 2 Metals.
+    - Step 3. Analyze the REACTANTS and figure out if you have 2 positive charges
+      or 2 negative charges.
+    - "In this example, we have 2 positively charged elements. Let\u2019s focus on
+      these pair first."
     - COMPARE THE REACTIVITY of the two using the chart I have provided you.
-    - If the NEW ELEMENT is MORE REACTIVE than the element paired in the COMPOUND,
-      then a reaction occurs.
+    - 'Using this chart, we know that Zinc has a HIGHER REACTIVITY than Hydrogen '
+    - 'If the NEW ELEMENT is MORE REACTIVE than the element paired in the COMPOUND,
+      then a reaction occurs, otherwise, there is no reaction. '
     - The element with HIGHER REACTIVITY gets to pair with the remaining element,
-      and leaving the other behind.
-    - 'Step 5: Ask if the element left behind is Diatomic or not.'
-    - DIATOMIC MOLECULES are atoms that EXIST IN PAIRS.
-    - If the element is diatomic, is it required to put a SUBSCRIPT OF 2.
+      and leaving the other behind
+    - 'Step 4: The charges should then be Balanced out through Criss-Cross Method'
+    - "We\u2019re almost done, however, there\u2019s something missing.   Let\u2019s
+      look at the chart again   Down here are the list of DIATOMIC MOLECULES"
+    - DIATOMIC MOLECULES are atoms that EXIST IN PAIRS.   This means that Hydrogen
+      cannot exist alone
+    - If the element is diatomic, is it required to put a SUBSCRIPT OF 2
+    - Our Equation is complete, now you just need to Balance it out!
   dialogueArray: []
   myAnimationControl: {fileID: 322991536}
   molecule: {fileID: 0}
@@ -16752,9 +16770,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 322991537}
-        m_TargetAssemblyTypeName: Salt, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 322991542}
+        m_TargetAssemblyTypeName: Single, Assembly-CSharp
+        m_MethodName: TrigUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16763,7 +16781,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
       - m_Target: {fileID: 1734470568}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
@@ -19134,7 +19152,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294375167
+    rgba: 4278190335
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -19967,7 +19985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1947401167
 RectTransform:
   m_ObjectHideFlags: 0

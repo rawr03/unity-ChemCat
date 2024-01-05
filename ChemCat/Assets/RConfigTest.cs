@@ -8,7 +8,7 @@ using Unity.RemoteConfig;
 //using System.Threading.Tasks;
 //using Unity.Services.RemoteConfig;
 //using System.Configuration;
-//using Unity.Services.RemoteConfig;
+using Unity.Services.RemoteConfig;
 
 public class RConfigTest : MonoBehaviour
 {
@@ -64,10 +64,11 @@ public class RConfigTest : MonoBehaviour
     
     void Awake()
     {
+        
         ConfigManager.FetchCompleted += SetTrue;
         ConfigManager.FetchConfig<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
-        ConfigManagerImpl.FetchCompleted += SetTrue;
-        ConfigurationManager.FetchCompleted += SetTrue;
+        //ConfigManagerImpl.FetchCompleted += SetTrue;
+        //ConfigurationManager.FetchCompleted += SetTrue;
     }
 
     void SetTrue(ConfigResponse response)

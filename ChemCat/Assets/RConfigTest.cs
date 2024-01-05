@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Unity.RemoteConfig;
-using Unity.Services.Core;
-using System.Configuration;
-using System.Threading.Tasks;
+//using Unity.Services.Core;
+//using System.Configuration;
+//using System.Threading.Tasks;
 //using Unity.Services.RemoteConfig;
 //using System.Configuration;
 //using Unity.Services.RemoteConfig;
@@ -53,15 +53,15 @@ public class RConfigTest : MonoBehaviour
 
     //First Try
     //public static class ConfigManager;
-    /*
+    
     public struct userAttributes { }
     public struct appAttributes { }
 
     public bool test = false;
-    */
+    
 
     // Start is called before the first frame update
-    /*
+    
     void Awake()
     {
         ConfigManager.FetchCompleted += SetTrue;
@@ -84,5 +84,5 @@ public class RConfigTest : MonoBehaviour
     private void OnDestroy()
     {
         ConfigManager.FetchCompleted -= SetTrue;
-    }*/
+    }
 }

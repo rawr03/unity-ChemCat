@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Analytics;
 
 public class UnlockMode : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class UnlockMode : MonoBehaviour
     public void Unlock()
     {
         Debug.Log(PlayerPrefs.GetString("Story"));
-        Debug.Log(PlayerPrefs.GetInt("LevelPassedmH"));
+        Debug.Log(PlayerPrefs.GetInt("LevelPassedH"));
         if (PlayerPrefs.GetString("Story").Equals("Completed"))
         {
             Standard.interactable = true;

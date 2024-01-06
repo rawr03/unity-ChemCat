@@ -64,7 +64,6 @@ public class RConfigTest : MonoBehaviour
     
     void Awake()
     {
-        
         ConfigManager.FetchCompleted += SetTrue;
         ConfigManager.FetchConfig<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
         //ConfigManagerImpl.FetchCompleted += SetTrue;
@@ -85,5 +84,5 @@ public class RConfigTest : MonoBehaviour
     private void OnDestroy()
     {
         ConfigManager.FetchCompleted -= SetTrue;
-    }
+    }*/
 }

@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using Unity.RemoteConfig;
-//using Unity.Services.Core;
-//using System.Configuration;
-//using System.Threading.Tasks;
-//using Unity.Services.RemoteConfig;
-//using System.Configuration;
+using Unity.Services.Core;
 using Unity.Services.RemoteConfig;
 
 public class RConfigTest : MonoBehaviour

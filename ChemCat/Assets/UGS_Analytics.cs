@@ -4,8 +4,13 @@ using UnityEngine;
 using Unity.Services.Analytics;
 using Unity.Services.Core;
 using Unity.Services.Core.Analytics;
+using UnityEngine.UI;
+using UnityEngine.Analytics;
+
 public class UGS_Analytics : MonoBehaviour
 {
+    public GameObject story;
+    string storybtn = "btn.storymode";
     async void Start()
     {
         try
@@ -20,6 +25,7 @@ public class UGS_Analytics : MonoBehaviour
         }
     }
 
+    
     private void LevelCompletedCustomEvent()
     {
         int currentLevel = Random.Range(1, 4); // Gets a random number from 1-3
@@ -36,6 +42,31 @@ public class UGS_Analytics : MonoBehaviour
 
         // You can call Events.Flush() to send the event immediately
         AnalyticsService.Instance.Flush();
+    }
+
+    private void UnlockMain()
+    {
+        var mainBtn = new Dictionary<string, object>();
+        mainBtn["storyMode"] = true;
+        mainBtn["standardMode"] = false;
+        mainBtn["quizMode"] = false;
+
+        story = GameObject.Find(storybtn);
+        if(story.activeSelf == true)
+        {
+            mainBtn["storyMode"] = true;
+        }
+        AnalyticsResult result = Analytics.CustomEvent("gameProgress", mainBtn);
+        Debug.Log(result.ToString());
+
+        /*
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            { "storyMode", true},
+            { "standardMode", false},
+            { "quizMode", false }
+        };
+        AnalyticsService.Instance.CustomData("gameProgress", parameters);*/
     }
 
     public void GiveConsent()

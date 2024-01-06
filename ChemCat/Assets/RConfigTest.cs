@@ -51,6 +51,7 @@ public class RConfigTest : MonoBehaviour
         if(!Ana)
     }*/
 
+    /*
     //First Try
     //public static class ConfigManager;
     
@@ -61,11 +62,11 @@ public class RConfigTest : MonoBehaviour
     
 
     // Start is called before the first frame update
-    /*
+    
     void Awake()
     {
-        //ConfigManager.FetchCompleted += SetTrue;
-        //ConfigManager.FetchConfig<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
+        ConfigManager.FetchCompleted += SetTrue;
+        ConfigManager.FetchConfig<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
         //ConfigManagerImpl.FetchCompleted += SetTrue;
         //ConfigurationManager.FetchCompleted += SetTrue;
     }

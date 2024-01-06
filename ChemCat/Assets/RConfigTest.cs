@@ -61,18 +61,18 @@ public class RConfigTest : MonoBehaviour
     
 
     // Start is called before the first frame update
-    
+    /*
     void Awake()
     {
-        ConfigManager.FetchCompleted += SetTrue;
-        ConfigManager.FetchConfig<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
+        //ConfigManager.FetchCompleted += SetTrue;
+        //ConfigManager.FetchConfig<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
         //ConfigManagerImpl.FetchCompleted += SetTrue;
         //ConfigurationManager.FetchCompleted += SetTrue;
     }
 
     void SetTrue(ConfigResponse response)
     {
-        test = ConfigManager.appConfig.GetBool("testIsTrue");
+        test = appConfig.GetBool("testIsTrue");
     }
 
     // Update is called once per frame

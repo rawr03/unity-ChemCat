@@ -6,6 +6,7 @@ using Unity.Services.Core;
 using Unity.Services.Core.Analytics;
 using UnityEngine.UI;
 using UnityEngine.Analytics;
+using System;
 
 public class UGS_Analytics : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class UGS_Analytics : MonoBehaviour
         {
             await UnityServices.InitializeAsync();
             GiveConsent(); // Get user consent according to various legislations
-            LevelCompletedCustomEvent();
+            //LevelCompletedCustomEvent();
         }
         catch (ConsentCheckException e)
         {
@@ -25,7 +26,7 @@ public class UGS_Analytics : MonoBehaviour
         }
     }
 
-    
+    /*
     private void LevelCompletedCustomEvent()
     {
         int currentLevel = Random.Range(1, 4); // Gets a random number from 1-3
@@ -42,7 +43,7 @@ public class UGS_Analytics : MonoBehaviour
 
         // You can call Events.Flush() to send the event immediately
         AnalyticsService.Instance.Flush();
-    }
+    }*/
 
     private void UnlockMain()
     {
@@ -55,6 +56,7 @@ public class UGS_Analytics : MonoBehaviour
         if(story.activeSelf == true)
         {
             mainBtn["storyMode"] = true;
+            Debug.Log("Story Mode is active");
         }
         AnalyticsResult result = Analytics.CustomEvent("gameProgress", mainBtn);
         Debug.Log(result.ToString());
@@ -75,4 +77,32 @@ public class UGS_Analytics : MonoBehaviour
         AnalyticsService.Instance.StartDataCollection();
         Debug.Log($"Consent has been provided. The SDK is now collecting data!");
     }
+
+    public static class RecordGameProgress
+    {
+        public static void RecordCustomEventWithNoParameters()
+        {
+            AnalyticsService.Instance.CustomData("gameProgress", new Dictionary<string, object>());
+        }
+
+        public static void RecordCustomEventWithNoParameters(string EventName)
+        {
+            AnalyticsService.Instance.CustomData(EventName, new Dictionary<string, object>());
+        }
+
+        public static void RecordCustomEventWithParameters()
+        {
+            var parameters = new Dictionary<string, object>
+            {
+                { "storyMode", true},
+                { "standardMode", false},
+                { "quizMode", false }
+            };
+
+            AnalyticsService.Instance.CustomData("gameProgress", parameters);
+        }
+
+        //Debug.Log("Recorded gameProgress");
+    }
+
 }

@@ -10,6 +10,13 @@ public class UnlockMode : MonoBehaviour
     // Start is called before the first frame update
     public Button Standard, Quiz;
     // Start is called before the first frame update
+
+    public void Reset()
+    {
+        PlayerPrefs.DeleteAll();
+    }
+
+
     void Start()
     {
         //Analytics.CustomEvent
@@ -20,8 +27,8 @@ public class UnlockMode : MonoBehaviour
 
     public void Unlock()
     {
-        Debug.Log(PlayerPrefs.GetString("Story"));
-        Debug.Log(PlayerPrefs.GetInt("LevelPassedH"));
+        //Debug.Log(PlayerPrefs.GetString("Story"));
+        //Debug.Log(PlayerPrefs.GetInt("LevelPassedH"));
         if (PlayerPrefs.GetString("Story").Equals("Completed"))
         {
             Standard.interactable = true;

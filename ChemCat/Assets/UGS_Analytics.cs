@@ -10,6 +10,155 @@ using System;
 
 public class UGS_Analytics : MonoBehaviour
 {
+    // if a button is active, make bool true
+    //private int playerScore = 0;
+    //private int playerLevel = 1;
+    public GameObject stry;
+    public GameObject stnd;
+    public GameObject quiz;
+    bool btnPressed = false; 
+
+    void Update()
+    {
+        /*
+        if (stry.activeSelf == true && btnPressed == true)
+        {
+            TrackCustomEvent("gameProgress", "storyMode", true);
+        }
+
+        if (stnd.activeSelf == true && btnPressed == true)
+        {
+            TrackCustomEvent("gameProgress", "standardMode", true);
+        }
+
+        if (quiz.activeSelf == true && btnPressed == true)
+        {
+            TrackCustomEvent("gameProgress", "quizMode", true);
+        }
+
+        
+        // Example: Track event when player reaches a certain score
+        if (playerScore >= 1000)
+        {
+            TrackCustomEvent("HighScoreReached");
+        }
+
+        // Example: Track event when player reaches a certain level
+        if (playerLevel == 5)
+        {
+            TrackCustomEvent("LevelReached", "Level", playerLevel);
+        }*/
+    }
+
+    public void PressedStry()
+    {
+        btnPressed = true;
+        TrackCustomEvent("gameProgress", "storyMode", true);
+        Debug.Log(stry.activeSelf == true);
+        Debug.Log(btnPressed);
+        btnPressed = false;
+    }
+
+    public void PressedStnd()
+    {
+        btnPressed = true;
+        if (stnd.activeSelf == true && btnPressed == true)
+        {
+            TrackCustomEvent("gameProgress", "standardMode", true);
+            Debug.Log(stnd.activeSelf == true);
+            Debug.Log(btnPressed);
+        }
+        btnPressed = false;
+    }
+
+    public void PressedQuiz()
+    {
+        btnPressed = true;
+        if (quiz.activeSelf == true && btnPressed == true)
+        {
+            TrackCustomEvent("gameProgress", "quizMode", true);
+            Debug.Log(quiz.activeSelf == true);
+            Debug.Log(btnPressed);
+        }
+        btnPressed = false;
+    }
+
+    void TrackCustomEvent(string eventName, params object[] parameters)
+    {
+        // Create a dictionary to store parameters for the custom event
+        var eventParams = new Dictionary<string, object>
+        {
+            { "storyMode", true},
+            { "standardMode", false},
+            { "quizMode", false }
+        };
+
+        /*
+        // Add parameters to the dictionary
+        for (int i = 0; i < parameters.Length; i += 2)
+        {
+            if (i + 1 < parameters.Length)
+            {
+                string key = parameters[i].ToString();
+
+                // Check if the key already exists in the dictionary
+                if (!eventParams.ContainsKey(key))
+                {
+                    eventParams.Add(key, parameters[i + 1]);
+                }
+                else
+                {
+                    // Handle the case where the key already exists (optional)
+                    Debug.LogWarning($"Key '{key}' already exists in the dictionary.");
+                }
+            }
+        }*/
+
+        // Record the custom event
+        Analytics.CustomEvent(eventName, eventParams);
+    }
+
+
+    /* TRY 3
+    void Start()
+    {
+        var result = Analytics.CustomEvent("Location", transform.position);
+        var state = new Dictionary<string, object>();
+        state["storyMode"] = 57;
+        state["standardMode"] = false;
+        state["quizMode"] = false;
+
+        result = Analytics.CustomEvent("gameProgress", state);
+        Debug.Log("Button was pressed: " + result);
+
+    }
+
+    public void buttonPressed()
+    {
+
+    }*/
+
+    /* TRY 2
+    bool btn_story = false;
+    public void ModeBtn()
+    {
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+                { "storyMode", true},
+                { "standardMode", false},
+                { "quizMode", false }
+        };
+
+        if(btn_story == true)
+        {
+            AnalyticsService.Instance.CustomData("gameProgress", parameters);
+        }
+
+        //Analytics.CustomEvent
+        //Events.CustomData("gameProgress", parameters);
+    }*
+
+    /*
     public GameObject story;
     string storybtn = "btn.storymode";
     async void Start()
@@ -43,7 +192,7 @@ public class UGS_Analytics : MonoBehaviour
 
         // You can call Events.Flush() to send the event immediately
         AnalyticsService.Instance.Flush();
-    }*/
+    }
 
     private void UnlockMain()
     {
@@ -61,14 +210,14 @@ public class UGS_Analytics : MonoBehaviour
         AnalyticsResult result = Analytics.CustomEvent("gameProgress", mainBtn);
         Debug.Log(result.ToString());
 
-        /*
+      
         Dictionary<string, object> parameters = new Dictionary<string, object>()
         {
             { "storyMode", true},
             { "standardMode", false},
             { "quizMode", false }
         };
-        AnalyticsService.Instance.CustomData("gameProgress", parameters);*/
+        AnalyticsService.Instance.CustomData("gameProgress", parameters);
     }
 
     public void GiveConsent()
@@ -76,6 +225,7 @@ public class UGS_Analytics : MonoBehaviour
         // Call if consent has been given by the user
         AnalyticsService.Instance.StartDataCollection();
         Debug.Log($"Consent has been provided. The SDK is now collecting data!");
+        //RecordGameProgress();
     }
 
     public static class RecordGameProgress
@@ -104,5 +254,5 @@ public class UGS_Analytics : MonoBehaviour
 
         //Debug.Log("Recorded gameProgress");
     }
-
+    */
 }

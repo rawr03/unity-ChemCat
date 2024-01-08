@@ -9,9 +9,49 @@ using UnityEngine.Analytics;
 using System;
 using Unity.VisualScripting;
 using System.Security.Cryptography;
+using UnityEngine.XR;
 
 public class UGS_Analytics : MonoBehaviour
 {
+    public string gameMode;
+    private void Start()
+    {
+        
+    }
+
+    public void BtnStry()
+    {
+        gameMode = "storyMode";
+        CheckButtons(gameMode);
+    }
+
+    public void BtnStnd()
+    {
+        gameMode = "standardMode";
+        CheckButtons(gameMode);
+    }
+
+    public void BtnQuiz()
+    {
+        gameMode = "quizMode";
+        CheckButtons(gameMode);
+    }
+
+    void CheckButtons(string gameMode)
+    {
+
+        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            //{ "levelName", "level" + currentLevel.ToString()}
+            { "Mode", "" + gameMode
+},
+        };
+        AnalyticsService.Instance.CustomData("ButtonPressed", parameters);
+        AnalyticsService.Instance.Flush();
+    }
+
+
+    /*
     // if a button is active, make bool true
     //private int playerScore = 0;
     //private int playerLevel = 1;
@@ -26,7 +66,6 @@ public class UGS_Analytics : MonoBehaviour
     async void Start()
     {
         await UnityServices.InitializeAsync();
-        /*
         try
         {
             await UnityServices.InitializeAsync();
@@ -36,9 +75,9 @@ public class UGS_Analytics : MonoBehaviour
         catch (ConsentCheckException e)
         {
             Debug.Log(e.ToString());
-        }*/
+        }
     }
-    /*
+    
     private void LevelCompletedCustomEvent()
     {
         int currentLevel = Random.Range(1, 4); // Gets a random number from 1-3
@@ -87,7 +126,7 @@ public class UGS_Analytics : MonoBehaviour
         {
             TrackCustomEvent("LevelReached", "Level", playerLevel);
         }
-    }*/
+    }
 
     public void PressedStry()
     {
@@ -104,7 +143,7 @@ public class UGS_Analytics : MonoBehaviour
         };
         //Analytics.CustomEvent("ButtonPress", gameMode);
         AnalyticsService.Instance.CustomData("ButtonPress", parameters);
-        AnalyticsService.Instance.Flush();*/
+        AnalyticsService.Instance.Flush();
 
 
         //TrackCustomEvent("gameProgress", "storyMode", true);
@@ -116,7 +155,7 @@ public class UGS_Analytics : MonoBehaviour
 
     public void PressedStnd()
     {
-        /*
+        
         btnPressed = true;
         if (stnd.activeSelf == true && btnPressed == true)
         {
@@ -124,12 +163,12 @@ public class UGS_Analytics : MonoBehaviour
             Debug.Log(stnd.activeSelf == true);
             Debug.Log(btnPressed);
         }
-        btnPressed = false;*/
+        btnPressed = false;
     }
 
     public void PressedQuiz()
     {
-        /*
+        
         btnPressed = true;
         if (quiz.activeSelf == true && btnPressed == true)
         {
@@ -137,10 +176,10 @@ public class UGS_Analytics : MonoBehaviour
             Debug.Log(quiz.activeSelf == true);
             Debug.Log(btnPressed);
         }
-        btnPressed = false;*/
+        btnPressed = false;
     }
     
-    /*
+    
     void TrackCustomEvent(string eventName, params object[] parameters)
     {
         // Create a dictionary to store parameters for the custom event

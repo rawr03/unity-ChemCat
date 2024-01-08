@@ -13,41 +13,66 @@ using UnityEngine.XR;
 
 public class UGS_Analytics : MonoBehaviour
 {
+
     public string gameMode;
+
     private void Start()
     {
-        
+        /*Dictionary<string, object> parameters = new Dictionary<string, object>()
+        {
+            //{ "levelName", "level" + currentLevel.ToString()}
+            { "Mode", gameMode }
+        };
+        AnalyticsService.Instance.CustomData("ButtonPressed", parameters);*/
+
+
+    }
+
+    public void test()
+    {
+        int totalPotions = 5;
+        int totalCoins = 100;
+        string weaponID = "Weapon_102";
+        Analytics.CustomEvent("gameProgress", new Dictionary<string, object>
+        {
+            { "activeWeapon", weaponID }
+        });
     }
 
     public void BtnStry()
     {
+        //string customEventName = "gameProgress";
+        //Debug.Log("Story");
         gameMode = "storyMode";
         CheckButtons(gameMode);
     }
 
     public void BtnStnd()
     {
+        //Debug.Log("Standard");
         gameMode = "standardMode";
         CheckButtons(gameMode);
     }
 
     public void BtnQuiz()
     {
+        //Debug.Log("Quiz");
         gameMode = "quizMode";
         CheckButtons(gameMode);
     }
 
     void CheckButtons(string gameMode)
     {
-
-        Dictionary<string, object> parameters = new Dictionary<string, object>()
+        //Debug.Log("Checkbtn");
+        //AnalyticsService.Instance.CustomData("ButtonPressed", parameters);
+        Analytics.CustomEvent("btnPress", new Dictionary<string, object>
         {
-            //{ "levelName", "level" + currentLevel.ToString()}
-            { "Mode", "" + gameMode
-},
-        };
-        AnalyticsService.Instance.CustomData("ButtonPressed", parameters);
-        AnalyticsService.Instance.Flush();
+            { "Mode", gameMode }
+        });
+        //AnalyticsService.Instance.CustomData("btnPress");
+        AnalyticsService.Instance.CustomData("btnPress");
+        Debug.Log(Analytics.CustomEvent("btnPress"));
+        //AnalyticsService.Instance.Flush();
     }
 
 

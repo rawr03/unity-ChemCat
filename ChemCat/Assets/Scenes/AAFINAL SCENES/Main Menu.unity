@@ -847,7 +847,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1257090519}
         m_TargetAssemblyTypeName: UGS_Analytics, Assembly-CSharp
-        m_MethodName: PressedStnd
+        m_MethodName: BtnStnd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -856,7 +856,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1708022482}
         m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
         m_MethodName: OpenLevel
@@ -1200,7 +1200,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1257090519}
         m_TargetAssemblyTypeName: UGS_Analytics, Assembly-CSharp
-        m_MethodName: PressedStry
+        m_MethodName: BtnStry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1209,7 +1209,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1708022482}
         m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
         m_MethodName: OpenLevel
@@ -1892,9 +1892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d9216a3cbf9d146a175b234f3c012b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stry: {fileID: 787950343}
-  stnd: {fileID: 538875658}
-  quiz: {fileID: 1764405124}
+  gameMode: 
 --- !u!4 &1257090520
 Transform:
   m_ObjectHideFlags: 0
@@ -2484,7 +2482,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1257090519}
         m_TargetAssemblyTypeName: UGS_Analytics, Assembly-CSharp
-        m_MethodName: PressedQuiz
+        m_MethodName: BtnQuiz
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2493,7 +2491,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 1708022482}
         m_TargetAssemblyTypeName: LevelMenu, Assembly-CSharp
         m_MethodName: OpenLevel

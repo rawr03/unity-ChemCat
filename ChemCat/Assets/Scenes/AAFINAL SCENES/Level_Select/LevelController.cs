@@ -224,7 +224,7 @@ public class LevelController : MonoBehaviour
         else if (difficulty == "Extreme")
         {
             levelPassed = PlayerPrefs.GetInt("LevelPassedEx");
-
+            Debug.Log("levelEx: " + levelPassed);
             switch (levelPassed)
             {
                 case 0:

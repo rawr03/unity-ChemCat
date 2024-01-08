@@ -2494,6 +2494,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4402530654461647380, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
+      propertyPath: m_text
+      value: Your progress will not be saved!
+      objectReference: {fileID: 0}
     - target: {fileID: 7523855634176775953, guid: e29566f353d87b74b8d2361d507a12cf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -5362,11 +5366,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.09
-  m_Text: '+ 3 for Easy Problems
+  m_Text: '+ 10 for Easy Problems
 
-    + 5 for Medium Problems
+    + 20 for Medium Problems
 
-    +10 for Hard Problems
+    + 30 for Hard
+    Problems
 
 '
 --- !u!222 &935169812

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2eca30e6-f3da-427f-a2d7-18338b98c733\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"test\",\r\n      \"type\": \"bool\",\r\n     
-    \"value\": false\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"2eca30e6-f3da-427f-a2d7-18338b98c733\"\r\n   
-    },\r\n    \"rs\": {\r\n      \"key\": \"test\",\r\n      \"type\": \"bool\",\r\n     
-    \"value\": false\r\n    }\r\n  }\r\n]"
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"41852f0d-3abf-4006-ae60-92fe5cb5bbdf\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Language\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"English\"\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"41852f0d-3abf-4006-ae60-92fe5cb5bbdf\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Language\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"English\"\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"65ee2421-fd9f-4d01-b9a7-432dd586a276\",\r\n   
     \"name\": \"production\",\r\n    \"id\": \"73219a72-f036-4f15-89ae-cb4dbebc06b7\",\r\n   
     \"isDefault\": true,\r\n    \"createdAt\": \"2024-01-04T12:11:06Z\",\r\n    \"updatedAt\":
